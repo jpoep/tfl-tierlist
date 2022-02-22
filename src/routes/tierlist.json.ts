@@ -57,7 +57,8 @@ export const get: RequestHandler = async () => {
 					rank: element.rank,
 					pokemon: (
 						await Promise.allSettled(element.pokemon.map(async (it) => await fetchPokemon(it)))
-					) //.filter(it => it.status == 'rejected')
+					)
+					//  .filter(it => it.status == 'rejected')
 						.map((it: PromiseFulfilledResult<Pokemon>) => it.value)
 				};
 			})
