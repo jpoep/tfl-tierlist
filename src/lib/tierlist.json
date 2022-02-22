@@ -1,0 +1,51 @@
+{
+    "tiers": [
+        {
+            "name": "S",
+            "rank": "1",
+            "pokemon": [
+                "azumarill",
+                "tornadus-therian",
+                "salamence",
+                "landorus-therian",
+                "dragonite",
+                "aegislash-shield",
+                "zapdos-galar",
+                "rillaboom",
+                "heatran",
+                "jirachi",
+                "celesteela",
+                "tapu-koko",
+                "kartana",
+                "dragapult",
+                "garchomp",
+                "corviknight",
+                "latias",
+                "latios",
+                "cinderace",
+                "mamoswine",
+                "necrozma",
+                "clefable",
+                "volcarona",
+                "weavile",
+                "excadrill",
+                "ferrothorn",
+                "terrakion",
+                "hydreigon",
+                "victini",
+                "thundurus-incarnate",
+                "thundurus-therian",
+                "urshifu-rapid-strike",
+                "zapdos",
+                "zeraora"
+            ]
+        },
+        {
+            "name": "A",
+            "rank": "2",
+            "pokemon": [
+                "arcanine"
+            ]
+        }
+    ]
+}
