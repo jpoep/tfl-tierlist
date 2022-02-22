@@ -1,21 +1,10 @@
 <script lang="ts" context="module">
-	import type { Load } from '@sveltejs/kit';
-	import type { Tier } from './tierlist.json';
+	import type { Tier } from './index.json';
 
 	export enum Language {
 		DE = 'DE',
 		EN = 'EN'
 	}
-
-	export const load: Load = async ({ fetch }) => {
-		return {
-			props: {
-				tierlist: await (await fetch(`/tierlist.json`)).json()
-			}
-		};
-	};
-	
-	
 </script>
 
 <script lang="ts">

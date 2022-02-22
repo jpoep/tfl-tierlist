@@ -19,11 +19,10 @@ export type Pokemon = {
 export const get: RequestHandler = async () => {
 	const pokeApi = `https://pokeapi.co/api/v2/pokemon`;
 
-	const getNames: { (pokemonRespone: any): Promise<{ en: string; de: string }> } = async (
-		pokemonResponse
+	const getNames: { (url: string): Promise<{ en: string; de: string }> } = async (
+		url
 	) => {
-		console.log(pokemonResponse.species.url);
-		const response = await fetch(pokemonResponse.species.url).catch((error) => {
+		const response = await fetch(url).catch((error) => {
 			console.error(error.message);
 		});
 		if (!response) return;
@@ -45,7 +44,7 @@ export const get: RequestHandler = async () => {
 		return {
 			typing: pokemon.types.map((it) => it.type.name),
 			imageUrl: pokemon.sprites.front_default,
-			name: await getNames(pokemon)
+			name: await getNames(pokemon.species.url)
 		} as Pokemon;
 	};
 
@@ -65,6 +64,8 @@ export const get: RequestHandler = async () => {
 		);
 
 	return {
-		body: await tierlist()
+		body: {
+			tierlist: await tierlist()
+		}
 	};
 };
