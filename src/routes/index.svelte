@@ -78,12 +78,10 @@
 	}
 	.tier {
 		div {
-			display: flex;
-			flex: 1 1 0px;
-			align-items: center;
-			flex-wrap: wrap;
-			// flex-grow: 1;
-			margin: 0.2rem;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			gap: .5rem;
+
 		}
 		h2 {
 			text-align: center;
@@ -92,14 +90,18 @@
 	}
 	.pokemon {
 		img {
-			align-self: center;
+			width: 80%;
+			justify-self: center;
 		}
+
+		text-align: center;
+		font-size: large;
 
 		padding: 1rem;
 
 		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 		display: flex;
 		flex-direction: column;
-		max-width: 10rem;
+		justify-content: center;
 	}
 </style>

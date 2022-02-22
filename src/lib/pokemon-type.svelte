@@ -93,7 +93,7 @@
 <style lang="scss">
 	div {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 		gap: 0.5rem;
 	}
 	span {
