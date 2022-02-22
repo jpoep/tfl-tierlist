@@ -85,8 +85,6 @@
 	<span class={type1}>{types[type1][language.toLowerCase()]}</span>
 	{#if type2}
 		<span class={type2}>{types[type2][language.toLowerCase()]}</span>
-	{:else}
-		<span class="empty" />
 	{/if}
 </div>
 
@@ -97,6 +95,8 @@
 		gap: 0.5rem;
 	}
 	span {
+        display: block;
+        width: 10ch;
 		border-radius: 2px;
 		color: white;
 		padding: 0.2rem 0.5rem;

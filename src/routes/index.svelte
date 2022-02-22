@@ -90,7 +90,6 @@
 	}
 	.pokemon {
 		img {
-			width: 80%;
 			justify-self: center;
 		}
 
