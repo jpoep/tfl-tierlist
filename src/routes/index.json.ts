@@ -77,28 +77,40 @@ export const get: RequestHandler = async () => {
 	};
 
 	const fetchPokemon: { (pokemonName: string): Promise<Pokemon> } = async (pokemonName: string) => {
+		console.info(`Fetching data for ${pokemonName}`);
 		const response = await fetch(`${pokeApi}/${pokemonName}`).catch((error) =>
 			Promise.reject(error.message)
 		);
 		if (!response.ok) {
 			return Promise.reject(`Pokemon ${pokemonName} failed to resolve.`);
 		}
+		console.info(`Data for ${pokemonName} fetched; names and form names are next.`);
+
 		const pokemon = await response.json();
 		const species = pokemon.species.name;
-		return {
+		const [name, form] = await Promise.all([
+			getName(pokemon.species.url),
+			getForm(pokemon.forms[0].url)
+		]);
+
+		const returnValue = {
 			typing: pokemon.types.map((it) => it.type.name),
 			imageUrl: pokemon.sprites.front_default,
-			name: await getName(pokemon.species.url),
-			form: await getForm(pokemon.forms[0].url),
+			name,
+			form,
 			id: pokemonName,
 			pokemonDbUrl: `https://pokemondb.net/pokedex/${species}`
 		} as Pokemon;
+
+		console.info(`Names for ${pokemonName} fetched.`);
+		return returnValue;
 	};
 
-	const tierlistJson = dev ? devTierlist : prodTierlist;
+	const tierlistJson = dev ? prodTierlist : prodTierlist;
 
 	const tierlist = await Promise.all(
 		tierlistJson.tiers.map(async (element) => {
+			console.info(`Fetching Pokemon for ${element.name} tier`);
 			return {
 				name: element.name,
 				rank: element.rank,
