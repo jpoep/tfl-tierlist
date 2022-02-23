@@ -47,7 +47,7 @@ import { onMount } from 'svelte';
 	const note = (pokemon: Pokemon) => pokemon.notes?.[language] || '';
 
 	const subtitle = (tier: TierWithState) =>
-		tier.subtitles[tier.activeSubtitle];
+		tier.subtitles[tier.activeSubtitle]  || '';
 </script>
 
 <div class="top-bar">
