@@ -12,8 +12,10 @@ export type Pokemon = {
 		en: string;
 		de: string;
 	};
+	id: string,
 	typing: string[];
 	imageUrl: string;
+	pokemonDbUrl: string;
 };
 
 export const get: RequestHandler = async () => {
@@ -41,10 +43,13 @@ export const get: RequestHandler = async () => {
 			return Promise.reject(`Pokemon ${pokemonName} failed to resolve.`);
 		}
 		const pokemon = await response.json();
+		const species = pokemon.species.name;
 		return {
 			typing: pokemon.types.map((it) => it.type.name),
 			imageUrl: pokemon.sprites.front_default,
-			name: await getNames(pokemon.species.url)
+			name: await getNames(pokemon.species.url),
+			id: pokemonName,
+			pokemonDbUrl: `https://pokemondb.net/pokedex/${species}`
 		} as Pokemon;
 	};
 

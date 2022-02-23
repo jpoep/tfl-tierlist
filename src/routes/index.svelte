@@ -11,14 +11,15 @@
 	import PokemonType from '$lib/pokemon-type.svelte';
 
 	export let tierlist: Tier[];
-	
+
 	let language = Language.DE;
 
-	$: sortedList = tierlist.map(it => ({
+	$: sortedList = tierlist.map((it) => ({
 		...it,
-		pokemon: it.pokemon.sort((a, b) => (a.name[language.toLowerCase()] as string).localeCompare(b.name[language.toLowerCase()]) ) // I know, it's pretty hideous
+		pokemon: it.pokemon.sort((a, b) =>
+			(a.name[language.toLowerCase()] as string).localeCompare(b.name[language.toLowerCase()])
+		) // I know, it's pretty hideous
 	}));
-
 
 	const toggleLanguage = () => {
 		language = language == Language.DE ? Language.EN : Language.DE;
@@ -35,36 +36,45 @@
 		<h2 id={tier.name}>{tier.name}</h2>
 		<div>
 			{#each tier.pokemon as pokemon}
-				<div class="pokemon">
-					<img src={pokemon.imageUrl} alt="pokemon.name.en" />
-					<div class="pokemon-info">
-						{#if language == Language.DE}
-							<p>
-								{pokemon.name.de}
-							</p>
-						{:else}
-							<p>
-								{pokemon.name.en}
-							</p>
-						{/if}
+				<a href={pokemon.pokemonDbUrl} target="_blank">
+					<div class="pokemon">
+						<img src={pokemon.imageUrl} alt="pokemon.name.en" />
+						<div class="pokemon-info">
+							{#if language == Language.DE}
+								<p>
+									{pokemon.name.de}
+								</p>
+							{:else}
+								<p>
+									{pokemon.name.en}
+								</p>
+							{/if}
+						</div>
+						<PokemonType type1={pokemon.typing[0]} type2={pokemon.typing[1]} {language} />
 					</div>
-					<PokemonType type1={pokemon.typing[0]} type2={pokemon.typing[1]} {language} />
-				</div>
+				</a>
 			{/each}
 		</div>
 	</div>
 {/each}
 
 <style lang="scss">
+	a {
+		color: inherit;
+		text-decoration: none;
+		display: block;
+
+		&:hover {
+			background-color: #eee;
+		}
+	}
 	button {
 		border: none;
-		display: inline-block;
 		text-align: center;
 		padding: 15px 32px;
 		font-size: 2rem;
 		background-color: white;
 		color: #444;
-		// box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 		cursor: pointer;
 	}
 	.top-bar {
@@ -72,7 +82,7 @@
 		display: flex;
 		justify-content: flex-end;
 	}
-	
+
 	h1 {
 		text-align: center;
 	}
@@ -80,8 +90,7 @@
 		div {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-			gap: .5rem;
-
+			gap: 0.5rem;
 		}
 		h2 {
 			text-align: center;
@@ -89,6 +98,8 @@
 		}
 	}
 	.pokemon {
+		display: inline-block;
+
 		img {
 			justify-self: center;
 		}
