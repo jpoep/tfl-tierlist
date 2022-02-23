@@ -20,7 +20,7 @@
 
 	export let tierlist: TierWithState[];
 
-	let language = Language.DE;
+	let language = Language.EN;
 
 	$: sortedList = tierlist.map((it) => ({
 		...it,
