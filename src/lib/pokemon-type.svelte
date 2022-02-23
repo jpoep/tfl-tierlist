@@ -95,18 +95,15 @@
 		gap: 0.5rem;
 	}
 	span {
-        display: block;
-        width: 10ch;
+		display: block;
+		max-width: 8ch;
+		min-width: 7ch;
 		border-radius: 2px;
 		color: white;
 		padding: 0.2rem 0.5rem;
-		min-width: 5ch;
-		display: block;
 		text-align: center;
 		font-size: small;
 		font-weight: 700;
 		text-transform: uppercase;
-		font-weight: 700;
-		background-color: #0000ff00;
 	}
 </style>

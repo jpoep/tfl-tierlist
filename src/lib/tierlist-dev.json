@@ -1,0 +1,23 @@
+{
+    "tiers": [
+        {
+            "name": "S",
+            "rank": "1",
+            "pokemon": [
+                "tornadus-therian",
+                "salamence",
+                "landorus-therian",
+                "dragonite",
+                "aegislash-shield"
+            ]
+        },
+        {
+            "name": "A",
+            "rank": "2",
+            "pokemon": [
+                "arcanine",
+                "tornadus-incarnate"
+            ]
+        }
+    ]
+}

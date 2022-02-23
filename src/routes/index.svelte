@@ -1,9 +1,9 @@
 <script lang="ts" context="module">
-	import type { Tier } from './index.json';
+	import type { Pokemon, Tier } from './index.json';
 
 	export enum Language {
-		DE = 'DE',
-		EN = 'EN'
+		DE = 'de',
+		EN = 'en'
 	}
 </script>
 
@@ -24,10 +24,13 @@
 	const toggleLanguage = () => {
 		language = language == Language.DE ? Language.EN : Language.DE;
 	};
+
+	const name = (pokemon: Pokemon) => pokemon.name[language];
+	const form = (pokemon: Pokemon) => pokemon.form?.[language] || '';
 </script>
 
 <div class="top-bar">
-	<button on:click={toggleLanguage}>{language}</button>
+	<button on:click={toggleLanguage}>{language.toUpperCase()}</button>
 </div>
 
 <h1>Tierlist für TFL Season 3</h1>
@@ -36,20 +39,15 @@
 		<h2 id={tier.name}>{tier.name}</h2>
 		<div>
 			{#each tier.pokemon as pokemon}
-				<a href={pokemon.pokemonDbUrl} target="_blank">
-					<div class="pokemon">
-						<img src={pokemon.imageUrl} alt="pokemon.name.en" />
-						<div class="pokemon-info">
-							{#if language == Language.DE}
-								<p>
-									{pokemon.name.de}
-								</p>
-							{:else}
-								<p>
-									{pokemon.name.en}
-								</p>
-							{/if}
-						</div>
+				<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
+					<img src={pokemon.imageUrl} alt="pokemon.name.en" />
+					<div class="pokemon-name">
+						{name(pokemon)}
+					</div>
+					<div class="pokemon-form">
+						{form(pokemon)}
+					</div>
+					<div class="pokemon-typing">
 						<PokemonType type1={pokemon.typing[0]} type2={pokemon.typing[1]} {language} />
 					</div>
 				</a>
@@ -87,9 +85,11 @@
 		text-align: center;
 	}
 	.tier {
-		div {
+		& > div {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			// grid-template-rows: repeat(auto-fit, minmax(0px, 1fr));
+			// grid-auto-rows: max-content;
 			gap: 0.5rem;
 		}
 		h2 {
@@ -98,20 +98,27 @@
 		}
 	}
 	.pokemon {
-		display: inline-block;
-
 		img {
 			justify-self: center;
 		}
 
 		text-align: center;
 		font-size: large;
-
 		padding: 1rem;
-
 		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		// justify-content: space-around;
+
+		.pokemon-form {
+			font-size: smaller;
+			color: #666;
+			margin-bottom: 0.5rem;
+		}
+		.pokemon-typing {
+			margin-top: auto;
+			justify-self: flex-end;
+		}
 	}
 </style>
