@@ -36,6 +36,9 @@
 	const name = (pokemon: Pokemon) => pokemon.name[language];
 	const form = (pokemon: Pokemon) => pokemon.form?.[language] || '';
 	const note = (pokemon: Pokemon) => pokemon.notes?.[language] || '';
+
+	const randomSubtitle = (tier: Tier) =>
+		tier.subtitles[Math.floor(Math.random() * tier.subtitles.length)];
 </script>
 
 <div class="top-bar">
@@ -46,6 +49,7 @@
 {#each sortedList as tier}
 	<div class="tier">
 		<h2 id={tier.name}>{tier.name}</h2>
+		<p class="tier-subtitle">{randomSubtitle(tier)}</p>
 		<div>
 			{#each tier.pokemon as pokemon}
 				<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
@@ -116,6 +120,17 @@
 		h2 {
 			text-align: center;
 			font-size: 3rem;
+			margin-bottom: 0;
+		}
+		.tier-subtitle {
+			margin-top: 0;
+			max-width: 70rem;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
+			font-size: 1.7rem;
+			color: #555;
+			overflow: hidden;
 		}
 	}
 	.pokemon {

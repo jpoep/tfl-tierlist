@@ -2,6 +2,13 @@
     "tiers": [
         {
             "name": "S",
+            "subtitles": [
+                "Die dicken Bimmser",
+                "Geile Pokemon und Necrozma",
+                "nice.",
+                "Hier ist es kernig",
+                "👌👀👌👀👌👀👌👀👌👀 good shit go౦ԁ sHit👌 thats ✔ some good👌👌shit right👌👌there👌👌👌 right✔there ✔✔if i do ƽaү so my self 💯 i say so 💯 thats what im talking about right there right there (chorus: ʳᶦᵍʰᵗ ᵗʰᵉʳᵉ) mMMMMᎷМ💯 👌👌 👌НO0ОଠOOOOOОଠଠOoooᵒᵒᵒᵒᵒᵒᵒᵒᵒ👌 👌👌 👌 💯 👌 👀 👀 👀 👌👌Good shit"
+            ],  
             "rank": 1,
             "pokemon": [
                 "azumarill",
@@ -48,6 +55,12 @@
         },
         {
             "name": "A",
+            "subtitles": [
+                "Auch noch ganz okay I guess",
+                "Erschwingliches Pex gefällig?",
+                "Ganz schön Wetter heute",
+                "Gute Pokemon und Snorlax"
+            ],
             "rank": 2,
             "pokemon": [
                 "arcanine",
@@ -113,6 +126,10 @@
         },
         {
             "name": "B",
+            "subtitles": [
+                "„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“",
+                "Gute Pokemon und Cofagrigus"
+            ],
             "rank": 3,
             "pokemon": [
                 "marowak-alola",
@@ -208,6 +225,10 @@
         },
         {
             "name": "C",
+            "subtitles": [
+                "Nimmste günstig mit",
+                "Okaye Pokemon und Avalugg"
+            ],
             "rank": 4,
             "pokemon": [
                 "aerodactyl",
@@ -303,6 +324,11 @@
         {
             "name": "D",
             "rank": 5,
+            "subtitles": [
+                "Immer noch besser als Warsteiner",
+                "Ja! Pizza Salami 3x350g",
+                "Avalaugg, we miss you"
+            ],
             "notes": {
                 "dugtrio": {
                     "de": "Ohne Auswegslos",
