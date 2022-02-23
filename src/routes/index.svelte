@@ -49,7 +49,7 @@
 		<div>
 			{#each tier.pokemon as pokemon}
 				<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
-					<img src={pokemon.imageUrl} alt="pokemon.name.en" />
+					<img src={pokemon.imageUrl} alt={name(pokemon)} />
 					{#if pokemon.notes}
 						<div
 							class="pokemon-note"
@@ -111,8 +111,6 @@
 		& > div {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-			// grid-template-rows: repeat(auto-fit, minmax(0px, 1fr));
-			// grid-auto-rows: max-content;
 			gap: 0.5rem;
 		}
 		h2 {
@@ -155,7 +153,6 @@
 			box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
 				rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
 				rgba(0, 0, 0, 0.09) 0px -3px 5px;
-			// box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
 			&:after {
 				content: '!';
