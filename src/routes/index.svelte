@@ -5,12 +5,20 @@
 		DE = 'de',
 		EN = 'en'
 	}
+
+	interface PokemonWithState extends Pokemon {
+		noteActive: boolean;
+	}
+
+	interface TierWithState extends Tier {
+		pokemon: PokemonWithState[];
+	}
 </script>
 
 <script lang="ts">
 	import PokemonType from '$lib/pokemon-type.svelte';
 
-	export let tierlist: Tier[];
+	export let tierlist: TierWithState[];
 
 	let language = Language.DE;
 
@@ -27,6 +35,7 @@
 
 	const name = (pokemon: Pokemon) => pokemon.name[language];
 	const form = (pokemon: Pokemon) => pokemon.form?.[language] || '';
+	const note = (pokemon: Pokemon) => pokemon.notes?.[language] || '';
 </script>
 
 <div class="top-bar">
@@ -41,6 +50,20 @@
 			{#each tier.pokemon as pokemon}
 				<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
 					<img src={pokemon.imageUrl} alt="pokemon.name.en" />
+					{#if pokemon.notes}
+						<div
+							class="pokemon-note"
+							on:click={(event) => {
+								pokemon.noteActive = !pokemon.noteActive;
+								event.preventDefault();
+							}}
+						/>
+						{#if pokemon.noteActive}
+							<div class="modal">
+								{note(pokemon)}
+							</div>
+						{/if}
+					{/if}
 					<div class="pokemon-name">
 						{name(pokemon)}
 					</div>
@@ -98,6 +121,8 @@
 		}
 	}
 	.pokemon {
+		position: relative;
+
 		img {
 			justify-self: center;
 		}
@@ -109,7 +134,53 @@
 
 		display: flex;
 		flex-direction: column;
-		// justify-content: space-around;
+
+		.pokemon-note {
+			position: absolute;
+			right: 1rem;
+			top: 1rem;
+			font-size: x-large;
+			font-weight: 700;
+			background-color: #bf616a;
+			border: 1px solid white;
+			border-radius: 50%;
+			color: white;
+			width: 2.5rem;
+			height: 2.5rem;
+			text-align: center;
+			vertical-align: middle;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+				rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+				rgba(0, 0, 0, 0.09) 0px -3px 5px;
+			// box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+			&:after {
+				content: '!';
+			}
+
+			&:hover {
+				background-color: rgb(212, 106, 116);
+			}
+		}
+
+		.modal {
+			position: absolute;
+			left: 1rem;
+			right: 1rem;
+			top: 5rem;
+			background: #bf616a;
+			border: 1px solid white;
+			color: white;
+			padding: 2rem;
+			border-radius: 5px;
+			text-align: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
 		.pokemon-form {
 			font-size: smaller;

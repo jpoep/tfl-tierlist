@@ -5,11 +5,17 @@
             "rank": "1",
             "pokemon": [
                 "tornadus-therian",
-                "salamence",
+                "cinderace",
                 "landorus-therian",
                 "dragonite",
                 "aegislash-shield"
-            ]
+            ],
+            "notes": {
+                "cinderace": {
+                    "de": "Ohne Libero",
+                    "en": "Libero is banned"
+                }
+            }
         },
         {
             "name": "A",

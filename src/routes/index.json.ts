@@ -21,6 +21,12 @@ export type Pokemon = {
 				de: string;
 		  }
 		| undefined;
+	notes:
+		| {
+				en: string;
+				de: string;
+		  }
+		| undefined;
 	id: string;
 	typing: string[];
 	imageUrl: string;
@@ -96,7 +102,12 @@ export const get: RequestHandler = async () => {
 			return {
 				name: element.name,
 				rank: element.rank,
-				pokemon: await Promise.all(element.pokemon.map(async (it) => await fetchPokemon(it)))
+				pokemon: (await Promise.all(element.pokemon.map(async (it) => await fetchPokemon(it)))).map(
+					(it) => ({
+						...it,
+						notes: element.notes?.[it.id]
+					})
+				)
 			};
 		})
 	);
