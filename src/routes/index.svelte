@@ -147,6 +147,7 @@ import { onMount } from 'svelte';
 
 		img {
 			justify-self: center;
+			image-rendering: pixelated;
 		}
 
 		text-align: center;
