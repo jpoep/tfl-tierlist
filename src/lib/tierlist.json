@@ -2,7 +2,7 @@
     "tiers": [
         {
             "name": "S",
-            "rank": "1",
+            "rank": 1,
             "pokemon": [
                 "azumarill",
                 "tornadus-therian",
@@ -38,11 +38,17 @@
                 "urshifu-rapid-strike",
                 "zapdos",
                 "zeraora"
-            ]
+            ],
+            "notes": {
+                "cinderace": {
+                    "de": "Ohne Libero",
+                    "en": "Libero is banned"
+                }
+            }
         },
         {
             "name": "A",
-            "rank": "2",
+            "rank": 2,
             "pokemon": [
                 "arcanine",
                 "toxapex",
@@ -97,7 +103,108 @@
                 "lycanroc-dusk",
                 "zarude",
                 "reuniclus"
-            ]
+            ],
+            "notes": {
+                "landorus-incarnate": {
+                    "de": "Ohne Rohe Gewalt",
+                    "en": "Sheer Force is banned"
+                }
+            }
+        },
+        {
+            "name": "B",
+            "rank": 3,
+            "pokemon": [
+                "marowak-alola",
+                "ninetales-alola",
+                "salazzle",
+                "silvally",
+                "jellicent",
+                "vaporeon",
+                "cloyster",
+                "ribombee",
+                "seismitoad",
+                "gigalith",
+                "bronzong",
+                "bisharp",
+                "celebi",
+                "chansey",
+                "klefki",
+                "cresselia",
+                "vikavolt",
+                "cofagrigus",
+                "entei",
+                "durant",
+                "darmanitan-standard",
+                "tsareena",
+                "incineroar",
+                "slowbro-galar",
+                "weezing-galar",
+                "gyarados",
+                "gastrodon",
+                "gardevoir",
+                "blissey",
+                "crobat",
+                "inteleon",
+                "bewear",
+                "crawdaunt",
+                "sirfetchd",
+                "moltres",
+                "flygon",
+                "blaziken",
+                "lucario",
+                "magnezone",
+                "mantine",
+                "metagross",
+                "milotic",
+                "mimikyu-disguised",
+                "tyrantrum",
+                "polteageist",
+                "stakataka",
+                "umbreon",
+                "grimmsnarl",
+                "porygon-z",
+                "politoed",
+                "torkoal",
+                "krookodile",
+                "regidrago",
+                "regieleki",
+                "rhyperior",
+                "roserade",
+                "rotom-mow",
+                "kingdra",
+                "indeedee-male",
+                "indeedee-female",
+                "hatterene",
+                "heracross",
+                "chandelure",
+                "dragalge",
+                "sharpedo",
+                "blastoise",
+                "noivern",
+                "goodra",
+                "xurkitree",
+                "galvantula",
+                "ninetales",
+                "braviary",
+                "mienshao",
+                "zoroark",
+                "zygarde-10"
+            ],
+            "notes": {
+                "blaziken": {
+                    "de": "Ohne Temposchub",
+                    "en": "Speedboost is banned"
+                },
+                "silvally": {
+                    "de": "1x mit Disc, 1x ohne",
+                    "en": "1x with disc, 1x without"
+                },
+                "zygarde-10": {
+                    "de": "Ohne Scharwandel",
+                    "en": "Power Construct is banned"
+                }
+            }
         }
     ]
 }
