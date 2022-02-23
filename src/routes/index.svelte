@@ -12,15 +12,24 @@
 
 	interface TierWithState extends Tier {
 		pokemon: PokemonWithState[];
+		activeSubtitle: number;
 	}
 </script>
 
 <script lang="ts">
 	import PokemonType from '$lib/pokemon-type.svelte';
+import { onMount } from 'svelte';
 
 	export let tierlist: TierWithState[];
 
 	let language = Language.EN;
+	
+	onMount(() => {
+		tierlist = tierlist.map(it => ({
+			...it,
+			activeSubtitle: Math.floor(Math.random() * it.subtitles.length)
+		}));		
+	});
 
 	$: sortedList = tierlist.map((it) => ({
 		...it,
@@ -37,8 +46,8 @@
 	const form = (pokemon: Pokemon) => pokemon.form?.[language] || '';
 	const note = (pokemon: Pokemon) => pokemon.notes?.[language] || '';
 
-	const randomSubtitle = (tier: Tier) =>
-		tier.subtitles[Math.floor(Math.random() * tier.subtitles.length)];
+	const subtitle = (tier: TierWithState) =>
+		tier.subtitles[tier.activeSubtitle];
 </script>
 
 <div class="top-bar">
@@ -49,7 +58,7 @@
 {#each sortedList as tier}
 	<div class="tier">
 		<h2 id={tier.name}>{tier.name}</h2>
-		<p class="tier-subtitle">{randomSubtitle(tier)}</p>
+		<p class="tier-subtitle">{subtitle(tier)}</p>
 		<div>
 			{#each tier.pokemon as pokemon}
 				<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
