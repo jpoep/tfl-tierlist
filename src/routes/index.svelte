@@ -18,17 +18,18 @@
 
 <script lang="ts">
 	import PokemonType from '$lib/pokemon-type.svelte';
-import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
+	import { fly } from 'svelte/transition';
 
 	export let tierlist: TierWithState[];
 
 	let language = Language.EN;
-	
+
 	onMount(() => {
-		tierlist = tierlist.map(it => ({
+		tierlist = tierlist.map((it) => ({
 			...it,
 			activeSubtitle: Math.floor(Math.random() * it.subtitles.length)
-		}));		
+		}));
 	});
 
 	$: sortedList = tierlist.map((it) => ({
@@ -46,8 +47,7 @@ import { onMount } from 'svelte';
 	const form = (pokemon: Pokemon) => pokemon.form?.[language] || '';
 	const note = (pokemon: Pokemon) => pokemon.notes?.[language] || '';
 
-	const subtitle = (tier: TierWithState) =>
-		tier.subtitles[tier.activeSubtitle]  || '';
+	const subtitle = (tier: TierWithState) => tier.subtitles[tier.activeSubtitle] || '';
 </script>
 
 <div class="top-bar">
@@ -63,19 +63,27 @@ import { onMount } from 'svelte';
 			{#each tier.pokemon as pokemon}
 				<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
 					<img src={pokemon.imageUrl} alt={name(pokemon)} />
-					{#if pokemon.notes}
+					{#if pokemon.notes && !pokemon.noteActive}
 						<div
 							class="pokemon-note"
+							transition:fly={{ y: -10, duration: 300 }}
 							on:click={(event) => {
 								pokemon.noteActive = !pokemon.noteActive;
 								event.preventDefault();
 							}}
 						/>
-						{#if pokemon.noteActive}
-							<div class="modal">
-								{note(pokemon)}
-							</div>
-						{/if}
+					{/if}
+					{#if pokemon.noteActive}
+						<div
+							class="modal"
+							on:click={(event) => {
+								pokemon.noteActive = !pokemon.noteActive;
+								event.preventDefault();
+							}}
+							transition:fly={{ y: 180, duration: 300 }}
+						>
+							{note(pokemon)}
+						</div>
 					{/if}
 					<div class="pokemon-name">
 						{name(pokemon)}
