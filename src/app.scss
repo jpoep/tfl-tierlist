@@ -99,8 +99,10 @@ body {
 }
 
 button {
+	font-family: 'Titillium Web', sans-serif; // Font is not inherited from body
 	background-color: transparent;
 	color: var(--font-color);
+	transition: color 1s ease;
 	border: none;
 	cursor: pointer;
 }
