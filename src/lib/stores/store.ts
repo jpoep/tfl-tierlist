@@ -28,11 +28,15 @@ export const toggleLanguage = () => {
 // theme
 type Theme = 'dark' | 'light';
 
-let storedTheme: Theme = 'light';
+let storedTheme: Theme;
 if (browser) {
-	storedTheme = localStorage.getItem('theme') as Theme;
+	storedTheme =
+		(localStorage.getItem('theme') as Theme) ||
+		window.matchMedia('(prefers-color-scheme: dark)').matches
+			? 'dark'
+			: 'light';
 }
-export const theme = writable(storedTheme || 'light');
+export const theme = writable(storedTheme);
 export const darkMode = writableDerived(
 	theme,
 	(theme: Theme) => theme === 'dark',

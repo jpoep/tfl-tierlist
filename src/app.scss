@@ -1,3 +1,23 @@
+@mixin dark-theme {
+	--bg-color: var(--dark-bg);
+	--bg-color-raised: var(--dark-bg-raised);
+	--bg-color-highlighted: var(--dark-bg-highlighted);
+	--font-color: var(--dark-fg);
+	--font-color-lightened: var(--dark-fg-lightened);
+}
+
+@mixin light-theme {
+	--bg-color: var(--light-bg);
+	--bg-color-raised: var(--light-bg-raised);
+	--bg-color-highlighted: var(--light-bg-highlighted);
+	--font-color: var(--light-fg);
+	--font-color-lightened: var(--light-fg-lightened);
+
+	.pokemon {
+		// Can't put it in the actual component for whatever reason. Sadge.
+		box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+	}
+}
 :root {
 	--dark-bg: var(--nord0);
 	--dark-bg-raised: var(--nord1);
@@ -48,97 +68,20 @@
 	--steel: #b8b7ce;
 	--fairy: #d686ad;
 
-	.ice {
-		background-color: var(--ice);
+	&[data-theme='dark'] {
+		@include dark-theme();
 	}
 
-	.poison {
-		background-color: var(--poison);
+	&[data-theme='light'] {
+		@include light-theme();
 	}
 
-	.ground {
-		background-color: var(--ground);
+	@media (prefers-color-scheme: dark) {
+		@include dark-theme();
 	}
 
-	.flying {
-		background-color: var(--flying);
-	}
-
-	.psychic {
-		background-color: var(--psychic);
-	}
-
-	.bug {
-		background-color: var(--bug);
-	}
-
-	.rock {
-		background-color: var(--rock);
-	}
-
-	.ghost {
-		background-color: var(--ghost);
-	}
-
-	.dragon {
-		background-color: var(--dragon);
-	}
-
-	.dark {
-		background-color: var(--dark);
-	}
-
-	.steel {
-		background-color: var(--steel);
-	}
-
-	.fairy {
-		background-color: var(--fairy);
-	}
-
-	.fighting {
-		background-color: var(--fighting);
-	}
-
-	.grass {
-		background-color: var(--grass);
-	}
-
-	.electric {
-		background-color: var(--electric);
-	}
-
-	.water {
-		background-color: var(--water);
-	}
-
-	.fire {
-		background-color: var(--fire);
-	}
-
-	.normal {
-		background-color: var(--normal);
-	}
-}
-
-[data-theme='dark'] {
-	--bg-color: var(--dark-bg);
-	--bg-color-raised: var(--dark-bg-raised);
-	--bg-color-highlighted: var(--dark-bg-highlighted);
-	--font-color: var(--dark-fg);
-	--font-color-lightened: var(--dark-fg-lightened);
-}
-
-[data-theme='light'] {
-	--bg-color: var(--light-bg);
-	--bg-color-raised: var(--light-bg-raised);
-	--bg-color-highlighted: var(--light-bg-highlighted);
-	--font-color: var(--light-fg);
-	--font-color-lightened: var(--light-fg-lightened);
-
-	.pokemon {
-		// Can't put it in the actual component for whatever reason. Sadge.
-		box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+	@media (prefers-color-scheme: light) {
+		@include light-theme();
 	}
 }
 
@@ -160,4 +103,76 @@ button {
 	color: var(--font-color);
 	border: none;
 	cursor: pointer;
+}
+
+.ice {
+	background-color: var(--ice);
+}
+
+.poison {
+	background-color: var(--poison);
+}
+
+.ground {
+	background-color: var(--ground);
+}
+
+.flying {
+	background-color: var(--flying);
+}
+
+.psychic {
+	background-color: var(--psychic);
+}
+
+.bug {
+	background-color: var(--bug);
+}
+
+.rock {
+	background-color: var(--rock);
+}
+
+.ghost {
+	background-color: var(--ghost);
+}
+
+.dragon {
+	background-color: var(--dragon);
+}
+
+.dark {
+	background-color: var(--dark);
+}
+
+.steel {
+	background-color: var(--steel);
+}
+
+.fairy {
+	background-color: var(--fairy);
+}
+
+.fighting {
+	background-color: var(--fighting);
+}
+
+.grass {
+	background-color: var(--grass);
+}
+
+.electric {
+	background-color: var(--electric);
+}
+
+.water {
+	background-color: var(--water);
+}
+
+.fire {
+	background-color: var(--fire);
+}
+
+.normal {
+	background-color: var(--normal);
 }
