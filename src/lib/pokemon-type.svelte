@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { Language } from '../routes/index.svelte';
+	import { language } from '$lib/stores/store';
 
 	export let type1: string;
 	export let type2: string | null = null;
-	export let language: Language = Language.DE;
 
 	const types = {
 		normal: {
@@ -82,9 +81,9 @@
 </script>
 
 <div>
-	<span class={type1}>{types[type1][language.toLowerCase()]}</span>
+	<span class={type1}>{types[type1][$language]}</span>
 	{#if type2}
-		<span class={type2}>{types[type2][language.toLowerCase()]}</span>
+		<span class={type2}>{types[type2][$language]}</span>
 	{/if}
 </div>
 

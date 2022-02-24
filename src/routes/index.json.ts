@@ -8,10 +8,10 @@ export type Tier = {
 	name: string;
 	rank: number;
 	subtitles: string[] | undefined;
-	pokemon: Pokemon[];
+	pokemon: PokemonType[];
 };
 
-export type Pokemon = {
+export type PokemonType = {
 	name: {
 		en: string;
 		de: string;
@@ -77,7 +77,7 @@ export const get: RequestHandler = async () => {
 		};
 	};
 
-	const fetchPokemon: { (pokemonName: string): Promise<Pokemon> } = async (pokemonName: string) => {
+	const fetchPokemon: { (pokemonName: string): Promise<PokemonType> } = async (pokemonName: string) => {
 		console.info(`Fetching data for ${pokemonName}`);
 		const response = await fetch(`${pokeApi}/${pokemonName}`).catch((error) =>
 			Promise.reject(error.message)
@@ -101,7 +101,7 @@ export const get: RequestHandler = async () => {
 			form,
 			id: pokemonName,
 			pokemonDbUrl: `https://pokemondb.net/pokedex/${species}`
-		} as Pokemon;
+		} as PokemonType;
 
 		console.info(`Names for ${pokemonName} fetched.`);
 		return returnValue;
