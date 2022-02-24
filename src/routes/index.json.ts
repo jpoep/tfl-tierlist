@@ -77,7 +77,9 @@ export const get: RequestHandler = async () => {
 		};
 	};
 
-	const fetchPokemon: { (pokemonName: string): Promise<PokemonType> } = async (pokemonName: string) => {
+	const fetchPokemon: { (pokemonName: string): Promise<PokemonType> } = async (
+		pokemonName: string
+	) => {
 		console.info(`Fetching data for ${pokemonName}`);
 		const response = await fetch(`${pokeApi}/${pokemonName}`).catch((error) =>
 			Promise.reject(error.message)
@@ -92,7 +94,7 @@ export const get: RequestHandler = async () => {
 		const [name, form] = await Promise.all([
 			getName(pokemon.species.url),
 			getForm(pokemon.forms[0].url)
-		]).catch(() => (["???", '']));
+		]).catch(() => ['???', '']);
 
 		const returnValue = {
 			typing: pokemon.types.map((it) => it.type.name),

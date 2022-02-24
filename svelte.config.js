@@ -11,7 +11,7 @@ const config = {
 
 	kit: {
 		paths: {
-			base: dev ? '' : '/tfl-tierlist',
+			base: dev ? '' : '/tfl-tierlist'
 		},
 		adapter: adapter()
 	}

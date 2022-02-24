@@ -1,4 +1,5 @@
 <script lang="ts">
+	import DarkModeButton from '$lib/dark-mode-button.svelte';
 	import { language, toggleLanguage } from '$lib/stores/store';
 	import TierComponent from '$lib/tier.svelte';
 	import type { Tier } from './index.json';
@@ -14,6 +15,7 @@
 </script>
 
 <div class="top-bar">
+	<DarkModeButton />
 	<button on:click={toggleLanguage}>{$language.toUpperCase()}</button>
 </div>
 
@@ -24,18 +26,18 @@
 
 <style lang="scss">
 	button {
-		border: none;
 		text-align: center;
-		padding: 15px 32px;
 		font-size: 2rem;
-		background-color: white;
-		color: #444;
-		cursor: pointer;
 	}
 	.top-bar {
 		width: 100%;
 		display: flex;
 		justify-content: flex-end;
+		height: 5rem;
+
+		> * {
+			margin: 0 1rem;
+		}
 	}
 
 	h1 {

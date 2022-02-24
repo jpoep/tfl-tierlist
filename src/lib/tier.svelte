@@ -23,7 +23,7 @@
 
 <div class="tier">
 	<h2 id={tier.name}>{tier.name}</h2>
-	<p class="tier-subtitle">{subtitle(_tier)}</p>
+	<p class="tier-subtitle secondary">{subtitle(_tier)}</p>
 	<div>
 		<!-- Only animate the first tier for performance reasons -->
 		<!-- It's not really pretty to define the each block twice but has to be done due to restrictions from Svelte's animate-->
@@ -61,13 +61,12 @@
 			margin-right: auto;
 			text-align: center;
 			font-size: 1.7rem;
-			color: #555;
 			overflow: hidden;
 		}
 
 		.pokemon-animation-wrapper {
-            display: flex;
-            flex-direction: column;
+			display: flex;
+			flex-direction: column;
 		}
 	}
 </style>

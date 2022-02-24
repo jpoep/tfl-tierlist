@@ -3,10 +3,9 @@ import { language } from '$lib/stores/store';
 import { get } from 'svelte/store';
 
 export class Pokemon {
-
-    constructor(pokemon: PokemonType) {
-        Object.assign(this, pokemon); 
-    }
+	constructor(pokemon: PokemonType) {
+		Object.assign(this, pokemon);
+	}
 
 	name: { en: string; de: string };
 	form: { en: string; de: string } | undefined;
@@ -19,13 +18,12 @@ export class Pokemon {
 	get localName(): string {
 		return this.name[get(language)];
 	}
-    
-    get localForm(): string | undefined {
-        return this.form?.[get(language)];
-    }
-    
-    get localNotes(): string | undefined {
-        return this.notes?.[get(language)];
-    }
-    
+
+	get localForm(): string | undefined {
+		return this.form?.[get(language)];
+	}
+
+	get localNotes(): string | undefined {
+		return this.notes?.[get(language)];
+	}
 }

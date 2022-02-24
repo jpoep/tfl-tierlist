@@ -31,7 +31,7 @@
 	<div class="pokemon-name">
 		{_pokemon.localName}
 	</div>
-	<div class="pokemon-form">
+	<div class="pokemon-form secondary">
 		{_pokemon.localForm || ''}
 	</div>
 	<div class="pokemon-typing">
@@ -46,22 +46,25 @@
 		display: block;
 
 		&:hover {
-			background-color: #eee;
+			background-color: var(--bg-color-highlighted);
 		}
 	}
+
 	.pokemon {
 		position: relative;
-        height: 100%;
+		height: 100%;
 
 		img {
 			justify-self: center;
 			image-rendering: pixelated;
 		}
 
+		// box-shadow: rgba(99, 99, 99, .3) 0px 2px 8px 0px;
+		background-color: var(--bg-color-raised);
 		text-align: center;
 		font-size: large;
 		padding: 1rem;
-		box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+		border-radius: 2px;
 
 		display: flex;
 		flex-direction: column;
@@ -115,7 +118,6 @@
 
 		.pokemon-form {
 			font-size: smaller;
-			color: #666;
 			margin-bottom: 0.5rem;
 		}
 		.pokemon-typing {

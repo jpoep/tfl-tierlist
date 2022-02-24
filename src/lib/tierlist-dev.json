@@ -1,65 +1,60 @@
 {
-    "tiers": [
-        {
-            "name": "S",
-            "subtitles": [
-                "Die dicken Bimmser",
-                "Geile Pokemon und Necrozma",
-                "nice.",
-                "Hier ist es kernig",
-                "👌👀👌👀✔ some good👌👌shit right mMMMMᎷМ 💯 there💦💦"
-            ],
-            "rank": 1,
-            "pokemon": [
-                "azumarill",
-                "tornadus-therian",
-                "salamence",
-                "landorus-therian",
-                "dragonite",
-                "aegislash-shield",
-                "zapdos-galar",
-                "rillaboom",
-                "heatran",
-                "jirachi",
-                "celesteela",
-                "tapu-koko",
-                "kartana",
-                "dragapult",
-                "garchomp",
-                "corviknight",
-                "latias",
-                "latios",
-                "cinderace",
-                "mamoswine",
-                "necrozma",
-                "clefable",
-                "volcarona",
-                "weavile",
-                "excadrill",
-                "ferrothorn",
-                "terrakion",
-                "hydreigon",
-                "victini",
-                "thundurus-incarnate",
-                "thundurus-therian"
-            ],
-            "notes": {
-                "cinderace": {
-                    "de": "Ohne Libero",
-                    "en": "Libero is banned"
-                }
-            }
-        },
-        {
-            "name": "A",
-            "subtitles": [
-                "„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"
-            ],
-            "rank": 2,
-            "pokemon": [
-                "arcanine",
-                "tornadus-incarnate"
-            ]
-        }
-    ]
+	"tiers": [
+		{
+			"name": "S",
+			"subtitles": [
+				"Die dicken Bimmser",
+				"Geile Pokemon und Necrozma",
+				"nice.",
+				"Hier ist es kernig",
+				"👌👀👌👀✔ some good👌👌shit right mMMMMᎷМ 💯 there💦💦"
+			],
+			"rank": 1,
+			"pokemon": [
+				"azumarill",
+				"tornadus-therian",
+				"salamence",
+				"landorus-therian",
+				"dragonite",
+				"aegislash-shield",
+				"zapdos-galar",
+				"rillaboom",
+				"heatran",
+				"jirachi",
+				"celesteela",
+				"tapu-koko",
+				"kartana",
+				"dragapult",
+				"garchomp",
+				"corviknight",
+				"latias",
+				"latios",
+				"cinderace",
+				"mamoswine",
+				"necrozma",
+				"clefable",
+				"volcarona",
+				"weavile",
+				"excadrill",
+				"ferrothorn",
+				"terrakion",
+				"hydreigon",
+				"victini",
+				"thundurus-incarnate",
+				"thundurus-therian"
+			],
+			"notes": {
+				"cinderace": {
+					"de": "Ohne Libero",
+					"en": "Libero is banned"
+				}
+			}
+		},
+		{
+			"name": "A",
+			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"],
+			"rank": 2,
+			"pokemon": ["arcanine", "tornadus-incarnate"]
+		}
+	]
 }
