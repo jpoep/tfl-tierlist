@@ -92,7 +92,7 @@ export const get: RequestHandler = async () => {
 		const [name, form] = await Promise.all([
 			getName(pokemon.species.url),
 			getForm(pokemon.forms[0].url)
-		]);
+		]).catch(() => (["???", '']));
 
 		const returnValue = {
 			typing: pokemon.types.map((it) => it.type.name),
@@ -114,7 +114,7 @@ export const get: RequestHandler = async () => {
 			console.info(`Fetching Pokemon for ${element.name} tier`);
 			return {
 				name: element.name,
-				rank: element.rank,
+				rank: element.rank as number,
 				subtitles: element.subtitles,
 				pokemon: (await Promise.all(element.pokemon.map(async (it) => await fetchPokemon(it)))).map(
 					(it) => ({

@@ -20,6 +20,7 @@
 	import PokemonType from '$lib/pokemon-type.svelte';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import { flip, type FlipParams } from 'svelte/animate';
 
 	export let tierlist: TierWithState[];
 
@@ -40,7 +41,7 @@
 	}));
 
 	const toggleLanguage = () => {
-		language = language == Language.DE ? Language.EN : Language.DE;
+		language = language === Language.DE ? Language.EN : Language.DE;
 	};
 
 	const name = (pokemon: Pokemon) => pokemon.name[language];
@@ -48,6 +49,17 @@
 	const note = (pokemon: Pokemon) => pokemon.notes?.[language] || '';
 
 	const subtitle = (tier: TierWithState) => tier.subtitles[tier.activeSubtitle] || '';
+
+	const conditionalFlip = (
+		node: Element,
+		{ from, to }: { from: DOMRect; to: DOMRect },
+		options: FlipParams & { when: boolean }
+	) => {
+		if (options.when) {
+			return flip(node, { from, to }, options);
+		}
+		return {};
+	};
 </script>
 
 <div class="top-bar">
@@ -60,8 +72,13 @@
 		<h2 id={tier.name}>{tier.name}</h2>
 		<p class="tier-subtitle">{subtitle(tier)}</p>
 		<div>
-			{#each tier.pokemon as pokemon}
-				<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
+			{#each tier.pokemon as pokemon (pokemon.id)}
+				<a
+					animate:conditionalFlip={{ when: tier.rank === 1, duration: 1000 }}
+					class="pokemon"
+					href={pokemon.pokemonDbUrl}
+					target="_blank"
+				>
 					<img src={pokemon.imageUrl} alt={name(pokemon)} />
 					{#if pokemon.notes && !pokemon.noteActive}
 						<div
