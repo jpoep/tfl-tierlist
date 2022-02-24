@@ -69,13 +69,6 @@
   dependencies:
     "@iconify/types" "^1.0.12"
 
-"@iconify/icons-ic@^1.2.2":
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/@iconify/icons-ic/-/icons-ic-1.2.2.tgz#6319c2d38ffb2884c2d869447faba1e0c60dc411"
-  integrity sha512-7T0i68XWlaXmI5DNSKnHEUNlng2+S0nv+HvcJLcFEX/WIcp6bHRNGn6WLZT+RbmNOw1Q4+q9cyGJVqUR0a3ANg==
-  dependencies:
-    "@iconify/types" "^1.0.12"
-
 "@iconify/svelte@^2.1.2":
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/@iconify/svelte/-/svelte-2.1.2.tgz#f6dbc807ea470be47d884d311ada74d73077889c"
