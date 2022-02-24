@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import PokemonCard from './pokemon-card.svelte';
 	import { flip } from 'svelte/animate';
+	import { expoOut } from 'svelte/easing';
 
 	interface TierWithState extends Tier {
 		activeSubtitle: number;
@@ -30,7 +31,7 @@
 		<!-- See https://github.com/sveltejs/svelte/issues/7209 -->
 		{#if tier.rank === 1}
 			{#each tier.pokemon as pokemon (pokemon.id)}
-				<div class="pokemon-animation-wrapper" animate:flip={{ duration: 1000 }}>
+				<div class="pokemon-animation-wrapper" animate:flip={{ duration: 1000, easing: expoOut }}>
 					<PokemonCard {pokemon} />
 				</div>
 			{/each}

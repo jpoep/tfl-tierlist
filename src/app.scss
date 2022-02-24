@@ -94,6 +94,10 @@ body {
 	transition: background-color 1s ease;
 }
 
+* {
+	box-sizing: border-box;
+}
+
 .secondary {
 	color: var(--font-color-lightened);
 }

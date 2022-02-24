@@ -1,8 +1,9 @@
 <script lang="ts">
 	import DarkModeButton from '$lib/dark-mode-button.svelte';
-	import { language, toggleLanguage } from '$lib/stores/store';
 	import TierComponent from '$lib/tier.svelte';
+	import { language } from '$lib/stores/store';
 	import type { Tier } from './index.json';
+	import LanguageButton from '$lib/language-button.svelte';
 
 	export let tierlist: Tier[];
 
@@ -16,7 +17,7 @@
 
 <div class="top-bar">
 	<DarkModeButton />
-	<button on:click={toggleLanguage}>{$language.toUpperCase()}</button>
+	<LanguageButton />
 </div>
 
 <h1>Tierlist für TFL Season 3</h1>
@@ -25,19 +26,13 @@
 {/each}
 
 <style lang="scss">
-	button {
-		text-align: center;
-		font-size: 2rem;
-	}
-	.top-bar {
+	:global(.top-bar) {
 		width: 100%;
 		display: flex;
 		justify-content: flex-end;
 		height: 5rem;
-
-		> * {
-			margin: 0 1rem;
-		}
+		padding: 1rem;
+		gap: 0.5rem;
 	}
 
 	h1 {
