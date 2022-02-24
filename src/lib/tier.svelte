@@ -63,6 +63,7 @@
 		.pokemon-animation-wrapper {
 			display: flex;
 			flex-direction: column;
+			max-width: 230px;
 		}
 	}
 </style>

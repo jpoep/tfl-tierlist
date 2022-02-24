@@ -97,8 +97,8 @@
 	}
 	span {
 		display: block;
-		max-width: 8ch;
-		min-width: 7ch;
+		max-width: 9ch;
+		min-width: 9ch;
 		border-radius: 2px;
 		color: white;
 		padding: 0.2rem 0.5rem;
@@ -106,5 +106,6 @@
 		font-size: small;
 		font-weight: 700;
 		text-transform: uppercase;
+		flex-grow: 1;
 	}
 </style>
