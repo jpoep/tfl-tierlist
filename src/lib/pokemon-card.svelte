@@ -76,10 +76,10 @@
 			top: 1rem;
 			font-size: x-large;
 			font-weight: 700;
-			background-color: #bf616a;
-			border: 1px solid white;
+			background-color: var(--warning);
+			border: 1px solid var(--dark-fg);
 			border-radius: 50%;
-			color: white;
+			color: var(--dark-fg);
 			width: 2.5rem;
 			height: 2.5rem;
 			text-align: center;
@@ -94,10 +94,6 @@
 			&:after {
 				content: '!';
 			}
-
-			&:hover {
-				background-color: rgb(212, 106, 116);
-			}
 		}
 
 		.modal {
@@ -105,9 +101,9 @@
 			left: 1rem;
 			right: 1rem;
 			top: 5rem;
-			background: #bf616a;
-			border: 1px solid white;
-			color: white;
+			background: var(--warning);
+			border: 1px solid var(--dark-fg);
+			color: var(--dark-fg);
 			padding: 2rem;
 			border-radius: 5px;
 			text-align: center;
