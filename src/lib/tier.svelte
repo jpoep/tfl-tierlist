@@ -36,11 +36,11 @@
 			{/each}
 		{:else}
 			<!-- wrapper needed here too because I suck at CSS -->
-			<div class="pokemon-animation-wrapper">
-				{#each tier.pokemon as pokemon (pokemon.id)}
+			{#each tier.pokemon as pokemon (pokemon.id)}
+				<div class="pokemon-animation-wrapper">
 					<PokemonCard {pokemon} />
-				{/each}
-			</div>
+				</div>
+			{/each}
 		{/if}
 	</div>
 </div>
