@@ -5,26 +5,18 @@
 	import { flip } from 'svelte/animate';
 	import { expoOut } from 'svelte/easing';
 
-	interface TierWithState extends Tier {
-		activeSubtitle: number;
-	}
-
 	export let tier: Tier;
 
-	$: _tier = tier as TierWithState;
-	const subtitle = (tier: TierWithState) => tier.subtitles[tier.activeSubtitle] || '';
+	const activeSubtitle: number = Math.floor(Math.random() * tier.subtitles.length);
 
-	onMount(() => {
-		_tier = {
-			..._tier,
-			activeSubtitle: Math.floor(Math.random() * _tier.subtitles.length)
-		};
-	});
+	const subtitle = (tier: Tier) => tier.subtitles[activeSubtitle] || '';
+
+	onMount(() => {});
 </script>
 
 <div class="tier">
 	<h2 id={tier.name}>{tier.name}</h2>
-	<p class="tier-subtitle secondary">{subtitle(_tier)}</p>
+	<p class="tier-subtitle secondary">{subtitle(tier)}</p>
 	<div>
 		<!-- Only animate the first tier for performance reasons -->
 		<!-- It's not really pretty to define the each block twice but has to be done due to restrictions from Svelte's animate-->
