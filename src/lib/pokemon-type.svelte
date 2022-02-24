@@ -1,10 +1,5 @@
-<script lang="ts">
-	import { language } from '$lib/stores/store';
-
-	export let type1: string;
-	export let type2: string | null = null;
-
-	const types = {
+<script lang="ts" context="module">
+	export const types = {
 		normal: {
 			de: 'Normal',
 			en: 'Normal'
@@ -78,6 +73,13 @@
 			en: 'Fairy'
 		}
 	};
+</script>
+
+<script lang="ts">
+	import { language } from '$lib/stores/store';
+
+	export let type1: string;
+	export let type2: string | null = null;
 </script>
 
 <div>

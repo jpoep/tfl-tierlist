@@ -2,10 +2,25 @@
 	import DarkModeButton from '$lib/dark-mode-button.svelte';
 	import TierComponent from '$lib/tier.svelte';
 	import { language } from '$lib/stores/store';
-	import type { Tier } from './index.json';
+	import type { PokemonType, Tier } from './index.json';
 	import LanguageButton from '$lib/language-button.svelte';
+	import { types } from '$lib/pokemon-type.svelte';
 
 	export let tierlist: Tier[];
+
+	let filter: string = '';
+
+	const contains = (pokemon: PokemonType, term: string) =>
+		[
+			pokemon.form?.de,
+			pokemon.form?.en,
+			pokemon.name.de,
+			pokemon.name.en,
+			types[pokemon.typing[0]]?.de,
+			types[pokemon.typing[0]]?.en,
+			types[pokemon.typing?.[1]]?.de,
+			types[pokemon.typing?.[1]]?.en,
+		].some((it: string) => it?.toLowerCase().includes(term));
 
 	$: sortedList = tierlist.map((it) => ({
 		...it,
@@ -13,15 +28,21 @@
 			(a.name[$language] as string).localeCompare(b.name[$language])
 		)
 	}));
+
+	$: filteredList = sortedList.map((it) => ({
+		...it,
+		pokemon: it.pokemon.filter((pokemon) => contains(pokemon, filter))
+	}));
 </script>
 
 <div class="top-bar">
+	<input type="text" bind:value={filter} />
 	<DarkModeButton />
 	<LanguageButton />
 </div>
 
 <h1>Tierlist für TFL Season 3</h1>
-{#each sortedList as tier}
+{#each filteredList as tier}
 	<TierComponent {tier} />
 {/each}
 
