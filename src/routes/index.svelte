@@ -1,7 +1,7 @@
 <script lang="ts">
 	import DarkModeButton from '$lib/dark-mode-button.svelte';
 	import TierComponent from '$lib/tier.svelte';
-	import { language } from '$lib/stores/store';
+	import { Language, language } from '$lib/stores/store';
 	import type { PokemonType, Tier } from './index.json';
 	import LanguageButton from '$lib/language-button.svelte';
 	import { types } from '$lib/pokemon-type.svelte';
@@ -9,6 +9,7 @@
 	export let tierlist: Tier[];
 
 	let filter: string = '';
+	
 
 	const contains = (pokemon: PokemonType, term: string) =>
 		[
@@ -36,7 +37,8 @@
 </script>
 
 <div class="top-bar">
-	<input type="text" bind:value={filter} />
+	<input type="text" bind:value={filter} placeholder="Nach Pokémon oder Typen filtern"  />
+	<div class="spacer" />
 	<DarkModeButton />
 	<LanguageButton />
 </div>
@@ -50,10 +52,18 @@
 	:global(.top-bar) {
 		width: 100%;
 		display: flex;
-		justify-content: flex-end;
+		justify-content: space-between;
 		height: 5rem;
 		padding: 1rem;
 		gap: 0.5rem;
+		
+		input {
+			width: 30ch;
+		}
+		
+		.spacer {
+			flex-grow: 1;
+		}
 	}
 
 	h1 {
