@@ -80,7 +80,7 @@
 								pokemon.noteActive = !pokemon.noteActive;
 								event.preventDefault();
 							}}
-							transition:fly={{ y: 180, duration: 300 }}
+							transition:fly={{ y: 50, duration: 300 }}
 						>
 							{note(pokemon)}
 						</div>
