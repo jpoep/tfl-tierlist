@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	import baselineDarkMode from '@iconify-icons/ic/baseline-dark-mode';
-	import baselineLightMode from '@iconify-icons/ic/baseline-light-mode';
+	import baselineDarkMode from '@iconify-icons/ic/baseline-dark-mode.js';
+	import baselineLightMode from '@iconify-icons/ic/baseline-light-mode.js';
 	import { darkMode } from '$lib/stores/store';
 </script>
 
