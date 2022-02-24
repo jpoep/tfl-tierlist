@@ -21,7 +21,7 @@
 			types[pokemon.typing[0]]?.en,
 			types[pokemon.typing?.[1]]?.de,
 			types[pokemon.typing?.[1]]?.en,
-		].some((it: string) => it?.toLowerCase().includes(term));
+		].some((it: string) => it?.toLowerCase().includes(term.toLowerCase()));
 
 	$: sortedList = tierlist.map((it) => ({
 		...it,
