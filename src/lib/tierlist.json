@@ -48,7 +48,7 @@
 			"notes": {
 				"cinderace": {
 					"de": "Ohne Libero",
-					"en": "Libero is banned"
+					"en": "Ohne Libero"
 				}
 			}
 		},
@@ -118,7 +118,7 @@
 			"notes": {
 				"landorus-incarnate": {
 					"de": "Ohne Rohe Gewalt",
-					"en": "Sheer Force is banned"
+					"en": "Ohne Sheer Force"
 				}
 			}
 		},
@@ -127,6 +127,8 @@
 			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"],
 			"rank": 3,
 			"pokemon": [
+				"tentacruel",
+				"moltres-galar",
 				"marowak-alola",
 				"ninetales-alola",
 				"salazzle",
@@ -206,15 +208,23 @@
 			"notes": {
 				"blaziken": {
 					"de": "Ohne Temposchub",
-					"en": "Speedboost is banned"
+					"en": "Ohne Speedboost"
 				},
 				"silvally": {
 					"de": "1x mit Disc, 1x ohne",
-					"en": "1x with disc, 1x without"
+					"en": "1x mit Disc, 1x ohne"
 				},
 				"zygarde-10": {
 					"de": "Ohne Scharwandel",
-					"en": "Power Construct is banned"
+					"en": "Ohne Power Construct"
+				},
+				"moltres-galar": {
+					"de": "Von uns hinzugefügt - Tieränderung vorbehalten",
+					"en": "Von uns hinzugefügt - Tieränderung vorbehalten"
+				},
+				"tentacruel": {
+					"de": "Von uns hinzugefügt - Tieränderung vorbehalten",
+					"en": "Von uns hinzugefügt - Tieränderung vorbehalten"
 				}
 			}
 		},
@@ -320,11 +330,11 @@
 			"notes": {
 				"dugtrio": {
 					"de": "Ohne Auswegslos",
-					"en": "Arena Trap is banned"
+					"en": "Ohne Arena Trap"
 				},
 				"gothitelle": {
 					"de": "Ohne Wegsperre",
-					"en": "Shadow Tag is banned"
+					"en": "Ohne Shadow Tag"
 				}
 			},
 			"pokemon": [
