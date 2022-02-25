@@ -11,7 +11,20 @@
 
 	const subtitle = (tier: Tier) => tier.subtitles[activeSubtitle] || '';
 
-	onMount(() => {});
+	// Hack to get a filtered list displayed correctly
+
+	let viewportWidth: number;
+	const minCardSize = 150; // Careful, it needs to be synced with "grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));" (the 150px). Too lazy to properly variable-ize it right now.
+
+	onMount(() => {
+		viewportWidth = window.innerWidth;
+		window.addEventListener('resize', () => {
+			viewportWidth = window.innerWidth;
+		});
+	});
+
+	$: maxElementsToFit = Math.floor(viewportWidth / minCardSize);
+	$: numberOfFakeDivs = Math.max(maxElementsToFit - tier.pokemon.length, 0);
 </script>
 
 <div class="tier">
@@ -27,13 +40,23 @@
 					<PokemonCard {pokemon} />
 				</div>
 			{/each}
+			{#if numberOfFakeDivs > 0}
+				{#each Array(numberOfFakeDivs) as _}
+					<div class="pokemon-animation-wrapper" />
+				{/each}
+			{/if}
 		{:else}
-			<!-- wrapper needed here too because I suck at CSS -->
+			<!-- Wrapper needed here too because I suck at CSS -->
 			{#each tier.pokemon as pokemon (pokemon.id)}
 				<div class="pokemon-animation-wrapper">
 					<PokemonCard {pokemon} />
 				</div>
 			{/each}
+			{#if numberOfFakeDivs > 0}
+				{#each Array(numberOfFakeDivs) as _}
+					<div class="pokemon-animation-wrapper" />
+				{/each}
+			{/if}
 		{/if}
 	</div>
 </div>
@@ -63,7 +86,6 @@
 		.pokemon-animation-wrapper {
 			display: flex;
 			flex-direction: column;
-			max-width: 230px;
 		}
 	}
 </style>
