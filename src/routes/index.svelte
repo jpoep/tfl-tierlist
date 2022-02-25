@@ -59,6 +59,12 @@
 		
 		input {
 			width: 30ch;
+			background-color: var(--bg-color-highlighted);
+			color: var(--font-color);
+			border: none;
+			border-radius: 5px;
+			// border: 1px solid;
+			padding: .5rem;
 		}
 		
 		.spacer {
