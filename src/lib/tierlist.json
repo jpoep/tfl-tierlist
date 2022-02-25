@@ -43,12 +43,17 @@
 				"thundurus-therian",
 				"urshifu-rapid-strike",
 				"zapdos",
-				"zeraora"
+				"zeraora",
+				"hawlucha"
 			],
 			"notes": {
 				"cinderace": {
 					"de": "Ohne Libero",
 					"en": "Ohne Libero"
+				},
+				"hawlucha": {
+					"de": "Von A nach S gewandert",
+					"en": "Von A nach S gewandert"
 				}
 			}
 		},
@@ -98,7 +103,6 @@
 				"primarina",
 				"raikou",
 				"snorlax",
-				"hawlucha",
 				"toxtricity-amped",
 				"rotom-heat",
 				"rotom-wash",
@@ -113,24 +117,35 @@
 				"volcanion",
 				"lycanroc-dusk",
 				"zarude",
-				"reuniclus"
+				"reuniclus",
+				"ninetales-alola",
+				"torkoal"
 			],
 			"notes": {
 				"landorus-incarnate": {
 					"de": "Ohne Rohe Gewalt",
 					"en": "Ohne Sheer Force"
+				},
+				"ninetales-alola": {
+					"de": "Von B nach A gewandert",
+					"en": "Von B nach A gewandert"
+				},
+				"torkoal": {
+					"de": "Von B nach A gewandert",
+					"en": "Von B nach A gewandert"
 				}
 			}
 		},
 		{
 			"name": "B",
-			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"],
+			"subtitles": [
+				"„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"
+			],
 			"rank": 3,
 			"pokemon": [
 				"tentacruel",
 				"moltres-galar",
 				"marowak-alola",
-				"ninetales-alola",
 				"salazzle",
 				"silvally",
 				"jellicent",
@@ -179,7 +194,6 @@
 				"grimmsnarl",
 				"porygon-z",
 				"politoed",
-				"torkoal",
 				"krookodile",
 				"regidrago",
 				"regieleki",
@@ -230,7 +244,9 @@
 		},
 		{
 			"name": "C",
-			"subtitles": ["Nimmste günstig mit"],
+			"subtitles": [
+				"Nimmste günstig mit"
+			],
 			"rank": 4,
 			"pokemon": [
 				"aerodactyl",
@@ -326,7 +342,10 @@
 		{
 			"name": "D",
 			"rank": 5,
-			"subtitles": ["Immer noch besser als Warsteiner", "Ja! Pizza Salami 3x350g"],
+			"subtitles": [
+				"Immer noch besser als Warsteiner",
+				"Ja! Pizza Salami 3x350g"
+			],
 			"notes": {
 				"dugtrio": {
 					"de": "Ohne Auswegslos",
