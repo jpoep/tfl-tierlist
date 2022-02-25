@@ -98,18 +98,19 @@
 
 		.modal {
 			position: absolute;
-			left: 1rem;
-			right: 1rem;
-			top: 5rem;
+			left: .5rem;
+			right: .5rem;
+			top: .5rem;
 			background: var(--warning);
 			border: 1px solid var(--dark-fg);
 			color: var(--dark-fg);
 			padding: 2rem;
-			border-radius: 5px;
+			border-radius: 2px;
 			text-align: center;
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			line-height: 1.4rem;
 		}
 
 		.pokemon-form {
