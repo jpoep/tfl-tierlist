@@ -32,9 +32,7 @@ let storedTheme: Theme;
 if (browser) {
 	storedTheme =
 		(localStorage.getItem('theme') as Theme) ||
-		window.matchMedia('(prefers-color-scheme: dark)').matches
-			? 'dark'
-			: 'light';
+		(window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 }
 export const theme = writable(storedTheme);
 export const darkMode = writableDerived(
