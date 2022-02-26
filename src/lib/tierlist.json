@@ -10,6 +10,7 @@
 			],
 			"rank": 1,
 			"pokemon": [
+				"tapu-bulu",
 				"azumarill",
 				"tornadus-therian",
 				"salamence",
@@ -54,6 +55,10 @@
 				"hawlucha": {
 					"de": "Von A nach S gewandert",
 					"en": "Von A nach S gewandert"
+				},
+				"tapu-bulu": {
+					"de": "Von uns hinzugefügt - Tieränderung vorbehalten",
+					"en": "Von uns hinzugefügt - Tieränderung vorbehalten"
 				}
 			}
 		},
