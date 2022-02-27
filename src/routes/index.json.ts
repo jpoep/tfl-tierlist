@@ -7,6 +7,7 @@ const dev = process.env.NODE_ENV === 'development';
 export type Tier = {
 	name: string;
 	rank: number;
+	emptyText: string;
 	subtitles: string[] | undefined;
 	pokemon: PokemonType[];
 };
@@ -118,6 +119,7 @@ export const get: RequestHandler = async () => {
 				name: element.name,
 				rank: element.rank as number,
 				subtitles: element.subtitles,
+				emptyText: element.emptyText,
 				pokemon: (await Promise.all(element.pokemon.map(async (it) => await fetchPokemon(it)))).map(
 					(it) => ({
 						...it,
