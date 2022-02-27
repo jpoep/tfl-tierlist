@@ -1,0 +1,49 @@
+{
+    "short_name": "TFL Tierlist",
+    "name": "TFL Tierlist Season 3",
+    "start_url": "/tfl-tierlist",
+    "icons": [
+        {
+            "src": "favicon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "background_color": "#eceff4",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#2e3440",
+    "shortcuts": [
+        {
+            "name": "S Tier",
+            "short_name": "S",
+            "description": "Direkt zum S-Tier",
+            "url": "/tfl-tierlist/#S"
+        },
+        {
+            "name": "A Tier",
+            "short_name": "A",
+            "description": "Direkt zum A-Tier",
+            "url": "/tfl-tierlist/#A"
+        },
+        {
+            "name": "B Tier",
+            "short_name": "B",
+            "description": "Direkt zum B-Tier",
+            "url": "/tfl-tierlist/#B"
+        },
+        {
+            "name": "C Tier",
+            "short_name": "C",
+            "description": "Direkt zum C-Tier",
+            "url": "/tfl-tierlist/#C"
+        },
+        {
+            "name": "S Tier",
+            "short_name": "D",
+            "description": "Direkt zum D-Tier",
+            "url": "/tfl-tierlist/#D"
+        }
+    ],
+    "description": "Die Tierlist für die dritte Season der TFL - in nicht beschissen anzugucken"
+}

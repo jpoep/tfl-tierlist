@@ -95,7 +95,7 @@ export const get: RequestHandler = async () => {
 		const [name, form] = await Promise.all([
 			getName(pokemon.species.url),
 			getForm(pokemon.forms[0].url)
-		]).catch(() => ['???', '']);
+		]).catch(() => [{ de: '???', en: '???' }, null]);
 
 		const returnValue = {
 			typing: pokemon.types.map((it) => it.type.name),
