@@ -91,8 +91,8 @@ export const get: RequestHandler = async () => {
 			name: getName(species),
 			form: getForm(form),
 			id: pokemonName,
-			pokemonDbUrl: `https://pokemondb.net/pokedex/${species}`
-		} as  PokemonType;
+			pokemonDbUrl: `https://pokemondb.net/pokedex/${species.name}`
+		} as PokemonType;
 
 		console.info(`Names for ${pokemonName} fetched.`);
 		return returnValue;
