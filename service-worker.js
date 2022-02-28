@@ -1,6 +1,6 @@
-const timestamp = 1646047490968;
+const timestamp = 1646056291103;
 const build = [
-  "/tfl-tierlist/_app/start-b1311cdf.js",
+  "/tfl-tierlist/_app/start-71c7ab26.js",
   "/tfl-tierlist/_app/pages/__layout.svelte-8d6d7c71.js",
   "/tfl-tierlist/_app/assets/pages/__layout.svelte-6559a077.css",
   "/tfl-tierlist/_app/error.svelte-d4708113.js",
@@ -35,7 +35,7 @@ async function fetchAndCache(request) {
   const cache = await caches.open(`offline${timestamp}`);
   try {
     const response = await fetch(request);
-    cache.put(request, response.clone());
+    await cache.put(request, response.clone());
     return response;
   } catch (err) {
     const response = await cache.match(request);
@@ -55,7 +55,7 @@ worker.addEventListener("fetch", (event) => {
   if (isHttp && !isDevServerRequest && !skipBecauseUncached) {
     event.respondWith((async () => {
       const cachedAsset = (isStaticAsset || url.pathname.startsWith("/PokeAPI/sprites/")) && await caches.match(event.request);
-      return cachedAsset || fetchAndCache(event.request);
+      return cachedAsset || await fetchAndCache(event.request);
     })());
   }
 });
