@@ -1,6 +1,6 @@
-const timestamp = 1646056291103;
+const timestamp = 1646062125032;
 const build = [
-  "/tfl-tierlist/_app/start-71c7ab26.js",
+  "/tfl-tierlist/_app/start-38074dd5.js",
   "/tfl-tierlist/_app/pages/__layout.svelte-8d6d7c71.js",
   "/tfl-tierlist/_app/assets/pages/__layout.svelte-6559a077.css",
   "/tfl-tierlist/_app/error.svelte-d4708113.js",
