@@ -11,7 +11,7 @@
     ],
     "background_color": "#eceff4",
     "display": "standalone",
-    "scope": "/",
+    "scope": "/tfl-tierlist",
     "theme_color": "#2e3440",
     "shortcuts": [
         {
