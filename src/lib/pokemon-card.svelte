@@ -19,7 +19,7 @@
 </script>
 
 <a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
-	<img src={pokemon.imageUrl} alt={_pokemon.localName} />
+	<img src={pokemon.imageUrl} alt={_pokemon.localName} crossorigin="anonymous" />
 	{#if pokemon.notes && !_pokemon.noteActive}
 		<div class="pokemon-note" transition:fly={{ y: -10, duration: 300 }} on:click={toggleNote} />
 	{/if}
@@ -98,9 +98,9 @@
 
 		.modal {
 			position: absolute;
-			left: .5rem;
-			right: .5rem;
-			top: .5rem;
+			left: 0.5rem;
+			right: 0.5rem;
+			top: 0.5rem;
 			background: var(--warning);
 			border: 1px solid var(--dark-fg);
 			color: var(--dark-fg);
