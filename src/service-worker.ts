@@ -41,7 +41,7 @@ async function fetchAndCache(request: Request) {
 
 	try {
 		const response = await fetch(request);
-		cache.put(request, response.clone());
+		await cache.put(request, response.clone());
 		return response;
 	} catch (err) {
 		const response = await cache.match(request);
@@ -73,7 +73,7 @@ worker.addEventListener('fetch', (event) => {
 					(isStaticAsset || url.pathname.startsWith('/PokeAPI/sprites/')) &&
 					(await caches.match(event.request));
 
-				return cachedAsset || fetchAndCache(event.request);
+				return cachedAsset || (await fetchAndCache(event.request));
 			})()
 		);
 	}
