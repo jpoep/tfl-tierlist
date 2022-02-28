@@ -1,7 +1,9 @@
 {
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
     "short_name": "TFL Tierlist",
     "name": "TFL Tierlist Season 3",
     "start_url": "/tfl-tierlist",
+    "id": "tfl-tierlist",
     "icons": [
         {
             "src": "favicon.png",
