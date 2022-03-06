@@ -4,26 +4,27 @@
 	import PokemonTypeComponent from '$lib/pokemon-type.svelte';
 	import type { PokemonType } from 'src/routes/index.json';
 
-	interface PokemonWithState extends Pokemon {
-		noteActive: boolean;
-	}
-
 	export let pokemon: PokemonType;
 
-	$: _pokemon = new Pokemon(pokemon) as PokemonWithState;
+	let ticked: boolean = false;
+	let noteActive: boolean = false;
+
+	$: _pokemon = new Pokemon(pokemon);
 
 	const toggleNote = (event: MouseEvent) => {
-		_pokemon.noteActive = !_pokemon.noteActive;
-		event.preventDefault();
+		noteActive = !noteActive;
 	};
 </script>
 
-<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
+<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank" class:inactive={ticked}>
 	<img src={pokemon.imageUrl} alt={_pokemon.localName} crossorigin="anonymous" />
-	{#if pokemon.notes && !_pokemon.noteActive}
-		<div class="pokemon-note" transition:fly={{ y: -10, duration: 300 }} on:click={toggleNote} />
+	<div class="pokemon-tick">
+		<input type="checkbox" bind:checked={ticked} on:click|stopPropagation />
+	</div>
+	{#if pokemon.notes && !noteActive}
+		<div class="pokemon-note" transition:fly={{ y: -10, duration: 300 }} on:click|preventDefault={toggleNote} />
 	{/if}
-	{#if _pokemon.noteActive}
+	{#if noteActive}
 		<div class="modal" on:click={toggleNote} transition:fly={{ y: 50, duration: 300 }}>
 			{_pokemon.localNotes || ''}
 		</div>
@@ -40,6 +41,18 @@
 </a>
 
 <style lang="scss">
+	.pokemon-tick {
+		position: absolute;
+		left: .5rem;
+		top: .5rem;
+		input {
+			height: 1.2rem;
+			width: 1.2rem;
+		}
+	}
+	.inactive {
+		filter: saturate(10%) brightness(80%);
+	}
 	a {
 		color: inherit;
 		text-decoration: none;
