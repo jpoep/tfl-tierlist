@@ -1,6 +1,6 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import prodTierlist from '$lib/tierlist.json';
-import devTierlist from '$lib/tierlist-dev.json';
+import prodTierlist from '$data/tierlist.json';
+import devTierlist from '$data/tierlist-dev.json';
 import pkg, { type PokemonForm, type PokemonSpecies } from 'pokenode-ts';
 const { PokemonClient } = pkg;
 
