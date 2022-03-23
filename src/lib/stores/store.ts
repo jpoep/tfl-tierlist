@@ -1,6 +1,7 @@
 import { browser } from '$app/env';
 import { writable } from 'svelte/store';
 import writableDerived from 'svelte-writable-derived';
+import type { Team } from 'src/routes/index.json';
 
 // This file needs a lot of cleaning
 
@@ -48,5 +49,22 @@ if (browser) {
 	});
 	window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) => {
 		theme.set(event.matches ? 'dark' : 'light');
+	});
+}
+
+// filter
+
+export const filter = writable<string>('');
+
+if (browser) {
+	// sync the q searchparam with the currently active filter
+	filter.subscribe((filter) => {
+		const url = new URL(window.location.href);
+		if (filter?.length > 0) {
+			url.searchParams.set('q', filter);
+		} else {
+			url.searchParams.delete('q');
+		}
+		window.history.replaceState(null, '', url.toString());
 	});
 }

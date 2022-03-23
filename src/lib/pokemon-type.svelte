@@ -101,7 +101,7 @@
 		min-width: 9ch;
 		border-radius: 2px;
 		color: white;
-		padding: 0.2rem 0.5rem;
+		padding: 0.2rem 0.2rem;
 		text-align: center;
 		font-size: small;
 		font-weight: 700;

@@ -2,30 +2,75 @@
 	import { fly } from 'svelte/transition';
 	import { Pokemon } from './classes/Pokemon';
 	import PokemonTypeComponent from '$lib/pokemon-type.svelte';
-	import type { PokemonType } from 'src/routes/index.json';
+	import type { PokemonType, Team } from 'src/routes/index.json';
+	import { filter } from '$lib/stores/store';
 
 	export let pokemon: PokemonType;
 
 	let noteActive: boolean = false;
+	let tooltipActive: boolean = false;
 
 	$: _pokemon = new Pokemon(pokemon);
 
-	const toggleNote = (event: MouseEvent) => {
+	const toggleNote = () => {
 		noteActive = !noteActive;
+	};
+
+	const enableTooltip = () => {
+		tooltipActive = true;
+	};
+
+	const disableTooltip = () => {
+		tooltipActive = false;
+	};
+
+	const setFilterToTeam = () => {
+		$filter = _pokemon.team.name;
+	};
+
+	const getImageUrl = (path: string) => {
+		// return new URL(`./assets/logos/${path}/`, import.meta.url).href;
+		return '/logos/' + path;
 	};
 </script>
 
 <a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
 	<img src={pokemon.imageUrl} alt={_pokemon.localName} crossorigin="anonymous" />
-	{#if pokemon.notes && !noteActive}
-		<div
-			class="pokemon-note"
-			transition:fly={{ y: -10, duration: 300 }}
-			on:click|preventDefault={toggleNote}
-		/>
-	{/if}
+	<div class="notes-container">
+		{#if pokemon.team}
+			<div
+				class="pokemon-team"
+				on:mouseover={enableTooltip}
+				on:focus={enableTooltip}
+				on:mouseout={disableTooltip}
+				on:blur={disableTooltip}
+				on:click|preventDefault={setFilterToTeam}
+			>
+				<img src={getImageUrl(pokemon.team.logo)} alt={'Logo von ' + pokemon.team.player} />
+				{#if tooltipActive}
+					<span class="tooltip" transition:fly={{ y: 15, duration: 100 }}>
+						{pokemon.team.name}
+						<span class="player">
+							{pokemon.team.player}
+						</span>
+					</span>
+				{/if}
+			</div>
+		{/if}
+		{#if pokemon.notes && !noteActive}
+			<div
+				class="pokemon-note"
+				transition:fly={{ y: -10, duration: 300 }}
+				on:click|preventDefault={toggleNote}
+			/>
+		{/if}
+	</div>
 	{#if noteActive}
-		<div class="modal" on:click={toggleNote} transition:fly={{ y: 50, duration: 300 }}>
+		<div
+			class="modal"
+			on:click|preventDefault={toggleNote}
+			transition:fly={{ y: 50, duration: 300 }}
+		>
 			{_pokemon.localNotes || ''}
 		</div>
 	{/if}
@@ -45,22 +90,11 @@
 		color: inherit;
 		text-decoration: none;
 		display: block;
-
-		&:hover {
-			background-color: var(--bg-color-highlighted);
-		}
 	}
 
 	.pokemon {
 		position: relative;
 		height: 100%;
-
-		img {
-			justify-self: center;
-			image-rendering: pixelated;
-		}
-
-		// box-shadow: rgba(99, 99, 99, .3) 0px 2px 8px 0px;
 		background-color: var(--bg-color-raised);
 		text-align: center;
 		font-size: large;
@@ -71,10 +105,60 @@
 		flex-direction: column;
 		justify-content: space-around;
 
-		.pokemon-note {
+		.notes-container {
 			position: absolute;
 			right: 1rem;
 			top: 1rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.pokemon-team {
+			.tooltip {
+				width: 8rem;
+				background-color: var(--bg-color-highlighted);
+				color: var(--font-color);
+				text-align: center;
+				padding: 0.5rem;
+				border-radius: 6px;
+
+				// positioning for it to appear at the top
+				bottom: 120%;
+				left: 50%;
+				margin-left: -4rem;
+
+				/* Position the tooltip text - see examples below! */
+				position: absolute;
+				z-index: 1;
+				display: block;
+				font-weight: bold;
+
+				// arrow
+				&::after {
+					content: ' ';
+					position: absolute;
+					top: 100%; /* At the bottom of the tooltip */
+					left: 50%;
+					margin-left: -5px;
+					border-width: 5px;
+					border-style: solid;
+					border-color: var(--bg-color-highlighted) transparent transparent transparent;
+				}
+
+				.player {
+					font-size: smaller;
+					color: var(--font-color-lightened);
+					font-weight: normal;
+					display: block;
+				}
+			}
+			img {
+				max-height: 3rem;
+				max-width: 3rem;
+			}
+		}
+
+		.pokemon-note {
 			font-size: x-large;
 			font-weight: 700;
 			background-color: var(--warning);
@@ -121,6 +205,11 @@
 		.pokemon-typing {
 			margin-top: auto;
 			justify-self: flex-end;
+		}
+
+		img {
+			justify-self: center;
+			image-rendering: pixelated;
 		}
 	}
 </style>

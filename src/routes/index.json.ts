@@ -1,12 +1,20 @@
 import type { RequestHandler } from '@sveltejs/kit';
-import prodTierlist from '$data/tierlist.json';
-import devTierlist from '$data/tierlist-dev.json';
+import prodTierlist from '$lib/data/tierlist.json';
+import devTierlist from '$lib/data/tierlist-dev.json';
+import teamsData from '$lib/data/teams.json';
 import pkg, { type PokemonForm, type PokemonSpecies } from 'pokenode-ts';
 const { PokemonClient } = pkg;
 
 const api = new PokemonClient();
 
 const dev = process.env.NODE_ENV === 'development';
+
+export type Team = {
+	name: string;
+	player: string;
+	logo: string;
+	pokemon: string[];
+};
 
 export type Tier = {
 	name: string;
@@ -34,12 +42,13 @@ export type PokemonType = {
 		  }
 		| undefined;
 	id: string;
+	team: Team | undefined;
 	typing: string[];
 	imageUrl: string;
 	pokemonDbUrl: string;
 };
 
-export const get: RequestHandler = async () => {
+export const get: RequestHandler = async ({url}) => {
 	const getName: {
 		(species: PokemonSpecies): { en: string; de: string };
 	} = (species) => {
@@ -111,7 +120,8 @@ export const get: RequestHandler = async () => {
 				pokemon: (await Promise.all(element.pokemon.map(async (it) => fetchPokemon(it)))).map(
 					(it) => ({
 						...it,
-						notes: element.notes?.[it.id]
+						notes: element.notes?.[it.id],
+						team: teamsData.teams.find((team) => team.pokemon.includes(it.id))
 					})
 				)
 			};
@@ -120,7 +130,9 @@ export const get: RequestHandler = async () => {
 
 	return {
 		body: {
-			tierlist
+			tierlist,
+			teams: teamsData.teams,
+			initialFilter: url.searchParams.get("q")
 		}
 	};
 };

@@ -1,4 +1,4 @@
-import type { PokemonType } from 'src/routes/index.json';
+import type { PokemonType, Team } from 'src/routes/index.json';
 import { language } from '$lib/stores/store';
 import { get } from 'svelte/store';
 
@@ -11,6 +11,7 @@ export class Pokemon {
 	form: { en: string; de: string } | undefined;
 	notes: { en: string; de: string } | undefined;
 	id: string;
+	team: Team | undefined;
 	typing: string[];
 	imageUrl: string;
 	pokemonDbUrl: string;

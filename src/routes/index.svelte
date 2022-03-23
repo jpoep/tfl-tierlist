@@ -1,15 +1,20 @@
 <script lang="ts">
 	import DarkModeButton from '$lib/dark-mode-button.svelte';
 	import TierComponent from '$lib/tier.svelte';
-	import { Language, language } from '$lib/stores/store';
-	import type { PokemonType, Tier } from './index.json';
+	import { language } from '$lib/stores/store';
+	import type { PokemonType, Team, Tier } from './index.json';
 	import LanguageButton from '$lib/language-button.svelte';
 	import { types } from '$lib/pokemon-type.svelte';
+	import { filter } from '$lib/stores/store';
 
 	export let tierlist: Tier[];
-
-	let filter: string = '';
+	export let initialFilter: string | undefined;
 	
+	console.log(initialFilter)
+	
+	if (initialFilter) {
+		$filter = initialFilter
+	}
 
 	const contains = (pokemon: PokemonType, term: string) =>
 		[
@@ -21,6 +26,8 @@
 			types[pokemon.typing[0]]?.en,
 			types[pokemon.typing?.[1]]?.de,
 			types[pokemon.typing?.[1]]?.en,
+			pokemon.team?.name,
+			pokemon.team?.player
 		].some((it: string) => it?.toLowerCase().includes(term.toLowerCase()));
 
 	$: sortedList = tierlist.map((it) => ({
@@ -32,12 +39,12 @@
 
 	$: filteredList = sortedList.map((it) => ({
 		...it,
-		pokemon: it.pokemon.filter((pokemon) => contains(pokemon, filter))
+		pokemon: it.pokemon.filter((pokemon) => contains(pokemon, $filter))
 	}));
 </script>
 
 <div class="top-bar">
-	<input type="text" bind:value={filter} placeholder="Nach Pokémon oder Typen filtern"  />
+	<input type="search" bind:value={$filter} placeholder="Nach Pokémon, Typen oder Teams filtern" />
 	<div class="spacer" />
 	<DarkModeButton />
 	<LanguageButton />
@@ -56,17 +63,20 @@
 		height: 5rem;
 		padding: 1rem;
 		gap: 0.5rem;
-		
+
 		input {
-			width: 30ch;
+			width: 33ch;
 			background-color: var(--bg-color-highlighted);
 			color: var(--font-color);
 			border: none;
 			border-radius: 5px;
-			// border: 1px solid;
-			padding: .5rem;
+			padding: 0.5rem;
+
+			&::placeholder {
+				text-align: center;
+			}
 		}
-		
+
 		.spacer {
 			flex-grow: 1;
 		}

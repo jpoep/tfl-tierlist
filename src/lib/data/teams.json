@@ -1,0 +1,220 @@
+{
+    "teams": [
+        {
+            "name": "Oliberlo Chancentod",
+            "player": "Oli",
+            "logo": "oliberlo-chancentod.avif",
+            "pokemon": [
+                "cinderace",
+                "clefable",
+                "toxapex",
+                "tornadus-incarnate",
+                "metagross",
+                "goodra",
+                "crawdaunt",
+                "rotom",
+                "virizion",
+                "dugtrio",
+                "cramorant"
+            ]
+        },
+        {
+            "name": "TUSPO Salamence",
+            "player": "Moritz",
+            "logo": "tuspo-salamence.avif",
+            "pokemon": [
+                "landorus-therian",
+                "jirachi",
+                "primarina",
+                "kommo-o",
+                "entei",
+                "crobat",
+                "zoroark",
+                "golisopod",
+                "miltank",
+                "sawk",
+                "trevenant"
+            ]
+        },
+        {
+            "name": "Atlanta Fletiamo",
+            "player": "Nico",
+            "logo": "atlanta-fletiamo.avif",
+            "pokemon": [
+                "salamence",
+                "victini",
+                "cobalion",
+                "amoonguss",
+                "incineroar",
+                "milotic",
+                "silvally",
+                "mudsdale",
+                "lanturn",
+                "articuno",
+                "lycanroc"
+            ]
+        },
+        {
+            "name": "Bellektro Ghetto",
+            "player": "Max B.",
+            "logo": "bellektro-ghetto.avif",
+            "pokemon": [
+                "garchomp",
+                "celesteela",
+                "starmie",
+                "raikou",
+                "blissey",
+                "mienshao",
+                "weezing-galar",
+                "drapion",
+                "decidueye",
+                "lycanroc-midnight",
+                "frosmoth"
+            ]
+        },
+        {
+            "name": "Freddyursa",
+            "player": "Rick",
+            "logo": "freddyursa.avif",
+            "pokemon": [
+                "weavile",
+                "heatran",
+                "slowking-galar",
+                "buzzwole",
+                "gastrodon",
+                "silvally",
+                "cresselia",
+                "aerodactyl",
+                "vanilluxe",
+                "emolga",
+                "greedent"
+            ]
+        },
+        {
+            "name": "Große Demeteros Apokalypse",
+            "player": "Niklas",
+            "logo": "gda.avif",
+            "pokemon": [
+                "rillaboom",
+                "latios",
+                "slowbro",
+                "landorus-incarnate",
+                "bisharp",
+                "klefki",
+                "marowak-alola",
+                "heliolisk",
+                "hitmonlee",
+                "kadabra",
+                "archeops"
+            ]
+        },
+        {
+            "name": "Kopflos Dorsten",
+            "player": "Max V.",
+            "logo": "kopflos-dorsten.avif",
+            "pokemon": [
+                "tornadus-therian",
+                "mamoswine",
+                "sylveon",
+                "arcanine",
+                "chansey",
+                "bronzong",
+                "flygon",
+                "jolteon",
+                "clawitzer",
+                "sceptile",
+                "wobbuffet"
+            ]
+        },
+        {
+            "name": "Miami Heatran",
+            "player": "Danny",
+            "logo": "miami-heatran.avif",
+            "pokemon": [
+                "zeraora",
+                "corviknight",
+                "haxorus",
+                "swampert",
+                "chandelure",
+                "grimmsnarl",
+                "slowbro-galar",
+                "persian-alola",
+                "uxie",
+                "eldegoss",
+                "rotom-frost"
+            ]
+        },
+        {
+            "name": "Pixelspark",
+            "player": "Till",
+            "logo": "pixelspark.avif",
+            "pokemon": [
+                "volcarona",
+                "urshifu-rapid-strike",
+                "torkoal",
+                "venusaur",
+                "hatterene",
+                "magnezone",
+                "zygarde-10",
+                "charizard",
+                "ditto",
+                "poliwrath",
+                "claydol"
+            ]
+        },
+        {
+            "name": "PSV Nilsoking",
+            "player": "Nils",
+            "logo": "psv-nilsoking.avif",
+            "pokemon": [
+                "dragapult",
+                "zapdos-galar",
+                "skarmory",
+                "ninetales-alola",
+                "krookodile",
+                "vaporeon",
+                "moltres",
+                "arctozolt",
+                "magneton",
+                "audino",
+                "leafeon"
+            ]
+        },
+        {
+            "name": "Quellbrunn Quaxo",
+            "player": "Philipp",
+            "logo": "quellbrunn-quaxo-transparent.avif",
+            "pokemon": [
+                "thundurus-therian",
+                "hawlucha",
+                "tapu-fini",
+                "nidoqueen",
+                "politoed",
+                "rotom-mow",
+                "stakataka",
+                "talonflame",
+                "drampa",
+                "thwackey",
+                "aurorus"
+            ]
+        },
+        {
+            "name": "Surging Strikes",
+            "player": "Alex",
+            "logo": "surging-strikes.avif",
+            "pokemon": [
+                "tapu-koko",
+                "aegislash",
+                "slowking",
+                "tangrowth",
+                "noivern",
+                "darmanitan",
+                "celebi",
+                "type-null",
+                "passimian",
+                "garbodor",
+                "cryogonal"
+            ]
+        }
+    ]
+}
