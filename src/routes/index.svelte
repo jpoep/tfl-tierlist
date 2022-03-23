@@ -6,15 +6,20 @@
 	import LanguageButton from '$lib/language-button.svelte';
 	import { types } from '$lib/pokemon-type.svelte';
 	import { filter } from '$lib/stores/store';
+	import { onMount } from 'svelte';
 
 	export let tierlist: Tier[];
 	export let initialFilter: string | undefined;
-	
-	console.log(initialFilter)
-	
-	if (initialFilter) {
-		$filter = initialFilter
-	}
+
+	console.log(initialFilter);
+
+	$filter = initialFilter || '';
+
+	onMount(() => {
+		window.addEventListener('popstate', () => {
+			$filter = initialFilter || '';
+		});
+	});
 
 	const contains = (pokemon: PokemonType, term: string) =>
 		[

@@ -1,7 +1,6 @@
 import { browser } from '$app/env';
 import { writable } from 'svelte/store';
 import writableDerived from 'svelte-writable-derived';
-import type { Team } from 'src/routes/index.json';
 
 // This file needs a lot of cleaning
 

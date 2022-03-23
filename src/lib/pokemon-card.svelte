@@ -26,6 +26,8 @@
 	};
 
 	const setFilterToTeam = () => {
+		// Having the option of using the browser's back button is a lot nicer
+		window.history.pushState(null, '', new URL(window.location.href))
 		$filter = _pokemon.team.name;
 	};
 
