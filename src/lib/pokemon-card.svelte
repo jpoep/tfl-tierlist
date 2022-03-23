@@ -27,7 +27,7 @@
 
 	const setFilterToTeam = () => {
 		// Having the option of using the browser's back button is a lot nicer
-		window.history.pushState(null, '', new URL(window.location.href))
+		window.history.pushState(null, '', new URL(window.location.href));
 		$filter = _pokemon.team.name;
 	};
 
@@ -38,7 +38,7 @@
 </script>
 
 <a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
-	<img src={pokemon.imageUrl} alt={_pokemon.localName} crossorigin="anonymous" />
+	<img src={pokemon.imageUrl} alt={_pokemon.localName} crossorigin="anonymous" loading="lazy" />
 	<div class="notes-container">
 		{#if pokemon.team}
 			<div
@@ -213,9 +213,10 @@
 			justify-self: flex-end;
 		}
 
-		img {
+		> img {
 			justify-self: center;
 			image-rendering: pixelated;
+			min-height: 120px;
 		}
 	}
 </style>
