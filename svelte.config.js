@@ -13,9 +13,6 @@ const config = {
 		paths: {
 			base: dev ? '' : '/tfl-tierlist'
 		},
-		prerender: {
-			onError: 'continue'
-		},
 		// files: {
 		// assets: '/public'
 		// },
