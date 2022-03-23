@@ -4,6 +4,7 @@
 	import PokemonTypeComponent from '$lib/pokemon-type.svelte';
 	import type { PokemonType, Team } from 'src/routes/index.json';
 	import { filter } from '$lib/stores/store';
+	import { base } from '$app/paths';
 
 	export let pokemon: PokemonType;
 
@@ -30,7 +31,7 @@
 
 	const getImageUrl = (path: string) => {
 		// return new URL(`./assets/logos/${path}/`, import.meta.url).href;
-		return '/logos/' + path;
+		return base + '/logos/' + path;
 	};
 </script>
 
@@ -157,7 +158,7 @@
 				max-width: 3rem;
 				border-radius: 50%;
 				background: var(--bg-color-highlighted);
-				padding: .3rem;
+				padding: 0.3rem;
 			}
 		}
 
