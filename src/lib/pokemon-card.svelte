@@ -6,7 +6,6 @@
 
 	export let pokemon: PokemonType;
 
-	let ticked: boolean = false;
 	let noteActive: boolean = false;
 
 	$: _pokemon = new Pokemon(pokemon);
@@ -16,13 +15,14 @@
 	};
 </script>
 
-<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank" class:inactive={ticked}>
+<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
 	<img src={pokemon.imageUrl} alt={_pokemon.localName} crossorigin="anonymous" />
-	<div class="pokemon-tick">
-		<input type="checkbox" bind:checked={ticked} on:click|stopPropagation />
-	</div>
 	{#if pokemon.notes && !noteActive}
-		<div class="pokemon-note" transition:fly={{ y: -10, duration: 300 }} on:click|preventDefault={toggleNote} />
+		<div
+			class="pokemon-note"
+			transition:fly={{ y: -10, duration: 300 }}
+			on:click|preventDefault={toggleNote}
+		/>
 	{/if}
 	{#if noteActive}
 		<div class="modal" on:click={toggleNote} transition:fly={{ y: 50, duration: 300 }}>
@@ -41,18 +41,6 @@
 </a>
 
 <style lang="scss">
-	.pokemon-tick {
-		position: absolute;
-		left: .5rem;
-		top: .5rem;
-		input {
-			height: 1.2rem;
-			width: 1.2rem;
-		}
-	}
-	.inactive {
-		filter: saturate(10%) brightness(80%);
-	}
 	a {
 		color: inherit;
 		text-decoration: none;
