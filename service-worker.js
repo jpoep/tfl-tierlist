@@ -1,16 +1,41 @@
-const timestamp = 1646574912111;
+const timestamp = 1648051455360;
 const build = [
-  "/tfl-tierlist/_app/start-2128e662.js",
-  "/tfl-tierlist/_app/pages/__layout.svelte-14df00e5.js",
+  "/tfl-tierlist/_app/start-25db949b.js",
+  "/tfl-tierlist/_app/pages/__layout.svelte-510458fd.js",
   "/tfl-tierlist/_app/assets/pages/__layout.svelte-6559a077.css",
-  "/tfl-tierlist/_app/error.svelte-d631604a.js",
-  "/tfl-tierlist/_app/pages/index.svelte-b4c3f73a.js",
-  "/tfl-tierlist/_app/assets/pages/index.svelte-9ce54ea0.css",
-  "/tfl-tierlist/_app/chunks/vendor-548c8ec8.js"
+  "/tfl-tierlist/_app/error.svelte-fc4cf3f8.js",
+  "/tfl-tierlist/_app/pages/index.svelte-2c3a6a24.js",
+  "/tfl-tierlist/_app/assets/pages/index.svelte-59237e22.css",
+  "/tfl-tierlist/_app/chunks/vendor-58404c5c.js"
 ];
 const files = [
   "/tfl-tierlist/.nojekyll",
   "/tfl-tierlist/favicon.png",
+  "/tfl-tierlist/logos/atlanta-fletiamo.avif",
+  "/tfl-tierlist/logos/atlanta-fletiamo.png",
+  "/tfl-tierlist/logos/bellektro-ghetto.avif",
+  "/tfl-tierlist/logos/bellektro-ghetto.png",
+  "/tfl-tierlist/logos/freddyursa.avif",
+  "/tfl-tierlist/logos/freddyursa.jpg",
+  "/tfl-tierlist/logos/gda.avif",
+  "/tfl-tierlist/logos/gda.jpg",
+  "/tfl-tierlist/logos/kopflos-dorsten.avif",
+  "/tfl-tierlist/logos/kopflos-dorsten.png",
+  "/tfl-tierlist/logos/miami-heatran.avif",
+  "/tfl-tierlist/logos/miami-heatran.png",
+  "/tfl-tierlist/logos/oliberlo-chancentod.avif",
+  "/tfl-tierlist/logos/oliberlo-chancentod.png",
+  "/tfl-tierlist/logos/pixelspark.avif",
+  "/tfl-tierlist/logos/pixelspark.jpg",
+  "/tfl-tierlist/logos/psv-nilsoking.avif",
+  "/tfl-tierlist/logos/psv-nilsoking.png",
+  "/tfl-tierlist/logos/quellbrunn-quaxo-transparent.avif",
+  "/tfl-tierlist/logos/quellbrunn-quaxo.avif",
+  "/tfl-tierlist/logos/quellbrunn-quaxo.jpg",
+  "/tfl-tierlist/logos/surging-strikes.avif",
+  "/tfl-tierlist/logos/surging-strikes.png",
+  "/tfl-tierlist/logos/tuspo-salamence.avif",
+  "/tfl-tierlist/logos/tuspo-salamence.png",
   "/tfl-tierlist/manifest.json"
 ];
 const worker = self;
