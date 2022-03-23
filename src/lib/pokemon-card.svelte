@@ -155,6 +155,9 @@
 			img {
 				max-height: 3rem;
 				max-width: 3rem;
+				border-radius: 50%;
+				background: var(--bg-color-highlighted);
+				padding: .3rem;
 			}
 		}
 
