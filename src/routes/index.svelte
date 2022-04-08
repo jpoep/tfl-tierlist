@@ -7,6 +7,7 @@
 	import { types } from '$lib/pokemon-type.svelte';
 	import { filter } from '$lib/stores/store';
 	import { onMount } from 'svelte';
+import ScrollTopButton from '$lib/scroll-top-button.svelte';
 
 	export let tierlist: Tier[];
 	export let initialFilter: string | undefined;
@@ -59,6 +60,8 @@
 {#each filteredList as tier}
 	<TierComponent {tier} />
 {/each}
+
+<ScrollTopButton />
 
 <style lang="scss">
 	:global(.top-bar) {
