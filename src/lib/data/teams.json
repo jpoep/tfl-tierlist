@@ -3,7 +3,7 @@
         {
             "name": "Oliberlo Chancentod",
             "player": "Oli",
-            "logo": "oliberlo-chancentod.avif",
+            "logo": "oliberlo-chancentod",
             "pokemon": [
                 "cinderace",
                 "clefable",
@@ -21,7 +21,7 @@
         {
             "name": "TUSPO Salamence",
             "player": "Moritz",
-            "logo": "tuspo-salamence.avif",
+            "logo": "tuspo-salamence",
             "pokemon": [
                 "landorus-therian",
                 "jirachi",
@@ -39,7 +39,7 @@
         {
             "name": "Atlanta Fletiamo",
             "player": "Nico",
-            "logo": "atlanta-fletiamo.avif",
+            "logo": "atlanta-fletiamo",
             "pokemon": [
                 "salamence",
                 "victini",
@@ -57,7 +57,7 @@
         {
             "name": "Bellektro Ghetto",
             "player": "Max B.",
-            "logo": "bellektro-ghetto.avif",
+            "logo": "bellektro-ghetto",
             "pokemon": [
                 "garchomp",
                 "celesteela",
@@ -75,7 +75,7 @@
         {
             "name": "Freddyursa",
             "player": "Rick",
-            "logo": "freddyursa.avif",
+            "logo": "freddyursa",
             "pokemon": [
                 "weavile",
                 "heatran",
@@ -93,7 +93,7 @@
         {
             "name": "Große Demeteros Apokalypse",
             "player": "Niklas",
-            "logo": "gda.avif",
+            "logo": "gda",
             "pokemon": [
                 "rillaboom",
                 "latios",
@@ -111,7 +111,7 @@
         {
             "name": "Kopflos Dorsten",
             "player": "Max V.",
-            "logo": "kopflos-dorsten.avif",
+            "logo": "kopflos-dorsten",
             "pokemon": [
                 "tornadus-therian",
                 "mamoswine",
@@ -129,7 +129,7 @@
         {
             "name": "Miami Heatran",
             "player": "Danny",
-            "logo": "miami-heatran.avif",
+            "logo": "miami-heatran",
             "pokemon": [
                 "zeraora",
                 "corviknight",
@@ -147,7 +147,7 @@
         {
             "name": "Pixelspark",
             "player": "Till",
-            "logo": "pixelspark.avif",
+            "logo": "pixelspark",
             "pokemon": [
                 "volcarona",
                 "urshifu-rapid-strike",
@@ -165,7 +165,7 @@
         {
             "name": "PSV Nilsoking",
             "player": "Nils",
-            "logo": "psv-nilsoking.avif",
+            "logo": "psv-nilsoking",
             "pokemon": [
                 "dragapult",
                 "zapdos-galar",
@@ -183,7 +183,7 @@
         {
             "name": "Quellbrunn Quaxo",
             "player": "Philipp",
-            "logo": "quellbrunn-quaxo-transparent.avif",
+            "logo": "quellbrunn-quaxo-transparent.",
             "pokemon": [
                 "thundurus-therian",
                 "hawlucha",
@@ -201,7 +201,7 @@
         {
             "name": "Surging Strikes",
             "player": "Alex",
-            "logo": "surging-strikes.avif",
+            "logo": "surging-strikes",
             "pokemon": [
                 "tapu-koko",
                 "aegislash-shield",

@@ -12,7 +12,11 @@ const dev = process.env.NODE_ENV === 'development';
 export type Team = {
 	name: string;
 	player: string;
-	logo: string;
+	logo: {
+		avif: string;
+		webp: string;
+		png: string;
+	};
 	pokemon: string[];
 };
 
@@ -48,7 +52,20 @@ export type PokemonType = {
 	pokemonDbUrl: string;
 };
 
-export const get: RequestHandler = async ({url}) => {
+function transformTeam(team): Team {
+	return {
+		...team,
+		logo: {
+			avif: team.logo + '.avif',
+			webp: team.logo + '.webp',
+			png: team.logo + '.png'
+		}
+	};
+}
+
+const transformedTeamsData: Team[] = teamsData.teams.map(transformTeam);
+
+export const get: RequestHandler = async ({ url }) => {
 	const getName: {
 		(species: PokemonSpecies): { en: string; de: string };
 	} = (species) => {
@@ -121,7 +138,7 @@ export const get: RequestHandler = async ({url}) => {
 					(it) => ({
 						...it,
 						notes: element.notes?.[it.id],
-						team: teamsData.teams.find((team) => team.pokemon.includes(it.id))
+						team: transformedTeamsData.find((team) => team.pokemon.includes(it.id))
 					})
 				)
 			};
@@ -131,8 +148,8 @@ export const get: RequestHandler = async ({url}) => {
 	return {
 		body: {
 			tierlist,
-			teams: teamsData.teams,
-			initialFilter: url.searchParams.get("q")
+			teams: transformedTeamsData,
+			initialFilter: url.searchParams.get('q')
 		}
 	};
 };

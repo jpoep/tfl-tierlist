@@ -5,6 +5,7 @@
 	import type { PokemonType, Team } from 'src/routes/index.json';
 	import { filter } from '$lib/stores/store';
 	import { base } from '$app/paths';
+import { loop_guard } from 'svelte/internal';
 
 	export let pokemon: PokemonType;
 
@@ -47,9 +48,12 @@
 				on:focus={enableTooltip}
 				on:mouseout={disableTooltip}
 				on:blur={disableTooltip}
-				on:click|preventDefault={setFilterToTeam}
-			>
-				<img src={getImageUrl(pokemon.team.logo)} alt={'Logo von ' + pokemon.team.player} />
+				on:click|preventDefault={setFilterToTeam} >
+				<picture>
+					<source srcSet={getImageUrl(pokemon.team.logo.avif)} type="image/avif" />
+					<source srcSet={getImageUrl(pokemon.team.logo.webp)} type="image/webp" />
+					<img src={getImageUrl(pokemon.team.logo.png)} alt={'Logo von ' + pokemon.team.player} decoding="async" loading="lazy"/>
+				</picture>
 				{#if tooltipActive}
 					<span class="tooltip" transition:fly={{ y: 15, duration: 100 }}>
 						{pokemon.team.name}
