@@ -154,8 +154,8 @@
 					"pokemon": "silvally",
 					"overrides": {
 						"form": {
-							"en": "Normal",
-							"de": "Normal"
+							"en": "No Memory",
+							"de": "Keine Disc"
 						}
 					}
 				},
@@ -164,9 +164,10 @@
 					"pokemon": "silvally",
 					"overrides": {
 						"form": {
-							"en": "Fairy",
-							"de": "Fee"
+							"en": "Fairy Memory",
+							"de": "Feen-Disc"
 						},
+						"typing": ["fairy"],
 						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/773-fairy.png"
 					}
 				},
