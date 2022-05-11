@@ -12,6 +12,34 @@
 			"rank": 1,
 			"emptyText": "wie schade, dass es hier nichts mehr gibt",
 			"pokemon": [
+				{
+					"internalName": "silvally-normal",
+					"pokemon": "silvally",
+					"overrides": {
+						"form": {
+							"en": "Normal",
+							"de": "Normal"
+						}
+					}
+				},
+				{
+					"internalName": "silvally-fairy",
+					"pokemon": "silvally",
+					"overrides": {
+						"form": {
+							"en": "Fairy",
+							"de": "Fee"
+						},
+						"typing": ["fairy"],
+						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/773-fairy.png"
+					}
+				},{
+					"internalName": "zygarde-10",
+					"pokemon": "zygarde-10",
+					"overrides": {
+						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10118.png"
+					}
+				},
 				"azumarill",
 				"tornadus-therian",
 				"salamence",
@@ -53,26 +81,17 @@
 		},
 		{
 			"name": "A",
-			"subtitles": [
-				"„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"
-			],
+			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"],
 			"emptyText": "wie alles rausgefiltert",
 			"rank": 2,
-			"pokemon": [
-				"arcanine",
-				"tornadus-incarnate"
-			]
+			"pokemon": ["arcanine", "tornadus-incarnate"]
 		},
 		{
 			"name": "B",
-			"subtitles": [
-				"„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"
-			],
+			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"],
 			"emptyText": "wie besonders leer gesucht",
 			"rank": 3,
-			"pokemon": [
-				"tentacruel"
-			]
+			"pokemon": ["tentacruel"]
 		}
 	]
 }

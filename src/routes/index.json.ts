@@ -52,6 +52,19 @@ export type PokemonType = {
 	pokemonDbUrl: string;
 };
 
+type JsonPokemonObject = {
+	internalName: string,
+	pokemon: string,	
+	overrides: PokemonType
+}
+
+type JsonPokemon = string | JsonPokemonObject
+
+function isJsonPokemonObject(jsonPokemon: any): jsonPokemon is JsonPokemonObject {
+	return typeof jsonPokemon === 'object' && "internalName" in jsonPokemon;
+}
+
+
 function transformTeam(team): Team {
 	return {
 		...team,
@@ -93,9 +106,12 @@ export const get: RequestHandler = async ({ url }) => {
 		throw error;
 	};
 
-	const fetchPokemon: { (pokemonName: string): Promise<PokemonType> } = async (
-		pokemonName: string
-	) => {
+	const fetchPokemon: { (pokemon: JsonPokemon): Promise<PokemonType> } = async (
+		jsonPokemon: JsonPokemon
+		) => {
+		const jsonPokemonObject = isJsonPokemonObject(jsonPokemon) ? jsonPokemon : undefined;
+		const pokemonName = jsonPokemonObject?.pokemon|| jsonPokemon as string;
+
 		console.info(`Fetching data for ${pokemonName}`);
 
 		const pokemon = await api.getPokemonByName(pokemonName);
@@ -116,11 +132,12 @@ export const get: RequestHandler = async ({ url }) => {
 			imageUrl: pokemon.sprites.front_default,
 			name: getName(species),
 			form: getForm(form),
-			id: pokemonName,
-			pokemonDbUrl: `https://pokemondb.net/pokedex/${species.name}`
+			id: jsonPokemonObject?.internalName || pokemonName,
+			pokemonDbUrl: `https://pokemondb.net/pokedex/${species.name}`,
+			...jsonPokemonObject?.overrides
 		} as PokemonType;
 
-		console.info(`Names for ${pokemonName} fetched.`);
+		console.info(`Names for ${jsonPokemon} fetched.`);
 		return returnValue;
 	};
 
@@ -134,7 +151,7 @@ export const get: RequestHandler = async ({ url }) => {
 				rank: element.rank as number,
 				subtitles: element.subtitles,
 				emptyText: element.emptyText,
-				pokemon: (await Promise.all(element.pokemon.map(async (it) => fetchPokemon(it)))).map(
+				pokemon: (await Promise.all(element.pokemon.map(async (pokemon: JsonPokemon) => fetchPokemon(pokemon)))).map(
 					(it) => ({
 						...it,
 						notes: element.notes?.[it.id],
