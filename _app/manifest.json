@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-5474f968.js",
+    "file": "start-4bd6b95b.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -22,7 +22,7 @@
       "_vendor-37050b0a.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-6559a077.css"
+      "assets/pages/__layout.svelte-230c8b45.css"
     ],
     "assets": [
       "assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
@@ -43,7 +43,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-554662d1.js",
+    "file": "pages/index.svelte-1d2ccb15.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
