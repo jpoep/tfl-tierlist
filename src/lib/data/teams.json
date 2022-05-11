@@ -37,6 +37,24 @@
             ]
         },
         {
+            "name": "Freddyursa",
+            "player": "Rick",
+            "logo": "freddyursa",
+            "pokemon": [
+                "weavile",
+                "heatran",
+                "slowking-galar",
+                "buzzwole",
+                "gastrodon",
+                "silvally",
+                "cresselia",
+                "aerodactyl",
+                "vanilluxe",
+                "emolga",
+                "greedent"
+            ]
+        },
+        {
             "name": "Atlanta Fletiamo",
             "player": "Nico",
             "logo": "atlanta-fletiamo",
@@ -70,24 +88,6 @@
                 "decidueye",
                 "lycanroc-midnight",
                 "frosmoth"
-            ]
-        },
-        {
-            "name": "Freddyursa",
-            "player": "Rick",
-            "logo": "freddyursa",
-            "pokemon": [
-                "weavile",
-                "heatran",
-                "slowking-galar",
-                "buzzwole",
-                "gastrodon",
-                "silvally",
-                "cresselia",
-                "aerodactyl",
-                "vanilluxe",
-                "emolga",
-                "greedent"
             ]
         },
         {
