@@ -67,6 +67,7 @@
 	--dark: #705747;
 	--steel: #b8b7ce;
 	--fairy: #d686ad;
+	--salt: #dbd9f1;
 
 	&[data-theme='dark'] {
 		@include dark-theme();
@@ -181,4 +182,8 @@ button {
 
 .normal {
 	background-color: var(--normal);
+}
+
+.salt {
+	background-color: var(--salt);
 }

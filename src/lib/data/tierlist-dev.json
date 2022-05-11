@@ -40,6 +40,21 @@
 						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10118.png"
 					}
 				},
+				{
+					"internalName": "rick",
+					"pokemon": "primeape",
+					"overrides": {
+						"name": {
+							"en": "Rick",
+							"de": "Rick"
+						},
+						"typing": ["poison", "salt"],
+						"form": {
+							"en": "Dota Forme",
+							"de": "Dota-Form"
+						}
+					}
+				},
 				"azumarill",
 				"tornadus-therian",
 				"salamence",

@@ -71,6 +71,10 @@
 		fairy: {
 			de: 'Fee',
 			en: 'Fairy'
+		},
+		salt: {
+			de: 'Salz',
+			en: 'Salt'
 		}
 	};
 </script>

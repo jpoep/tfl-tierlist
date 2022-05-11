@@ -530,7 +530,22 @@
 				"dusknoir",
 				"dusclops",
 				"dubwool",
-				"meltan"
+				"meltan",
+				{
+					"internalName": "rick",
+					"pokemon": "primeape",
+					"overrides": {
+						"name": {
+							"en": "Rick",
+							"de": "Rick"
+						},
+						"typing": ["poison", "salt"],
+						"form": {
+							"en": "Dota Forme",
+							"de": "Dota-Form"
+						}
+					}
+				}
 			]
 		}
 	]
