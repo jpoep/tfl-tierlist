@@ -167,8 +167,7 @@
 							"en": "Fairy Memory",
 							"de": "Feen-Disc"
 						},
-						"typing": ["fairy"],
-						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/773-fairy.png"
+						"typing": ["fairy"]
 					}
 				},
 				"jellicent",
