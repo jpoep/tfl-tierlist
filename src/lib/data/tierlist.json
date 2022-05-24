@@ -481,7 +481,6 @@
 				"clefairy",
 				"pikachu",
 				"pinsir",
-				"shuckle",
 				"meowstic-male",
 				"meowstic-female",
 				"poliwrath",
@@ -544,6 +543,13 @@
 							"en": "Dota Forme",
 							"de": "Dota-Form"
 						}
+					}
+				},
+				{
+					"internalName": "shuckle",
+					"pokemon": "shuckle",
+					"overrides": {
+						"imageUrl": "https://i.kym-cdn.com/entries/icons/original/000/018/489/nick-young-confused-face-300x256-nqlyaa.jpg"
 					}
 				}
 			]
