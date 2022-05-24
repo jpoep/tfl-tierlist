@@ -1,6 +1,6 @@
-const timestamp = 1652881440607;
+const timestamp = 1653400845990;
 const build = [
-  "/_app/start-e18174e0.js",
+  "/_app/start-28353989.js",
   "/_app/pages/__layout.svelte-b238adbd.js",
   "/_app/assets/pages/__layout.svelte-b2693581.css",
   "/_app/error.svelte-f2d62e4f.js",
@@ -11,6 +11,7 @@ const build = [
 ];
 const files = [
   "/.nojekyll",
+  "/CNAME",
   "/favicon.png",
   "/logo-120x120.png",
   "/logo-128x128.png",
