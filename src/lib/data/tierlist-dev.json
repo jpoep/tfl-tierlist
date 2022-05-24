@@ -33,7 +33,8 @@
 						"typing": ["fairy"],
 						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/773-fairy.png"
 					}
-				},{
+				},
+				{
 					"internalName": "zygarde-10",
 					"pokemon": "zygarde-10",
 					"overrides": {
@@ -85,7 +86,14 @@
 				"hydreigon",
 				"victini",
 				"thundurus-incarnate",
-				"thundurus-therian"
+				"thundurus-therian",
+				{
+					"internalName": "shuckle",
+					"pokemon": "shuckle",
+					"overrides": {
+						"pokemonDbUrl": "/till.png"
+					}
+				}
 			],
 			"notes": {
 				"cinderace": {
