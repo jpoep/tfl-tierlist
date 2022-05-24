@@ -1,6 +1,6 @@
-const timestamp = 1653401063625;
+const timestamp = 1653402344109;
 const build = [
-  "/_app/start-d8a82981.js",
+  "/_app/start-e37f2822.js",
   "/_app/pages/__layout.svelte-b238adbd.js",
   "/_app/assets/pages/__layout.svelte-b2693581.css",
   "/_app/error.svelte-f2d62e4f.js",
@@ -67,7 +67,8 @@ const files = [
   "/logos/tuspo-salamence.png",
   "/logos/tuspo-salamence.webp",
   "/manifest.json",
-  "/pokeball-logo.svg"
+  "/pokeball-logo.svg",
+  "/till.png"
 ];
 const worker = self;
 const FILES = `cache${timestamp}`;
