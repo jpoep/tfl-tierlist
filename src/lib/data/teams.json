@@ -1,24 +1,6 @@
 {
     "teams": [
         {
-            "name": "Oliberlo Chancentod",
-            "player": "Oli",
-            "logo": "oliberlo-chancentod",
-            "pokemon": [
-                "cinderace",
-                "clefable",
-                "toxapex",
-                "tornadus-incarnate",
-                "metagross",
-                "goodra",
-                "crawdaunt",
-                "rotom",
-                "virizion",
-                "dugtrio",
-                "cramorant"
-            ]
-        },
-        {
             "name": "TUSPO Salamence",
             "player": "Moritz",
             "logo": "tuspo-salamence",
@@ -56,42 +38,6 @@
             ]
         },
         {
-            "name": "Atlanta Fletiamo",
-            "player": "Nico",
-            "logo": "atlanta-fletiamo",
-            "pokemon": [
-                "salamence",
-                "victini",
-                "cobalion",
-                "amoonguss",
-                "incineroar",
-                "milotic",
-                "silvally-fairy",
-                "mudsdale",
-                "lanturn",
-                "articuno",
-                "lycanroc-midday"
-            ]
-        },
-        {
-            "name": "Bellektro Ghetto",
-            "player": "Max B.",
-            "logo": "bellektro-ghetto",
-            "pokemon": [
-                "garchomp",
-                "celesteela",
-                "starmie",
-                "raikou",
-                "blissey",
-                "mienshao",
-                "weezing-galar",
-                "drapion",
-                "decidueye",
-                "lycanroc-midnight",
-                "frosmoth"
-            ]
-        },
-        {
             "name": "Große Demeteros Apokalypse",
             "player": "Niklas",
             "logo": "gda",
@@ -107,24 +53,6 @@
                 "hitmonlee",
                 "kadabra",
                 "archeops"
-            ]
-        },
-        {
-            "name": "Kopflos Dorsten",
-            "player": "Max V.",
-            "logo": "kopflos-dorsten",
-            "pokemon": [
-                "tornadus-therian",
-                "mamoswine",
-                "sylveon",
-                "arcanine",
-                "chansey",
-                "bronzong",
-                "flygon",
-                "jolteon",
-                "clawitzer",
-                "sceptile",
-                "wobbuffet"
             ]
         },
         {
@@ -146,25 +74,6 @@
             ]
         },
         {
-            "name": "Pixelspark",
-            "player": "Till",
-            "logo": "pixelspark",
-            "pokemon": [
-                "volcarona",
-                "urshifu-rapid-strike",
-                "torkoal",
-                "venusaur",
-                "hatterene",
-                "magnezone",
-                "zygarde-10",
-                "charizard",
-                "ditto",
-                "poliwrath",
-                "claydol",
-                "shuckle"
-            ]
-        },
-        {
             "name": "PSV Nilsoking",
             "player": "Nils",
             "logo": "psv-nilsoking",
@@ -180,24 +89,6 @@
                 "magneton",
                 "audino",
                 "leafeon"
-            ]
-        },
-        {
-            "name": "Quellbrunn Quaxo",
-            "player": "Philipp",
-            "logo": "quellbrunn-quaxo-transparent",
-            "pokemon": [
-                "thundurus-therian",
-                "hawlucha",
-                "tapu-fini",
-                "nidoqueen",
-                "politoed",
-                "rotom-mow",
-                "stakataka",
-                "talonflame",
-                "drampa",
-                "thwackey",
-                "aurorus"
             ]
         },
         {
