@@ -12,8 +12,6 @@ import ScrollTopButton from '$lib/scroll-top-button.svelte';
 	export let tierlist: Tier[];
 	export let initialFilter: string | undefined;
 
-	console.log(initialFilter);
-
 	$filter = initialFilter || '';
 
 	onMount(() => {

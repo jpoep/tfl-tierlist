@@ -13,16 +13,6 @@
 			"emptyText": "wie schade, dass es hier nichts mehr gibt",
 			"pokemon": [
 				{
-					"internalName": "silvally-normal",
-					"pokemon": "silvally",
-					"overrides": {
-						"form": {
-							"en": "Normal",
-							"de": "Normal"
-						}
-					}
-				},
-				{
 					"internalName": "silvally-fairy",
 					"pokemon": "silvally",
 					"overrides": {

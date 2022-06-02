@@ -164,7 +164,6 @@ export const get: RequestHandler = async ({ url }) => {
 			id: jsonPokemonObject?.internalName || pokemonName,
 			baseStats: getStats(pokemon),
 			abilities: getAbilities(pokemon),
-			id: pokemonName,
 			pokemonDbUrl: `https://pokemondb.net/pokedex/${species.name}`,
 			...jsonPokemonObject?.overrides
 		} as PokemonType;
