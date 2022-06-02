@@ -2,7 +2,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 import prodTierlist from '$lib/data/tierlist.json';
 import devTierlist from '$lib/data/tierlist-dev.json';
 import teamsData from '$lib/data/teams.json';
-import pkg, { type PokemonForm, type PokemonSpecies } from 'pokenode-ts';
+import pkg, { ItemClient, type PokemonForm, type PokemonSpecies } from 'pokenode-ts';
 const { PokemonClient } = pkg;
 
 const api = new PokemonClient();
@@ -28,6 +28,15 @@ export type Tier = {
 	pokemon: PokemonType[];
 };
 
+export type Stats = {
+	hp: number;
+	atk: number;
+	def: number;
+	spatk: number;
+	spdef: number;
+	spd: number;
+};
+
 export type PokemonType = {
 	name: {
 		en: string;
@@ -45,6 +54,8 @@ export type PokemonType = {
 				de: string;
 		  }
 		| undefined;
+	baseStats: Stats;
+	abilities: string[];
 	id: string;
 	team: Team | undefined;
 	typing: string[];
@@ -101,6 +112,24 @@ export const get: RequestHandler = async ({ url }) => {
 		};
 	};
 
+	const getStats: {
+		(pokemon: pkg.Pokemon): Stats;
+	} = (pokemon) => {
+		const stats = pokemon.stats.map((stat) => stat.base_stat);
+		return {
+			hp: stats[0],
+			atk: stats[1],
+			def: stats[2],
+			spatk: stats[3],
+			spdef: stats[4],
+			spd: stats[5]
+		};
+	};
+
+	const getAbilities: {
+		(pokemon: pkg.Pokemon): string[];
+	} = (pokemon) => pokemon.abilities.map((ability) => ability.ability.name);
+
 	const logError = (error: Error, pokemonName: string, method: string) => {
 		console.log(`${pokemonName}, ${method}: ${error}`);
 		throw error;
@@ -133,6 +162,9 @@ export const get: RequestHandler = async ({ url }) => {
 			name: getName(species),
 			form: getForm(form),
 			id: jsonPokemonObject?.internalName || pokemonName,
+			baseStats: getStats(pokemon),
+			abilities: getAbilities(pokemon),
+			id: pokemonName,
 			pokemonDbUrl: `https://pokemondb.net/pokedex/${species.name}`,
 			...jsonPokemonObject?.overrides
 		} as PokemonType;

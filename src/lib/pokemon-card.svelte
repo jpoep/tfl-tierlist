@@ -6,11 +6,13 @@
 	import { filter } from '$lib/stores/store';
 	import { base } from '$app/paths';
 import { loop_guard } from 'svelte/internal';
+	import PokemonStats from './pokemon-stats.svelte';
 
 	export let pokemon: PokemonType;
 
 	let noteActive: boolean = false;
 	let tooltipActive: boolean = false;
+	let detailsActive: boolean = false;
 
 	$: _pokemon = new Pokemon(pokemon);
 
@@ -26,6 +28,8 @@ import { loop_guard } from 'svelte/internal';
 		tooltipActive = false;
 	};
 
+	const toggleDetails = () => (detailsActive = !detailsActive);
+
 	const setFilterToTeam = () => {
 		// Having the option of using the browser's back button is a lot nicer
 		window.history.pushState(null, '', new URL(window.location.href));
@@ -38,7 +42,7 @@ import { loop_guard } from 'svelte/internal';
 	};
 </script>
 
-<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
+<div class="pokemon" on:click={toggleDetails}>
 	<img src={pokemon.imageUrl} alt={_pokemon.localName} crossorigin="anonymous" loading="lazy" />
 	<div class="notes-container">
 		{#if pokemon.team}
@@ -87,18 +91,15 @@ import { loop_guard } from 'svelte/internal';
 	<div class="pokemon-form secondary">
 		{_pokemon.localForm || ''}
 	</div>
+	{#if detailsActive}
+		<PokemonStats stats={pokemon.baseStats} abilities={pokemon.abilities} />
+	{/if}
 	<div class="pokemon-typing">
 		<PokemonTypeComponent type1={pokemon.typing[0]} type2={pokemon.typing[1]} />
 	</div>
-</a>
+</div>
 
 <style lang="scss">
-	a {
-		color: inherit;
-		text-decoration: none;
-		display: block;
-	}
-
 	.pokemon {
 		position: relative;
 		height: 100%;
@@ -107,6 +108,7 @@ import { loop_guard } from 'svelte/internal';
 		font-size: large;
 		padding: 1rem;
 		border-radius: 2px;
+		cursor: pointer;
 
 		display: flex;
 		flex-direction: column;
