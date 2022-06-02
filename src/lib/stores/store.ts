@@ -67,3 +67,7 @@ if (browser) {
 		window.history.replaceState(null, '', url.toString());
 	});
 }
+
+// allStatsToggled
+
+export const allStatsToggled = writable<boolean>(false);

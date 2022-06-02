@@ -1,13 +1,11 @@
 <script lang="ts">
-	import DarkModeButton from '$lib/dark-mode-button.svelte';
 	import TierComponent from '$lib/tier.svelte';
 	import { language } from '$lib/stores/store';
 	import type { PokemonType, Team, Tier } from './index.json';
-	import LanguageButton from '$lib/language-button.svelte';
 	import { types } from '$lib/pokemon-type.svelte';
 	import { filter } from '$lib/stores/store';
 	import { onMount } from 'svelte';
-import ScrollTopButton from '$lib/scroll-top-button.svelte';
+	import ScrollTopButton from '$lib/scroll-top-button.svelte';
 
 	export let tierlist: Tier[];
 	export let initialFilter: string | undefined;
@@ -47,46 +45,15 @@ import ScrollTopButton from '$lib/scroll-top-button.svelte';
 	}));
 </script>
 
-<div class="top-bar">
-	<input type="search" bind:value={$filter} placeholder="Nach Pokémon, Typen oder Teams filtern" />
-	<div class="spacer" />
-	<DarkModeButton />
-	<LanguageButton />
-</div>
 
-<h1>Tierlist für TFL Season 3</h1>
-{#each filteredList as tier}
-	<TierComponent {tier} />
-{/each}
+	<h1>Tierlist für TFL Season 3</h1>
+	{#each filteredList as tier}
+		<TierComponent {tier} />
+	{/each}
 
 <ScrollTopButton />
 
 <style lang="scss">
-	:global(.top-bar) {
-		width: 100%;
-		display: flex;
-		justify-content: space-between;
-		height: 5rem;
-		padding: 1rem;
-		gap: 0.5rem;
-
-		input {
-			width: 33ch;
-			background-color: var(--bg-color-highlighted);
-			color: var(--font-color);
-			border: none;
-			border-radius: 5px;
-			padding: 0.5rem;
-
-			&::placeholder {
-				text-align: center;
-			}
-		}
-
-		.spacer {
-			flex-grow: 1;
-		}
-	}
 
 	h1 {
 		text-align: center;

@@ -17,6 +17,10 @@
 		// Can't put it in the actual component for whatever reason. Sadge.
 		box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
 	}
+	
+	nav{
+		box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
+	}
 }
 :root {
 	--dark-bg: var(--nord0);
@@ -93,6 +97,7 @@ body {
 
 	transition: color 1s ease;
 	transition: background-color 1s ease;
+	margin: 0;
 }
 
 * {

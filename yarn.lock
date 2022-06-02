@@ -62,6 +62,13 @@
   resolved "https://registry.yarnpkg.com/@iarna/toml/-/toml-2.2.5.tgz#b32366c89b43c6f8cefbdefac778b9c828e3ba8c"
   integrity sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==
 
+"@iconify-icons/gridicons@^1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/gridicons/-/gridicons-1.2.1.tgz#75af877165991886611685439ca4abaca4a74b16"
+  integrity sha512-JCBR1F9YBm2LfQddBa/ujmSd+x4hXaTdWN8uENbSCmFYSlex42bv+VVVhlHWd4H9JTqfEaT1CYDWtIoXz1o6ag==
+  dependencies:
+    "@iconify/types" "^1.0.12"
+
 "@iconify-icons/ic@^1.2.2":
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/@iconify-icons/ic/-/ic-1.2.2.tgz#ad2c1a449257ace1939b656b4cec1b69827db319"

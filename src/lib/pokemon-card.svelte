@@ -3,16 +3,17 @@
 	import { Pokemon } from './classes/Pokemon';
 	import PokemonTypeComponent from '$lib/pokemon-type.svelte';
 	import type { PokemonType, Team } from 'src/routes/index.json';
-	import { filter } from '$lib/stores/store';
+	import { allStatsToggled, filter } from '$lib/stores/store';
 	import { base } from '$app/paths';
 	import PokemonStats from './pokemon-stats.svelte';
-	import { flip } from 'svelte/animate';
 
 	export let pokemon: PokemonType;
 
 	let noteActive: boolean = false;
 	let tooltipActive: boolean = false;
 	let detailsActive: boolean = false;
+
+	$: detailsActive = $allStatsToggled;
 
 	$: _pokemon = new Pokemon(pokemon);
 
@@ -111,9 +112,9 @@
 		</div>
 	</div>
 	{#if !detailsActive}
-	<div class="pokemon-typing" class:tiny={detailsActive}>
-		<PokemonTypeComponent type1={pokemon.typing[0]} type2={pokemon.typing[1]} />
-	</div>
+		<div class="pokemon-typing" class:tiny={detailsActive}>
+			<PokemonTypeComponent type1={pokemon.typing[0]} type2={pokemon.typing[1]} />
+		</div>
 	{/if}
 	{#if detailsActive}
 		<div class="pokemon-stats">
@@ -123,12 +124,6 @@
 </div>
 
 <style lang="scss">
-	// img.tiny {
-	// flex-grow: 0;
-	// height: 20px;
-	// width: 50px;
-	// flex-shrink: 1;
-	// }
 	.pokemon-main {
 		display: flex;
 		flex-direction: column;
