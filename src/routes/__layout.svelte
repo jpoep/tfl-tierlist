@@ -45,6 +45,7 @@
 			background-color: var(--bg-color-highlighted);
 			height: 100%;
 			width: 100%;
+			max-width: 40rem;
 			color: var(--font-color);
 			border: none;
 			border-radius: 5px;
