@@ -75,8 +75,6 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		margin: 0.2rem 0;
-		padding: 0 0.2rem;
 		font-weight: bold;
 
 		> div {
@@ -87,12 +85,9 @@
 	.stat-bar {
 		position: absolute;
 		border-radius: 5px;
-		// border-bottom: 3px solid;
 		height: 3px;
 		left: 0;
 		bottom: 0;
-		// top: 0.1rem;
-		// bottom: 0.1rem;
 	}
 
 	.stat-label,

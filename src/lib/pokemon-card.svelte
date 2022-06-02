@@ -93,7 +93,7 @@
 		</div>
 	{/if}
 
-	<div class="pokemon-bla" class:tiny={detailsActive}>
+	<div class="pokemon-main" class:tiny={detailsActive}>
 		<img
 			src={pokemon.imageUrl}
 			alt={_pokemon.localName}
@@ -110,9 +110,11 @@
 			</div>
 		</div>
 	</div>
-	<div class="pokemon-typing">
+	{#if !detailsActive}
+	<div class="pokemon-typing" class:tiny={detailsActive}>
 		<PokemonTypeComponent type1={pokemon.typing[0]} type2={pokemon.typing[1]} />
 	</div>
+	{/if}
 	{#if detailsActive}
 		<div class="pokemon-stats">
 			<PokemonStats stats={_pokemon.baseStats} abilities={_pokemon.abilities} />
@@ -127,15 +129,15 @@
 	// width: 50px;
 	// flex-shrink: 1;
 	// }
-	.pokemon-bla {
+	.pokemon-main {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		margin-bottom: 1rem;
+		margin-bottom: 0.5rem;
 
 		&.tiny {
 			flex-direction: row;
-			justify-content: space-between;
+			justify-content: center;
 		}
 
 		> img {
@@ -152,31 +154,29 @@
 
 		&.tiny {
 			flex-direction: column;
-			font-size: 0.9rem;
 			justify-content: center;
 			font-weight: bold;
-			
+
 			.form {
 				min-height: 0;
+				font-weight: normal;
+				font-size: 0.7rem;
 			}
 		}
 		.form {
 			font-size: smaller;
 			min-height: 1rem;
-			
+			line-height: 0.9rem;
 		}
-	}
-	.tiny {
-		flex-direction: row;
 	}
 	.pokemon {
 		position: relative;
 		height: 100%;
-		min-height: 15rem;
+		min-height: 10rem;
 		background-color: var(--bg-color-raised);
 		text-align: center;
 		font-size: large;
-		padding: 1rem;
+		padding: 0.7rem;
 		border-radius: 2px;
 		cursor: pointer;
 
@@ -280,13 +280,7 @@
 			line-height: 1.4rem;
 		}
 
-		.pokemon-typing {
-			// margin-top: auto;
-			// justify-self: flex-end;
-		}
-
 		.pokemon-stats {
-			margin-bottom: 1rem;
 			margin-top: 1rem;
 		}
 	}
