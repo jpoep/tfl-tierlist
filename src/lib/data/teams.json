@@ -8,14 +8,14 @@
                 "landorus-therian",
                 "jirachi",
                 "primarina",
-                "kommo-o",
+                "raikou",
                 "entei",
                 "crobat",
-                "zoroark",
+                "goodra",
                 "golisopod",
                 "miltank",
                 "sawk",
-                "trevenant"
+                "swoobat"
             ]
         },
         {
@@ -24,12 +24,12 @@
             "logo": "freddyursa",
             "pokemon": [
                 "weavile",
-                "heatran",
+                "zapdos",
                 "slowking-galar",
                 "buzzwole",
-                "gastrodon",
-                "silvally-normal",
-                "cresselia",
+                "milotic",
+                "incineroar",
+                "seismitoad",
                 "aerodactyl",
                 "vanilluxe",
                 "emolga",
@@ -43,13 +43,13 @@
             "logo": "gda",
             "pokemon": [
                 "rillaboom",
-                "latios",
+                "clefable",
                 "slowbro",
                 "landorus-incarnate",
                 "bisharp",
-                "klefki",
-                "marowak-alola",
-                "heliolisk",
+                "darmanitan-standard",
+                "chansey",
+                "jolteon",
                 "hitmonlee",
                 "kadabra",
                 "archeops"
@@ -65,12 +65,12 @@
                 "haxorus",
                 "swampert",
                 "chandelure",
-                "grimmsnarl",
+                "mienshao",
                 "slowbro-galar",
                 "persian-alola",
-                "uxie",
-                "eldegoss",
-                "rotom-frost"
+                "comfey",
+                "beartic",
+                "lycanroc-midday"
             ]
         },
         {
@@ -84,11 +84,11 @@
                 "ninetales-alola",
                 "krookodile",
                 "vaporeon",
-                "moltres",
+                "blissey",
                 "arctozolt",
                 "magneton",
                 "audino",
-                "leafeon"
+                "rhydon"
             ]
         },
         {
@@ -97,15 +97,15 @@
             "logo": "surging-strikes",
             "pokemon": [
                 "tapu-koko",
-                "aegislash-shield",
+                "excadrill",
                 "slowking",
-                "tangrowth",
+                "blacephalon",
                 "noivern",
-                "darmanitan-standard",
+                "gigalith",
                 "celebi",
                 "type-null",
                 "passimian",
-                "garbodor",
+                "sceptile",
                 "cryogonal"
             ]
         }
