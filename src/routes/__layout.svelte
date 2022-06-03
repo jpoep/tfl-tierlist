@@ -7,6 +7,8 @@
 	import LanguageButton from '$lib/language-button.svelte';
 	import { filter } from '$lib/stores/store';
 	import { allStatsToggled } from '$lib/stores/store';
+	import cancelIcon from '@iconify-icons/iconoir/cancel.js';
+	import Icon from '@iconify/svelte';
 
 	let y: number;
 </script>
@@ -14,7 +16,18 @@
 <svelte:window bind:scrollY={y} />
 
 <nav class="top-bar" class:shadowed={y > 50}>
-	<input type="search" bind:value={$filter} placeholder="Nach Pokémon, Typen oder Teams filtern" />
+	<div class="input-wrapper">
+		<input
+			type="search"
+			bind:value={$filter}
+			placeholder="Nach Pokémon, Typen oder Teams filtern"
+		/>
+		{#if $filter.length > 0}
+			<button class="cancel-button" on:click={() => ($filter = '')}>
+				<Icon icon={cancelIcon} inline/>
+			</button>
+		{/if}
+	</div>
 	<div class="spacer" />
 	<ToggleStatsButton bind:toggled={$allStatsToggled} />
 	<DarkModeButton />
@@ -45,15 +58,27 @@
 
 		transition: background-color 1s ease;
 
+		.input-wrapper {
+			height: 100%;
+			width: 100%;
+			max-width: 40rem;
+			position: relative;
+			.cancel-button {
+				position: absolute;
+				right: .2rem;
+				height: 100%;
+				font-size: 1.8rem;
+			}
+		}
 		input {
 			background-color: var(--bg-color-highlighted);
 			height: 100%;
 			width: 100%;
-			max-width: 40rem;
 			color: var(--font-color);
 			border: none;
 			border-radius: 5px;
 			padding: 0.5rem;
+			appearance: none;
 
 			&::placeholder {
 				text-align: center;
