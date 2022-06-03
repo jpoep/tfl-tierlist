@@ -22,7 +22,7 @@
 			bind:value={$filter}
 			placeholder="Nach Pokémon, Typen oder Teams filtern"
 		/>
-		{#if $filter.length > 0}
+		{#if $filter?.length > 0}
 			<button class="cancel-button" on:click={() => ($filter = '')}>
 				<Icon icon={cancelIcon} inline/>
 			</button>
