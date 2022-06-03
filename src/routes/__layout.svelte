@@ -7,9 +7,13 @@
 	import LanguageButton from '$lib/language-button.svelte';
 	import { filter } from '$lib/stores/store';
 	import { allStatsToggled } from '$lib/stores/store';
+
+	let y: number;
 </script>
 
-<nav class="top-bar">
+<svelte:window bind:scrollY={y} />
+
+<nav class="top-bar" class:shadowed={y > 50}>
 	<input type="search" bind:value={$filter} placeholder="Nach Pokémon, Typen oder Teams filtern" />
 	<div class="spacer" />
 	<ToggleStatsButton bind:toggled={$allStatsToggled} />
@@ -35,7 +39,7 @@
 		display: flex;
 		justify-content: space-between;
 		height: var(--navbar-height);
-		padding: .6rem 0.5rem; 
+		padding: 0.6rem 0.5rem;
 		gap: 0.2rem;
 		align-items: center;
 
@@ -61,7 +65,11 @@
 		}
 	}
 
+	nav {
+		transition: box-shadow 0.5s ease;
+	}
+
 	main {
-		margin: 0 .5rem;
+		margin: 0 0.5rem;
 	}
 </style>
