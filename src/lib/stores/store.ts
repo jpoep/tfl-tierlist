@@ -53,7 +53,7 @@ if (browser) {
 
 // filter
 
-export const filter = writable<string>('');
+export const filter = writable<string>();
 
 if (browser) {
 	// sync the q searchparam with the currently active filter
