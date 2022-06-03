@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Stats } from 'src/routes/index.json';
-	import { darkMode, theme } from './stores/store';
+	import type { Ability, Stats } from 'src/routes/index.json';
+	import { language } from './stores/store';
 
 	export let stats: Stats;
-	export let abilities: string[];
+	export let abilities: Ability[];
 
 	const STAT_NAMES = {
 		hp: 'HP',
@@ -20,7 +20,13 @@
 	const YELLOW_COLOR = [254, 177, 57];
 	const BLUE_COLOR = [48, 170, 221]; // "#88c0d0"
 
-	$: THRESHOLDS = { 0: RED_COLOR, 20: RED_COLOR, 30: YELLOW_COLOR, 60: GREEN_COLOR, 100: BLUE_COLOR };
+	$: THRESHOLDS = {
+		0: RED_COLOR,
+		20: RED_COLOR,
+		30: YELLOW_COLOR,
+		60: GREEN_COLOR,
+		100: BLUE_COLOR
+	};
 
 	function getBarStyles(stat: number): string {
 		const percentage = getBarPercentage(stat);
@@ -68,9 +74,30 @@
 			<div class="stat-number">{stat[1]}</div>
 		</div>
 	{/each}
+	<div class="abilities">
+		{#each abilities as ability, index}
+			<div class="ability">
+				{ability[$language].name }
+			</div>
+		{/each}
+	</div>
 </div>
 
 <style lang="scss">
+	.abilities {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		gap: 0.5rem;
+		.ability {
+			font-size: 0.8rem;
+			color: var(--font-color-lightened);
+			line-height: .5em;
+		}
+		margin-top: .8rem;
+		margin-bottom: .2rem;
+	}
 	.stat {
 		position: relative;
 		display: flex;
@@ -94,5 +121,4 @@
 	.stat-number {
 		color: var(--fg-color-highlighted);
 	}
-
 </style>

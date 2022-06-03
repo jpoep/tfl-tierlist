@@ -131,8 +131,8 @@
 		margin-bottom: 0.5rem;
 
 		&.tiny {
-			flex-direction: row;
-			justify-content: center;
+			flex-direction: row-reverse;
+			justify-content: space-between;
 		}
 
 		> img {
@@ -150,6 +150,7 @@
 		&.tiny {
 			flex-direction: column;
 			justify-content: center;
+			align-items: flex-start;
 			font-weight: bold;
 
 			.form {
@@ -276,7 +277,7 @@
 		}
 
 		.pokemon-stats {
-			margin-top: 1rem;
+			// margin-top: 1rem;
 		}
 	}
 </style>
