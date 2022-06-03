@@ -8,9 +8,15 @@
 	import ScrollTopButton from '$lib/scroll-top-button.svelte';
 
 	export let tierlist: Tier[];
+	export let teams: Team[];
 	export let initialFilter: string | undefined;
 
+	let currentTeam: Team | undefined;
+
 	$filter = initialFilter || '';
+	$: currentTeam = teams.map((team) => team.name).includes($filter)
+		? teams.find((it) => it.name === $filter)
+		: undefined;
 
 	onMount(() => {
 		window.addEventListener('popstate', () => {
@@ -45,16 +51,28 @@
 	}));
 </script>
 
-
-	<h1>Tierlist für TFL Season 3</h1>
+<h1>Tierlist für TFL Season 3</h1>
+{#if currentTeam}
+	<TierComponent
+		tier={{
+			name: currentTeam.name,
+			emptyText: '',
+			rank: 1,
+			subtitles: [currentTeam.player],
+			pokemon: tierlist
+				.flatMap((it) => it.pokemon)
+				.filter((pokemon) => currentTeam.pokemon.includes(pokemon.id))
+		}}
+	/>
+{:else}
 	{#each filteredList as tier}
 		<TierComponent {tier} />
 	{/each}
+{/if}
 
 <ScrollTopButton />
 
 <style lang="scss">
-
 	h1 {
 		text-align: center;
 	}
