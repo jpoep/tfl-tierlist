@@ -85,10 +85,12 @@
 
 <style lang="scss">
 	.abilities {
+		min-height: 1.6rem;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
+		align-items: center;
 		gap: 0.5rem;
 		.ability {
 			font-size: 0.8rem;
@@ -102,7 +104,6 @@
 		position: relative;
 		display: flex;
 		justify-content: space-between;
-		font-weight: bold;
 
 		> div {
 			z-index: 1;
