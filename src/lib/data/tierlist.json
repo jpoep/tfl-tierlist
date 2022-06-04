@@ -141,9 +141,7 @@
 		},
 		{
 			"name": "B",
-			"subtitles": [
-				"„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"
-			],
+			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"],
 			"emptyText": "wie besonders leer gesucht",
 			"rank": 3,
 			"pokemon": [
@@ -151,7 +149,27 @@
 				"moltres-galar",
 				"marowak-alola",
 				"salazzle",
-				"silvally",
+				{
+					"internalName": "silvally-normal",
+					"pokemon": "silvally",
+					"overrides": {
+						"form": {
+							"en": "No Memory",
+							"de": "Keine Disc"
+						}
+					}
+				},
+				{
+					"internalName": "silvally-fairy",
+					"pokemon": "silvally",
+					"overrides": {
+						"form": {
+							"en": "Fairy Memory",
+							"de": "Feen-Disc"
+						},
+						"typing": ["fairy"]
+					}
+				},
 				"jellicent",
 				"vaporeon",
 				"cloyster",
@@ -221,16 +239,18 @@
 				"braviary",
 				"mienshao",
 				"zoroark",
-				"zygarde-10"
+				{
+					"internalName": "zygarde-10",
+					"pokemon": "zygarde-10",
+					"overrides": {
+						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10118.png"
+					}
+				}
 			],
 			"notes": {
 				"blaziken": {
 					"de": "Ohne Temposchub",
 					"en": "Ohne Speedboost"
-				},
-				"silvally": {
-					"de": "1x mit Disc, 1x ohne",
-					"en": "1x mit Disc, 1x ohne"
 				},
 				"zygarde-10": {
 					"de": "Ohne Scharwandel",
@@ -248,9 +268,7 @@
 		},
 		{
 			"name": "C",
-			"subtitles": [
-				"Nimmste günstig mit"
-			],
+			"subtitles": ["Nimmste günstig mit"],
 			"emptyText": "wie complett ergebnislos",
 			"rank": 4,
 			"pokemon": [
@@ -347,10 +365,7 @@
 		{
 			"name": "D",
 			"rank": 5,
-			"subtitles": [
-				"Immer noch besser als Warsteiner",
-				"Ja! Pizza Salami 3x350g"
-			],
+			"subtitles": ["Immer noch besser als Warsteiner", "Ja! Pizza Salami 3x350g"],
 			"emptyText": "wie doof, dass nichts mehr übrig ist",
 			"notes": {
 				"dugtrio": {
@@ -466,7 +481,6 @@
 				"clefairy",
 				"pikachu",
 				"pinsir",
-				"shuckle",
 				"meowstic-male",
 				"meowstic-female",
 				"poliwrath",
@@ -515,7 +529,29 @@
 				"dusknoir",
 				"dusclops",
 				"dubwool",
-				"meltan"
+				"meltan",
+				{
+					"internalName": "rick",
+					"pokemon": "primeape",
+					"overrides": {
+						"name": {
+							"en": "Rick",
+							"de": "Rick"
+						},
+						"typing": ["poison", "salt"],
+						"form": {
+							"en": "Dota Forme",
+							"de": "Dota-Form"
+						}
+					}
+				},
+				{
+					"internalName": "shuckle",
+					"pokemon": "shuckle",
+					"overrides": {
+						"pokemonDbUrl": "/till.png"
+					}
+				}
 			]
 		}
 	]

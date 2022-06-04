@@ -3,13 +3,17 @@
 	import { Pokemon } from './classes/Pokemon';
 	import PokemonTypeComponent from '$lib/pokemon-type.svelte';
 	import type { PokemonType, Team } from 'src/routes/index.json';
-	import { filter } from '$lib/stores/store';
+	import { allStatsToggled, filter } from '$lib/stores/store';
 	import { base } from '$app/paths';
+	import PokemonStats from './pokemon-stats.svelte';
 
 	export let pokemon: PokemonType;
 
 	let noteActive: boolean = false;
 	let tooltipActive: boolean = false;
+	let detailsActive: boolean = false;
+
+	$: detailsActive = $allStatsToggled;
 
 	$: _pokemon = new Pokemon(pokemon);
 
@@ -25,6 +29,8 @@
 		tooltipActive = false;
 	};
 
+	const toggleDetails = () => (detailsActive = !detailsActive);
+
 	const setFilterToTeam = () => {
 		// Having the option of using the browser's back button is a lot nicer
 		window.history.pushState(null, '', new URL(window.location.href));
@@ -37,76 +43,142 @@
 	};
 </script>
 
-<a class="pokemon" href={pokemon.pokemonDbUrl} target="_blank">
-	<img src={pokemon.imageUrl} alt={_pokemon.localName} crossorigin="anonymous" loading="lazy" />
-	<div class="notes-container">
-		{#if pokemon.team}
-			<div
-				class="pokemon-team"
-				on:mouseover={enableTooltip}
-				on:focus={enableTooltip}
-				on:mouseout={disableTooltip}
-				on:blur={disableTooltip}
-				on:click|preventDefault={setFilterToTeam}
-			>
-				<img src={getImageUrl(pokemon.team.logo)} alt={'Logo von ' + pokemon.team.player} />
-				{#if tooltipActive}
-					<span class="tooltip" transition:fly={{ y: 15, duration: 100 }}>
-						{pokemon.team.name}
-						<span class="player">
-							{pokemon.team.player}
+<div class="pokemon" on:click={toggleDetails}>
+	{#if !detailsActive}
+		<div class="notes-container">
+			{#if pokemon.team}
+				<div
+					class="pokemon-team"
+					on:mouseover={enableTooltip}
+					on:focus={enableTooltip}
+					on:mouseout={disableTooltip}
+					on:blur={disableTooltip}
+					on:click|stopPropagation={setFilterToTeam}
+				>
+					<picture>
+						<source srcSet={getImageUrl(pokemon.team.logo.avif)} type="image/avif" />
+						<source srcSet={getImageUrl(pokemon.team.logo.webp)} type="image/webp" />
+						<img
+							src={getImageUrl(pokemon.team.logo.png)}
+							alt={'Logo von ' + pokemon.team.player}
+							decoding="async"
+							loading="lazy"
+						/>
+					</picture>
+					{#if tooltipActive}
+						<span class="tooltip" transition:fly|local={{ y: 15, duration: 100 }}>
+							{pokemon.team.name}
+							<span class="player">
+								{pokemon.team.player}
+							</span>
 						</span>
-					</span>
-				{/if}
-			</div>
-		{/if}
-		{#if pokemon.notes && !noteActive}
-			<div
-				class="pokemon-note"
-				transition:fly={{ y: -10, duration: 300 }}
-				on:click|preventDefault={toggleNote}
-			/>
-		{/if}
-	</div>
+					{/if}
+				</div>
+			{/if}
+			{#if pokemon.notes && !noteActive}
+				<div
+					class="pokemon-note"
+					transition:fly|local={{ y: -10, duration: 300 }}
+					on:click|stopPropagation={toggleNote}
+				/>
+			{/if}
+		</div>
+	{/if}
 	{#if noteActive}
 		<div
 			class="modal"
-			on:click|preventDefault={toggleNote}
+			on:click|stopPropagation={toggleNote}
 			transition:fly={{ y: 50, duration: 300 }}
 		>
 			{_pokemon.localNotes || ''}
 		</div>
 	{/if}
-	<div class="pokemon-name">
-		{_pokemon.localName}
+
+	<div class="pokemon-main" class:tiny={detailsActive}>
+		<img
+			src={pokemon.imageUrl}
+			alt={_pokemon.localName}
+			crossorigin="anonymous"
+			loading="lazy"
+			class:tiny={detailsActive}
+		/>
+		<div class="pokemon-name" class:tiny={detailsActive}>
+			<div class="name">
+				{_pokemon.localName}
+			</div>
+			<div class="form secondary">
+				{_pokemon.localForm || ''}
+			</div>
+		</div>
 	</div>
-	<div class="pokemon-form secondary">
-		{_pokemon.localForm || ''}
-	</div>
-	<div class="pokemon-typing">
-		<PokemonTypeComponent type1={pokemon.typing[0]} type2={pokemon.typing[1]} />
-	</div>
-</a>
+	{#if !detailsActive}
+		<div class="pokemon-typing" class:tiny={detailsActive}>
+			<PokemonTypeComponent type1={pokemon.typing[0]} type2={pokemon.typing[1]} />
+		</div>
+	{/if}
+	{#if detailsActive}
+		<div class="pokemon-stats">
+			<PokemonStats stats={_pokemon.baseStats} abilities={_pokemon.abilities} />
+		</div>
+	{/if}
+</div>
 
 <style lang="scss">
-	a {
-		color: inherit;
-		text-decoration: none;
-		display: block;
-	}
-
-	.pokemon {
-		position: relative;
-		height: 100%;
-		background-color: var(--bg-color-raised);
-		text-align: center;
-		font-size: large;
-		padding: 1rem;
-		border-radius: 2px;
-
+	.pokemon-main {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
+		margin-bottom: 0.5rem;
+
+		&.tiny {
+			flex-direction: row-reverse;
+			justify-content: space-between;
+		}
+
+		> img {
+			image-rendering: pixelated;
+		}
+
+		> img.tiny {
+			height: 2.5rem;
+		}
+	}
+	.pokemon-name {
+		display: flex;
+		flex-direction: column;
+
+		&.tiny {
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+			font-weight: bold;
+
+			.form {
+				min-height: 0;
+				font-weight: normal;
+				font-size: 0.7rem;
+			}
+		}
+		.form {
+			font-size: smaller;
+			min-height: 1rem;
+			line-height: 0.9rem;
+		}
+	}
+	.pokemon {
+		position: relative;
+		height: 100%;
+		min-height: 10rem;
+		background-color: var(--bg-color-raised);
+		text-align: center;
+		font-size: large;
+		padding: 0.7rem;
+		border-radius: 2px;
+		cursor: pointer;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 
 		.notes-container {
 			position: absolute;
@@ -204,19 +276,8 @@
 			line-height: 1.4rem;
 		}
 
-		.pokemon-form {
-			font-size: smaller;
-			margin-bottom: 0.5rem;
-		}
-		.pokemon-typing {
-			margin-top: auto;
-			justify-self: flex-end;
-		}
-
-		> img {
-			justify-self: center;
-			image-rendering: pixelated;
-			min-height: 120px;
+		.pokemon-stats {
+			// margin-top: 1rem;
 		}
 	}
 </style>

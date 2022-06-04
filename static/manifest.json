@@ -6,9 +6,54 @@
     "id": "tfl-tierlist",
     "icons": [
         {
-            "src": "favicon.png",
+            "src": "logo-512x512.png",
             "type": "image/png",
             "sizes": "512x512"
+        },
+        {
+            "src": "logo-384x384.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "logo-192x192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "logo-180x180.png",
+            "type": "image/png",
+            "sizes": "180x180"
+        },
+        {
+            "src": "logo-152x152.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "logo-144x144.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "logo-128x128.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        },
+        {
+            "src": "logo-120x120.png",
+            "type": "image/png",
+            "sizes": "120x120"
+        },
+        {
+            "src": "logo-96x96.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "logo-72x72.png",
+            "type": "image/png",
+            "sizes": "72x72"
         }
     ],
     "background_color": "#eceff4",
@@ -17,34 +62,59 @@
     "theme_color": "#2e3440",
     "shortcuts": [
         {
-            "name": "S Tier",
-            "short_name": "S",
-            "description": "Direkt zum S-Tier",
-            "url": "/tfl-tierlist/#S"
-        },
-        {
             "name": "A Tier",
             "short_name": "A",
             "description": "Direkt zum A-Tier",
-            "url": "/tfl-tierlist/#A"
+            "url": "/tfl-tierlist/#A",
+            "icons": [
+                {
+                    "src": "logo-96x96.png",
+                    "type": "image/png",
+                    "sizes": "96x96"
+                }
+            ]
         },
         {
             "name": "B Tier",
             "short_name": "B",
             "description": "Direkt zum B-Tier",
-            "url": "/tfl-tierlist/#B"
+            "url": "/tfl-tierlist/#B",
+            "icons": [
+                {
+                    "src": "logo-96x96.png",
+                    "type": "image/png",
+                    "sizes": "96x96"
+                }
+            ]
+
         },
         {
             "name": "C Tier",
             "short_name": "C",
             "description": "Direkt zum C-Tier",
-            "url": "/tfl-tierlist/#C"
+            "url": "/tfl-tierlist/#C",
+            "icons": [
+                {
+                    "src": "logo-96x96.png",
+                    "type": "image/png",
+                    "sizes": "96x96"
+                }
+            ]
+
         },
         {
-            "name": "S Tier",
+            "name": "D Tier",
             "short_name": "D",
             "description": "Direkt zum D-Tier",
-            "url": "/tfl-tierlist/#D"
+            "url": "/tfl-tierlist/#D",
+            "icons": [
+                {
+                    "src": "logo-96x96.png",
+                    "type": "image/png",
+                    "sizes": "96x96"
+                }
+            ]
+
         }
     ],
     "description": "Die Tierlist für die dritte Season der TFL - in nicht beschissen anzugucken"

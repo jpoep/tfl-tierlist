@@ -1,171 +1,82 @@
 {
     "teams": [
         {
-            "name": "Oliberlo Chancentod",
-            "player": "Oli",
-            "logo": "oliberlo-chancentod.avif",
-            "pokemon": [
-                "cinderace",
-                "clefable",
-                "toxapex",
-                "tornadus-incarnate",
-                "metagross",
-                "goodra",
-                "crawdaunt",
-                "rotom",
-                "virizion",
-                "dugtrio",
-                "cramorant"
-            ]
-        },
-        {
             "name": "TUSPO Salamence",
             "player": "Moritz",
-            "logo": "tuspo-salamence.avif",
+            "logo": "tuspo-salamence",
             "pokemon": [
                 "landorus-therian",
                 "jirachi",
                 "primarina",
-                "kommo-o",
+                "raikou",
                 "entei",
                 "crobat",
-                "zoroark",
+                "goodra",
                 "golisopod",
                 "miltank",
                 "sawk",
-                "trevenant"
-            ]
-        },
-        {
-            "name": "Atlanta Fletiamo",
-            "player": "Nico",
-            "logo": "atlanta-fletiamo.avif",
-            "pokemon": [
-                "salamence",
-                "victini",
-                "cobalion",
-                "amoonguss",
-                "incineroar",
-                "milotic",
-                "silvally",
-                "mudsdale",
-                "lanturn",
-                "articuno",
-                "lycanroc"
-            ]
-        },
-        {
-            "name": "Bellektro Ghetto",
-            "player": "Max B.",
-            "logo": "bellektro-ghetto.avif",
-            "pokemon": [
-                "garchomp",
-                "celesteela",
-                "starmie",
-                "raikou",
-                "blissey",
-                "mienshao",
-                "weezing-galar",
-                "drapion",
-                "decidueye",
-                "lycanroc-midnight",
-                "frosmoth"
+                "swoobat"
             ]
         },
         {
             "name": "Freddyursa",
             "player": "Rick",
-            "logo": "freddyursa.avif",
+            "logo": "freddyursa",
             "pokemon": [
                 "weavile",
-                "heatran",
+                "zapdos",
                 "slowking-galar",
                 "buzzwole",
-                "gastrodon",
-                "silvally",
-                "cresselia",
+                "milotic",
+                "incineroar",
+                "seismitoad",
                 "aerodactyl",
                 "vanilluxe",
                 "emolga",
-                "greedent"
+                "greedent",
+                "rick"
             ]
         },
         {
             "name": "Große Demeteros Apokalypse",
             "player": "Niklas",
-            "logo": "gda.avif",
+            "logo": "gda",
             "pokemon": [
                 "rillaboom",
-                "latios",
+                "clefable",
                 "slowbro",
                 "landorus-incarnate",
                 "bisharp",
-                "klefki",
-                "marowak-alola",
-                "heliolisk",
+                "darmanitan-standard",
+                "chansey",
+                "jolteon",
                 "hitmonlee",
                 "kadabra",
                 "archeops"
             ]
         },
         {
-            "name": "Kopflos Dorsten",
-            "player": "Max V.",
-            "logo": "kopflos-dorsten.avif",
-            "pokemon": [
-                "tornadus-therian",
-                "mamoswine",
-                "sylveon",
-                "arcanine",
-                "chansey",
-                "bronzong",
-                "flygon",
-                "jolteon",
-                "clawitzer",
-                "sceptile",
-                "wobbuffet"
-            ]
-        },
-        {
             "name": "Miami Heatran",
             "player": "Danny",
-            "logo": "miami-heatran.avif",
+            "logo": "miami-heatran",
             "pokemon": [
                 "zeraora",
                 "corviknight",
                 "haxorus",
                 "swampert",
                 "chandelure",
-                "grimmsnarl",
+                "mienshao",
                 "slowbro-galar",
                 "persian-alola",
-                "uxie",
-                "eldegoss",
-                "rotom-frost"
-            ]
-        },
-        {
-            "name": "Pixelspark",
-            "player": "Till",
-            "logo": "pixelspark.avif",
-            "pokemon": [
-                "volcarona",
-                "urshifu-rapid-strike",
-                "torkoal",
-                "venusaur",
-                "hatterene",
-                "magnezone",
-                "zygarde-10",
-                "charizard",
-                "ditto",
-                "poliwrath",
-                "claydol"
+                "comfey",
+                "beartic",
+                "lycanroc-midday"
             ]
         },
         {
             "name": "PSV Nilsoking",
             "player": "Nils",
-            "logo": "psv-nilsoking.avif",
+            "logo": "psv-nilsoking",
             "pokemon": [
                 "dragapult",
                 "zapdos-galar",
@@ -173,46 +84,28 @@
                 "ninetales-alola",
                 "krookodile",
                 "vaporeon",
-                "moltres",
+                "blissey",
                 "arctozolt",
                 "magneton",
                 "audino",
-                "leafeon"
-            ]
-        },
-        {
-            "name": "Quellbrunn Quaxo",
-            "player": "Philipp",
-            "logo": "quellbrunn-quaxo-transparent.avif",
-            "pokemon": [
-                "thundurus-therian",
-                "hawlucha",
-                "tapu-fini",
-                "nidoqueen",
-                "politoed",
-                "rotom-mow",
-                "stakataka",
-                "talonflame",
-                "drampa",
-                "thwackey",
-                "aurorus"
+                "rhydon"
             ]
         },
         {
             "name": "Surging Strikes",
             "player": "Alex",
-            "logo": "surging-strikes.avif",
+            "logo": "surging-strikes",
             "pokemon": [
                 "tapu-koko",
-                "aegislash-shield",
+                "excadrill",
                 "slowking",
-                "tangrowth",
+                "blacephalon",
                 "noivern",
-                "darmanitan-standard",
+                "gigalith",
                 "celebi",
                 "type-null",
                 "passimian",
-                "garbodor",
+                "sceptile",
                 "cryogonal"
             ]
         }

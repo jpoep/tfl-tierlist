@@ -10,9 +10,6 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		paths: {
-			base: dev ? '' : '/tfl-tierlist'
-		},
 		// files: {
 		// assets: '/public'
 		// },

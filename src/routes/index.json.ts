@@ -12,7 +12,11 @@ const dev = process.env.NODE_ENV === 'development';
 export type Team = {
 	name: string;
 	player: string;
-	logo: string;
+	logo: {
+		avif: string;
+		webp: string;
+		png: string;
+	};
 	pokemon: string[];
 };
 
@@ -22,6 +26,26 @@ export type Tier = {
 	emptyText: string;
 	subtitles: string[] | undefined;
 	pokemon: PokemonType[];
+};
+
+export type Stats = {
+	hp: number;
+	atk: number;
+	def: number;
+	spatk: number;
+	spdef: number;
+	spd: number;
+};
+
+export type Ability = {
+	de: {
+		name: string;
+		description: string;
+	};
+	en: {
+		name: string;
+		description: string;
+	};
 };
 
 export type PokemonType = {
@@ -41,6 +65,8 @@ export type PokemonType = {
 				de: string;
 		  }
 		| undefined;
+	baseStats: Stats;
+	abilities: Ability[];
 	id: string;
 	team: Team | undefined;
 	typing: string[];
@@ -48,7 +74,38 @@ export type PokemonType = {
 	pokemonDbUrl: string;
 };
 
-export const get: RequestHandler = async ({url}) => {
+type AbilityCache = {
+	[key: string]: Ability;
+};
+
+type JsonPokemonObject = {
+	internalName: string;
+	pokemon: string;
+	overrides: PokemonType;
+};
+
+type JsonPokemon = string | JsonPokemonObject;
+
+const abilityCache: AbilityCache = {};
+
+function isJsonPokemonObject(jsonPokemon: unknown): jsonPokemon is JsonPokemonObject {
+	return typeof jsonPokemon === 'object' && 'internalName' in jsonPokemon;
+}
+
+function transformTeam(team): Team {
+	return {
+		...team,
+		logo: {
+			avif: team.logo + '.avif',
+			webp: team.logo + '.webp',
+			png: team.logo + '.png'
+		}
+	};
+}
+
+const transformedTeamsData: Team[] = teamsData.teams.map(transformTeam);
+
+export const get: RequestHandler = async ({ url }) => {
 	const getName: {
 		(species: PokemonSpecies): { en: string; de: string };
 	} = (species) => {
@@ -71,27 +128,66 @@ export const get: RequestHandler = async ({url}) => {
 		};
 	};
 
+	const getStats: {
+		(pokemon: pkg.Pokemon): Stats;
+	} = (pokemon) => {
+		const stats = pokemon.stats.map((stat) => stat.base_stat);
+		return {
+			hp: stats[0],
+			atk: stats[1],
+			def: stats[2],
+			spatk: stats[3],
+			spdef: stats[4],
+			spd: stats[5]
+		};
+	};
+
+	async function getAbility(abilityName: string): Promise<Ability> {
+		if (abilityName in abilityCache) {
+			return abilityCache[abilityName];
+		}
+		const ability = await api.getAbilityByName(abilityName);
+		const byLanguage = (language: string) => (verboseEffect: pkg.Name | pkg.VerboseEffect) =>
+			verboseEffect.language.name === language;
+		const returnAbility: Ability = {
+			de: {
+				name: ability.names.find(byLanguage('de')).name,
+				description: ability.effect_entries.find(byLanguage('de'))?.effect
+			},
+			en: {
+				name: ability.names.find(byLanguage('en')).name,
+				description: ability.effect_entries.find(byLanguage('en'))?.effect
+			}
+		};
+		abilityCache[abilityName] = returnAbility;
+		return returnAbility
+	}
+
 	const logError = (error: Error, pokemonName: string, method: string) => {
 		console.log(`${pokemonName}, ${method}: ${error}`);
 		throw error;
 	};
 
-	const fetchPokemon: { (pokemonName: string): Promise<PokemonType> } = async (
-		pokemonName: string
+	const fetchPokemon: { (pokemon: JsonPokemon): Promise<PokemonType> } = async (
+		jsonPokemon: JsonPokemon
 	) => {
+		const jsonPokemonObject = isJsonPokemonObject(jsonPokemon) ? jsonPokemon : undefined;
+		const pokemonName = jsonPokemonObject?.pokemon || (jsonPokemon as string);
+
 		console.info(`Fetching data for ${pokemonName}`);
 
 		const pokemon = await api.getPokemonByName(pokemonName);
 
 		console.info(`Data for ${pokemonName} fetched; names and forms are next`);
 
-		const [species, form] = await Promise.all([
+		const [species, form, ...abilities] = await Promise.all([
 			api
 				.getPokemonSpeciesByName(pokemon.species.name)
 				.catch((it) => logError(it, pokemonName, 'species')),
 			api
 				.getPokemonFormByName(pokemon.forms[0].name)
-				.catch((it) => logError(it, pokemonName, 'form'))
+				.catch((it) => logError(it, pokemonName, 'form')),
+			...pokemon.abilities.map((it) => getAbility(it.ability.name))
 		]);
 
 		const returnValue = {
@@ -99,11 +195,14 @@ export const get: RequestHandler = async ({url}) => {
 			imageUrl: pokemon.sprites.front_default,
 			name: getName(species),
 			form: getForm(form),
-			id: pokemonName,
-			pokemonDbUrl: `https://pokemondb.net/pokedex/${species.name}`
+			id: jsonPokemonObject?.internalName || pokemonName,
+			baseStats: getStats(pokemon),
+			abilities: abilities,
+			pokemonDbUrl: `https://pokemondb.net/pokedex/${species.name}`,
+			...jsonPokemonObject?.overrides
 		} as PokemonType;
 
-		console.info(`Names for ${pokemonName} fetched.`);
+		console.info(`Names for ${jsonPokemon} fetched.`);
 		return returnValue;
 	};
 
@@ -117,13 +216,15 @@ export const get: RequestHandler = async ({url}) => {
 				rank: element.rank as number,
 				subtitles: element.subtitles,
 				emptyText: element.emptyText,
-				pokemon: (await Promise.all(element.pokemon.map(async (it) => fetchPokemon(it)))).map(
-					(it) => ({
-						...it,
-						notes: element.notes?.[it.id],
-						team: teamsData.teams.find((team) => team.pokemon.includes(it.id))
-					})
-				)
+				pokemon: (
+					await Promise.all(
+						element.pokemon.map(async (pokemon: JsonPokemon) => fetchPokemon(pokemon))
+					)
+				).map((it) => ({
+					...it,
+					notes: element.notes?.[it.id],
+					team: transformedTeamsData.find((team) => team.pokemon.includes(it.id))
+				}))
 			};
 		})
 	);
@@ -131,8 +232,8 @@ export const get: RequestHandler = async ({url}) => {
 	return {
 		body: {
 			tierlist,
-			teams: teamsData.teams,
-			initialFilter: url.searchParams.get("q")
+			teams: transformedTeamsData,
+			initialFilter: url.searchParams.get('q')
 		}
 	};
 };
