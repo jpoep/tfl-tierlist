@@ -8,8 +8,13 @@
 	import type { TooltipProps } from './actions/tooltip';
 	import type { Placement } from '@floating-ui/dom';
 
+	let animate = false;
 	let tooltipElement: HTMLElement;
 	let arrowElement: HTMLElement;
+
+	onMount(() => {
+		setTimeout(() => (animate = true), 0);
+	});
 
 	export let tooltipProps: TooltipProps;
 	export let placement: Placement | null = null;
@@ -38,6 +43,7 @@
 
 <div
 	class="tooltip"
+	class:animate
 	bind:this={tooltipElement}
 	style:width
 	style:--background-color={backgroundColor}
@@ -55,6 +61,9 @@
 </div>
 
 <style lang="scss">
+	.tooltip.animate {
+		opacity: 1;
+	}
 	.tooltip {
 		background-color: var(--background-color);
 		color: var(--font-color);
