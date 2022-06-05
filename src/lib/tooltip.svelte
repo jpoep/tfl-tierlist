@@ -6,23 +6,49 @@
 <script lang="ts">
 	import { onMount, setContext } from 'svelte';
 	import type { TooltipProps } from './actions/tooltip';
+	import type { Placement } from '@floating-ui/dom';
 
 	let animate = false;
 	let tooltipElement: HTMLElement;
 	let arrowElement: HTMLElement;
+
 	onMount(() => {
 		setTimeout(() => (animate = true), 0);
 	});
 
 	export let tooltipProps: TooltipProps;
+	export let placement: Placement | null = null;
 
-	const { subTitle, title, width = '8rem' } = tooltipProps;
+	const {
+		subTitle,
+		title,
+		width = '8rem',
+		backgroundColor = 'var(--bg-color-highlighted)'
+	} = tooltipProps;
+	const ANIMATION_DISTANCE = '15px';
 
 	$: setContext(TOOLTIP_DIV, tooltipElement);
 	$: setContext(ARROW_DIV, arrowElement);
+
+	$: splitPlacement = placement?.split('-')[0];
+	$: initialAnimation = splitPlacement && {
+		left: `translateX(-${ANIMATION_DISTANCE})`,
+		right: `translateX(${ANIMATION_DISTANCE})`,
+		top: `translateY(-${ANIMATION_DISTANCE})`,
+		bottom: `translateY(${ANIMATION_DISTANCE})`
+	}[splitPlacement];
 </script>
 
-<div class="tooltip" class:animate bind:this={tooltipElement} style:width>
+<svelte:options accessors={true} />
+
+<div
+	class="tooltip"
+	class:animate
+	bind:this={tooltipElement}
+	style:width
+	style:--background-color={backgroundColor}
+	style:transform ={initialAnimation}
+>
 	{#if title}
 		{title}
 	{/if}
@@ -36,11 +62,11 @@
 
 <style lang="scss">
 	.tooltip.animate {
-		transform: translateY(0);
+		transform: translate(0, 0); 
 		opacity: 1;
 	}
 	.tooltip {
-		background-color: var(--bg-color-highlighted);
+		background-color: var(--background-color);
 		color: var(--font-color);
 		text-align: center;
 		padding: 0.5rem;
@@ -48,9 +74,8 @@
 		font-size: medium;
 
 		// animation
-		transform: translateY(15px);
 		opacity: 0;
-		transition: transform 100ms, opacity 100ms;
+		transition: transform 200ms, opacity 100ms;
 
 		/* Position the tooltip text - see examples below! */
 		position: absolute;
@@ -67,7 +92,7 @@
 			width: 8px;
 			height: 8px;
 			transform: rotate(45deg);
-			background: var(--bg-color-highlighted);
+			background: var(--background-color);
 		}
 
 		.small-text {

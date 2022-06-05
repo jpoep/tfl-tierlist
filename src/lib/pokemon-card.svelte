@@ -11,24 +11,11 @@
 	export let pokemon: PokemonType;
 
 	let noteActive: boolean = false;
-	let tooltipActive: boolean = false;
 	let detailsActive: boolean = false;
 
 	$: detailsActive = $allStatsToggled;
 
 	$: _pokemon = new Pokemon(pokemon);
-
-	const toggleNote = () => {
-		noteActive = !noteActive;
-	};
-
-	const enableTooltip = () => {
-		tooltipActive = true;
-	};
-
-	const disableTooltip = () => {
-		tooltipActive = false;
-	};
 
 	const toggleDetails = () => (detailsActive = !detailsActive);
 
@@ -39,18 +26,17 @@
 	};
 
 	const getImageUrl = (path: string) => {
-		// return new URL(`./assets/logos/${path}/`, import.meta.url).href;
 		return base + '/logos/' + path;
 	};
 </script>
 
 <div class="pokemon" on:click={toggleDetails}>
 	{#if !detailsActive}
-		<div class="notes-container" >
+		<div class="notes-container">
 			{#if pokemon.team}
 				<div
 					class="pokemon-team"
-					use:tooltip={{title: pokemon.team.name, subTitle: pokemon.team.player}}
+					use:tooltip={{ title: pokemon.team.name, subTitle: pokemon.team.player }}
 					on:click|stopPropagation={setFilterToTeam}
 				>
 					<picture>
@@ -68,19 +54,10 @@
 			{#if pokemon.notes && !noteActive}
 				<div
 					class="pokemon-note"
-					transition:fly|local={{ y: -10, duration: 300 }}
-					on:click|stopPropagation={toggleNote}
+					use:tooltip={{ backgroundColor: 'var(--warning', subTitle: _pokemon.localNotes }}
+					on:click|stopPropagation
 				/>
 			{/if}
-		</div>
-	{/if}
-	{#if noteActive}
-		<div
-			class="modal"
-			on:click|stopPropagation={toggleNote}
-			transition:fly={{ y: 50, duration: 300 }}
-		>
-			{_pokemon.localNotes || ''}
 		</div>
 	{/if}
 
@@ -177,14 +154,24 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
 		}
 		.pokemon-team {
-			img {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			picture {
 				max-height: 3rem;
 				max-width: 3rem;
 				border-radius: 50%;
 				background: var(--bg-color-highlighted);
-				padding: 0.3rem;
+				padding: 0.1rem;
+			}
+			img {
+				max-width: 100%;
+				border-radius: 50%;
+				overflow: hidden;
 			}
 		}
 
@@ -192,7 +179,6 @@
 			font-size: x-large;
 			font-weight: 700;
 			background-color: var(--warning);
-			border: 1px solid var(--dark-fg);
 			border-radius: 50%;
 			color: var(--dark-fg);
 			width: 2.5rem;
@@ -209,27 +195,6 @@
 			&:after {
 				content: '!';
 			}
-		}
-
-		.modal {
-			position: absolute;
-			left: 0.5rem;
-			right: 0.5rem;
-			top: 0.5rem;
-			background: var(--warning);
-			border: 1px solid var(--dark-fg);
-			color: var(--dark-fg);
-			padding: 2rem;
-			border-radius: 2px;
-			text-align: center;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			line-height: 1.4rem;
-		}
-
-		.pokemon-stats {
-			// margin-top: 1rem;
 		}
 	}
 </style>

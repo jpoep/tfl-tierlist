@@ -1,10 +1,11 @@
 import Tooltip, { ARROW_DIV, TOOLTIP_DIV } from '$lib/tooltip.svelte';
 import { arrow, autoPlacement, offset, shift } from '@floating-ui/core';
-import { computePosition, flip } from '@floating-ui/dom';
+import { computePosition } from '@floating-ui/dom';
 export type TooltipProps = {
 	title?: string | null;
 	subTitle?: string | null;
 	width?: string | null;
+	backgroundColor?: string | null;
 };
 export function tooltip(element: Element, tooltipProps: TooltipProps) {
 	let tooltipComponent: Tooltip;
@@ -18,8 +19,12 @@ export function tooltip(element: Element, tooltipProps: TooltipProps) {
 		const tooltip = tooltipComponent.$$.context.get(TOOLTIP_DIV);
 		const arrowElement = tooltipComponent.$$.context.get(ARROW_DIV);
 		computePosition(element, tooltip, {
-			placement: 'top',
-			middleware: [offset(10), autoPlacement(), shift({ padding: 5 }), arrow({ element: arrowElement })]
+			middleware: [
+				offset(-5),
+				autoPlacement({allowedPlacements: ["bottom", "top"]}),
+				shift({ padding: 5 }),
+				arrow({ element: arrowElement })
+			]
 		}).then(({ x, y, placement, middlewareData }) => {
 			Object.assign(tooltip.style, {
 				left: `${x}px`,
@@ -41,6 +46,8 @@ export function tooltip(element: Element, tooltipProps: TooltipProps) {
 				bottom: '',
 				[staticSide]: '-4px'
 			});
+
+			tooltipComponent.$set({ placement });
 		});
 	}
 
