@@ -149,14 +149,23 @@ export const get: RequestHandler = async ({ url }) => {
 		const ability = await api.getAbilityByName(abilityName);
 		const byLanguage = (language: string) => (verboseEffect: pkg.Name | pkg.VerboseEffect) =>
 			verboseEffect.language.name === language;
+
 		const returnAbility: Ability = {
 			de: {
 				name: ability.names.find(byLanguage('de')).name,
-				description: ability.effect_entries.find(byLanguage('de'))?.effect
+				description:
+					ability.effect_entries.find(byLanguage('de'))?.effect ||
+					ability.flavor_text_entries
+						.filter((it) => it.language.name === 'de')
+						?.find((it) => it.version_group.name === 'sword-shield').flavor_text
 			},
 			en: {
 				name: ability.names.find(byLanguage('en')).name,
-				description: ability.effect_entries.find(byLanguage('en'))?.effect
+				description:
+					ability.effect_entries.find(byLanguage('en'))?.effect ||
+					ability.flavor_text_entries
+						.filter((it) => it.language.name === 'en')
+						?.find((it) => it.version_group.name === 'sword-shield').flavor_text
 			}
 		};
 		abilityCache[abilityName] = returnAbility;
@@ -197,7 +206,8 @@ export const get: RequestHandler = async ({ url }) => {
 							description: 'another one',
 							name: 'Ability'
 						}
-					},{
+					},
+					{
 						de: {
 							description: 'Test Description Lorem ipsum dolor sit amet bla',
 							name: 'Ability'
