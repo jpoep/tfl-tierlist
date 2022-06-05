@@ -160,12 +160,15 @@ export const get: RequestHandler = async ({ url }) => {
 			}
 		};
 		abilityCache[abilityName] = returnAbility;
-		return returnAbility
+		return returnAbility;
 	}
 
 	const logError = (error: Error, pokemonName: string, method: string) => {
-		console.log(`${pokemonName}, ${method}: ${error}`);
-		throw error;
+		console.error(`${pokemonName}, ${method}: ${error}`);
+		if (!dev) {
+			console.error('Not in Dev environment; aborting.');
+			throw error;
+		}
 	};
 
 	const fetchPokemon: { (pokemon: JsonPokemon): Promise<PokemonType> } = async (
@@ -176,7 +179,55 @@ export const get: RequestHandler = async ({ url }) => {
 
 		console.info(`Fetching data for ${pokemonName}`);
 
-		const pokemon = await api.getPokemonByName(pokemonName);
+		const pokemon = await api
+			.getPokemonByName(pokemonName)
+			.catch((it) => logError(it, pokemonName, 'main'));
+
+		if (!pokemon) {
+			console.error(`${pokemonName} could not be fetched. Continuing with mock Pokemon`);
+			return {
+				id: pokemonName,
+				abilities: [
+					{
+						de: {
+							description: 'Test Description Lorem ipsum dolor sit amet bla',
+							name: 'Ability'
+						},
+						en: {
+							description: 'another one',
+							name: 'Ability'
+						}
+					},{
+						de: {
+							description: 'Test Description Lorem ipsum dolor sit amet bla',
+							name: 'Ability'
+						},
+						en: {
+							description: 'Test Description Lorem ipsum dolor sit amet bla',
+							name: 'Ability'
+						}
+					}
+				],
+				baseStats: {
+					atk: 0,
+					def: 0,
+					hp: 0,
+					spatk: 0,
+					spd: 0,
+					spdef: 0
+				},
+				imageUrl: '',
+				name: {
+					en: pokemonName,
+					de: pokemonName
+				},
+				pokemonDbUrl: '',
+				typing: ['normal'],
+				form: undefined,
+				notes: undefined,
+				team: undefined
+			} as PokemonType;
+		}
 
 		console.info(`Data for ${pokemonName} fetched; names and forms are next`);
 
@@ -187,14 +238,20 @@ export const get: RequestHandler = async ({ url }) => {
 			api
 				.getPokemonFormByName(pokemon.forms[0].name)
 				.catch((it) => logError(it, pokemonName, 'form')),
-			...pokemon.abilities.map((it) => getAbility(it.ability.name))
+			...pokemon.abilities.map((it) =>
+				getAbility(it.ability.name).catch((it) => logError(it, pokemonName, 'abilities'))
+			)
 		]);
+
+		if (!species) {
+			console.error(`${pokemonName} could be resolved, but not its form or species. Aborting.`);
+		}
 
 		const returnValue = {
 			typing: pokemon.types.map((it) => it.type.name),
 			imageUrl: pokemon.sprites.front_default,
-			name: getName(species),
-			form: getForm(form),
+			name: (species && getName(species)) || { de: pokemonName, en: pokemonName },
+			form: form && getForm(form),
 			id: jsonPokemonObject?.internalName || pokemonName,
 			baseStats: getStats(pokemon),
 			abilities: abilities,

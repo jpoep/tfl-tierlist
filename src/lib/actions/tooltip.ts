@@ -1,7 +1,10 @@
-import Tooltip from '$lib/tooltip.svelte';
+import Tooltip, { ARROW_DIV, TOOLTIP_DIV } from '$lib/tooltip.svelte';
+import { arrow, autoPlacement, offset, shift } from '@floating-ui/core';
+import { computePosition, flip } from '@floating-ui/dom';
 export type TooltipProps = {
-	title: string;
+	title?: string | null;
 	subTitle?: string | null;
+	width?: string | null;
 };
 export function tooltip(element: Element, tooltipProps: TooltipProps) {
 	let tooltipComponent: Tooltip;
@@ -12,7 +15,35 @@ export function tooltip(element: Element, tooltipProps: TooltipProps) {
 			},
 			target: element
 		});
+		const tooltip = tooltipComponent.$$.context.get(TOOLTIP_DIV);
+		const arrowElement = tooltipComponent.$$.context.get(ARROW_DIV);
+		computePosition(element, tooltip, {
+			placement: 'top',
+			middleware: [offset(10), autoPlacement(), shift({ padding: 5 }), arrow({ element: arrowElement })]
+		}).then(({ x, y, placement, middlewareData }) => {
+			Object.assign(tooltip.style, {
+				left: `${x}px`,
+				top: `${y}px`
+			});
+
+			const { x: arrowX, y: arrowY } = middlewareData.arrow;
+			const staticSide = {
+				top: 'bottom',
+				right: 'left',
+				bottom: 'top',
+				left: 'right'
+			}[placement.split('-')[0]];
+
+			Object.assign(arrowElement.style, {
+				left: arrowX != null ? `${arrowX}px` : '',
+				top: arrowY != null ? `${arrowY}px` : '',
+				right: '',
+				bottom: '',
+				[staticSide]: '-4px'
+			});
+		});
 	}
+
 	function mouseLeave() {
 		tooltipComponent.$destroy();
 	}

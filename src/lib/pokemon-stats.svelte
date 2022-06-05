@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Ability, Stats } from 'src/routes/index.json';
 	import { language } from './stores/store';
+	import { tooltip } from '$lib/actions/tooltip';
 
 	export let stats: Stats;
 	export let abilities: Ability[];
@@ -13,6 +14,8 @@
 		spdef: 'SpD',
 		spd: 'Spe'
 	};
+
+	const NO_ABILITY_DESCRIPTION = "PokeAPI gönnt nicht. Beschwert euch bei denen."
 
 	const FULLEST_BAR_VALUE = 200;
 	const RED_COLOR = [245, 83, 83]; // "#bf616a"
@@ -75,9 +78,9 @@
 		</div>
 	{/each}
 	<div class="abilities">
-		{#each abilities as ability, index}
-			<div class="ability">
-				{ability[$language].name }
+		{#each abilities as ability}
+			<div class="ability" on:click|stopPropagation use:tooltip={{ subTitle: ability[$language].description || NO_ABILITY_DESCRIPTION, width: "20rem" }}>
+				{ability[$language].name}
 			</div>
 		{/each}
 	</div>
@@ -91,14 +94,17 @@
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 		align-items: center;
-		gap: 0.5rem;
+		column-gap: .3rem;
+
+		margin-top: 0.8rem;
+		margin-bottom: 0.2rem;
+		
 		.ability {
 			font-size: 0.8rem;
 			color: var(--font-color-lightened);
-			line-height: .5em;
+			position: relative;
 		}
-		margin-top: .8rem;
-		margin-bottom: .2rem;
+
 	}
 	.stat {
 		position: relative;
@@ -106,7 +112,6 @@
 		justify-content: space-between;
 
 		> div {
-			z-index: 1;
 			font-size: smaller;
 		}
 	}

@@ -39,6 +39,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@floating-ui/core": "^0.7.2",
+		"@floating-ui/dom": "^0.5.2",
 		"@fontsource/titillium-web": "^4.5.2"
 	}
 }
