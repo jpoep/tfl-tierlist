@@ -11,6 +11,15 @@
   "scripts": {
     "build:website": "yarn workspace pokemon-tierlist build"
   },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "svelte-language-server": "^0.14.28",
+    "typescript": "~4.7.3"
+  },
   "private": true,
   "packageManager": "yarn@3.2.1"
 }

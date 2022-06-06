@@ -1,0 +1,6 @@
+{
+  "name": "svelte-language-server",
+  "version": "0.14.28-sdk",
+  "main": "dist/src/index.js",
+  "type": "commonjs"
+}
