@@ -4,7 +4,7 @@ const timestamp = {
   }
 };
 const build = [
-  "/_app/immutable/start-0c3cf22c.js",
+  "/_app/immutable/start-d3a7c558.js",
   "/_app/immutable/pages/__layout.svelte-8139a8b6.js",
   "/_app/immutable/assets/pages/__layout.svelte-1537a61b.css",
   "/_app/immutable/assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
@@ -14,7 +14,7 @@ const build = [
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/error.svelte-bd714bac.js",
-  "/_app/immutable/pages/index.svelte-2d26c221.js",
+  "/_app/immutable/pages/index.svelte-acc0ed3d.js",
   "/_app/immutable/assets/pages/index.svelte-3552b8ca.css",
   "/_app/immutable/chunks/index-9df6a460.js",
   "/_app/immutable/chunks/index-8a4b4e58.js",
