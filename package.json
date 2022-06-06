@@ -8,6 +8,9 @@
     "website",
     "server"
   ],
+  "scripts": {
+    "build:website": "yarn workspace pokemon-tierlist build"
+  },
   "private": true,
   "packageManager": "yarn@3.2.1"
 }

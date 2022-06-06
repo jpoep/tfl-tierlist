@@ -24,7 +24,7 @@ jobs:
           cmd: install # will run `yarn install` command
       - uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: workspace website build # will run `yarn build` command
+          cmd: build:website # will run `yarn build` command
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
