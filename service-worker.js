@@ -1,14 +1,25 @@
-const timestamp = 1654473401765;
+const timestamp = {
+  toString: () => {
+    throw new Error("`timestamp` has been removed from $service-worker. Use `version` instead");
+  }
+};
 const build = [
-  "/_app/start-b4ae9025.js",
-  "/_app/pages/__layout.svelte-6d0f1faf.js",
-  "/_app/assets/pages/__layout.svelte-8809c804.css",
-  "/_app/error.svelte-f949a76a.js",
-  "/_app/pages/index.svelte-10b2ba2e.js",
-  "/_app/assets/pages/index.svelte-3552b8ca.css",
-  "/_app/chunks/vendor-9656f187.js",
-  "/_app/chunks/paths-4b3c6e7e.js",
-  "/_app/chunks/store-03b80e1c.js"
+  "/_app/immutable/start-0c3cf22c.js",
+  "/_app/immutable/pages/__layout.svelte-8139a8b6.js",
+  "/_app/immutable/assets/pages/__layout.svelte-1537a61b.css",
+  "/_app/immutable/assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
+  "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
+  "/_app/immutable/assets/titillium-web-latin-400-normal-557f6d08.woff2",
+  "/_app/immutable/assets/titillium-web-latin-ext-700-normal-8f8ebc7e.woff2",
+  "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
+  "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
+  "/_app/immutable/error.svelte-bd714bac.js",
+  "/_app/immutable/pages/index.svelte-2d26c221.js",
+  "/_app/immutable/assets/pages/index.svelte-3552b8ca.css",
+  "/_app/immutable/chunks/index-9df6a460.js",
+  "/_app/immutable/chunks/index-8a4b4e58.js",
+  "/_app/immutable/chunks/paths-396f020f.js",
+  "/_app/immutable/chunks/index-bd3f2e60.js"
 ];
 const files = [
   "/.nojekyll",
