@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Ability, Stats } from 'src/routes/index.json';
+	import type { Ability, Stats } from 'src/routes';
 	import { language } from './stores/store';
 	import { tooltip } from '$lib/actions/tooltip';
 

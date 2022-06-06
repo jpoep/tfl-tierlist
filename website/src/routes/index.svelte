@@ -1,7 +1,7 @@
 <script lang="ts">
 	import TierComponent from '$lib/tier.svelte';
 	import { language } from '$lib/stores/store';
-	import type { PokemonType, Team, Tier } from './index.json';
+	import type { PokemonType, Team, Tier } from '.';
 	import { types } from '$lib/pokemon-type.svelte';
 	import { filter } from '$lib/stores/store';
 	import { onMount } from 'svelte';
@@ -14,7 +14,7 @@
 	let currentTeam: Team | undefined;
 
 	$filter = initialFilter || '';
-	$: currentTeam = teams.map((team) => team.name).includes($filter)
+	$: currentTeam = teams?.map((team) => team.name).includes($filter)
 		? teams.find((it) => it.name === $filter)
 		: undefined;
 
@@ -38,14 +38,14 @@
 			pokemon.team?.player
 		].some((it: string) => it?.toLowerCase().includes(term.toLowerCase()));
 
-	$: sortedList = tierlist.map((it) => ({
+	$: sortedList = tierlist?.map((it) => ({
 		...it,
 		pokemon: it.pokemon.sort((a, b) =>
 			(a.name[$language] as string).localeCompare(b.name[$language])
 		)
 	}));
 
-	$: filteredList = sortedList.map((it) => ({
+	$: filteredList = sortedList?.map((it) => ({
 		...it,
 		pokemon: it.pokemon.filter((pokemon) => contains(pokemon, $filter))
 	}));

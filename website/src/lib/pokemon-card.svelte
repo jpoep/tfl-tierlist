@@ -2,7 +2,7 @@
 	import { fly } from 'svelte/transition';
 	import { Pokemon } from './classes/Pokemon';
 	import PokemonTypeComponent from '$lib/pokemon-type.svelte';
-	import type { PokemonType } from 'src/routes/index.json';
+	import type { PokemonType } from 'src/routes';
 	import { allStatsToggled, filter } from '$lib/stores/store';
 	import { base } from '$app/paths';
 	import PokemonStats from './pokemon-stats.svelte';

@@ -1,4 +1,4 @@
-import type { Ability, PokemonType, Team } from 'src/routes/index.json';
+import type { Ability, PokemonType, Team } from 'src/routes';
 import { language } from '$lib/stores/store';
 import { get } from 'svelte/store';
 

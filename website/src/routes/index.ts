@@ -301,6 +301,8 @@ export const get: RequestHandler = async ({ url }) => {
 			tierlist,
 			teams: transformedTeamsData,
 			initialFilter: url.searchParams.get('q')
-		}
+		},
+		status: 200,
+		headers: { 'Content-Type': 'application/json' }
 	};
 };

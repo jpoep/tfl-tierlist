@@ -1,0 +1,9 @@
+{
+  "name": "tfl-serer",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@graphql-yoga/node": "^2.9.0",
+    "graphql": "^16.5.0"
+  }
+}
