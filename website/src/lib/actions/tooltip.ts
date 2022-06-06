@@ -21,7 +21,7 @@ export function tooltip(element: Element, tooltipProps: TooltipProps) {
 		computePosition(element, tooltip, {
 			middleware: [
 				offset(-5),
-				autoPlacement({allowedPlacements: ["bottom", "top"]}),
+				autoPlacement({ allowedPlacements: ['bottom', 'top'] }),
 				shift({ padding: 5 }),
 				arrow({ element: arrowElement })
 			]

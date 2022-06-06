@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { fly } from 'svelte/transition';
 	import { Pokemon } from './classes/Pokemon';
 	import PokemonTypeComponent from '$lib/pokemon-type.svelte';
 	import type { PokemonType } from 'src/routes';
@@ -10,8 +9,8 @@
 
 	export let pokemon: PokemonType;
 
-	let noteActive: boolean = false;
-	let detailsActive: boolean = false;
+	let noteActive = false;
+	let detailsActive = false;
 
 	$: detailsActive = $allStatsToggled;
 
