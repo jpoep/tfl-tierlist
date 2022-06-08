@@ -53,6 +53,7 @@ export type PokemonType = {
 	team?: Team;
 	typing: Typing;
 	imageUrl?: string;
+	officialArtworkUrl?: string;
 	miniSpriteUrl?: string;
 	pokemonDbUrl?: string;
 };

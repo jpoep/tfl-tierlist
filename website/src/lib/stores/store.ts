@@ -73,3 +73,15 @@ if (browser) {
 // allStatsToggled
 
 export const allStatsToggled = writable<boolean>(false);
+
+// sprite preference
+
+export const officialArtworkEnabled = writable<boolean>(
+	(browser && localStorage.getItem('officialArtworkEnabled') === 'true') || false
+);
+
+if (browser) {
+	officialArtworkEnabled.subscribe((value) =>
+		localStorage.setItem('officialArtworkEnabled', value.toString())
+	);
+}

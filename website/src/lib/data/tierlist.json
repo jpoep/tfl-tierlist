@@ -243,7 +243,8 @@
 					"internalName": "zygarde-10",
 					"pokemon": "zygarde-10",
 					"overrides": {
-						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10118.png"
+						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10118.png",
+						"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10118.png"
 					}
 				}
 			],

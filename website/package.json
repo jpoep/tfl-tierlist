@@ -12,6 +12,7 @@
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
+		"@iconify-icons/akar-icons": "^1.2.6",
 		"@iconify-icons/gridicons": "^1.2.1",
 		"@iconify-icons/ic": "^1.2.5",
 		"@iconify-icons/iconoir": "^1.2.6",

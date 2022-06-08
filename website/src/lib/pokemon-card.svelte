@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Pokemon } from './classes/Pokemon';
 	import PokemonTypeComponent from '$lib/pokemon-type.svelte';
-	import { allStatsToggled, filter } from '$lib/stores/store';
+	import { allStatsToggled, filter, officialArtworkEnabled } from '$lib/stores/store';
 	import { base } from '$app/paths';
 	import PokemonStats from './pokemon-stats.svelte';
 	import { tooltip } from '$lib/actions/tooltip';
@@ -13,7 +13,11 @@
 	let detailsActive = false;
 
 	$: detailsActive = $allStatsToggled;
-
+	$: imageSource = detailsActive
+		? pokemon.miniSpriteUrl
+		: $officialArtworkEnabled
+		? pokemon.officialArtworkUrl
+		: pokemon.imageUrl;
 	$: _pokemon = new Pokemon(pokemon);
 
 	const toggleDetails = () => (detailsActive = !detailsActive);
@@ -49,7 +53,11 @@
 		{#if pokemon.notes}
 			<div
 				class="note"
-				use:tooltip={{ backgroundColor: 'var(--warning)', smallFontColor: 'var(--dark-fg)', subTitle: _pokemon.localNotes }}
+				use:tooltip={{
+					backgroundColor: 'var(--warning)',
+					smallFontColor: 'var(--dark-fg)',
+					subTitle: _pokemon.localNotes
+				}}
 				on:click|stopPropagation
 			/>
 		{/if}
@@ -57,11 +65,12 @@
 
 	<div class="card-content" class:details-layout={detailsActive}>
 		<img
-			src={detailsActive ? pokemon.miniSpriteUrl : pokemon.imageUrl}
+			src={imageSource}
 			alt={_pokemon.localName}
 			crossorigin="anonymous"
 			loading="lazy"
 			class:details-layout={detailsActive}
+			class:pixelated={detailsActive || !$officialArtworkEnabled}
 		/>
 		<div class="pokemon-name" class:details-layout={detailsActive}>
 			<div class="name">
@@ -162,33 +171,21 @@
 			}
 
 			> img {
-				// image-rendering: pixelated;
 				z-index: 0;
 				pointer-events: none;
 				width: 100%;
 				height: fit-content;
 				aspect-ratio: 1/1;
 
-
-				// outline currently disabled due to performance
-				// --stroke-pos: 1px;
-				// --stroke-neg: -1px;
-				// --stroke-color: var(--bg-color-raised);
-				// filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color))
-				// 	drop-shadow(var(--stroke-neg) 0 var(--stroke-color))
-				// 	drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color))
-				// 	drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color))
-				// 	drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color))
-				// 	drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color))
-				// 	drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color))
-				// 	drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
-
+				&.pixelated {
+					image-rendering: pixelated;
+				}
 			}
 
 			&.details-layout {
 				flex-direction: row-reverse;
 				justify-content: space-between;
-				
+
 				> img {
 					height: 2.5rem;
 					width: auto;

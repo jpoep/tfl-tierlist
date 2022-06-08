@@ -2,13 +2,13 @@
 	import '../app.scss';
 	import '@fontsource/titillium-web';
 	import '@fontsource/titillium-web/700.css';
-	import ToggleStatsButton from '$lib/toggle-stats-button.svelte';
-	import DarkModeButton from '$lib/dark-mode-button.svelte';
-	import LanguageButton from '$lib/language-button.svelte';
+	import ToggleStatsButton from '$lib/components/buttons/toggle-stats-button.svelte';
+	import DarkModeButton from '$lib/components/buttons/dark-mode-button.svelte';
+	import LanguageButton from '$lib/components/buttons/language-button.svelte';
 	import { filter } from '$lib/stores/store';
-	import { allStatsToggled } from '$lib/stores/store';
 	import cancelIcon from '@iconify-icons/iconoir/cancel.js';
 	import Icon from '@iconify/svelte';
+	import ToggleArtworkButton from '$lib/components/buttons/toggle-artwork-button.svelte';
 
 	let y: number;
 </script>
@@ -24,12 +24,13 @@
 		/>
 		{#if $filter?.length > 0}
 			<button class="cancel-button" on:click={() => ($filter = '')}>
-				<Icon icon={cancelIcon} inline/>
+				<Icon icon={cancelIcon} inline />
 			</button>
 		{/if}
 	</div>
 	<div class="spacer" />
-	<ToggleStatsButton bind:toggled={$allStatsToggled} />
+	<ToggleStatsButton />
+	<ToggleArtworkButton />
 	<DarkModeButton />
 	<LanguageButton />
 </nav>
@@ -65,7 +66,7 @@
 			position: relative;
 			.cancel-button {
 				position: absolute;
-				right: .2rem;
+				right: 0.2rem;
 				height: 100%;
 				font-size: 1.8rem;
 			}
@@ -96,6 +97,6 @@
 
 	main {
 		margin: 0 0.5rem;
-		margin-bottom: .5rem;
+		margin-bottom: 0.5rem;
 	}
 </style>

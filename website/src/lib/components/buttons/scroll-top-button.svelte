@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { fly } from 'svelte/transition';
-	import { tooltip } from './actions/tooltip';
 	import Icon from '@iconify/svelte';
 	import topArrow from '@iconify-icons/ic/baseline-arrow-upward.js';
+	import { tooltip } from '$lib/actions/tooltip';
 
 	let y: number;
 

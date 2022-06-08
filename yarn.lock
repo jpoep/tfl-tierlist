@@ -265,6 +265,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iconify-icons/akar-icons@npm:^1.2.6":
+  version: 1.2.6
+  resolution: "@iconify-icons/akar-icons@npm:1.2.6"
+  dependencies:
+    "@iconify/types": ^1.1.0
+  checksum: 0a3607f2bd2e8ce44101945e535124435aef328a4cf3b4b1950a33094e2befb3528b15085f72a7f8d42296abba379373a20009eb77ccf81415be583be97a4762
+  languageName: node
+  linkType: hard
+
 "@iconify-icons/gridicons@npm:^1.2.1":
   version: 1.2.1
   resolution: "@iconify-icons/gridicons@npm:1.2.1"
@@ -3289,6 +3298,7 @@ __metadata:
     "@floating-ui/core": ^0.7.2
     "@floating-ui/dom": ^0.5.2
     "@fontsource/titillium-web": ^4.5.8
+    "@iconify-icons/akar-icons": ^1.2.6
     "@iconify-icons/gridicons": ^1.2.1
     "@iconify-icons/ic": ^1.2.5
     "@iconify-icons/iconoir": ^1.2.6
