@@ -36,7 +36,7 @@
 			types[pokemon.typing?.[1]]?.en,
 			pokemon.team?.name,
 			pokemon.team?.player
-		].some((it: string) => it?.toLowerCase().includes(term.toLowerCase()));
+		].some((it: string | undefined) => it?.toLowerCase().includes(term.toLowerCase()));
 
 	$: sortedList = tierlist?.map((it) => ({
 		...it,
@@ -61,7 +61,7 @@
 			subtitles: [currentTeam.player],
 			pokemon: tierlist
 				.flatMap((it) => it.pokemon)
-				.filter((pokemon) => currentTeam.pokemon.includes(pokemon.id))
+				.filter((pokemon) => currentTeam?.pokemon.includes(pokemon.id))
 		}}
 	/>
 {:else}

@@ -7,10 +7,10 @@
 
 	export let tier: Tier;
 
-	const activeSubtitle: number = Math.floor(Math.random() * tier.subtitles.length);
+	const activeSubtitle: number = Math.floor(Math.random() * (tier.subtitles?.length ?? 0));
 
-	const subtitle = (tier: Tier) => tier.subtitles[activeSubtitle] || '';
-	
+	const subtitle = (tier: Tier) => tier.subtitles?.[activeSubtitle];
+
 	$: tierEmpty = tier.pokemon.length === 0;
 	$: tierEmptyText = !tierEmpty ? '' : tier.emptyText;
 
@@ -31,9 +31,14 @@
 </script>
 
 <div class="tier">
-	<h2 class:empty={tierEmpty} id={tier.name}>{tier.name} <span class="emptyText">{tierEmptyText}</span></h2>
+	<h2 class:empty={tierEmpty} id={tier.name}>
+		{tier.name} <span class="emptyText">{tierEmptyText}</span>
+	</h2>
 	{#if tier.pokemon.length > 0}
-		<p class="tier-subtitle secondary">{subtitle(tier)}</p>
+		{@const sub = subtitle(tier)}
+		{#if sub}
+			<p class="tier-subtitle secondary">{sub}</p>
+		{/if}
 		<div>
 			<!-- Only animate the first tier for performance reasons -->
 			<!-- It's not really pretty to define the each block twice but has to be done due to restrictions from Svelte's animate-->

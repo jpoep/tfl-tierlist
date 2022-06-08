@@ -1,22 +1,22 @@
-import type { Ability, PokemonType, Team } from 'src/routes';
+import type { Ability, PokemonType, Stats, Team } from 'src/routes';
 import { language } from '$lib/stores/store';
 import { get } from 'svelte/store';
+import type { Typing } from '$lib/pokemon-type.svelte';
 
 export class Pokemon implements PokemonType {
 	constructor(pokemon: PokemonType) {
 		Object.assign(this, pokemon);
 	}
-	baseStats: { hp: number; atk: number; def: number; spatk: number; spdef: number; spd: number };
-	abilities: Ability[];
-
-	name: { en: string; de: string };
-	form: { en: string; de: string } | undefined;
-	notes: { en: string; de: string } | undefined;
-	id: string;
-	team: Team | undefined;
-	typing: string[];
-	imageUrl: string;
-	pokemonDbUrl: string;
+	name!: { en: string; de: string };
+	form?: { en: string; de: string } | undefined;
+	notes?: { en: string; de: string } | undefined;
+	baseStats!: Stats;
+	abilities!: Ability[];
+	id!: string;
+	team?: Team | undefined;
+	typing!: Typing;
+	imageUrl?: string | undefined;
+	pokemonDbUrl?: string | undefined;
 
 	get localName(): string {
 		return this.name[get(language)];

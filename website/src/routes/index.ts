@@ -3,12 +3,12 @@ import prodTierlist from '$lib/data/tierlist.json';
 import devTierlist from '$lib/data/tierlist-dev.json';
 import teamsData from '$lib/data/teams.json';
 import pkg, { type PokemonForm, type PokemonSpecies } from 'pokenode-ts';
+import type { Typing } from '$lib/pokemon-type.svelte';
 const { PokemonClient } = pkg;
 
 const api = new PokemonClient();
 
 const dev = process.env.NODE_ENV === 'development';
-
 export type Team = {
 	name: string;
 	player: string;
@@ -28,13 +28,22 @@ export type Tier = {
 	pokemon: PokemonType[];
 };
 
+type JsonTier = Omit<Tier, 'pokemon'> & {
+	pokemon: JsonPokemon[];
+	notes: {
+		[key: string]:
+			| {
+					de: string;
+					en: string;
+			  }
+			| undefined;
+	};
+};
+
+export type StatKeys = 'hp' | 'atk' | 'def' | 'spatk' | 'spdef' | 'spd';
+
 export type Stats = {
-	hp: number;
-	atk: number;
-	def: number;
-	spatk: number;
-	spdef: number;
-	spd: number;
+	[Property in StatKeys]: number;
 };
 
 export type Ability = {
@@ -53,25 +62,25 @@ export type PokemonType = {
 		en: string;
 		de: string;
 	};
-	form:
-		| {
-				en: string;
-				de: string;
-		  }
-		| undefined;
-	notes:
-		| {
-				en: string;
-				de: string;
-		  }
-		| undefined;
+	form?: {
+		en: string;
+		de: string;
+	};
+	notes?: {
+		en: string;
+		de: string;
+	};
 	baseStats: Stats;
 	abilities: Ability[];
 	id: string;
-	team: Team | undefined;
-	typing: string[];
-	imageUrl: string;
-	pokemonDbUrl: string;
+	team?: Team;
+	typing: Typing;
+	imageUrl?: string;
+	pokemonDbUrl?: string;
+};
+
+type OptionalPokemonType = {
+	[Property in keyof PokemonType]?: PokemonType[Property];
 };
 
 type AbilityCache = {
@@ -81,7 +90,7 @@ type AbilityCache = {
 type JsonPokemonObject = {
 	internalName: string;
 	pokemon: string;
-	overrides: PokemonType;
+	overrides?: OptionalPokemonType;
 };
 
 type JsonPokemon = string | JsonPokemonObject;
@@ -89,10 +98,13 @@ type JsonPokemon = string | JsonPokemonObject;
 const abilityCache: AbilityCache = {};
 
 function isJsonPokemonObject(jsonPokemon: unknown): jsonPokemon is JsonPokemonObject {
-	return typeof jsonPokemon === 'object' && 'internalName' in jsonPokemon;
+	if (jsonPokemon) {
+		return typeof jsonPokemon === 'object' && 'internalName' in jsonPokemon;
+	}
+	return false;
 }
 
-function transformTeam(team): Team {
+function transformTeam(team: Omit<Team, 'logo'> & { logo: string }): Team {
 	return {
 		...team,
 		logo: {
@@ -110,8 +122,8 @@ export const get: RequestHandler = async ({ url }) => {
 		(species: PokemonSpecies): { en: string; de: string };
 	} = (species) => {
 		return {
-			en: species.names.find((it) => it.language.name === 'en').name as string,
-			de: species.names.find((it) => it.language.name === 'de').name as string
+			en: species.names.find((it) => it.language.name === 'en')?.name as string,
+			de: species.names.find((it) => it.language.name === 'de')?.name as string
 		};
 	};
 
@@ -123,8 +135,8 @@ export const get: RequestHandler = async ({ url }) => {
 		}
 
 		return {
-			en: form.form_names.find((it) => it.language.name === 'en').name as string,
-			de: form.form_names.find((it) => it.language.name === 'de').name as string
+			en: form.form_names.find((it) => it.language.name === 'en')?.name as string,
+			de: form.form_names.find((it) => it.language.name === 'de')?.name as string
 		};
 	};
 
@@ -142,30 +154,37 @@ export const get: RequestHandler = async ({ url }) => {
 		};
 	};
 
+	function throwExpression(errorMessage: string): never {
+		throw new Error(errorMessage);
+	}
+
 	async function getAbility(abilityName: string): Promise<Ability> {
 		if (abilityName in abilityCache) {
 			return abilityCache[abilityName];
 		}
 		const ability = await api.getAbilityByName(abilityName);
+		const error = () => throwExpression(`Ability "${abilityName}" not found.`);
 		const byLanguage = (language: string) => (verboseEffect: pkg.Name | pkg.VerboseEffect) =>
 			verboseEffect.language.name === language;
 
 		const returnAbility: Ability = {
 			de: {
-				name: ability.names.find(byLanguage('de')).name,
+				name: ability.names.find(byLanguage('de'))?.name ?? error(),
 				description:
-					ability.effect_entries.find(byLanguage('de'))?.effect ||
-					ability.flavor_text_entries
-						.filter((it) => it.language.name === 'de')
-						?.find((it) => it.version_group.name === 'sword-shield').flavor_text
+					(ability.effect_entries.find(byLanguage('de'))?.effect ||
+						ability.flavor_text_entries
+							.filter((it) => it.language.name === 'de')
+							?.find((it) => it.version_group.name === 'sword-shield')?.flavor_text) ??
+					error()
 			},
 			en: {
-				name: ability.names.find(byLanguage('en')).name,
+				name: ability.names.find(byLanguage('en'))?.name ?? error(),
 				description:
-					ability.effect_entries.find(byLanguage('en'))?.effect ||
-					ability.flavor_text_entries
-						.filter((it) => it.language.name === 'en')
-						?.find((it) => it.version_group.name === 'sword-shield').flavor_text
+					(ability.effect_entries.find(byLanguage('en'))?.effect ||
+						ability.flavor_text_entries
+							.filter((it) => it.language.name === 'en')
+							?.find((it) => it.version_group.name === 'sword-shield')?.flavor_text) ??
+					error()
 			}
 		};
 		abilityCache[abilityName] = returnAbility;
@@ -253,30 +272,38 @@ export const get: RequestHandler = async ({ url }) => {
 			)
 		]);
 
-		if (!species) {
-			console.error(`${pokemonName} could be resolved, but not its form or species. Aborting.`);
-		}
+		const FALLBACK_ABILITY_TEXT = 'Konnte Ability nicht laden';
+		const fallbackAbility: Ability = {
+			de: {
+				description: FALLBACK_ABILITY_TEXT,
+				name: FALLBACK_ABILITY_TEXT
+			},
+			en: {
+				description: FALLBACK_ABILITY_TEXT,
+				name: FALLBACK_ABILITY_TEXT
+			}
+		};
 
-		const returnValue = {
-			typing: pokemon.types.map((it) => it.type.name),
-			imageUrl: pokemon.sprites.front_default,
+		const returnValue: PokemonType = {
+			typing: pokemon.types.map((it) => it.type.name) as Typing,
+			imageUrl: pokemon.sprites.front_default || undefined,
 			name: (species && getName(species)) || { de: pokemonName, en: pokemonName },
-			form: form && getForm(form),
+			form: (form && getForm(form)) || undefined,
 			id: jsonPokemonObject?.internalName || pokemonName,
 			baseStats: getStats(pokemon),
-			abilities: abilities,
-			pokemonDbUrl: `https://pokemondb.net/pokedex/${species.name}`,
+			abilities: abilities.map((it) => it || fallbackAbility),
+			pokemonDbUrl: species?.name && `https://pokemondb.net/pokedex/${species.name}`,
 			...jsonPokemonObject?.overrides
-		} as PokemonType;
+		};
 
 		console.info(`Names for ${jsonPokemon} fetched.`);
 		return returnValue;
 	};
 
-	const tierlistJson = dev ? devTierlist : prodTierlist;
+	const tierlistJson: JsonTier[] = (dev ? devTierlist.tiers : prodTierlist.tiers) as JsonTier[];
 
 	const tierlist = await Promise.all(
-		tierlistJson.tiers.map(async (element) => {
+		tierlistJson.map(async (element: JsonTier) => {
 			console.info(`Fetching Pokemon for ${element.name} tier`);
 			return {
 				name: element.name,

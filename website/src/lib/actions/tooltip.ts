@@ -31,21 +31,24 @@ export function tooltip(element: Element, tooltipProps: TooltipProps) {
 				top: `${y}px`
 			});
 
-			const { x: arrowX, y: arrowY } = middlewareData.arrow;
-			const staticSide = {
-				top: 'bottom',
-				right: 'left',
-				bottom: 'top',
-				left: 'right'
-			}[placement.split('-')[0]];
+			if (middlewareData.arrow) {
+				const { x: arrowX, y: arrowY } = middlewareData.arrow;
+				const staticSide =
+					{
+						top: 'bottom',
+						right: 'left',
+						bottom: 'top',
+						left: 'right'
+					}[placement.split('-')[0]] ?? 'bottom';
 
-			Object.assign(arrowElement.style, {
-				left: arrowX != null ? `${arrowX}px` : '',
-				top: arrowY != null ? `${arrowY}px` : '',
-				right: '',
-				bottom: '',
-				[staticSide]: '-4px'
-			});
+				Object.assign(arrowElement.style, {
+					left: arrowX != null ? `${arrowX}px` : '',
+					top: arrowY != null ? `${arrowY}px` : '',
+					right: '',
+					bottom: '',
+					[staticSide]: '-4px'
+				});
+			}
 
 			tooltipComponent.$set({ placement });
 		});

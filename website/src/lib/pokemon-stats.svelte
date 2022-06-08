@@ -1,12 +1,25 @@
 <script lang="ts">
-	import type { Ability, Stats } from 'src/routes';
+	import type { Ability, StatKeys, Stats } from 'src/routes';
 	import { language } from './stores/store';
 	import { tooltip } from '$lib/actions/tooltip';
 
+	type StatNames = {
+		[P in StatKeys]: string;
+	};
+
+	type Entries<T> = {
+		[K in keyof T]: [K, T[K]];
+	}[keyof T][];
+
+	type StatEntries = Entries<Stats>;
+
 	export let stats: Stats;
 	export let abilities: Ability[];
+	
+	$: statEntries = Object.entries(stats) as StatEntries
 
-	const STAT_NAMES = {
+
+	const STAT_NAMES: StatNames = {
 		hp: 'HP',
 		atk: 'Atk',
 		def: 'Def',
@@ -15,7 +28,7 @@
 		spd: 'Spe'
 	};
 
-	const NO_ABILITY_DESCRIPTION = "PokeAPI gönnt nicht. Beschwert euch bei denen."
+	const NO_ABILITY_DESCRIPTION = 'PokeAPI gönnt nicht. Beschwert euch bei denen.';
 
 	const FULLEST_BAR_VALUE = 200;
 	const RED_COLOR = [245, 83, 83]; // "#bf616a"
@@ -70,7 +83,7 @@
 </script>
 
 <div class="details">
-	{#each Object.entries(stats) as stat}
+	{#each statEntries as stat }
 		<div class="stat">
 			<div class="stat-bar" style={getBarStyles(stat[1])} />
 			<div class="stat-label">{STAT_NAMES[stat[0]]}</div>
@@ -79,7 +92,14 @@
 	{/each}
 	<div class="abilities">
 		{#each abilities as ability}
-			<div class="ability" on:click|stopPropagation use:tooltip={{ subTitle: ability[$language].description || NO_ABILITY_DESCRIPTION, width: "20rem" }}>
+			<div
+				class="ability"
+				on:click|stopPropagation
+				use:tooltip={{
+					subTitle: ability[$language].description || NO_ABILITY_DESCRIPTION,
+					width: '20rem'
+				}}
+			>
 				{ability[$language].name}
 			</div>
 		{/each}
@@ -94,17 +114,16 @@
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 		align-items: center;
-		column-gap: .3rem;
+		column-gap: 0.3rem;
 
 		margin-top: 0.8rem;
 		margin-bottom: 0.2rem;
-		
+
 		.ability {
 			font-size: 0.8rem;
 			color: var(--font-color-lightened);
 			position: relative;
 		}
-
 	}
 	.stat {
 		position: relative;

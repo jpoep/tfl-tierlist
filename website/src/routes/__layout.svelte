@@ -96,5 +96,6 @@
 
 	main {
 		margin: 0 0.5rem;
+		margin-bottom: .5rem;
 	}
 </style>

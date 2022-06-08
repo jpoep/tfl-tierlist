@@ -1,4 +1,8 @@
 <script lang="ts" context="module">
+	export type Type = keyof typeof types;
+
+	export type Typing = Type[];
+
 	export const types = {
 		normal: {
 			de: 'Normal',
@@ -82,8 +86,8 @@
 <script lang="ts">
 	import { language } from '$lib/stores/store';
 
-	export let type1: string;
-	export let type2: string | null = null;
+	export let type1: Type;
+	export let type2: Type | null = null;
 </script>
 
 <div>
