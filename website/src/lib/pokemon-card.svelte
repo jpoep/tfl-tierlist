@@ -146,6 +146,7 @@
 			flex-direction: column;
 			justify-content: space-around;
 			margin-bottom: 0.5rem;
+			overflow: hidden;
 
 			.pokemon-name {
 				display: flex;
