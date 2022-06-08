@@ -57,7 +57,7 @@
 
 	<div class="card-content" class:details-layout={detailsActive}>
 		<img
-			src={pokemon.imageUrl}
+			src={detailsActive ? pokemon.miniSpriteUrl : pokemon.imageUrl}
 			alt={_pokemon.localName}
 			crossorigin="anonymous"
 			class:details-layout={detailsActive}

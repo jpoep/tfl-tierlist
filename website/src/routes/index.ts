@@ -225,6 +225,10 @@ export const get: RequestHandler = async ({ url }) => {
 			baseStats: getStats(pokemon),
 			abilities: abilities.map((it) => it || fallbackAbility),
 			pokemonDbUrl: species?.name && `https://pokemondb.net/pokedex/${species.name}`,
+			miniSpriteUrl:
+				pokemon.sprites.versions['generation-vii'].icons.front_default ??
+				pokemon.sprites.versions['generation-viii'].icons.front_default ??
+				undefined,
 			...jsonPokemonObject?.overrides
 		};
 
