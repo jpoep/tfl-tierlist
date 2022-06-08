@@ -5,7 +5,7 @@
 	import { base } from '$app/paths';
 	import PokemonStats from './pokemon-stats.svelte';
 	import { tooltip } from '$lib/actions/tooltip';
-import type { PokemonType } from './types/pokemon';
+	import type { PokemonType } from './types/pokemon';
 
 	export let pokemon: PokemonType;
 	let _pokemon: Pokemon;
@@ -117,23 +117,22 @@ import type { PokemonType } from './types/pokemon';
 
 			.team {
 				position: absolute;
-				right: -1.2rem;
-				top: -1.2rem;
+				right: -3.2rem;
+				top: -3.2rem;
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				picture {
-					max-height: 7rem;
-					max-width: 7rem;
+					filter: opacity(.5) grayscale(.7);
+					max-height: 12rem;
+					max-width: 12rem;
 					border-radius: 50%;
 					background: var(--bg-color-highlighted);
 					padding: 0.1rem;
-					overflow: hidden;
 				}
 				img {
 					max-width: 100%;
 					border-radius: 50%;
-					overflow: hidden;
 				}
 			}
 		}
@@ -172,8 +171,8 @@ import type { PokemonType } from './types/pokemon';
 				pointer-events: none;
 
 				// outline currently disabled due to performance
-				// --stroke-pos: 0.5px;
-				// --stroke-neg: -0.5px;
+				// --stroke-pos: 1px;
+				// --stroke-neg: -1px;
 				// --stroke-color: var(--bg-color-raised);
 				// filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color))
 				// 	drop-shadow(var(--stroke-neg) 0 var(--stroke-color))
