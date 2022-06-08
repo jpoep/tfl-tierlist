@@ -165,6 +165,7 @@
 				z-index: 0;
 				pointer-events: none;
 				width: 100%;
+				height: fit-content;
 				aspect-ratio: 1/1;
 
 
@@ -181,14 +182,16 @@
 				// 	drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color))
 				// 	drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
 
-				&.details-layout {
-					height: 2.5rem;
-				}
 			}
 
 			&.details-layout {
 				flex-direction: row-reverse;
 				justify-content: space-between;
+				
+				> img {
+					height: 2.5rem;
+					width: auto;
+				}
 			}
 		}
 		.note {
