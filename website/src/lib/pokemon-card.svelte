@@ -44,8 +44,6 @@
 						<img
 							src={getImageUrl(pokemon.team.logo.png)}
 							alt={'Logo von ' + pokemon.team.player}
-							decoding="async"
-							loading="lazy"
 						/>
 					</picture>
 				</div>
