@@ -8,8 +8,8 @@
 	import { tooltip } from '$lib/actions/tooltip';
 
 	export let pokemon: PokemonType;
+	let _pokemon: Pokemon;
 
-	let noteActive = false;
 	let detailsActive = false;
 
 	$: detailsActive = $allStatsToggled;
@@ -21,7 +21,7 @@
 	const setFilterToTeam = () => {
 		// Having the option of using the browser's back button is a lot nicer
 		window.history.pushState(null, '', new URL(window.location.href));
-		$filter = _pokemon.team.name;
+		$filter = _pokemon?.team?.name || '';
 	};
 
 	const getImageUrl = (path: string) => {
@@ -31,10 +31,10 @@
 
 <div class="pokemon" on:click={toggleDetails}>
 	{#if !detailsActive}
-		<div class="notes-container">
-			{#if pokemon.team}
+		{#if pokemon.team}
+			<div class="team-wrapper">
 				<div
-					class="pokemon-team"
+					class="team"
 					use:tooltip={{ title: pokemon.team.name, subTitle: pokemon.team.player }}
 					on:click|stopPropagation={setFilterToTeam}
 				>
@@ -49,26 +49,25 @@
 						/>
 					</picture>
 				</div>
-			{/if}
-			{#if pokemon.notes && !noteActive}
-				<div
-					class="pokemon-note"
-					use:tooltip={{ backgroundColor: 'var(--warning', subTitle: _pokemon.localNotes }}
-					on:click|stopPropagation
-				/>
-			{/if}
-		</div>
+			</div>
+		{/if}
+		{#if pokemon.notes}
+			<div
+				class="note"
+				use:tooltip={{ backgroundColor: 'var(--warning', subTitle: _pokemon.localNotes }}
+				on:click|stopPropagation
+			/>
+		{/if}
 	{/if}
 
-	<div class="pokemon-main" class:tiny={detailsActive}>
+	<div class="card-content" class:details-layout={detailsActive}>
 		<img
 			src={pokemon.imageUrl}
 			alt={_pokemon.localName}
 			crossorigin="anonymous"
-			loading="lazy"
-			class:tiny={detailsActive}
+			class:details-layout={detailsActive}
 		/>
-		<div class="pokemon-name" class:tiny={detailsActive}>
+		<div class="pokemon-name" class:details-layout={detailsActive}>
 			<div class="name">
 				{_pokemon.localName}
 			</div>
@@ -78,7 +77,7 @@
 		</div>
 	</div>
 	{#if !detailsActive}
-		<div class="pokemon-typing" class:tiny={detailsActive}>
+		<div class="pokemon-typing" class:details-layout={detailsActive}>
 			<PokemonTypeComponent type1={pokemon.typing[0]} type2={pokemon.typing[1]} />
 		</div>
 	{/if}
@@ -90,47 +89,6 @@
 </div>
 
 <style lang="scss">
-	.pokemon-main {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-around;
-		margin-bottom: 0.5rem;
-
-		&.tiny {
-			flex-direction: row-reverse;
-			justify-content: space-between;
-		}
-
-		> img {
-			image-rendering: pixelated;
-		}
-
-		> img.tiny {
-			height: 2.5rem;
-		}
-	}
-	.pokemon-name {
-		display: flex;
-		flex-direction: column;
-
-		&.tiny {
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
-			font-weight: bold;
-
-			.form {
-				min-height: 0;
-				font-weight: normal;
-				font-size: 0.7rem;
-			}
-		}
-		.form {
-			font-size: smaller;
-			min-height: 1rem;
-			line-height: 0.9rem;
-		}
-	}
 	.pokemon {
 		position: relative;
 		height: 100%;
@@ -146,35 +104,100 @@
 		flex-direction: column;
 		justify-content: center;
 
-		.notes-container {
+		.team-wrapper {
 			position: absolute;
-			right: 1rem;
-			top: 1rem;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+
+			.team {
+				position: absolute;
+				right: -1.2rem;
+				top: -1.2rem;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				picture {
+					max-height: 7rem;
+					max-width: 7rem;
+					border-radius: 50%;
+					background: var(--bg-color-highlighted);
+					padding: 0.1rem;
+					overflow: hidden;
+				}
+				img {
+					max-width: 100%;
+					border-radius: 50%;
+					overflow: hidden;
+				}
+			}
+		}
+		.card-content {
 			display: flex;
 			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			gap: 0.5rem;
-		}
-		.pokemon-team {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			picture {
-				max-height: 3rem;
-				max-width: 3rem;
-				border-radius: 50%;
-				background: var(--bg-color-highlighted);
-				padding: 0.1rem;
-			}
-			img {
-				max-width: 100%;
-				border-radius: 50%;
-				overflow: hidden;
-			}
-		}
+			justify-content: space-around;
+			margin-bottom: 0.5rem;
 
-		.pokemon-note {
+			.pokemon-name {
+				display: flex;
+				flex-direction: column;
+
+				.form {
+					font-size: smaller;
+					min-height: 1rem;
+					line-height: 0.9rem;
+				}
+				&.details-layout {
+					flex-direction: column;
+					justify-content: center;
+					align-items: flex-start;
+					font-weight: bold;
+
+					.form {
+						min-height: 0;
+						font-weight: normal;
+						font-size: 0.7rem;
+					}
+				}
+			}
+
+			> img {
+				image-rendering: pixelated;
+				z-index: 0;
+				pointer-events: none;
+
+				// outline currently disabled due to performance
+				// --stroke-pos: 0.5px;
+				// --stroke-neg: -0.5px;
+				// --stroke-color: var(--bg-color-raised);
+				// filter: drop-shadow(var(--stroke-pos) 0 0 var(--stroke-color))
+				// 	drop-shadow(var(--stroke-neg) 0 var(--stroke-color))
+				// 	drop-shadow(0 var(--stroke-pos) 0 var(--stroke-color))
+				// 	drop-shadow(0 var(--stroke-neg) 0 var(--stroke-color))
+				// 	drop-shadow(var(--stroke-pos) var(--stroke-pos) 0 var(--stroke-color))
+				// 	drop-shadow(var(--stroke-pos) var(--stroke-neg) 0 var(--stroke-color))
+				// 	drop-shadow(var(--stroke-neg) var(--stroke-pos) 0 var(--stroke-color))
+				// 	drop-shadow(var(--stroke-neg) var(--stroke-neg) 0 var(--stroke-color));
+
+				&.details-layout {
+					height: 2.5rem;
+				}
+			}
+
+			&.details-layout {
+				flex-direction: row-reverse;
+				justify-content: space-between;
+			}
+		}
+		.note {
+			position: absolute;
+			left: 0.75rem;
+			top: 0.75rem;
 			font-size: x-large;
 			font-weight: 700;
 			background-color: var(--warning);
