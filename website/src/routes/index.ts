@@ -177,17 +177,30 @@ export const get: RequestHandler = async ({ url }) => {
 			} as PokemonType;
 		}
 
-		console.info(`Data for ${pokemonName} fetched; names and forms are next`);
+		console.info(`Data for ${pokemonName} fetched; additional data is next`);
 
 		const [species, form, ...abilities] = await Promise.all([
 			api
 				.getPokemonSpeciesByName(pokemon.species.name)
+				.then((it) => {
+					console.info('\tSpecies data for ' + pokemonName + ' fetched');
+					return it;
+				})
 				.catch((it) => logError(it, pokemonName, 'species')),
 			api
 				.getPokemonFormByName(pokemon.forms[0].name)
+				.then((it) => {
+					console.info('\tForm data for ' + pokemonName + ' fetched');
+					return it;
+				})
 				.catch((it) => logError(it, pokemonName, 'form')),
 			...pokemon.abilities.map((it) =>
-				getAbility(it.ability.name).catch((it) => logError(it, pokemonName, 'abilities'))
+				getAbility(it.ability.name)
+					.then((it) => {
+						console.info('\tAbility data for ' + pokemonName + ' fetched');
+						return it;
+					})
+					.catch((it) => logError(it, pokemonName, 'abilities'))
 			)
 		]);
 
@@ -215,7 +228,7 @@ export const get: RequestHandler = async ({ url }) => {
 			...jsonPokemonObject?.overrides
 		};
 
-		console.info(`Names for ${jsonPokemon} fetched.`);
+		console.info(`\t\tAll data for ${jsonPokemon} fetched.`);
 		return returnValue;
 	};
 
