@@ -1,7 +1,6 @@
-import type { Ability, PokemonType, Stats, Team } from 'src/routes';
 import { language } from '$lib/stores/store';
 import { get } from 'svelte/store';
-import type { Typing } from '$lib/pokemon-type.svelte';
+import type { Ability, PokemonType, Stats, Team, Typing } from '$lib/types/pokemon';
 
 export class Pokemon implements PokemonType {
 	constructor(pokemon: PokemonType) {

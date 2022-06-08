@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Tier } from 'src/routes';
 	import { onMount } from 'svelte';
 	import PokemonCard from './pokemon-card.svelte';
 	import { flip } from 'svelte/animate';
 	import { expoOut } from 'svelte/easing';
+import type { Tier } from './types/pokemon';
 
 	export let tier: Tier;
 

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Ability, StatKeys, Stats } from 'src/routes';
 	import { language } from './stores/store';
 	import { tooltip } from '$lib/actions/tooltip';
+	import type { Ability, StatKeys, Stats } from './types/pokemon';
 
 	type StatNames = {
 		[P in StatKeys]: string;
@@ -15,9 +15,8 @@
 
 	export let stats: Stats;
 	export let abilities: Ability[];
-	
-	$: statEntries = Object.entries(stats) as StatEntries
 
+	$: statEntries = Object.entries(stats) as StatEntries;
 
 	const STAT_NAMES: StatNames = {
 		hp: 'HP',
@@ -83,7 +82,7 @@
 </script>
 
 <div class="details">
-	{#each statEntries as stat }
+	{#each statEntries as stat}
 		<div class="stat">
 			<div class="stat-bar" style={getBarStyles(stat[1])} />
 			<div class="stat-label">{STAT_NAMES[stat[0]]}</div>

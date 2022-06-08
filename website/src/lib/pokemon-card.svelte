@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { Pokemon } from './classes/Pokemon';
 	import PokemonTypeComponent from '$lib/pokemon-type.svelte';
-	import type { PokemonType } from 'src/routes';
 	import { allStatsToggled, filter } from '$lib/stores/store';
 	import { base } from '$app/paths';
 	import PokemonStats from './pokemon-stats.svelte';
 	import { tooltip } from '$lib/actions/tooltip';
+import type { PokemonType } from './types/pokemon';
 
 	export let pokemon: PokemonType;
 	let _pokemon: Pokemon;

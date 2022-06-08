@@ -3,98 +3,17 @@ import prodTierlist from '$lib/data/tierlist.json';
 import devTierlist from '$lib/data/tierlist-dev.json';
 import teamsData from '$lib/data/teams.json';
 import pkg, { type PokemonForm, type PokemonSpecies } from 'pokenode-ts';
-import type { Typing } from '$lib/pokemon-type.svelte';
+import type { Ability, PokemonType, Stats, Team, Typing } from '$lib/types/pokemon';
+import type { JsonPokemon, JsonPokemonObject, JsonTier } from '$lib/types/json';
 const { PokemonClient } = pkg;
 
 const api = new PokemonClient();
 
 const dev = process.env.NODE_ENV === 'development';
-export type Team = {
-	name: string;
-	player: string;
-	logo: {
-		avif: string;
-		webp: string;
-		png: string;
-	};
-	pokemon: string[];
-};
-
-export type Tier = {
-	name: string;
-	rank: number;
-	emptyText: string;
-	subtitles: string[] | undefined;
-	pokemon: PokemonType[];
-};
-
-type JsonTier = Omit<Tier, 'pokemon'> & {
-	pokemon: JsonPokemon[];
-	notes: {
-		[key: string]:
-			| {
-					de: string;
-					en: string;
-			  }
-			| undefined;
-	};
-};
-
-export type StatKeys = 'hp' | 'atk' | 'def' | 'spatk' | 'spdef' | 'spd';
-
-export type Stats = {
-	[Property in StatKeys]: number;
-};
-
-export type Ability = {
-	de: {
-		name: string;
-		description: string;
-	};
-	en: {
-		name: string;
-		description: string;
-	};
-};
-
-export type PokemonType = {
-	name: {
-		en: string;
-		de: string;
-	};
-	form?: {
-		en: string;
-		de: string;
-	};
-	notes?: {
-		en: string;
-		de: string;
-	};
-	baseStats: Stats;
-	abilities: Ability[];
-	id: string;
-	team?: Team;
-	typing: Typing;
-	imageUrl?: string;
-	pokemonDbUrl?: string;
-};
-
-type OptionalPokemonType = {
-	[Property in keyof PokemonType]?: PokemonType[Property];
-};
 
 type AbilityCache = {
 	[key: string]: Ability;
 };
-
-type JsonPokemonObject = {
-	internalName: string;
-	pokemon: string;
-	overrides?: OptionalPokemonType;
-};
-
-type JsonPokemon = string | JsonPokemonObject;
-
 const abilityCache: AbilityCache = {};
 
 function isJsonPokemonObject(jsonPokemon: unknown): jsonPokemon is JsonPokemonObject {
