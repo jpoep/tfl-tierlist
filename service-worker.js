@@ -1,5 +1,5 @@
 const build = [
-  "/_app/immutable/start-b744dc08.js",
+  "/_app/immutable/start-d33d942b.js",
   "/_app/immutable/pages/__layout.svelte-e1feb261.js",
   "/_app/immutable/assets/pages/__layout.svelte-a1942712.css",
   "/_app/immutable/assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
@@ -9,7 +9,7 @@ const build = [
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/error.svelte-69190d4e.js",
-  "/_app/immutable/pages/index.svelte-af0c63d1.js",
+  "/_app/immutable/pages/index.svelte-92f232dc.js",
   "/_app/immutable/assets/pages/index.svelte-db7411f8.css",
   "/_app/immutable/chunks/index-a64115f5.js",
   "/_app/immutable/chunks/index-6bee92c9.js",
@@ -77,7 +77,7 @@ const files = [
   "/pokeball-logo.svg",
   "/till.png"
 ];
-const version = "1654693637250";
+const version = "1654702446655";
 const worker = self;
 const FILES = `cache${version}`;
 const to_cache = build.concat(files.filter((it) => !it.endsWith(".nojekyll")));
