@@ -1,20 +1,20 @@
 const build = [
-  "/_app/immutable/start-0008cf92.js",
-  "/_app/immutable/pages/__layout.svelte-e1feb261.js",
-  "/_app/immutable/assets/pages/__layout.svelte-a1942712.css",
+  "/_app/immutable/start-52775f13.js",
+  "/_app/immutable/pages/__layout.svelte-187888c2.js",
+  "/_app/immutable/assets/pages/__layout.svelte-c77a3056.css",
   "/_app/immutable/assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-latin-400-normal-557f6d08.woff2",
   "/_app/immutable/assets/titillium-web-latin-ext-700-normal-8f8ebc7e.woff2",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
-  "/_app/immutable/error.svelte-69190d4e.js",
-  "/_app/immutable/pages/index.svelte-d73e98e4.js",
-  "/_app/immutable/assets/pages/index.svelte-d573c15b.css",
-  "/_app/immutable/chunks/index-a64115f5.js",
-  "/_app/immutable/chunks/index-6bee92c9.js",
+  "/_app/immutable/error.svelte-b933263e.js",
+  "/_app/immutable/pages/index.svelte-24e01908.js",
+  "/_app/immutable/assets/pages/index.svelte-5ee29c59.css",
+  "/_app/immutable/chunks/index-3df6a2d7.js",
+  "/_app/immutable/chunks/index-6c4eee75.js",
   "/_app/immutable/chunks/paths-396f020f.js",
-  "/_app/immutable/chunks/index-c790f9d4.js"
+  "/_app/immutable/chunks/index-c944c310.js"
 ];
 const files = [
   "/.nojekyll",
@@ -77,7 +77,7 @@ const files = [
   "/pokeball-logo.svg",
   "/till.png"
 ];
-const version = "1654720779016";
+const version = "1654724849816";
 const worker = self;
 const FILES = `cache${version}`;
 const to_cache = build.concat(files.filter((it) => !it.endsWith(".nojekyll")));
