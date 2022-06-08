@@ -41,10 +41,7 @@
 					<picture>
 						<source srcSet={getImageUrl(pokemon.team.logo.avif)} type="image/avif" />
 						<source srcSet={getImageUrl(pokemon.team.logo.webp)} type="image/webp" />
-						<img
-							src={getImageUrl(pokemon.team.logo.png)}
-							alt={'Logo von ' + pokemon.team.player}
-						/>
+						<img src={getImageUrl(pokemon.team.logo.png)} alt={'Logo von ' + pokemon.team.player} />
 					</picture>
 				</div>
 			</div>
@@ -121,7 +118,7 @@
 				align-items: center;
 				justify-content: center;
 				picture {
-					filter: opacity(.5) grayscale(.7);
+					filter: opacity(0.5) grayscale(0.7);
 					max-height: 12rem;
 					max-width: 12rem;
 					border-radius: 50%;
@@ -167,6 +164,9 @@
 				image-rendering: pixelated;
 				z-index: 0;
 				pointer-events: none;
+				width: 100%;
+				aspect-ratio: 1/1;
+
 
 				// outline currently disabled due to performance
 				// --stroke-pos: 1px;
