@@ -23,7 +23,9 @@
 		subTitle,
 		title,
 		width = '8rem',
-		backgroundColor = 'var(--bg-color-highlighted)'
+		backgroundColor = 'var(--bg-color-highlighted)',
+		fontColor = 'var(--font-color)',
+		smallFontColor = 'var(--font-color-lightened)'
 	} = tooltipProps;
 	const ANIMATION_DISTANCE = '15px';
 
@@ -47,6 +49,8 @@
 	bind:this={tooltipElement}
 	style:width
 	style:--background-color={backgroundColor}
+	style:--font-color={fontColor}
+	style:--font-color-lightened={smallFontColor}
 	style:transform ={initialAnimation}
 >
 	{#if title}

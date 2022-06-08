@@ -49,7 +49,7 @@
 		{#if pokemon.notes}
 			<div
 				class="note"
-				use:tooltip={{ backgroundColor: 'var(--warning', subTitle: _pokemon.localNotes }}
+				use:tooltip={{ backgroundColor: 'var(--warning)', smallFontColor: 'var(--dark-fg)', subTitle: _pokemon.localNotes }}
 				on:click|stopPropagation
 			/>
 		{/if}
@@ -60,6 +60,7 @@
 			src={detailsActive ? pokemon.miniSpriteUrl : pokemon.imageUrl}
 			alt={_pokemon.localName}
 			crossorigin="anonymous"
+			loading="lazy"
 			class:details-layout={detailsActive}
 		/>
 		<div class="pokemon-name" class:details-layout={detailsActive}>
@@ -161,7 +162,7 @@
 			}
 
 			> img {
-				image-rendering: pixelated;
+				// image-rendering: pixelated;
 				z-index: 0;
 				pointer-events: none;
 				width: 100%;

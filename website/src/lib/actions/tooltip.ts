@@ -6,6 +6,8 @@ export type TooltipProps = {
 	subTitle?: string | null;
 	width?: string | null;
 	backgroundColor?: string | null;
+	fontColor?: string | null;
+	smallFontColor?: string | null;
 };
 export function tooltip(element: Element, tooltipProps: TooltipProps) {
 	let tooltipComponent: Tooltip;
