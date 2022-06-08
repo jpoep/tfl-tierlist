@@ -1,25 +1,20 @@
-const timestamp = {
-  toString: () => {
-    throw new Error("`timestamp` has been removed from $service-worker. Use `version` instead");
-  }
-};
 const build = [
-  "/_app/immutable/start-d3a7c558.js",
-  "/_app/immutable/pages/__layout.svelte-8139a8b6.js",
-  "/_app/immutable/assets/pages/__layout.svelte-1537a61b.css",
+  "/_app/immutable/start-e8d84e81.js",
+  "/_app/immutable/pages/__layout.svelte-e1feb261.js",
+  "/_app/immutable/assets/pages/__layout.svelte-a1942712.css",
   "/_app/immutable/assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-latin-400-normal-557f6d08.woff2",
   "/_app/immutable/assets/titillium-web-latin-ext-700-normal-8f8ebc7e.woff2",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
-  "/_app/immutable/error.svelte-bd714bac.js",
-  "/_app/immutable/pages/index.svelte-acc0ed3d.js",
-  "/_app/immutable/assets/pages/index.svelte-3552b8ca.css",
-  "/_app/immutable/chunks/index-9df6a460.js",
-  "/_app/immutable/chunks/index-8a4b4e58.js",
+  "/_app/immutable/error.svelte-69190d4e.js",
+  "/_app/immutable/pages/index.svelte-87d0d050.js",
+  "/_app/immutable/assets/pages/index.svelte-add4af81.css",
+  "/_app/immutable/chunks/index-a64115f5.js",
+  "/_app/immutable/chunks/index-6bee92c9.js",
   "/_app/immutable/chunks/paths-396f020f.js",
-  "/_app/immutable/chunks/index-bd3f2e60.js"
+  "/_app/immutable/chunks/index-c790f9d4.js"
 ];
 const files = [
   "/.nojekyll",
@@ -82,8 +77,9 @@ const files = [
   "/pokeball-logo.svg",
   "/till.png"
 ];
+const version = "1654692229372";
 const worker = self;
-const FILES = `cache${timestamp}`;
+const FILES = `cache${version}`;
 const to_cache = build.concat(files.filter((it) => !it.endsWith(".nojekyll")));
 const staticAssets = new Set(to_cache);
 worker.addEventListener("install", (event) => {
@@ -101,7 +97,7 @@ worker.addEventListener("activate", (event) => {
   }));
 });
 async function fetchAndCache(request) {
-  const cache = await caches.open(`offline${timestamp}`);
+  const cache = await caches.open(`offline${version}`);
   try {
     const response = await fetch(request);
     cache.put(request, response.clone());
