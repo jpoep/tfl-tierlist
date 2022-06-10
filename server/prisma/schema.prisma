@@ -1,0 +1,230 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+generator pothos {
+  provider = "prisma-pothos-types"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Season {
+  number        Int           @id
+  name          String?
+  startDate     DateTime
+  endDate       DateTime?
+  tierlist      Tier[]
+  leagues       League[]
+  pickRules     PickRules[]
+  scheduleRules ScheduleRules @relation(fields: [scheduleRulesId], references: [id])
+  ratingRules   RatingRules   @relation(fields: [ratingRulesId], references: [id])
+  clauses       Clause[]
+
+  // opposite fields
+  scheduleRulesId String
+  ratingRulesId   String
+}
+
+model League {
+  id      String  @id @default(uuid())
+  rank    Int
+  name    String
+  players Team[]
+  matches Match[]
+
+  // opposite fields
+  season   Season @relation(fields: [seasonId], references: [number])
+  seasonId Int
+}
+
+model Match {
+  id                 String              @id @default(uuid())
+  player1            ParticipatingPlayer @relation("player1", fields: [player1Id], references: [id])
+  player2            ParticipatingPlayer @relation("player2", fields: [player2Id], references: [id])
+  date               DateTime
+  kills              Kill[]
+  score              MatchScore          @relation(fields: [matchId], references: [id])
+  vodLink            String?
+  showdownReplayLink String?
+
+  // opposite fields
+  league    League @relation(fields: [leagueId], references: [id])
+  leagueId  String
+  player1Id String
+  player2Id String
+  winnerId  String
+  matchId   String
+}
+
+model Kill {
+  id      String   @id @default(uuid())
+  fainter Pokemon? @relation("fainter", fields: [fainterId], references: [id])
+  faintee Pokemon  @relation("faintee", fields: [fainteeId], references: [id])
+
+  // opposite fields
+  match     Match  @relation(fields: [matchId], references: [id])
+  matchId   String
+  fainterId String
+  fainteeId String
+}
+
+model Pokemon {
+  id String @id
+
+  // opposite fields
+  killsAsFainter Kill[]              @relation("fainter")
+  killsAsFaintee Kill[]              @relation("faintee")
+  inTeams        Team[]
+  inTiers        Tier[]
+  builtAs        ConfiguredPokemon[]
+}
+
+model MatchScore {
+  id           String @id @default(uuid())
+  player1Score Int
+  player2Score Int
+
+  // opposite fields
+  matches Match[]
+}
+
+model PickRules {
+  id    String @id @default(uuid())
+  tiers Tier[]
+  picks Int
+
+  // opposite fields
+  season   Season @relation(fields: [seasonId], references: [number])
+  seasonId Int
+}
+
+model ScheduleRules {
+
+  id                  String   @id @default(uuid())
+  matchTurnus         DateTime
+  rounds              Int
+  playoffs            Boolean
+  midSeasonTournament Boolean
+
+  // opposite fields
+  seasons Season[]
+}
+
+model RatingRules {
+  id           String @id @default(uuid())
+  scorePerWin  Int
+  scorePerDraw Int
+  scorePerLoss Int
+
+  // opposite fields
+  season Season[]
+}
+
+model Clause {
+  id          String  @id @default(uuid())
+  title       String?
+  description String
+
+  // opposite fields
+  season   Season @relation(fields: [seasonId], references: [number])
+  seasonId Int
+}
+
+model Tier {
+  id              String       @id @default(uuid())
+  rank            Int
+  name            String
+  flavorTexts     FlavorText[]
+  emptySearchtext String
+  pokemon         Pokemon[]
+
+  // opposite fields
+  pickRules    PickRules[]
+  Season       Season?     @relation(fields: [seasonNumber], references: [number])
+  seasonNumber Int?
+}
+
+model FlavorText {
+  id    String @id @default(uuid())
+  text  String
+  tiers Tier[]
+}
+
+model User {
+  username String @id
+  name     String
+
+  // opposite fields
+  players Team[]
+}
+
+model Team {
+  id       String    @id @default(uuid())
+  teamName String
+  teamLogo String
+  person   User      @relation(fields: [userId], references: [username])
+  pokemon  Pokemon[]
+
+  // opposite fields
+  league          League                @relation(fields: [leagueId], references: [id])
+  leagueId        String
+  userId          String
+  // pokemonIds      String[]
+  participatingAs ParticipatingPlayer[]
+}
+
+model Stats {
+  id    String @id @default(uuid())
+  hp    Int
+  atk   Int
+  def   Int
+  spatk Int
+  spdef Int
+  speed Int
+
+  usedAsIvsIn ConfiguredPokemon[] @relation("ivs")
+  usedAsEvsIn ConfiguredPokemon[] @relation("evs")
+}
+
+model ParticipatingPlayer {
+  id     String              @id @default(uuid())
+  player Team                @relation(fields: [playerId], references: [id])
+  roster ConfiguredPokemon[]
+
+  // opposite fields
+  matchupAsPlayer1  Match[] @relation("player1")
+  matchupsAsPlayer2 Match[] @relation("player2")
+  playerId          String
+}
+
+model ConfiguredPokemon {
+  id       String  @id @default(uuid())
+  pokemon  Pokemon @relation(fields: [pokemonId], references: [id])
+  nickname String?
+  shiny    Boolean
+  evs      Stats   @relation("evs", fields: [evsId], references: [id])
+  ivs      Stats   @relation("ivs", fields: [ivsId], references: [id])
+  nature   String
+  ability  String
+  moves    Move[]
+  item     String
+
+  // opposite fields
+  inRosterOf ParticipatingPlayer @relation(fields: [rosterId], references: [id])
+  rosterId   String
+  pokemonId  String
+  evsId      String
+  ivsId      String
+}
+
+model Move {
+  name                String             @id
+  ConfiguredPokemon   ConfiguredPokemon? @relation(fields: [configuredPokemonId], references: [id])
+  configuredPokemonId String?
+}
