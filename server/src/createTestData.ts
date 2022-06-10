@@ -8,6 +8,11 @@ async function initDb() {
       rank: 1,
       emptySearchtext: "Kek",
       name: "S",
+      pokemon: {
+        create: [{
+            id: "aegislash-shield"
+        }]
+      }
     },
   });
 

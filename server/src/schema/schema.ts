@@ -1,8 +1,8 @@
-import SchemaBuilder, { contextCacheSymbol } from "@pothos/core";
-import { PrismaClient } from "@prisma/client";
+import SchemaBuilder, { ArgBuilder, contextCacheSymbol } from "@pothos/core";
+import { PrismaClient, Season } from "@prisma/client";
 import PrismaPlugin, { prismaModelName } from "@pothos/plugin-prisma";
 import type PrismaTypes from "@pothos/plugin-prisma/generated";
-
+import { setFlagsFromString } from "v8";
 
 const prisma = new PrismaClient({});
 
@@ -129,8 +129,7 @@ builder.prismaObject("Pokemon", {
   findUnique: (it) => ({ id: it.id }),
   fields: (t) => ({
     id: t.exposeID("id"),
-  })
-  ,
+  }),
 });
 
 builder.prismaObject("Tier", {
@@ -163,6 +162,7 @@ builder.prismaObject("Team", {
 
 builder.prismaObject("Stats", {
   description: "",
+  findUnique: (it) => ({ id: it.id }),
   fields: (t) => ({
     hp: t.exposeInt("hp", {}),
     atk: t.exposeInt("atk", {}),
@@ -235,6 +235,56 @@ builder.queryType({
       resolve: async (query, root, args, ctx, info) =>
         prisma.season.findMany({
           ...query,
+        }),
+    }),
+  }),
+});
+
+// export type TypesWithDefaults = PothosSchemaTypes.ExtendDefaultTypes<PrismaTypes>;
+
+builder.mutationType({
+  fields: (t) => ({
+    postSeason: t.prismaField({
+      type: "Season",
+      args: {
+        number: t.arg({
+          type: "Int",
+          required: true,
+        }),
+        name: t.arg({
+          type: "String",
+        }),
+        startDate: t.arg({
+          type: "String",
+          required: true,
+        }),
+        endDate: t.arg({
+          type: "String",
+        }),
+        scheduleRulesId: t.arg({ type: "String" }),
+        ratingRulesId: t.arg({ type: "String" }),
+      },
+      resolve: async (query, root, args, ctx, info) =>
+        prisma.season.create({
+          data: {
+            number: args.number,
+            startDate: new Date(),
+            endDate: args.endDate,
+            scheduleRules: args.scheduleRulesId
+              ? {
+                  connect: {
+                    id: args.scheduleRulesId ?? undefined,
+                  },
+                }
+              : undefined,
+            ratingRules: args.ratingRulesId
+              ? {
+                  connect: {
+                    id: args.ratingRulesId ?? undefined,
+                  },
+                }
+              : undefined,
+          },
         }),
     }),
   }),

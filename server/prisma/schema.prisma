@@ -22,13 +22,13 @@ model Season {
   tierlist      Tier[]
   leagues       League[]
   pickRules     PickRules[]
-  scheduleRules ScheduleRules @relation(fields: [scheduleRulesId], references: [id])
-  ratingRules   RatingRules   @relation(fields: [ratingRulesId], references: [id])
+  scheduleRules ScheduleRules? @relation(fields: [scheduleRulesId], references: [id])
+  ratingRules   RatingRules?   @relation(fields: [ratingRulesId], references: [id])
   clauses       Clause[]
 
   // opposite fields
-  scheduleRulesId String
-  ratingRulesId   String
+  scheduleRulesId String?
+  ratingRulesId   String?
 }
 
 model League {
