@@ -1,9 +1,21 @@
+import "reflect-metadata";
 import { createServer } from "@graphql-yoga/node";
-import { schema } from "./schema/schema";
+import { resolvers } from "@generated/type-graphql";
+import { buildSchema } from "type-graphql";
+import { PrismaClient } from "@prisma/client";
 
-// Create your server
-const server = createServer({
-  schema,
-});
-// start the server and explore http://localhost:4000/graphql
-server.start();
+async function run() {
+  const schema = await buildSchema({
+    resolvers,
+    validate: false,
+  });
+
+  createServer({
+    context: {
+      prisma: new PrismaClient({}),
+    },
+    schema,
+  }).start();
+}
+
+run();
