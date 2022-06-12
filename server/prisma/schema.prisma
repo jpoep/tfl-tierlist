@@ -10,12 +10,12 @@ generator typegraphql {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
 }
 
 model Season {
-  number        Int           @id
+  number        Int            @id
   name          String?
   startDate     DateTime
   endDate       DateTime?
@@ -25,6 +25,7 @@ model Season {
   scheduleRules ScheduleRules? @relation(fields: [scheduleRulesId], references: [id])
   ratingRules   RatingRules?   @relation(fields: [ratingRulesId], references: [id])
   clauses       Clause[]
+  managers      User[]
 
   // opposite fields
   scheduleRulesId String?
@@ -157,24 +158,55 @@ model FlavorText {
 }
 
 model User {
-  username String @id
-  name     String
+  id       Int     @id @default(autoincrement())
+  username String  @unique
+  /// @TypeGraphQL.omit(output: true, input: true)
+  password String?
+  realName String
 
   // opposite fields
-  players Team[]
+  teams           Team[]
+  tokens          Token[]
+  managingSeasons Season[]
+  roles           Role[]
+}
+
+model Token {
+  id         Int       @id @default(autoincrement())
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  type       TokenType
+  valid      Boolean   @default(true)
+  expiration DateTime
+
+  // opposite fields
+  user   User? @relation(fields: [userId], references: [id])
+  userId Int?
+}
+
+enum TokenType {
+  SIGNUP
+  API
+}
+
+enum Role {
+  ADMIN
+  INVITER
+  PLAYER
+  VIEWER
 }
 
 model Team {
   id       String    @id @default(uuid())
   teamName String
   teamLogo String
-  person   User      @relation(fields: [userId], references: [username])
+  person   User      @relation(fields: [userId], references: [id])
   pokemon  Pokemon[]
 
   // opposite fields
-  league          League                @relation(fields: [leagueId], references: [id])
-  leagueId        String
-  userId          String
+  league          League?                @relation(fields: [leagueId], references: [id])
+  leagueId        String?
+  userId          Int
   // pokemonIds      String[]
   participatingAs ParticipatingPlayer[]
 }

@@ -26,5 +26,8 @@
     "typescript": "~4.7.3"
   },
   "private": true,
-  "packageManager": "yarn@3.2.1"
+  "packageManager": "yarn@3.2.1",
+  "dependencies": {
+    "fastify": "^4.0.1"
+  }
 }
