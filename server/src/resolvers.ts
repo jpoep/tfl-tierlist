@@ -52,12 +52,12 @@ import {
   MoveRelationsResolver,
 } from "@generated/type-graphql";
 import { NonEmptyArray } from "type-graphql";
-import { CreateSeason } from "./resolvers/CreateSeason";
-import { CreateTeam } from "./resolvers/CreateTeam";
+import { SeasonResolver } from "./resolvers/season";
+import { TeamResolver } from "./resolvers/team";
 
 export const resolvers: NonEmptyArray<Function> = [
-  CreateTeam,
-  CreateSeason,
+  TeamResolver,
+  SeasonResolver,
   FindUniqueUserResolver,
   UserRelationsResolver,
   FindManySeasonResolver,

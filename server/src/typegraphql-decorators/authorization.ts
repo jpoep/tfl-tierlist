@@ -8,9 +8,9 @@ import { AuthChecker, Authorized } from "type-graphql";
 import { ContextType } from "../main";
 
 type AuthCheckerType = {
-    roles: Role[],
-    self: boolean
-}
+  roles: Role[];
+  self: boolean;
+};
 
 // define the decorators config using generic ResolverActionsConfig<TModelName> type
 const seasonsActionsConfig: ResolverActionsConfig<"Season"> = {
@@ -25,15 +25,17 @@ const teamActionsConfig: ResolverActionsConfig<"Team"> = {
   createTeam: [Authorized<Role>()],
 };
 const userActionsConfig: ResolverActionsConfig<"User"> = {
-    createUser: [Authorized<AuthCheckerType>({roles: [Role.INVITER], self: false})]
-}
+  createUser: [
+    Authorized<AuthCheckerType>({ roles: [Role.INVITER], self: false }),
+  ],
+};
 
 // join the actions config into a single resolvers enhance object
 const resolversEnhanceMap: ResolversEnhanceMap = {
   Season: seasonsActionsConfig,
   League: leaguesActionsConfig,
   Team: teamActionsConfig,
-  User: userActionsConfig
+  User: userActionsConfig,
 };
 
 // apply the config (it will apply decorators on the resolver class methods)
@@ -43,9 +45,11 @@ export const customAuthChecker: AuthChecker<ContextType, AuthCheckerType> = (
   { root, args, context, info },
   roles: AuthCheckerType[]
 ) => {
-    console.log(args["data"].person);
-    const allowedRoles = roles.flatMap(it => it.roles)
-    console.log(allowedRoles)
-    return context.user?.roles.some((role) => allowedRoles.includes(role)) || allowedRoles.length === 0;
-
-}
+  console.log(args["data"].person);
+  const allowedRoles = roles.flatMap((it) => it.roles);
+  console.log(allowedRoles);
+  return (
+    context.user?.roles.some((role) => allowedRoles.includes(role)) ||
+    allowedRoles.length === 0
+  );
+};
