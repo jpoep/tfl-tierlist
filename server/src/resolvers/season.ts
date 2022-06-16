@@ -51,7 +51,7 @@ export class SeasonResolver {
       id: user.id,
       username: user.username,
     });
-    return await prisma.season.create({
+    return prisma.season.create({
       data: {
         number,
         tierlist: { create: tierlist },
@@ -59,10 +59,48 @@ export class SeasonResolver {
         scheduleRules: { create: scheduleRules },
         ratingRules: { create: ratingRules },
         clauses: { create: clauses },
-        managers: { connect: managers },
+        managers: managers && { connect: managers },
         startDate,
         endDate,
         name,
+      },
+    });
+  }
+
+  @Mutation(() => SeasonType)
+  async updateSeason(
+    @Ctx() { prisma, user }: ContextType,
+    @Arg("number") number: number,
+    @Arg("startDate", { nullable: true }) startDate?: Date,
+    @Arg("endDate", { nullable: true }) endDate?: Date,
+    @Arg("name", { nullable: true }) name?: string,
+    @Arg("managers", () => [UserWhereUniqueInput], {
+      defaultValue:
+        "Additional users that may manage this season. You are included by default.",
+      nullable: true,
+    })
+    managers?: UserWhereUniqueInput[]
+  ): Promise<SeasonType> {
+    if (!user) {
+      throw new UnauthorizedError();
+    }
+    const season = await prisma.season.findUnique({
+      where: { number },
+      include: { managers: true },
+    });
+    if (
+      !user.roles.includes("ADMIN") &&
+      !season?.managers.map((it) => it.id).includes(user.id)
+    ) {
+      throw new UnauthorizedError();
+    }
+    return prisma.season.update({
+      where: { number },
+      data: {
+        startDate,
+        endDate,
+        name,
+        managers: managers && { connect: managers },
       },
     });
   }
