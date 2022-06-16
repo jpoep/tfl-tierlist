@@ -47,21 +47,20 @@ model League {
 }
 
 model Match {
-  id                 Int                 @id @default(autoincrement())
-  player1            ParticipatingPlayer @relation("player1", fields: [player1Id], references: [id])
-  player2            ParticipatingPlayer @relation("player2", fields: [player2Id], references: [id])
-  date               DateTime
-  kills              Kill[]
-  score              MatchScore          @relation(fields: [matchId], references: [id])
-  vodLink            String?
-  showdownReplayLink String?
+  id      Int                 @id @default(autoincrement())
+  player1 ParticipatingPlayer @relation("player1", fields: [player1Id], references: [id])
+  player2 ParticipatingPlayer @relation("player2", fields: [player2Id], references: [id])
+  winner  User?               @relation(fields: [winnerId], references: [id])
+  date    DateTime?
+  kills   Kill[]
+  score   MatchScore?         @relation(fields: [matchId], references: [id])
 
   // opposite fields
   league    League @relation(fields: [leagueId], references: [id])
   leagueId  Int
   player1Id Int
   player2Id Int
-  winnerId  Int
+  winnerId  Int?
   matchId   Int
 }
 
@@ -172,6 +171,7 @@ model User {
   managingSeasons Season[]
   roles           Role[]
   allowedLeagues  League[]
+  wonMatches      Match[]
 }
 
 model Token {
@@ -228,9 +228,12 @@ model Stats {
 }
 
 model ParticipatingPlayer {
-  id     Int                 @id @default(autoincrement())
-  player Team                @relation(fields: [playerId], references: [id])
-  roster ConfiguredPokemon[]
+  id                 Int                 @id @default(autoincrement())
+  player             Team                @relation(fields: [playerId], references: [id])
+  roster             ConfiguredPokemon[]
+  vodLink            String?
+  showdownReplayLink String?
+  liveStreamLink     String?
 
   // opposite fields
   matchupAsPlayer1  Match[] @relation("player1")
