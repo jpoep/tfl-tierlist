@@ -35,7 +35,7 @@ model Season {
 model League {
   id                Int     @id @default(autoincrement())
   rank              Int
-  name              String
+  name              String?
   currentlyDrafting Boolean @default(false)
   allowedPlayers    User[]
   teams             Team[]
@@ -58,8 +58,8 @@ model Match {
   // opposite fields
   league    League @relation(fields: [leagueId], references: [id])
   leagueId  Int
-  player1Id Int
-  player2Id Int
+  player1Id Int    @unique
+  player2Id Int    @unique
   winnerId  Int?
   matchId   Int
 }
@@ -236,22 +236,22 @@ model ParticipatingPlayer {
   liveStreamLink     String?
 
   // opposite fields
-  matchupAsPlayer1  Match[] @relation("player1")
-  matchupsAsPlayer2 Match[] @relation("player2")
-  playerId          Int
+  matchupAsPlayer1 Match? @relation("player1")
+  matchupAsPlayer2 Match? @relation("player2")
+  playerId         Int
 }
 
 model ConfiguredPokemon {
   id       Int     @id @default(autoincrement())
   pokemon  Pokemon @relation(fields: [pokemonId], references: [id])
   nickname String?
-  shiny    Boolean
-  evs      Stats   @relation("evs", fields: [evsId], references: [id])
-  ivs      Stats   @relation("ivs", fields: [ivsId], references: [id])
-  nature   String
-  ability  String
+  shiny    Boolean?
+  evs      Stats?   @relation("evs", fields: [evsId], references: [id])
+  ivs      Stats?   @relation("ivs", fields: [ivsId], references: [id])
+  nature   String?
+  ability  String?
   moves    Move[]
-  item     String
+  item     String?
 
   // opposite fields
   inRosterOf ParticipatingPlayer @relation(fields: [rosterId], references: [id])

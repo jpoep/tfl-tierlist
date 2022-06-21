@@ -3,10 +3,8 @@ import {
   Arg,
   Authorized,
   Ctx,
-  Field,
+  ClassType,
   Mutation,
-  Query,
-  Resolver,
   UnauthorizedError,
 } from "type-graphql";
 import { ContextType } from "../main";
@@ -18,7 +16,24 @@ import {
   RatingRulesCreateWithoutSeasonInput,
   ClauseCreateWithoutSeasonInput,
   UserWhereUniqueInput,
+  PokemonWhereUniqueInput,
+  FlavorTextCreateNestedManyWithoutTiersInput,
+  PickRulesCreateNestedManyWithoutTiersInput,
+
 } from "@generated/type-graphql";
+
+type TierlistInput = Omit<TierCreateWithoutSeasonInput, 'pokemon'> & {
+  pokemon: PokemonWhereUniqueInput[];
+};
+
+declare class TierlistInputClass implements TierlistInput {
+  flavorTexts?: FlavorTextCreateNestedManyWithoutTiersInput | undefined;
+  emptySearchtext: string;
+  pickRules?: PickRulesCreateNestedManyWithoutTiersInput | undefined;
+  pokemon: PokemonWhereUniqueInput[];
+  rank: number;
+  name: string; 
+}
 
 export class SeasonResolver {
   @Authorized<Role>(Role.ADMIN)
@@ -26,8 +41,10 @@ export class SeasonResolver {
   async createSeason(
     @Ctx() { prisma, user }: ContextType,
     @Arg("number") number: number,
-    @Arg("tierlist", () => [TierCreateWithoutSeasonInput])
-    tierlist: TierCreateWithoutSeasonInput[],
+    @Arg("numberOfLeagues")
+    numberOfLeagues: number,
+    @Arg("tierlist", () => [TierlistInputClass])
+    tierlist: TierlistInputClass[],
     @Arg("pickRules", () => [PickRulesCreateWithoutSeasonInput])
     pickRules: PickRulesCreateWithoutSeasonInput[],
     @Arg("scheduleRules") scheduleRules: ScheduleRulesCreateWithoutSeasonsInput,
@@ -51,9 +68,16 @@ export class SeasonResolver {
       id: user.id,
       username: user.username,
     });
-    return prisma.season.create({
+    const season = await prisma.season.create({
       data: {
         number,
+        leagues: {
+          createMany: {
+            data: Array(numberOfLeagues).map((_, index) => ({
+              rank: index + 1,
+            })),
+          },
+        },
         tierlist: { create: tierlist },
         pickRules: { create: pickRules },
         scheduleRules: { create: scheduleRules },
@@ -65,6 +89,7 @@ export class SeasonResolver {
         name,
       },
     });
+    return season;
   }
 
   @Mutation(() => SeasonType)
