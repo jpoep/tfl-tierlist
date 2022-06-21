@@ -1,8 +1,10 @@
 import { TokenType } from "@prisma/client";
 import { FastifyPluginCallback } from "fastify";
-import { verify } from "jsonwebtoken";
-import { jwtSecret, prisma, TflTokenPayload } from "../main";
+import jsonwebtoken from "jsonwebtoken";
+import { jwtSecret, prisma, TflTokenPayload } from "../main.js";
 import bcrypt from "bcrypt";
+
+const { verify } = jsonwebtoken;
 
 export const register: FastifyPluginCallback = async (app) =>
   app.route<{

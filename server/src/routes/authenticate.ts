@@ -1,9 +1,12 @@
 import { TokenType } from "@prisma/client";
+
 import { add } from "date-fns";
 import { FastifyPluginCallback } from "fastify";
-import { sign } from "jsonwebtoken";
-import { jwtSecret, prisma, TflTokenPayload } from "../main";
+import jsonwebtoken from "jsonwebtoken";
+import { jwtSecret, prisma, TflTokenPayload } from "../main.js";
 import bcrypt from "bcrypt";
+
+const { sign } = jsonwebtoken;
 
 const AUTHENTICATION_TOKEN_EXPIRATION_HOURS: number = 24 * 100;
 

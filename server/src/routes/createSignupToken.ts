@@ -1,10 +1,11 @@
 import { Role, TokenType, User } from "@prisma/client";
 import { FastifyPluginCallback } from "fastify";
-import { sign, verify } from "jsonwebtoken";
-import { jwtSecret, prisma, TflTokenPayload } from "../main";
+import jsonwebtoken from "jsonwebtoken";
+import { jwtSecret, prisma, TflTokenPayload } from "../main.js";
 import bcrypt from "bcrypt";
 import { add } from "date-fns";
 
+const { sign, verify } = jsonwebtoken;
 const SIGNUP_TOKEN_EXPIRATION_HOURS: number = 24;
 
 export const createSignupToken: FastifyPluginCallback = async (app) =>

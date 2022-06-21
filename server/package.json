@@ -2,6 +2,7 @@
   "name": "tfl-serer",
   "version": "1.0.0",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "@fastify/auth": "^3.0.1",
     "@graphql-yoga/node": "^2.9.0",

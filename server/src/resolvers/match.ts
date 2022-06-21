@@ -1,10 +1,12 @@
-import { Match, Role } from "@prisma/client";
+import { Role } from "@prisma/client";
 import {
   ConfiguredPokemonCreateWithoutInRosterOfInput,
   PokemonWhereUniqueInput,
   MoveWhereUniqueInput,
   StatsCreateNestedOneWithoutUsedAsEvsInInput,
   StatsCreateNestedOneWithoutUsedAsIvsInInput,
+  ParticipatingPlayer,
+  Match,
 } from "@generated/type-graphql";
 import {
   Arg,
@@ -17,14 +19,40 @@ import { ContextType } from "../main";
 import { shuffle } from "d3-array";
 import { add, differenceInDays } from "date-fns";
 
+type ConfiguredPokemonInput = Omit<
+  ConfiguredPokemonCreateWithoutInRosterOfInput,
+  "pokemon" | "moves"
+> & {
+  pokemon: PokemonWhereUniqueInput[];
+  moves: MoveWhereUniqueInput[];
+};
+
+class ConfiguredPokemonInputClass implements ConfiguredPokemonInput {
+  nickname?: string | undefined;
+  shiny?: boolean | undefined;
+  evs?: StatsCreateNestedOneWithoutUsedAsEvsInInput | undefined;
+  ivs?: StatsCreateNestedOneWithoutUsedAsIvsInInput | undefined;
+  nature?: string | undefined;
+  ability?: string | undefined;
+  item?: string | undefined;
+  pokemon!: PokemonWhereUniqueInput[];
+  moves!: MoveWhereUniqueInput[];
+}
+
+declare class Kills {
+  fainter: string;
+  faintee: string;
+}
+
 export class MatchResolver {
   @Authorized<Role>(Role.PLAYER, Role.ADMIN)
+  @Mutation(() => ParticipatingPlayer)
   async registerTeam(
     @Ctx() { prisma, user }: ContextType,
     @Arg("matchId") matchId: number,
     @Arg("roster", () => [ConfiguredPokemonInputClass])
     roster: ConfiguredPokemonInputClass[]
-  ) {
+  ): Promise<ParticipatingPlayer> {
     if (!user) {
       throw new UnauthorizedError();
     }
@@ -60,7 +88,7 @@ export class MatchResolver {
       throw new Error("Can't change a team for a finished match.");
     }
 
-    await prisma.participatingPlayer.update({
+    return await prisma.participatingPlayer.update({
       where: {
         id: participatingPlayer.id,
       },
@@ -78,11 +106,11 @@ export class MatchResolver {
   }
 
   @Authorized<Role>(Role.PLAYER)
-  @Mutation()
+  @Mutation(() => [Match])
   async updateResults(
     @Ctx() { prisma, user }: ContextType,
     @Arg("matchId") matchId: number,
-    @Arg("kills") kills: Kills,
+    @Arg("kills", () => [Kills]) kills: Kills[],
     @Arg("winnerId", { nullable: true }) winnerId: number
   ): Promise<Match> {
     if (!user) {
@@ -212,7 +240,7 @@ export class MatchResolver {
   }
 
   @Authorized<Role>(Role.ADMIN)
-  @Mutation()
+  @Mutation(() => [Match])
   async generateMatches(
     @Ctx() { prisma, user }: ContextType,
     @Arg("leagueId")
@@ -319,28 +347,3 @@ export class MatchResolver {
     return matches;
   }
 }
-
-type ConfiguredPokemonInput = Omit<
-  ConfiguredPokemonCreateWithoutInRosterOfInput,
-  "pokemon" | "moves"
-> & {
-  pokemon: PokemonWhereUniqueInput[];
-  moves: MoveWhereUniqueInput[];
-};
-
-declare class ConfiguredPokemonInputClass implements ConfiguredPokemonInput {
-  nickname?: string | undefined;
-  shiny?: boolean | undefined;
-  evs?: StatsCreateNestedOneWithoutUsedAsEvsInInput | undefined;
-  ivs?: StatsCreateNestedOneWithoutUsedAsIvsInInput | undefined;
-  nature?: string | undefined;
-  ability?: string | undefined;
-  item?: string | undefined;
-  pokemon: PokemonWhereUniqueInput[];
-  moves: MoveWhereUniqueInput[];
-}
-
-type Kills = {
-  fainter: string;
-  faintee: string;
-}[];

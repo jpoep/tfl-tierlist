@@ -1,9 +1,8 @@
-import { RatingRules, Role, ScheduleRules, Season } from "@prisma/client";
+import { Role, Season } from "@prisma/client";
 import {
   Arg,
   Authorized,
   Ctx,
-  ClassType,
   Mutation,
   UnauthorizedError,
 } from "type-graphql";

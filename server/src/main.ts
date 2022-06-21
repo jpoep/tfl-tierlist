@@ -5,12 +5,15 @@ import { PrismaClient, Role, TokenType, User } from "@prisma/client";
 import fastify, { FastifyRequest, FastifyReply } from "fastify";
 import fastifyAuth from "@fastify/auth";
 import "dotenv/config";
-import { verify, JwtPayload, sign } from "jsonwebtoken";
-import { authenticate } from "./routes/authenticate";
-import { register } from "./routes/register";
-import { createSignupToken } from "./routes/createSignupToken";
-import { customAuthChecker } from "./typegraphql-decorators/authorization";
-import { resolvers } from "./resolvers";
+import jsonwebtoken from "jsonwebtoken";
+import { customAuthChecker } from "./typegraphql-decorators/authorization.js";
+import { authenticate } from "./routes/authenticate.js";
+import { register } from "./routes/register.js";
+import { createSignupToken } from "./routes/createSignupToken.js";
+import { resolvers } from "./resolvers.js";
+
+const { verify, sign } = jsonwebtoken;
+type JwtPayload = jsonwebtoken.JwtPayload;
 
 export type TflTokenPayload = JwtPayload & {
   tokenId: number;
