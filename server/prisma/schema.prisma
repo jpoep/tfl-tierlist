@@ -50,7 +50,7 @@ model Match {
   id      Int                 @id @default(autoincrement())
   player1 ParticipatingPlayer @relation("player1", fields: [player1Id], references: [id])
   player2 ParticipatingPlayer @relation("player2", fields: [player2Id], references: [id])
-  winner  User?               @relation(fields: [winnerId], references: [id])
+  winner  Team?               @relation(fields: [winnerId], references: [id])
   date    DateTime?
   kills   Kill[]
   score   MatchScore?         @relation(fields: [matchId], references: [id])
@@ -70,14 +70,14 @@ model Kill {
   faintee Pokemon  @relation("faintee", fields: [fainteeId], references: [id])
 
   // opposite fields
-  match     Match @relation(fields: [matchId], references: [id])
+  match     Match  @relation(fields: [matchId], references: [id])
   matchId   Int
-  fainterId Int
-  fainteeId Int
+  fainterId String
+  fainteeId String
 }
 
 model Pokemon {
-  id Int @id
+  id String @id
 
   // opposite fields
   killsAsFainter Kill[]              @relation("fainter")
@@ -171,7 +171,6 @@ model User {
   managingSeasons Season[]
   roles           Role[]
   allowedLeagues  League[]
-  wonMatches      Match[]
 }
 
 model Token {
@@ -210,8 +209,8 @@ model Team {
   league          League?               @relation(fields: [leagueId], references: [id])
   leagueId        Int?
   userId          Int
-  // pokemonIds      String[]
   participatingAs ParticipatingPlayer[]
+  wonMatches      Match[]
 }
 
 model Stats {
@@ -242,8 +241,8 @@ model ParticipatingPlayer {
 }
 
 model ConfiguredPokemon {
-  id       Int     @id @default(autoincrement())
-  pokemon  Pokemon @relation(fields: [pokemonId], references: [id])
+  id       Int      @id @default(autoincrement())
+  pokemon  Pokemon  @relation(fields: [pokemonId], references: [id])
   nickname String?
   shiny    Boolean?
   evs      Stats?   @relation("evs", fields: [evsId], references: [id])
@@ -256,7 +255,7 @@ model ConfiguredPokemon {
   // opposite fields
   inRosterOf ParticipatingPlayer @relation(fields: [rosterId], references: [id])
   rosterId   Int
-  pokemonId  Int
+  pokemonId  String
   evsId      Int
   ivsId      Int
 }

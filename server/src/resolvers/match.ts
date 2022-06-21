@@ -1,8 +1,11 @@
+import { Match, Role } from "@prisma/client";
 import {
-    Match,
-    Role,
-    ConfiguredPokemonCreateUncheckedWithoutInRosterOfInput
-} from "@prisma/client";
+  ConfiguredPokemonCreateWithoutInRosterOfInput,
+  PokemonWhereUniqueInput,
+  MoveWhereUniqueInput,
+  StatsCreateNestedOneWithoutUsedAsEvsInInput,
+  StatsCreateNestedOneWithoutUsedAsIvsInInput,
+} from "@generated/type-graphql";
 import {
   Arg,
   Authorized,
@@ -11,16 +14,16 @@ import {
   UnauthorizedError,
 } from "type-graphql";
 import { ContextType } from "../main";
-import { Season as SeasonType } from "@generated/type-graphql";
 import { shuffle } from "d3-array";
 import { add, differenceInDays } from "date-fns";
 
 export class MatchResolver {
-  @Authorized<Role>(Role.PLAYER)
+  @Authorized<Role>(Role.PLAYER, Role.ADMIN)
   async registerTeam(
     @Ctx() { prisma, user }: ContextType,
     @Arg("matchId") matchId: number,
-    @Arg("team") team: ConfiguredPokemonUncheckedCreateWithoutInRosterOfInput,
+    @Arg("roster", () => [ConfiguredPokemonInputClass])
+    roster: ConfiguredPokemonInputClass[]
   ) {
     if (!user) {
       throw new UnauthorizedError();
@@ -56,21 +59,160 @@ export class MatchResolver {
     ) {
       throw new Error("Can't change a team for a finished match.");
     }
-    
-      await prisma.participatingPlayer.update({
-          where: {
-            id: participatingPlayer.id
+
+    await prisma.participatingPlayer.update({
+      where: {
+        id: participatingPlayer.id,
+      },
+      data: {
+        roster: {
+          deleteMany: {
+            rosterId: {
+              equals: participatingPlayer.id,
+            },
           },
-          data: {
-              roster: {
-                  create: 
-              }
-          }
-    })
-    
+          create: roster,
+        },
+      },
+    });
   }
+
+  @Authorized<Role>(Role.PLAYER)
+  @Mutation()
+  async updateResults(
+    @Ctx() { prisma, user }: ContextType,
+    @Arg("matchId") matchId: number,
+    @Arg("kills") kills: Kills,
+    @Arg("winnerId", { nullable: true }) winnerId: number
+  ): Promise<Match> {
+    if (!user) {
+      throw new UnauthorizedError();
+    }
+    const match = await prisma.match.findUnique({
+      where: {
+        id: matchId,
+      },
+      include: {
+        player1: { include: { roster: true } },
+        player2: { include: { roster: true } },
+      },
+    });
+
+    if (!match) {
+      throw new Error("No match found");
+    }
+
+    const { player1, player2 } = match;
+    const team1 = player1.roster.map((it) => it.pokemonId);
+    const team2 = player2.roster.map((it) => it.pokemonId);
+
+    kills.forEach((kill) => {
+      const { fainter, faintee } = kill;
+      const isPartOf = (pokemon: string, set: string[]) =>
+        set.includes(pokemon);
+      if (
+        !(isPartOf(fainter, team1) && isPartOf(faintee, team2)) ||
+        !(isPartOf(faintee, team1) && isPartOf(fainter, team2))
+      ) {
+        throw new Error(
+          "Invalid kills -- all mentioned pokemon must be of either player's team."
+        );
+      }
+    });
+
+    const databaseKills = await Promise.all(
+      kills.map(async (kill) =>
+        prisma.kill.create({
+          data: {
+            faintee: {
+              connect: {
+                id: kill.faintee,
+              },
+            },
+            fainter: {
+              connect: {
+                id: kill.fainter,
+              },
+            },
+            match: {
+              connect: {
+                id: match.id,
+              },
+            },
+          },
+        })
+      )
+    );
+
+    // can be done safely because it was previously checked that all kills match players' Pokemon
+    const playersOwningPokemonThatKill = databaseKills.map((kill) =>
+      team1.includes(kill.fainterId) ? player1.playerId : player2.playerId
+    );
+
+    const score = (associatedKills: number[], countFor: number) =>
+      associatedKills.reduce((acc, cur) => (acc + cur === countFor ? 1 : 0));
+
+    const player1Score = score(playersOwningPokemonThatKill, player1.playerId);
+    const player2Score = score(playersOwningPokemonThatKill, player2.playerId);
+
+    const determineWinner = async (winnerId?: number) => {
+      if (winnerId) {
+        const winner = await prisma.participatingPlayer.findUnique({
+          where: {
+            id: winnerId,
+          },
+        });
+        if (!winner) {
+          throw new Error("winnerId invalid");
+        }
+        const winnerValid = [player1.id, player2.id].includes(winner.id);
+        if (!winnerValid) {
+          throw new Error(
+            "winnerId doesn't belong to either participating player"
+          );
+        }
+        return winner;
+      }
+      if (player1Score === player2Score) {
+        return null;
+      }
+      return {
+        [player1Score]: player1,
+        [player2Score]: player2,
+      }[Math.max(player1Score, player2Score)];
+    };
+
+    const winner = await determineWinner(winnerId);
+
+    return await prisma.match.update({
+      where: {
+        id: matchId,
+      },
+      data: {
+        kills: {
+          connect: databaseKills.map((kill) => ({
+            id: kill.id,
+          })),
+        },
+        score: {
+          create: {
+            player1Score: player1Score,
+            player2Score: player2Score,
+          },
+        },
+        winner: winner
+          ? {
+              connect: {
+                id: winner.id,
+              },
+            }
+          : undefined,
+      },
+    });
+  }
+
   @Authorized<Role>(Role.ADMIN)
-  @Mutation((returns) => SeasonType)
+  @Mutation()
   async generateMatches(
     @Ctx() { prisma, user }: ContextType,
     @Arg("leagueId")
@@ -177,3 +319,28 @@ export class MatchResolver {
     return matches;
   }
 }
+
+type ConfiguredPokemonInput = Omit<
+  ConfiguredPokemonCreateWithoutInRosterOfInput,
+  "pokemon" | "moves"
+> & {
+  pokemon: PokemonWhereUniqueInput[];
+  moves: MoveWhereUniqueInput[];
+};
+
+declare class ConfiguredPokemonInputClass implements ConfiguredPokemonInput {
+  nickname?: string | undefined;
+  shiny?: boolean | undefined;
+  evs?: StatsCreateNestedOneWithoutUsedAsEvsInInput | undefined;
+  ivs?: StatsCreateNestedOneWithoutUsedAsIvsInInput | undefined;
+  nature?: string | undefined;
+  ability?: string | undefined;
+  item?: string | undefined;
+  pokemon: PokemonWhereUniqueInput[];
+  moves: MoveWhereUniqueInput[];
+}
+
+type Kills = {
+  fainter: string;
+  faintee: string;
+}[];
