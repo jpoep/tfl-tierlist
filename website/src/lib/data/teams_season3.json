@@ -1,0 +1,113 @@
+{
+	"teams": [
+		{
+			"name": "TUSPO Salamence",
+			"player": "Moritz",
+			"logo": "tuspo-salamence",
+			"pokemon": [
+				"landorus-therian",
+				"jirachi",
+				"primarina",
+				"raikou",
+				"entei",
+				"crobat",
+				"goodra",
+				"golisopod",
+				"miltank",
+				"sawk",
+				"swoobat"
+			]
+		},
+		{
+			"name": "Freddyursa",
+			"player": "Rick",
+			"logo": "freddyursa",
+			"pokemon": [
+				"weavile",
+				"zapdos",
+				"slowking-galar",
+				"buzzwole",
+				"milotic",
+				"incineroar",
+				"seismitoad",
+				"aerodactyl",
+				"vanilluxe",
+				"emolga",
+				"greedent",
+				"rick"
+			]
+		},
+		{
+			"name": "Große Demeteros Apokalypse",
+			"player": "Niklas",
+			"logo": "gda",
+			"pokemon": [
+				"rillaboom",
+				"clefable",
+				"slowbro",
+				"landorus-incarnate",
+				"bisharp",
+				"darmanitan-standard",
+				"chansey",
+				"jolteon",
+				"hitmonlee",
+				"kadabra",
+				"archeops"
+			]
+		},
+		{
+			"name": "Miami Heatran",
+			"player": "Danny",
+			"logo": "miami-heatran",
+			"pokemon": [
+				"zeraora",
+				"corviknight",
+				"haxorus",
+				"swampert",
+				"chandelure",
+				"mienshao",
+				"slowbro-galar",
+				"persian-alola",
+				"comfey",
+				"beartic",
+				"lycanroc-midday"
+			]
+		},
+		{
+			"name": "PSV Nilsoking",
+			"player": "Nils",
+			"logo": "psv-nilsoking",
+			"pokemon": [
+				"dragapult",
+				"zapdos-galar",
+				"skarmory",
+				"ninetales-alola",
+				"krookodile",
+				"vaporeon",
+				"blissey",
+				"arctozolt",
+				"magneton",
+				"audino",
+				"rhydon"
+			]
+		},
+		{
+			"name": "Surging Strikes",
+			"player": "Alex",
+			"logo": "surging-strikes",
+			"pokemon": [
+				"tapu-koko",
+				"excadrill",
+				"slowking",
+				"blacephalon",
+				"noivern",
+				"gigalith",
+				"celebi",
+				"type-null",
+				"passimian",
+				"sceptile",
+				"cryogonal"
+			]
+		}
+	]
+}

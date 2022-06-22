@@ -12,9 +12,6 @@
 			"rank": 1,
 			"pokemon": [
 				"tapu-bulu",
-				"zygarde-50",
-				"kyurem",
-				"tapu-lele",
 				"azumarill",
 				"tornadus-therian",
 				"salamence",
@@ -52,17 +49,13 @@
 				"hawlucha"
 			],
 			"notes": {
-				"zygarde-50": {
-					"de": "Neu dazu gekommen",
-					"en": "Neu dazu gekommen"
+				"cinderace": {
+					"de": "Ohne Libero",
+					"en": "Ohne Libero"
 				},
-				"kyurem": {
-					"de": "Neu dazu gekommen",
-					"en": "Neu dazu gekommen"
-				},
-				"tapu-lele": {
-					"de": "Neu dazu gekommen; ohne Psychofeld",
-					"en": "Neu dazu gekommen; ohne Psychic Terrain"
+				"hawlucha": {
+					"de": "Von A nach S gewandert",
+					"en": "Von A nach S gewandert"
 				}
 			}
 		},
@@ -83,6 +76,7 @@
 				"obstagoon",
 				"venusaur",
 				"tornadus-incarnate",
+				"scolipede",
 				"landorus-incarnate",
 				"tyranitar",
 				"sylveon",
@@ -90,6 +84,7 @@
 				"gengar",
 				"kommo-o",
 				"diggersby",
+				"mandibuzz",
 				"hippowdon",
 				"amoonguss",
 				"tapu-fini",
@@ -111,6 +106,7 @@
 				"primarina",
 				"raikou",
 				"snorlax",
+				"toxtricity-amped",
 				"rotom-heat",
 				"rotom-wash",
 				"scizor",
@@ -123,32 +119,21 @@
 				"togekiss",
 				"volcanion",
 				"lycanroc-dusk",
+				"zarude",
 				"reuniclus",
 				"ninetales-alola",
-				"torkoal",
-				"blissey",
-				"chansey",
-				"regieleki",
-				"milotic"
+				"torkoal"
 			],
 			"notes": {
 				"landorus-incarnate": {
 					"de": "Ohne Rohe Gewalt",
 					"en": "Ohne Sheer Force"
 				},
-				"blissey": {
+				"ninetales-alola": {
 					"de": "Von B nach A gewandert",
 					"en": "Von B nach A gewandert"
 				},
-				"chansey": {
-					"de": "Von B nach A gewandert",
-					"en": "Von B nach A gewandert"
-				},
-				"regieleki": {
-					"de": "Von B nach A gewandert",
-					"en": "Von B nach A gewandert"
-				},
-				"milotic": {
+				"torkoal": {
 					"de": "Von B nach A gewandert",
 					"en": "Von B nach A gewandert"
 				}
@@ -194,6 +179,7 @@
 				"bronzong",
 				"bisharp",
 				"celebi",
+				"chansey",
 				"klefki",
 				"cresselia",
 				"vikavolt",
@@ -208,6 +194,7 @@
 				"gyarados",
 				"gastrodon",
 				"gardevoir",
+				"blissey",
 				"crobat",
 				"inteleon",
 				"bewear",
@@ -220,6 +207,7 @@
 				"magnezone",
 				"mantine",
 				"metagross",
+				"milotic",
 				"mimikyu-disguised",
 				"tyrantrum",
 				"polteageist",
@@ -230,6 +218,7 @@
 				"politoed",
 				"krookodile",
 				"regidrago",
+				"regieleki",
 				"rhyperior",
 				"roserade",
 				"rotom-mow",
@@ -249,13 +238,7 @@
 				"ninetales",
 				"braviary",
 				"mienshao",
-				"scolipede",
-				"zarude",
-				"toxtricity-amped",
-				"mandibuzz",
 				"zoroark",
-				"arctozolt",
-				"type-null",
 				{
 					"internalName": "zygarde-10",
 					"pokemon": "zygarde-10",
@@ -274,29 +257,13 @@
 					"de": "Ohne Scharwandel",
 					"en": "Ohne Power Construct"
 				},
-				"scolipede": {
-					"de": "Von A nach B gewandert",
-					"en": "Von A nach B gewandert"
+				"moltres-galar": {
+					"de": "Von uns hinzugefügt - Tieränderung vorbehalten",
+					"en": "Von uns hinzugefügt - Tieränderung vorbehalten"
 				},
-				"zarude": {
-					"de": "Von A nach B gewandert",
-					"en": "Von A nach B gewandert"
-				},
-				"toxtricity-amped": {
-					"de": "Von A nach B gewandert",
-					"en": "Von A nach B gewandert"
-				},
-				"mandibuzz": {
-					"de": "Von A nach B gewandert",
-					"en": "Von A nach B gewandert"
-				},
-				"arctozolt": {
-					"de": "Von C nach B gewandert",
-					"en": "Von C nach B gewandert"
-				},
-				"type-null": {
-					"de": "Von C nach B gewandert",
-					"en": "Von C nach B gewandert"
+				"tentacruel": {
+					"de": "Von uns hinzugefügt - Tieränderung vorbehalten",
+					"en": "Von uns hinzugefügt - Tieränderung vorbehalten"
 				}
 			}
 		},
@@ -348,6 +315,7 @@
 				"hitmonlee",
 				"exploud",
 				"lanturn",
+				"arctozolt",
 				"falinks",
 				"machamp",
 				"magmortar",
@@ -388,23 +356,12 @@
 				"tauros",
 				"golisopod",
 				"toxicroak",
+				"type-null",
 				"mesprit",
 				"virizion",
 				"clawitzer",
-				"xatu",
-				"archeops",
-				"articuno"
-			],
-			"notes": {
-				"archeops": {
-					"de": "Von D nach C gewandert",
-					"en": "Von D nach C gewandert"
-				},
-				"articuno": {
-					"de": "Von D nach C gewandert",
-					"en": "Von D nach C gewandert"
-				}
-			}
+				"xatu"
+			]
 		},
 		{
 			"name": "D",
@@ -422,12 +379,14 @@
 				}
 			},
 			"pokemon": [
+				"archeops",
 				"dugtrio-alola",
 				"exeggutor-alola",
 				"sandslash-alola",
 				"haunter",
 				"aurorus",
 				"omastar",
+				"articuno",
 				"armaldo",
 				"basculin-red-striped",
 				"ivysaur",

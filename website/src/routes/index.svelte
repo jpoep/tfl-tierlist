@@ -51,7 +51,7 @@
 	}));
 </script>
 
-<h1>Tierlist für TFL Season 3</h1>
+<h1>Tierlist für Season 4 der TFL</h1>
 {#if currentTeam}
 	<TierComponent
 		tier={{
