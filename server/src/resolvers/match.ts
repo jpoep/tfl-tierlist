@@ -12,6 +12,8 @@ import {
   Arg,
   Authorized,
   Ctx,
+  Field,
+  InputType,
   Mutation,
   UnauthorizedError,
 } from "type-graphql";
@@ -27,21 +29,43 @@ type ConfiguredPokemonInput = Omit<
   moves: MoveWhereUniqueInput[];
 };
 
+@InputType()
 class ConfiguredPokemonInputClass implements ConfiguredPokemonInput {
+  @Field(() => String, { nullable: true })
   nickname?: string | undefined;
+  @Field(() => Boolean, { nullable: true })
   shiny?: boolean | undefined;
+  @Field(() => StatsCreateNestedOneWithoutUsedAsEvsInInput)
   evs?: StatsCreateNestedOneWithoutUsedAsEvsInInput | undefined;
+  @Field(() => StatsCreateNestedOneWithoutUsedAsIvsInInput)
   ivs?: StatsCreateNestedOneWithoutUsedAsIvsInInput | undefined;
+  @Field(() => String, { nullable: true })
   nature?: string | undefined;
+  @Field(() => String, { nullable: true })
   ability?: string | undefined;
+  @Field(() => String, { nullable: true })
   item?: string | undefined;
+  @Field(() => [PokemonWhereUniqueInput])
   pokemon!: PokemonWhereUniqueInput[];
+  @Field(() => [MoveWhereUniqueInput])
   moves!: MoveWhereUniqueInput[];
 }
 
-declare class Kills {
-  fainter: string;
-  faintee: string;
+@InputType()
+class RegisterTeamInput {
+  @Field()
+  matchId!: number;
+
+  @Field(() => [ConfiguredPokemonInputClass])
+  roster!: ConfiguredPokemonInputClass[];
+}
+
+@InputType()
+class Kills {
+  @Field()
+  fainter!: string;
+  @Field()
+  faintee!: string;
 }
 
 export class MatchResolver {
@@ -49,10 +73,9 @@ export class MatchResolver {
   @Mutation(() => ParticipatingPlayer)
   async registerTeam(
     @Ctx() { prisma, user }: ContextType,
-    @Arg("matchId") matchId: number,
-    @Arg("roster", () => [ConfiguredPokemonInputClass])
-    roster: ConfiguredPokemonInputClass[]
+    @Arg("data") newTeamData: RegisterTeamInput
   ): Promise<ParticipatingPlayer> {
+    const { matchId, roster } = newTeamData;
     if (!user) {
       throw new UnauthorizedError();
     }

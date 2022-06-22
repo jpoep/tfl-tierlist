@@ -3,6 +3,8 @@ import {
   Arg,
   Authorized,
   Ctx,
+  Field,
+  InputType,
   Mutation,
   UnauthorizedError,
 } from "type-graphql";
@@ -18,20 +20,26 @@ import {
   PokemonWhereUniqueInput,
   FlavorTextCreateNestedManyWithoutTiersInput,
   PickRulesCreateNestedManyWithoutTiersInput,
-
 } from "@generated/type-graphql";
 
-type TierlistInput = Omit<TierCreateWithoutSeasonInput, 'pokemon'> & {
+type TierlistInput = Omit<TierCreateWithoutSeasonInput, "pokemon"> & {
   pokemon: PokemonWhereUniqueInput[];
 };
 
-declare class TierlistInputClass implements TierlistInput {
+@InputType()
+class TierlistInputClass implements TierlistInput {
+  @Field(() => FlavorTextCreateNestedManyWithoutTiersInput)
   flavorTexts?: FlavorTextCreateNestedManyWithoutTiersInput | undefined;
-  emptySearchtext: string;
+  @Field()
+  emptySearchtext!: string;
+  @Field(() => PickRulesCreateNestedManyWithoutTiersInput)
   pickRules?: PickRulesCreateNestedManyWithoutTiersInput | undefined;
-  pokemon: PokemonWhereUniqueInput[];
-  rank: number;
-  name: string; 
+  @Field(() => [PokemonWhereUniqueInput])
+  pokemon!: PokemonWhereUniqueInput[];
+  @Field()
+  rank!: number;
+  @Field()
+  name!: string;
 }
 
 export class SeasonResolver {
