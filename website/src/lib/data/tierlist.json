@@ -27,6 +27,7 @@
 				"jirachi",
 				"celesteela",
 				"tapu-koko",
+				"magearna",
 				"kartana",
 				"dragapult",
 				"garchomp",
@@ -63,6 +64,10 @@
 				"tapu-lele": {
 					"de": "Neu dazu gekommen; ohne Psychofeld",
 					"en": "Neu dazu gekommen; ohne Psychic Terrain"
+				}, 
+				"magearna": {
+					"de": "Neu dazu gekommen; ohne Setup-Moves",
+					"en": "Neu dazu gekommen; ohne Setup-Moves"
 				}
 			}
 		},
