@@ -86,9 +86,14 @@
 				"zapdos",
 				"zeraora",
 				"hawlucha",
-				"zacian-crowned"
+				"zacian-crowned",
+				"melmetal"
 			],
 			"notes": {
+				"melmetal": {
+					"de": "Ohne Double Iron Bash",
+					"en": "Ohne Double Iron Bash"
+				},
 				"zygarde-50": {
 					"de": "Neu dazu gekommen",
 					"en": "Neu dazu gekommen"
