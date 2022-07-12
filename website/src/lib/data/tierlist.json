@@ -106,109 +106,144 @@
 					"en": "Neu dazu gekommen; ohne Setup-Moves"
 				},
 				"calyrex-ice": {
-					"de": "Darf nicht im Trickroom angreifen"
+					"de": "Darf nicht im Trickroom angreifen",
+					"en": "Darf nicht im Trickroom angreifen"
 				},
 				"calyrex-shadow": {
-					"de": "Darf keine STABs benutzen"
+					"de": "Darf keine STABs benutzen",
+					"en": "Darf keine STABs benutzen"
 				},
 				"darmanitan-galar-standard": {
-					"de": "Ohne Guerilla Tactics"
+					"de": "Ohne Guerilla Tactics",
+					"en": "Ohne Guerilla Tactics"
 				},
 				"dialga": {
-					"de": "Darf kein SpA-Investment fahren und keine Damage-boosting Items tragen"
+					"de": "Darf kein SpA-Investment fahren und keine Damage-boosting Items tragen",
+					"en": "Darf kein SpA-Investment fahren und keine Damage-boosting Items tragen"
 				},
 				"dracovish": {
-					"de": "Ohne Strong Jaw"
+					"de": "Ohne Strong Jaw",
+					"en": "Ohne Strong Jaw"
 				},
 				"eternatus": {
-					"de": "Darf nicht angreifen"
+					"de": "Darf nicht angreifen",
+					"en": "Darf nicht angreifen"
 				},
 				"genesect": {
-					"de": "Darf nicht free reinkommen"
+					"de": "Darf nicht free reinkommen",
+					"en": "Darf nicht free reinkommen"
 				},
 				"giratina-altered": {
-					"de": "Darf keine Support-Moves mitnehmen"
+					"de": "Darf keine Support-Moves mitnehmen",
+					"en": "Darf keine Support-Moves mitnehmen"
 				},
 				"giratina-origin": {
-					"de": "Darf nur mit Normal-typed attacks angreifen"
+					"de": "Darf nur mit Normal-typed attacks angreifen",
+					"en": "Darf nur mit Normal-typed attacks angreifen"
 				},
 				"groudon": {
-					"de": "Nur Fissure ist als Move erlaubt"
+					"de": "Nur Fissure ist als Move erlaubt",
+					"en": "Nur Fissure ist als Move erlaubt"
 				},
 				"ho-oh": {
-					"de": "Ohne Regenerator"
+					"de": "Ohne Regenerator",
+					"en": "Ohne Regenerator"
 				},
 				"kyogre": {
-					"de": "Darf erst angreifen, wenn es nicht mehr regnet"
+					"de": "Darf erst angreifen, wenn es nicht mehr regnet",
+					"en": "Darf erst angreifen, wenn es nicht mehr regnet"
 				},
 				"kyurem-white": {
-					"de": "Darf nur physische Moves mitnehmen"
+					"de": "Darf nur physische Moves mitnehmen",
+					"en": "Darf nur physische Moves mitnehmen"
 				},
 				"kyurem-black": {
-					"de": "Darf nur spezielle Moves mitnehmen"
+					"de": "Darf nur spezielle Moves mitnehmen",
+					"en": "Darf nur spezielle Moves mitnehmen"
 				},
 				"lugia": {
-					"de": "Ohne Multiscale"
+					"de": "Ohne Multiscale",
+					"en": "Ohne Multiscale"
 				},
 				"lunala": {
-					"de": "Darf nur reinkommen, wenn Hazards liegen; ohne Boots"
+					"de": "Darf nur reinkommen, wenn Hazards liegen; ohne Boots",
+					"en": "Darf nur reinkommen, wenn Hazards liegen; ohne Boots"
 				},
 				"marshadow": {
-					"de": "Darf nicht mehr rausgeswitched werden, wenn es einmal drin ist"
+					"de": "Darf nicht mehr rausgeswitched werden, wenn es einmal drin ist",
+					"en": "Darf nicht mehr rausgeswitched werden, wenn es einmal drin ist"
 				},
 				"mewtwo": {
-					"de": "Darf nur Gegner angreifen, die mindestens einen Hit leben"
+					"de": "Darf nur Gegner angreifen, die mindestens einen Hit leben",
+					"en": "Darf nur Gegner angreifen, die mindestens einen Hit leben"
 				},
 				"naganadel": {
-					"de": "Ohne Nasty Plot; SpA darf nicht der höchste Stat sein"
+					"de": "Ohne Nasty Plot; SpA darf nicht der höchste Stat sein",
+					"en": "Ohne Nasty Plot; SpA darf nicht der höchste Stat sein"
 				},
 				"necrozma-dusk": {
-					"de": "Ohne EVs und IVs; neutrales Wesen"
+					"de": "Ohne EVs und IVs; neutrales Wesen",
+					"en": "Ohne EVs und IVs; neutrales Wesen"
 				},
 				"necrozma-dawn": {
-					"de": "Ohne EVs und IVs; neutrales Wesen"
+					"de": "Ohne EVs und IVs; neutrales Wesen",
+					"en": "Ohne EVs und IVs; neutrales Wesen"
 				},
 				"palkia": {
-					"de": "Darf nur gegen Dragon Types reinkommen"
+					"de": "Darf nur gegen Dragon Types reinkommen",
+					"en": "Darf nur gegen Dragon Types reinkommen"
 				},
 				"pheromosa": {
-					"de": "Nur Moves mit 60 Base Power oder weniger; nur defensives Investment"
+					"de": "Nur Moves mit 60 Base Power oder weniger; nur defensives Investment",
+					"en": "Nur Moves mit 60 Base Power oder weniger; nur defensives Investment"
 				},
 				"rayquaza": {
-					"de": "Darf nur V-Create drücken"
+					"de": "Darf nur V-Create drücken",
+					"en": "Darf nur V-Create drücken"
 				},
 				"reshiram": {
-					"de": "Darf nur Pokemon angreifen, deren Abilities mit Turboblaze überbrückt werden"
+					"de": "Darf nur Pokemon angreifen, deren Abilities mit Turboblaze überbrückt werden",
+					"en": "Darf nur Pokemon angreifen, deren Abilities mit Turboblaze überbrückt werden"
 				},
 				"solgaleo": {
-					"de": "Darf nicht gegennt werden"
+					"de": "Darf nicht gegennt werden",
+					"en": "Darf nicht gegennt werden"
 				},
 				"spectrier": {
-					"de": "Darf nur im Trick Room angreifen"
+					"de": "Darf nur im Trick Room angreifen",
+					"en": "Darf nur im Trick Room angreifen"
 				},
 				"urshifu-single-strike": {
-					"de": "Ohne Wicked Blow"
+					"de": "Ohne Wicked Blow",
+					"en": "Ohne Wicked Blow"
 				},
 				"xerneas": {
-					"de": "Ohne Geomancy"
+					"de": "Ohne Geomancy",
+					"en": "Ohne Geomancy"
 				},
 				"yveltal": {
-					"de": "Nur mit Ring Target"
+					"de": "Nur mit Ring Target",
+					"en": "Nur mit Ring Target"
 				},
 				"zamazenta": {
-					"de": "Muss im ersten Turn immer Guard Swap nutzen"
+					"de": "Muss im ersten Turn immer Guard Swap nutzen",
+					"en": "Muss im ersten Turn immer Guard Swap nutzen"
 				},
 				"zamazenta-crowned": {
-					"de": "Darf nur 2-Turn-Moves einsetzen"
+					"de": "Darf nur 2-Turn-Moves einsetzen",
+					"en": "Darf nur 2-Turn-Moves einsetzen"
 				},
 				"zekrom": {
-					"de": "Darf nur schnellere Pokemon angreifen"
+					"de": "Darf nur schnellere Pokemon angreifen",
+					"en": "Darf nur schnellere Pokemon angreifen"
 				},
 				"zygarde-complete": {
-					"de": "Darf in der Complete-Form nicht mehr angreifen"
+					"de": "Darf in der Complete-Form nicht mehr angreifen",
+					"en": "Darf in der Complete-Form nicht mehr angreifen"
 				},
 				"zacian-crowned": {
-					"de": "Muss auf Level 25 gespielt werden"
+					"de": "Muss auf Level 25 gespielt werden",
+					"en": "Muss auf Level 25 gespielt werden"
 				}
 			}
 		},
