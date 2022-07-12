@@ -1,14 +1,14 @@
 {
 	"tiers": [
 		{
-			"name": "S",
+			"name": "s",
 			"subtitles": [
-				"Die dicken Bimmser",
-				"Geile Pokemon und Necrozma",
+				"die dicken bimmser",
+				"geile pokemon und necrozma",
 				"nice.",
-				"👌👀👌👀✔ some good👌👌shit right mMMMMᎷМ 💯 there💦💦"
+				"👌👀👌👀✔ some good👌👌shit right mmmmmꮇм 💯 there💦💦"
 			],
-			"emptyText": "wie schade, dass es hier nichts mehr gibt",
+			"emptytext": "wie schade, dass es hier nichts mehr gibt",
 			"rank": 1,
 			"pokemon": [
 				"calyrex-ice",
@@ -87,179 +87,184 @@
 				"zeraora",
 				"hawlucha",
 				"zacian-crowned",
-				"melmetal"
+				"melmetal",
+				"mew"
 			],
 			"notes": {
+				"mew": {
+					"de": "Darf keine TMs lernen",
+					"en": "Darf keine TMs lernen"
+				},
 				"melmetal": {
-					"de": "Ohne Double Iron Bash",
-					"en": "Ohne Double Iron Bash"
+					"de": "ohne double iron bash",
+					"en": "ohne double iron bash"
 				},
 				"zygarde-50": {
-					"de": "Neu dazu gekommen",
-					"en": "Neu dazu gekommen"
+					"de": "neu dazu gekommen",
+					"en": "neu dazu gekommen"
 				},
 				"kyurem": {
-					"de": "Neu dazu gekommen",
-					"en": "Neu dazu gekommen"
+					"de": "neu dazu gekommen",
+					"en": "neu dazu gekommen"
 				},
 				"tapu-lele": {
-					"de": "Neu dazu gekommen; ohne Psychofeld",
-					"en": "Neu dazu gekommen; ohne Psychic Terrain"
+					"de": "neu dazu gekommen; ohne psychofeld",
+					"en": "neu dazu gekommen; ohne psychic terrain"
 				},
 				"magearna": {
-					"de": "Neu dazu gekommen; ohne Setup-Moves",
-					"en": "Neu dazu gekommen; ohne Setup-Moves"
+					"de": "neu dazu gekommen; ohne setup-moves",
+					"en": "neu dazu gekommen; ohne setup-moves"
 				},
 				"calyrex-ice": {
-					"de": "Darf nicht im Trickroom angreifen",
-					"en": "Darf nicht im Trickroom angreifen"
+					"de": "darf nicht im trickroom angreifen",
+					"en": "darf nicht im trickroom angreifen"
 				},
 				"calyrex-shadow": {
-					"de": "Darf keine STABs benutzen",
-					"en": "Darf keine STABs benutzen"
+					"de": "darf keine stabs benutzen",
+					"en": "darf keine stabs benutzen"
 				},
 				"darmanitan-galar-standard": {
-					"de": "Ohne Guerilla Tactics",
-					"en": "Ohne Guerilla Tactics"
+					"de": "ohne guerilla tactics",
+					"en": "ohne guerilla tactics"
 				},
 				"dialga": {
-					"de": "Darf kein SpA-Investment fahren und keine Damage-boosting Items tragen",
-					"en": "Darf kein SpA-Investment fahren und keine Damage-boosting Items tragen"
+					"de": "darf kein spa-investment fahren und keine damage-boosting items tragen",
+					"en": "darf kein spa-investment fahren und keine damage-boosting items tragen"
 				},
 				"dracovish": {
-					"de": "Ohne Strong Jaw",
-					"en": "Ohne Strong Jaw"
+					"de": "ohne strong jaw",
+					"en": "ohne strong jaw"
 				},
 				"eternatus": {
-					"de": "Darf nicht angreifen",
-					"en": "Darf nicht angreifen"
+					"de": "darf nicht angreifen",
+					"en": "darf nicht angreifen"
 				},
 				"genesect": {
-					"de": "Darf nicht free reinkommen",
-					"en": "Darf nicht free reinkommen"
+					"de": "darf nicht free reinkommen",
+					"en": "darf nicht free reinkommen"
 				},
 				"giratina-altered": {
-					"de": "Darf keine Support-Moves mitnehmen",
-					"en": "Darf keine Support-Moves mitnehmen"
+					"de": "darf keine support-moves mitnehmen",
+					"en": "darf keine support-moves mitnehmen"
 				},
 				"giratina-origin": {
-					"de": "Darf nur mit Normal-typed attacks angreifen",
-					"en": "Darf nur mit Normal-typed attacks angreifen"
+					"de": "darf nur mit normal-typed attacks angreifen",
+					"en": "darf nur mit normal-typed attacks angreifen"
 				},
 				"groudon": {
-					"de": "Nur Fissure ist als Move erlaubt",
-					"en": "Nur Fissure ist als Move erlaubt"
+					"de": "nur fissure ist als move erlaubt",
+					"en": "nur fissure ist als move erlaubt"
 				},
 				"ho-oh": {
-					"de": "Ohne Regenerator",
-					"en": "Ohne Regenerator"
+					"de": "ohne regenerator",
+					"en": "ohne regenerator"
 				},
 				"kyogre": {
-					"de": "Darf erst angreifen, wenn es nicht mehr regnet",
-					"en": "Darf erst angreifen, wenn es nicht mehr regnet"
+					"de": "darf erst angreifen, wenn es nicht mehr regnet",
+					"en": "darf erst angreifen, wenn es nicht mehr regnet"
 				},
 				"kyurem-white": {
-					"de": "Darf nur physische Moves mitnehmen",
-					"en": "Darf nur physische Moves mitnehmen"
+					"de": "darf nur physische moves mitnehmen",
+					"en": "darf nur physische moves mitnehmen"
 				},
 				"kyurem-black": {
-					"de": "Darf nur spezielle Moves mitnehmen",
-					"en": "Darf nur spezielle Moves mitnehmen"
+					"de": "darf nur spezielle moves mitnehmen",
+					"en": "darf nur spezielle moves mitnehmen"
 				},
 				"lugia": {
-					"de": "Ohne Multiscale",
-					"en": "Ohne Multiscale"
+					"de": "ohne multiscale",
+					"en": "ohne multiscale"
 				},
 				"lunala": {
-					"de": "Darf nur reinkommen, wenn Hazards liegen; ohne Boots",
-					"en": "Darf nur reinkommen, wenn Hazards liegen; ohne Boots"
+					"de": "darf nur reinkommen, wenn hazards liegen; ohne boots",
+					"en": "darf nur reinkommen, wenn hazards liegen; ohne boots"
 				},
 				"marshadow": {
-					"de": "Darf nicht mehr rausgeswitched werden, wenn es einmal drin ist",
-					"en": "Darf nicht mehr rausgeswitched werden, wenn es einmal drin ist"
+					"de": "darf nicht mehr rausgeswitched werden, wenn es einmal drin ist",
+					"en": "darf nicht mehr rausgeswitched werden, wenn es einmal drin ist"
 				},
 				"mewtwo": {
-					"de": "Darf nur Gegner angreifen, die mindestens einen Hit leben",
-					"en": "Darf nur Gegner angreifen, die mindestens einen Hit leben"
+					"de": "darf nur gegner angreifen, die mindestens einen hit leben",
+					"en": "darf nur gegner angreifen, die mindestens einen hit leben"
 				},
 				"naganadel": {
-					"de": "Ohne Nasty Plot; SpA darf nicht der höchste Stat sein",
-					"en": "Ohne Nasty Plot; SpA darf nicht der höchste Stat sein"
+					"de": "ohne nasty plot; spa darf nicht der höchste stat sein",
+					"en": "ohne nasty plot; spa darf nicht der höchste stat sein"
 				},
 				"necrozma-dusk": {
-					"de": "Ohne EVs und IVs; neutrales Wesen",
-					"en": "Ohne EVs und IVs; neutrales Wesen"
+					"de": "ohne evs und ivs; neutrales wesen",
+					"en": "ohne evs und ivs; neutrales wesen"
 				},
 				"necrozma-dawn": {
-					"de": "Ohne EVs und IVs; neutrales Wesen",
-					"en": "Ohne EVs und IVs; neutrales Wesen"
+					"de": "ohne evs und ivs; neutrales wesen",
+					"en": "ohne evs und ivs; neutrales wesen"
 				},
 				"palkia": {
-					"de": "Darf nur gegen Dragon Types reinkommen",
-					"en": "Darf nur gegen Dragon Types reinkommen"
+					"de": "darf nur gegen dragon types reinkommen",
+					"en": "darf nur gegen dragon types reinkommen"
 				},
 				"pheromosa": {
-					"de": "Nur Moves mit 60 Base Power oder weniger; nur defensives Investment",
-					"en": "Nur Moves mit 60 Base Power oder weniger; nur defensives Investment"
+					"de": "nur moves mit 60 base power oder weniger; nur defensives investment",
+					"en": "nur moves mit 60 base power oder weniger; nur defensives investment"
 				},
 				"rayquaza": {
-					"de": "Darf nur V-Create drücken",
-					"en": "Darf nur V-Create drücken"
+					"de": "darf nur v-create drücken",
+					"en": "darf nur v-create drücken"
 				},
 				"reshiram": {
-					"de": "Darf nur Pokemon angreifen, deren Abilities mit Turboblaze überbrückt werden",
-					"en": "Darf nur Pokemon angreifen, deren Abilities mit Turboblaze überbrückt werden"
+					"de": "darf nur pokemon angreifen, deren abilities mit turboblaze überbrückt werden",
+					"en": "darf nur pokemon angreifen, deren abilities mit turboblaze überbrückt werden"
 				},
 				"solgaleo": {
-					"de": "Darf nicht gegennt werden",
-					"en": "Darf nicht gegennt werden"
+					"de": "darf nicht gegennt werden",
+					"en": "darf nicht gegennt werden"
 				},
 				"spectrier": {
-					"de": "Darf nur im Trick Room angreifen",
-					"en": "Darf nur im Trick Room angreifen"
+					"de": "darf nur im trick room angreifen",
+					"en": "darf nur im trick room angreifen"
 				},
 				"urshifu-single-strike": {
-					"de": "Ohne Wicked Blow",
-					"en": "Ohne Wicked Blow"
+					"de": "ohne wicked blow",
+					"en": "ohne wicked blow"
 				},
 				"xerneas": {
-					"de": "Ohne Geomancy",
-					"en": "Ohne Geomancy"
+					"de": "ohne geomancy",
+					"en": "ohne geomancy"
 				},
 				"yveltal": {
-					"de": "Nur mit Ring Target",
-					"en": "Nur mit Ring Target"
+					"de": "nur mit ring target",
+					"en": "nur mit ring target"
 				},
 				"zamazenta": {
-					"de": "Muss im ersten Turn immer Guard Swap nutzen",
-					"en": "Muss im ersten Turn immer Guard Swap nutzen"
+					"de": "muss im ersten turn immer guard swap nutzen",
+					"en": "muss im ersten turn immer guard swap nutzen"
 				},
 				"zamazenta-crowned": {
-					"de": "Darf nur 2-Turn-Moves einsetzen",
-					"en": "Darf nur 2-Turn-Moves einsetzen"
+					"de": "darf nur 2-turn-moves einsetzen",
+					"en": "darf nur 2-turn-moves einsetzen"
 				},
 				"zekrom": {
-					"de": "Darf nur schnellere Pokemon angreifen",
-					"en": "Darf nur schnellere Pokemon angreifen"
+					"de": "darf nur schnellere pokemon angreifen",
+					"en": "darf nur schnellere pokemon angreifen"
 				},
 				"zygarde-complete": {
-					"de": "Darf in der Complete-Form nicht mehr angreifen",
-					"en": "Darf in der Complete-Form nicht mehr angreifen"
+					"de": "darf in der complete-form nicht mehr angreifen",
+					"en": "darf in der complete-form nicht mehr angreifen"
 				},
 				"zacian-crowned": {
-					"de": "Muss auf Level 25 gespielt werden",
-					"en": "Muss auf Level 25 gespielt werden"
+					"de": "muss auf level 25 gespielt werden",
+					"en": "muss auf level 25 gespielt werden"
 				}
 			}
 		},
 		{
-			"name": "A",
+			"name": "a",
 			"subtitles": [
-				"Auch noch ganz okay I guess",
-				"Erschwingliches Pex gefällig?",
-				"Ganz schön Wetter heute"
+				"auch noch ganz okay i guess",
+				"erschwingliches pex gefällig?",
+				"ganz schön wetter heute"
 			],
-			"emptyText": "wie alles rausgefiltert",
+			"emptytext": "wie alles rausgefiltert",
 			"rank": 2,
 			"pokemon": [
 				"arcanine",
@@ -318,31 +323,31 @@
 			],
 			"notes": {
 				"landorus-incarnate": {
-					"de": "Ohne Rohe Gewalt",
-					"en": "Ohne Sheer Force"
+					"de": "ohne rohe gewalt",
+					"en": "ohne sheer force"
 				},
 				"blissey": {
-					"de": "Von B nach A gewandert",
-					"en": "Von B nach A gewandert"
+					"de": "von b nach a gewandert",
+					"en": "von b nach a gewandert"
 				},
 				"chansey": {
-					"de": "Von B nach A gewandert",
-					"en": "Von B nach A gewandert"
+					"de": "von b nach a gewandert",
+					"en": "von b nach a gewandert"
 				},
 				"regieleki": {
-					"de": "Von B nach A gewandert",
-					"en": "Von B nach A gewandert"
+					"de": "von b nach a gewandert",
+					"en": "von b nach a gewandert"
 				},
 				"milotic": {
-					"de": "Von B nach A gewandert",
-					"en": "Von B nach A gewandert"
+					"de": "von b nach a gewandert",
+					"en": "von b nach a gewandert"
 				}
 			}
 		},
 		{
-			"name": "B",
-			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"],
-			"emptyText": "wie besonders leer gesucht",
+			"name": "b",
+			"subtitles": ["„wer das b-tier nicht ehrt, ist des s-tiers nicht wert.“"],
+			"emptytext": "wie besonders leer gesucht",
 			"rank": 3,
 			"pokemon": [
 				"tentacruel",
@@ -350,22 +355,22 @@
 				"marowak-alola",
 				"salazzle",
 				{
-					"internalName": "silvally-normal",
+					"internalname": "silvally-normal",
 					"pokemon": "silvally",
 					"overrides": {
 						"form": {
-							"en": "No Memory",
-							"de": "Keine Disc"
+							"en": "no memory",
+							"de": "keine disc"
 						}
 					}
 				},
 				{
-					"internalName": "silvally-fairy",
+					"internalname": "silvally-fairy",
 					"pokemon": "silvally",
 					"overrides": {
 						"form": {
-							"en": "Fairy Memory",
-							"de": "Feen-Disc"
+							"en": "fairy memory",
+							"de": "feen-disc"
 						},
 						"typing": ["fairy"]
 					}
@@ -443,53 +448,53 @@
 				"arctozolt",
 				"type-null",
 				{
-					"internalName": "zygarde-10",
+					"internalname": "zygarde-10",
 					"pokemon": "zygarde-10",
 					"overrides": {
-						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10118.png",
-						"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10118.png"
+						"imageurl": "https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/10118.png",
+						"officialartworkurl": "https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/official-artwork/10118.png"
 					}
 				}
 			],
 			"notes": {
 				"blaziken": {
-					"de": "Ohne Temposchub",
-					"en": "Ohne Speedboost"
+					"de": "ohne temposchub",
+					"en": "ohne speedboost"
 				},
 				"zygarde-10": {
-					"de": "Ohne Scharwandel",
-					"en": "Ohne Power Construct"
+					"de": "ohne scharwandel",
+					"en": "ohne power construct"
 				},
 				"scolipede": {
-					"de": "Von A nach B gewandert",
-					"en": "Von A nach B gewandert"
+					"de": "von a nach b gewandert",
+					"en": "von a nach b gewandert"
 				},
 				"zarude": {
-					"de": "Von A nach B gewandert",
-					"en": "Von A nach B gewandert"
+					"de": "von a nach b gewandert",
+					"en": "von a nach b gewandert"
 				},
 				"toxtricity-amped": {
-					"de": "Von A nach B gewandert",
-					"en": "Von A nach B gewandert"
+					"de": "von a nach b gewandert",
+					"en": "von a nach b gewandert"
 				},
 				"mandibuzz": {
-					"de": "Von A nach B gewandert",
-					"en": "Von A nach B gewandert"
+					"de": "von a nach b gewandert",
+					"en": "von a nach b gewandert"
 				},
 				"arctozolt": {
-					"de": "Von C nach B gewandert",
-					"en": "Von C nach B gewandert"
+					"de": "von c nach b gewandert",
+					"en": "von c nach b gewandert"
 				},
 				"type-null": {
-					"de": "Von C nach B gewandert",
-					"en": "Von C nach B gewandert"
+					"de": "von c nach b gewandert",
+					"en": "von c nach b gewandert"
 				}
 			}
 		},
 		{
-			"name": "C",
-			"subtitles": ["Nimmste günstig mit"],
-			"emptyText": "wie complett ergebnislos",
+			"name": "c",
+			"subtitles": ["nimmste günstig mit"],
+			"emptytext": "wie complett ergebnislos",
 			"rank": 4,
 			"pokemon": [
 				"aerodactyl",
@@ -583,28 +588,28 @@
 			],
 			"notes": {
 				"archeops": {
-					"de": "Von D nach C gewandert",
-					"en": "Von D nach C gewandert"
+					"de": "von d nach c gewandert",
+					"en": "von d nach c gewandert"
 				},
 				"articuno": {
-					"de": "Von D nach C gewandert",
-					"en": "Von D nach C gewandert"
+					"de": "von d nach c gewandert",
+					"en": "von d nach c gewandert"
 				}
 			}
 		},
 		{
-			"name": "D",
+			"name": "d",
 			"rank": 5,
-			"subtitles": ["Immer noch besser als Warsteiner", "Ja! Pizza Salami 3x350g"],
-			"emptyText": "wie doof, dass nichts mehr übrig ist",
+			"subtitles": ["immer noch besser als warsteiner", "ja! pizza salami 3x350g"],
+			"emptytext": "wie doof, dass nichts mehr übrig ist",
 			"notes": {
 				"dugtrio": {
-					"de": "Ohne Auswegslos",
-					"en": "Ohne Arena Trap"
+					"de": "ohne auswegslos",
+					"en": "ohne arena trap"
 				},
 				"gothitelle": {
-					"de": "Ohne Wegsperre",
-					"en": "Ohne Shadow Tag"
+					"de": "ohne wegsperre",
+					"en": "ohne shadow tag"
 				}
 			},
 			"pokemon": [
@@ -759,25 +764,25 @@
 				"dubwool",
 				"meltan",
 				{
-					"internalName": "rick",
+					"internalname": "rick",
 					"pokemon": "primeape",
 					"overrides": {
 						"name": {
-							"en": "Rick",
-							"de": "Rick"
+							"en": "rick",
+							"de": "rick"
 						},
 						"typing": ["poison", "salt"],
 						"form": {
-							"en": "Dota Forme",
-							"de": "Dota-Form"
+							"en": "dota forme",
+							"de": "dota-form"
 						}
 					}
 				},
 				{
-					"internalName": "shuckle",
+					"internalname": "shuckle",
 					"pokemon": "shuckle",
 					"overrides": {
-						"pokemonDbUrl": "/till.png"
+						"pokemondburl": "/till.png"
 					}
 				}
 			]
