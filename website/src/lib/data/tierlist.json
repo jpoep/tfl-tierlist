@@ -11,6 +11,41 @@
 			"emptyText": "wie schade, dass es hier nichts mehr gibt",
 			"rank": 1,
 			"pokemon": [
+				"calyrex-ice",
+				"calyrex-shadow",
+				"darmanitan-galar-standard",
+				"dialga",
+				"dracovish",
+				"eternatus",
+				"genesect",
+				"giratina-altered",
+				"giratina-origin",
+				"groudon",
+				"ho-oh",
+				"kyogre",
+				"kyurem-white",
+				"kyurem-black",
+				"landorus-incarnate",
+				"lugia",
+				"lunala",
+				"marshadow",
+				"mewtwo",
+				"naganadel",
+				"necrozma-dusk",
+				"necrozma-dawn",
+				"palkia",
+				"pheromosa",
+				"rayquaza",
+				"reshiram",
+				"solgaleo",
+				"spectrier",
+				"urshifu-single-strike",
+				"xerneas",
+				"yveltal",
+				"zamazenta",
+				"zamazenta-crowned",
+				"zekrom",
+				"zygarde-complete",
 				"tapu-bulu",
 				"zygarde-50",
 				"kyurem",
@@ -50,7 +85,8 @@
 				"urshifu-rapid-strike",
 				"zapdos",
 				"zeraora",
-				"hawlucha"
+				"hawlucha",
+				"zacian-crowned"
 			],
 			"notes": {
 				"zygarde-50": {
@@ -64,10 +100,115 @@
 				"tapu-lele": {
 					"de": "Neu dazu gekommen; ohne Psychofeld",
 					"en": "Neu dazu gekommen; ohne Psychic Terrain"
-				}, 
+				},
 				"magearna": {
 					"de": "Neu dazu gekommen; ohne Setup-Moves",
 					"en": "Neu dazu gekommen; ohne Setup-Moves"
+				},
+				"calyrex-ice": {
+					"de": "Darf nicht im Trickroom angreifen"
+				},
+				"calyrex-shadow": {
+					"de": "Darf keine STABs benutzen"
+				},
+				"darmanitan-galar-standard": {
+					"de": "Ohne Guerilla Tactics"
+				},
+				"dialga": {
+					"de": "Darf kein SpA-Investment fahren und keine Damage-boosting Items tragen"
+				},
+				"dracovish": {
+					"de": "Ohne Strong Jaw"
+				},
+				"eternatus": {
+					"de": "Darf nicht angreifen"
+				},
+				"genesect": {
+					"de": "Darf nicht free reinkommen"
+				},
+				"giratina-altered": {
+					"de": "Darf keine Support-Moves mitnehmen"
+				},
+				"giratina-origin": {
+					"de": "Darf nur mit Normal-typed attacks angreifen"
+				},
+				"groudon": {
+					"de": "Nur Fissure ist als Move erlaubt"
+				},
+				"ho-oh": {
+					"de": "Ohne Regenerator"
+				},
+				"kyogre": {
+					"de": "Darf erst angreifen, wenn es nicht mehr regnet"
+				},
+				"kyurem-white": {
+					"de": "Darf nur physische Moves mitnehmen"
+				},
+				"kyurem-black": {
+					"de": "Darf nur spezielle Moves mitnehmen"
+				},
+				"lugia": {
+					"de": "Ohne Multiscale"
+				},
+				"lunala": {
+					"de": "Darf nur reinkommen, wenn Hazards liegen; ohne Boots"
+				},
+				"marshadow": {
+					"de": "Darf nicht mehr rausgeswitched werden, wenn es einmal drin ist"
+				},
+				"mewtwo": {
+					"de": "Darf nur Gegner angreifen, die mindestens einen Hit leben"
+				},
+				"naganadel": {
+					"de": "Ohne Nasty Plot; SpA darf nicht der höchste Stat sein"
+				},
+				"necrozma-dusk": {
+					"de": "Ohne EVs und IVs; neutrales Wesen"
+				},
+				"necrozma-dawn": {
+					"de": "Ohne EVs und IVs; neutrales Wesen"
+				},
+				"palkia": {
+					"de": "Darf nur gegen Dragon Types reinkommen"
+				},
+				"pheromosa": {
+					"de": "Nur Moves mit 60 Base Power oder weniger; nur defensives Investment"
+				},
+				"rayquaza": {
+					"de": "Darf nur V-Create drücken"
+				},
+				"reshiram": {
+					"de": "Darf nur Pokemon angreifen, deren Abilities mit Turboblaze überbrückt werden"
+				},
+				"solgaleo": {
+					"de": "Darf nicht gegennt werden"
+				},
+				"spectrier": {
+					"de": "Darf nur im Trick Room angreifen"
+				},
+				"urshifu-single-strike": {
+					"de": "Ohne Wicked Blow"
+				},
+				"xerneas": {
+					"de": "Ohne Geomancy"
+				},
+				"yveltal": {
+					"de": "Nur mit Ring Target"
+				},
+				"zamazenta": {
+					"de": "Muss im ersten Turn immer Guard Swap nutzen"
+				},
+				"zamazenta-crowned": {
+					"de": "Darf nur 2-Turn-Moves einsetzen"
+				},
+				"zekrom": {
+					"de": "Darf nur schnellere Pokemon angreifen"
+				},
+				"zygarde-complete": {
+					"de": "Darf in der Complete-Form nicht mehr angreifen"
+				},
+				"zacian-crowned": {
+					"de": "Muss auf Level 25 gespielt werden"
 				}
 			}
 		},
