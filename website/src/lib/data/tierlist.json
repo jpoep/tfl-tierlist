@@ -1,51 +1,16 @@
 {
 	"tiers": [
 		{
-			"name": "s",
+			"name": "S",
 			"subtitles": [
-				"die dicken bimmser",
-				"geile pokemon und necrozma",
+				"Die dicken Bimmser",
+				"Geile Pokemon und Necrozma",
 				"nice.",
-				"👌👀👌👀✔ some good👌👌shit right mmmmmꮇм 💯 there💦💦"
+				"👌👀👌👀✔ some good👌👌shit right mMMMMᎷМ 💯 there💦💦"
 			],
-			"emptytext": "wie schade, dass es hier nichts mehr gibt",
+			"emptyText": "wie schade, dass es hier nichts mehr gibt",
 			"rank": 1,
 			"pokemon": [
-				"calyrex-ice",
-				"calyrex-shadow",
-				"darmanitan-galar-standard",
-				"dialga",
-				"dracovish",
-				"eternatus",
-				"genesect",
-				"giratina-altered",
-				"giratina-origin",
-				"groudon",
-				"ho-oh",
-				"kyogre",
-				"kyurem-white",
-				"kyurem-black",
-				"landorus-incarnate",
-				"lugia",
-				"lunala",
-				"marshadow",
-				"mewtwo",
-				"naganadel",
-				"necrozma-dusk",
-				"necrozma-dawn",
-				"palkia",
-				"pheromosa",
-				"rayquaza",
-				"reshiram",
-				"solgaleo",
-				"spectrier",
-				"urshifu-single-strike",
-				"xerneas",
-				"yveltal",
-				"zamazenta",
-				"zamazenta-crowned",
-				"zekrom",
-				"zygarde-complete",
 				"tapu-bulu",
 				"zygarde-50",
 				"kyurem",
@@ -62,7 +27,6 @@
 				"jirachi",
 				"celesteela",
 				"tapu-koko",
-				"magearna",
 				"kartana",
 				"dragapult",
 				"garchomp",
@@ -85,186 +49,31 @@
 				"urshifu-rapid-strike",
 				"zapdos",
 				"zeraora",
-				"hawlucha",
-				"zacian-crowned",
-				"melmetal",
-				"mew"
+				"hawlucha"
 			],
 			"notes": {
-				"mew": {
-					"de": "Darf keine TMs lernen",
-					"en": "Darf keine TMs lernen"
-				},
-				"melmetal": {
-					"de": "ohne double iron bash",
-					"en": "ohne double iron bash"
-				},
 				"zygarde-50": {
-					"de": "neu dazu gekommen",
-					"en": "neu dazu gekommen"
+					"de": "Neu dazu gekommen",
+					"en": "Neu dazu gekommen"
 				},
 				"kyurem": {
-					"de": "neu dazu gekommen",
-					"en": "neu dazu gekommen"
+					"de": "Neu dazu gekommen",
+					"en": "Neu dazu gekommen"
 				},
 				"tapu-lele": {
-					"de": "neu dazu gekommen; ohne psychofeld",
-					"en": "neu dazu gekommen; ohne psychic terrain"
-				},
-				"magearna": {
-					"de": "neu dazu gekommen; ohne setup-moves",
-					"en": "neu dazu gekommen; ohne setup-moves"
-				},
-				"calyrex-ice": {
-					"de": "darf nicht im trickroom angreifen",
-					"en": "darf nicht im trickroom angreifen"
-				},
-				"calyrex-shadow": {
-					"de": "darf keine stabs benutzen",
-					"en": "darf keine stabs benutzen"
-				},
-				"darmanitan-galar-standard": {
-					"de": "ohne guerilla tactics",
-					"en": "ohne guerilla tactics"
-				},
-				"dialga": {
-					"de": "darf kein spa-investment fahren und keine damage-boosting items tragen",
-					"en": "darf kein spa-investment fahren und keine damage-boosting items tragen"
-				},
-				"dracovish": {
-					"de": "ohne strong jaw",
-					"en": "ohne strong jaw"
-				},
-				"eternatus": {
-					"de": "darf nicht angreifen",
-					"en": "darf nicht angreifen"
-				},
-				"genesect": {
-					"de": "darf nicht free reinkommen",
-					"en": "darf nicht free reinkommen"
-				},
-				"giratina-altered": {
-					"de": "darf keine support-moves mitnehmen",
-					"en": "darf keine support-moves mitnehmen"
-				},
-				"giratina-origin": {
-					"de": "darf nur mit normal-typed attacks angreifen",
-					"en": "darf nur mit normal-typed attacks angreifen"
-				},
-				"groudon": {
-					"de": "nur fissure ist als move erlaubt",
-					"en": "nur fissure ist als move erlaubt"
-				},
-				"ho-oh": {
-					"de": "ohne regenerator",
-					"en": "ohne regenerator"
-				},
-				"kyogre": {
-					"de": "darf erst angreifen, wenn es nicht mehr regnet",
-					"en": "darf erst angreifen, wenn es nicht mehr regnet"
-				},
-				"kyurem-white": {
-					"de": "darf nur physische moves mitnehmen",
-					"en": "darf nur physische moves mitnehmen"
-				},
-				"kyurem-black": {
-					"de": "darf nur spezielle moves mitnehmen",
-					"en": "darf nur spezielle moves mitnehmen"
-				},
-				"lugia": {
-					"de": "ohne multiscale",
-					"en": "ohne multiscale"
-				},
-				"lunala": {
-					"de": "darf nur reinkommen, wenn hazards liegen; ohne boots",
-					"en": "darf nur reinkommen, wenn hazards liegen; ohne boots"
-				},
-				"marshadow": {
-					"de": "darf nicht mehr rausgeswitched werden, wenn es einmal drin ist",
-					"en": "darf nicht mehr rausgeswitched werden, wenn es einmal drin ist"
-				},
-				"mewtwo": {
-					"de": "darf nur gegner angreifen, die mindestens einen hit leben",
-					"en": "darf nur gegner angreifen, die mindestens einen hit leben"
-				},
-				"naganadel": {
-					"de": "ohne nasty plot; spa darf nicht der höchste stat sein",
-					"en": "ohne nasty plot; spa darf nicht der höchste stat sein"
-				},
-				"necrozma-dusk": {
-					"de": "ohne evs und ivs; neutrales wesen",
-					"en": "ohne evs und ivs; neutrales wesen"
-				},
-				"necrozma-dawn": {
-					"de": "ohne evs und ivs; neutrales wesen",
-					"en": "ohne evs und ivs; neutrales wesen"
-				},
-				"palkia": {
-					"de": "darf nur gegen dragon types reinkommen",
-					"en": "darf nur gegen dragon types reinkommen"
-				},
-				"pheromosa": {
-					"de": "nur moves mit 60 base power oder weniger; nur defensives investment",
-					"en": "nur moves mit 60 base power oder weniger; nur defensives investment"
-				},
-				"rayquaza": {
-					"de": "darf nur v-create drücken",
-					"en": "darf nur v-create drücken"
-				},
-				"reshiram": {
-					"de": "darf nur pokemon angreifen, deren abilities mit turboblaze überbrückt werden",
-					"en": "darf nur pokemon angreifen, deren abilities mit turboblaze überbrückt werden"
-				},
-				"solgaleo": {
-					"de": "darf nicht gegennt werden",
-					"en": "darf nicht gegennt werden"
-				},
-				"spectrier": {
-					"de": "darf nur im trick room angreifen",
-					"en": "darf nur im trick room angreifen"
-				},
-				"urshifu-single-strike": {
-					"de": "ohne wicked blow",
-					"en": "ohne wicked blow"
-				},
-				"xerneas": {
-					"de": "ohne geomancy",
-					"en": "ohne geomancy"
-				},
-				"yveltal": {
-					"de": "nur mit ring target",
-					"en": "nur mit ring target"
-				},
-				"zamazenta": {
-					"de": "muss im ersten turn immer guard swap nutzen",
-					"en": "muss im ersten turn immer guard swap nutzen"
-				},
-				"zamazenta-crowned": {
-					"de": "darf nur 2-turn-moves einsetzen",
-					"en": "darf nur 2-turn-moves einsetzen"
-				},
-				"zekrom": {
-					"de": "darf nur schnellere pokemon angreifen",
-					"en": "darf nur schnellere pokemon angreifen"
-				},
-				"zygarde-complete": {
-					"de": "darf in der complete-form nicht mehr angreifen",
-					"en": "darf in der complete-form nicht mehr angreifen"
-				},
-				"zacian-crowned": {
-					"de": "muss auf level 25 gespielt werden",
-					"en": "muss auf level 25 gespielt werden"
+					"de": "Neu dazu gekommen; ohne Psychofeld",
+					"en": "Neu dazu gekommen; ohne Psychic Terrain"
 				}
 			}
 		},
 		{
-			"name": "a",
+			"name": "A",
 			"subtitles": [
-				"auch noch ganz okay i guess",
-				"erschwingliches pex gefällig?",
-				"ganz schön wetter heute"
+				"Auch noch ganz okay I guess",
+				"Erschwingliches Pex gefällig?",
+				"Ganz schön Wetter heute"
 			],
-			"emptytext": "wie alles rausgefiltert",
+			"emptyText": "wie alles rausgefiltert",
 			"rank": 2,
 			"pokemon": [
 				"arcanine",
@@ -323,31 +132,31 @@
 			],
 			"notes": {
 				"landorus-incarnate": {
-					"de": "ohne rohe gewalt",
-					"en": "ohne sheer force"
+					"de": "Ohne Rohe Gewalt",
+					"en": "Ohne Sheer Force"
 				},
 				"blissey": {
-					"de": "von b nach a gewandert",
-					"en": "von b nach a gewandert"
+					"de": "Von B nach A gewandert",
+					"en": "Von B nach A gewandert"
 				},
 				"chansey": {
-					"de": "von b nach a gewandert",
-					"en": "von b nach a gewandert"
+					"de": "Von B nach A gewandert",
+					"en": "Von B nach A gewandert"
 				},
 				"regieleki": {
-					"de": "von b nach a gewandert",
-					"en": "von b nach a gewandert"
+					"de": "Von B nach A gewandert",
+					"en": "Von B nach A gewandert"
 				},
 				"milotic": {
-					"de": "von b nach a gewandert",
-					"en": "von b nach a gewandert"
+					"de": "Von B nach A gewandert",
+					"en": "Von B nach A gewandert"
 				}
 			}
 		},
 		{
-			"name": "b",
-			"subtitles": ["„wer das b-tier nicht ehrt, ist des s-tiers nicht wert.“"],
-			"emptytext": "wie besonders leer gesucht",
+			"name": "B",
+			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"],
+			"emptyText": "wie besonders leer gesucht",
 			"rank": 3,
 			"pokemon": [
 				"tentacruel",
@@ -355,22 +164,22 @@
 				"marowak-alola",
 				"salazzle",
 				{
-					"internalname": "silvally-normal",
+					"internalName": "silvally-normal",
 					"pokemon": "silvally",
 					"overrides": {
 						"form": {
-							"en": "no memory",
-							"de": "keine disc"
+							"en": "No Memory",
+							"de": "Keine Disc"
 						}
 					}
 				},
 				{
-					"internalname": "silvally-fairy",
+					"internalName": "silvally-fairy",
 					"pokemon": "silvally",
 					"overrides": {
 						"form": {
-							"en": "fairy memory",
-							"de": "feen-disc"
+							"en": "Fairy Memory",
+							"de": "Feen-Disc"
 						},
 						"typing": ["fairy"]
 					}
@@ -448,53 +257,53 @@
 				"arctozolt",
 				"type-null",
 				{
-					"internalname": "zygarde-10",
+					"internalName": "zygarde-10",
 					"pokemon": "zygarde-10",
 					"overrides": {
-						"imageurl": "https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/10118.png",
-						"officialartworkurl": "https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/official-artwork/10118.png"
+						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10118.png",
+						"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10118.png"
 					}
 				}
 			],
 			"notes": {
 				"blaziken": {
-					"de": "ohne temposchub",
-					"en": "ohne speedboost"
+					"de": "Ohne Temposchub",
+					"en": "Ohne Speedboost"
 				},
 				"zygarde-10": {
-					"de": "ohne scharwandel",
-					"en": "ohne power construct"
+					"de": "Ohne Scharwandel",
+					"en": "Ohne Power Construct"
 				},
 				"scolipede": {
-					"de": "von a nach b gewandert",
-					"en": "von a nach b gewandert"
+					"de": "Von A nach B gewandert",
+					"en": "Von A nach B gewandert"
 				},
 				"zarude": {
-					"de": "von a nach b gewandert",
-					"en": "von a nach b gewandert"
+					"de": "Von A nach B gewandert",
+					"en": "Von A nach B gewandert"
 				},
 				"toxtricity-amped": {
-					"de": "von a nach b gewandert",
-					"en": "von a nach b gewandert"
+					"de": "Von A nach B gewandert",
+					"en": "Von A nach B gewandert"
 				},
 				"mandibuzz": {
-					"de": "von a nach b gewandert",
-					"en": "von a nach b gewandert"
+					"de": "Von A nach B gewandert",
+					"en": "Von A nach B gewandert"
 				},
 				"arctozolt": {
-					"de": "von c nach b gewandert",
-					"en": "von c nach b gewandert"
+					"de": "Von C nach B gewandert",
+					"en": "Von C nach B gewandert"
 				},
 				"type-null": {
-					"de": "von c nach b gewandert",
-					"en": "von c nach b gewandert"
+					"de": "Von C nach B gewandert",
+					"en": "Von C nach B gewandert"
 				}
 			}
 		},
 		{
-			"name": "c",
-			"subtitles": ["nimmste günstig mit"],
-			"emptytext": "wie complett ergebnislos",
+			"name": "C",
+			"subtitles": ["Nimmste günstig mit"],
+			"emptyText": "wie complett ergebnislos",
 			"rank": 4,
 			"pokemon": [
 				"aerodactyl",
@@ -588,28 +397,28 @@
 			],
 			"notes": {
 				"archeops": {
-					"de": "von d nach c gewandert",
-					"en": "von d nach c gewandert"
+					"de": "Von D nach C gewandert",
+					"en": "Von D nach C gewandert"
 				},
 				"articuno": {
-					"de": "von d nach c gewandert",
-					"en": "von d nach c gewandert"
+					"de": "Von D nach C gewandert",
+					"en": "Von D nach C gewandert"
 				}
 			}
 		},
 		{
-			"name": "d",
+			"name": "D",
 			"rank": 5,
-			"subtitles": ["immer noch besser als warsteiner", "ja! pizza salami 3x350g"],
-			"emptytext": "wie doof, dass nichts mehr übrig ist",
+			"subtitles": ["Immer noch besser als Warsteiner", "Ja! Pizza Salami 3x350g"],
+			"emptyText": "wie doof, dass nichts mehr übrig ist",
 			"notes": {
 				"dugtrio": {
-					"de": "ohne auswegslos",
-					"en": "ohne arena trap"
+					"de": "Ohne Auswegslos",
+					"en": "Ohne Arena Trap"
 				},
 				"gothitelle": {
-					"de": "ohne wegsperre",
-					"en": "ohne shadow tag"
+					"de": "Ohne Wegsperre",
+					"en": "Ohne Shadow Tag"
 				}
 			},
 			"pokemon": [
@@ -764,25 +573,25 @@
 				"dubwool",
 				"meltan",
 				{
-					"internalname": "rick",
+					"internalName": "rick",
 					"pokemon": "primeape",
 					"overrides": {
 						"name": {
-							"en": "rick",
-							"de": "rick"
+							"en": "Rick",
+							"de": "Rick"
 						},
 						"typing": ["poison", "salt"],
 						"form": {
-							"en": "dota forme",
-							"de": "dota-form"
+							"en": "Dota Forme",
+							"de": "Dota-Form"
 						}
 					}
 				},
 				{
-					"internalname": "shuckle",
+					"internalName": "shuckle",
 					"pokemon": "shuckle",
 					"overrides": {
-						"pokemondburl": "/till.png"
+						"pokemonDbUrl": "/till.png"
 					}
 				}
 			]
