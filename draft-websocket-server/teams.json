@@ -1,0 +1,88 @@
+{
+	"teams": [
+		{
+			"name": "TUSPO Salamence",
+			"player": "Moritz",
+			"logo": "tuspo-salamence",
+			"pokemon": [""]
+		},
+		{
+			"name": "Freddyursa",
+			"player": "Rick",
+			"logo": "freddyursa",
+			"pokemon": [""]
+		},
+		{
+			"name": "Große Demeteros Apokalypse",
+			"player": "Niklas",
+			"logo": "gda",
+			"pokemon": [""]
+		},
+		{
+			"name": "Miami Heatran",
+			"player": "Danny",
+			"logo": "miami-heatran",
+			"pokemon": [""]
+		},
+		{
+			"name": "PSV Nilsoking",
+			"player": "Nils",
+			"logo": "psv-nilsoking",
+			"pokemon": [""]
+		},
+		{
+			"name": "Surging Strikes",
+			"player": "Alex",
+			"logo": "surging-strikes",
+			"pokemon": [""]
+		},
+		{
+			"name": "Oliberlo Chancentod",
+			"player": "Oli",
+			"logo": "oliberlo-chancentod",
+			"pokemon": [""]
+		},
+		{
+			"name": "tbd",
+			"player": "Felix",
+			"logo": "tbd",
+			"pokemon": [""]
+		},
+		{
+			"name": "tbd",
+			"player": "Till",
+			"logo": "tbd",
+			"pokemon": [""]
+		},
+		{
+			"name": "dyken domage",
+			"player": "Jonas",
+			"logo": "tbd",
+			"pokemon": [""]
+		},
+		{
+			"name": "tbd",
+			"player": "Philipp",
+			"logo": "tbd",
+			"pokemon": [""]
+		},
+		{
+			"name": "tbd",
+			"player": "Nico",
+			"logo": "tbd",
+			"pokemon": [""]
+		},
+		{
+			"name": "tbd",
+			"player": "Max",
+			"logo": "tbd",
+			"pokemon": [""]
+		},
+		{
+			"name": "tbd",
+			"player": "Bobex",
+			"logo": "tbd",
+			"pokemon": [""]
+		}
+	]
+}

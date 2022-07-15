@@ -1,0 +1,20 @@
+{
+  "name": "draft-websocket-server",
+  "packageManager": "yarn@3.2.1",
+  "dependencies": {
+    "@types/body-parser": "^1.19.2",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "ws": "^8.8.0"
+  },
+  "scripts": {
+    "start": "ts-node src/server.ts --resolveJsonModule"
+  },
+  "devDependencies": {
+    "-": "^0.0.1",
+    "@types/express": "^4.17.13",
+    "@types/ws": "^8.5.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  }
+}

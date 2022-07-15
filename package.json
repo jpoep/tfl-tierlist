@@ -6,7 +6,8 @@
   "license": "MIT",
   "workspaces": [
     "website",
-    "server"
+    "server",
+    "draft-websocket-server"
   ],
   "scripts": {
     "build:website": "yarn workspace pokemon-tierlist build",
