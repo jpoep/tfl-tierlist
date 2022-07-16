@@ -4,85 +4,85 @@
 			"name": "TUSPO Salamence",
 			"player": "Moritz",
 			"logo": "tuspo-salamence",
-			"pokemon": []
+			"pokemon": [""]
 		},
 		{
 			"name": "Freddyursa",
 			"player": "Rick",
 			"logo": "freddyursa",
-			"pokemon": []
+			"pokemon": [""]
 		},
 		{
 			"name": "Große Demeteros Apokalypse",
 			"player": "Niklas",
-			"logo": "gda",
-			"pokemon": []
+			"logo": "gda-2",
+			"pokemon": [""]
 		},
 		{
-			"name": "Miami Heatran",
+			"name": "Stomping Dannex",
 			"player": "Danny",
-			"logo": "miami-heatran",
-			"pokemon": []
+			"logo": "stomping-dannex",
+			"pokemon": [""]
 		},
 		{
 			"name": "PSV Nilsoking",
 			"player": "Nils",
 			"logo": "psv-nilsoking",
-			"pokemon": []
+			"pokemon": [""]
 		},
 		{
 			"name": "Surging Strikes",
 			"player": "Alex",
 			"logo": "surging-strikes",
-			"pokemon": []
+			"pokemon": [""]
 		},
 		{
-			"name": "Oliberlo Chancentod",
+			"name": "Dragapult Disco",
 			"player": "Oli",
-			"logo": "oliberlo-chancentod",
-			"pokemon": []
+			"logo": "dragapult-disco",
+			"pokemon": [""]
 		},
 		{
-			"name": "tbd",
+			"name": "Machakey Balboa",
 			"player": "Felix",
-			"logo": "tbd",
-			"pokemon": []
+			"logo": "machakey",
+			"pokemon": [""]
 		},
 		{
-			"name": "tbd",
+			"name": "Pixelspark",
 			"player": "Till",
-			"logo": "tbd",
-			"pokemon": []
+			"logo": "pixelspark",
+			"pokemon": [""]
 		},
 		{
-			"name": "dyken domage",
+			"name": "Zygarde-69%",
 			"player": "Jonas",
-			"logo": "tbd",
-			"pokemon": []
+			"logo": "z69",
+			"pokemon": [""]
 		},
 		{
-			"name": "tbd",
+			"name": "Galar Rapidashs",
 			"player": "Philipp",
-			"logo": "tbd",
-			"pokemon": []
+			"logo": "galar-rapidashs",
+			"pokemon": [""]
 		},
 		{
-			"name": "tbd",
+			"name": "Atalanta Fletiamo",
 			"player": "Nico",
-			"logo": "tbd",
-			"pokemon": []
+			"logo": "atlanta-fletiamo",
+			"pokemon": [""]
 		},
 		{
-			"name": "tbd",
+			"name": "Bellektro Ghetto",
 			"player": "Max",
-			"logo": "tbd",
-			"pokemon": []
+			"logo": "bellektro-ghetto-2",
+			"pokemon": [""]
 		},
 		{
-			"name": "tbd",
+			"name": "Triple D Trauma",
 			"player": "Bobex",
-			"logo": "tbd",
-			"pokemon": []
+			"logo": "tripled",
+			"pokemon": [""]
 		}
 	]
 }
