@@ -6,7 +6,6 @@
   "license": "MIT",
   "workspaces": [
     "website",
-    "server",
     "draft-websocket-server"
   ],
   "scripts": {
