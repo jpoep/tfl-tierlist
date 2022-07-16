@@ -1,22 +1,21 @@
-const build = [
-  "/_app/immutable/start-b96090cd.js",
-  "/_app/immutable/pages/__layout.svelte-4064d19a.js",
-  "/_app/immutable/assets/pages/__layout.svelte-c77a3056.css",
+const r = [
   "/_app/immutable/assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
-  "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-latin-400-normal-557f6d08.woff2",
   "/_app/immutable/assets/titillium-web-latin-ext-700-normal-8f8ebc7e.woff2",
-  "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
-  "/_app/immutable/error.svelte-cd1ca991.js",
-  "/_app/immutable/pages/index.svelte-ace33381.js",
-  "/_app/immutable/assets/pages/index.svelte-794694ae.css",
-  "/_app/immutable/chunks/index-8c7a71bd.js",
-  "/_app/immutable/chunks/index-0665da37.js",
-  "/_app/immutable/chunks/paths-396f020f.js",
-  "/_app/immutable/chunks/index-e1c47fd3.js"
-];
-const files = [
+  "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
+  "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
+  "/_app/immutable/start-fac1dcbc.js",
+  "/_app/immutable/pages/__layout.svelte-b5be459d.js",
+  "/_app/immutable/assets/__layout-1e33ba6f.css",
+  "/_app/immutable/error.svelte-30c3d862.js",
+  "/_app/immutable/pages/index.svelte-88c0bc3f.js",
+  "/_app/immutable/assets/index-a6c351a7.css",
+  "/_app/immutable/chunks/index-3e568538.js",
+  "/_app/immutable/chunks/index-66fd6d2b.js",
+  "/_app/immutable/chunks/paths-1c47712a.js",
+  "/_app/immutable/chunks/index-8456a1b9.js"
+], c = [
   "/.nojekyll",
   "/CNAME",
   "/favicon.png",
@@ -115,51 +114,34 @@ const files = [
   "/sounds/sword-thud.mp3",
   "/sounds/till.mp3",
   "/till.png"
-];
-const version = "1657983819218";
-const worker = self;
-const FILES = `cache${version}`;
-const to_cache = build.concat(files.filter((it) => !it.endsWith(".nojekyll")));
-const staticAssets = new Set(to_cache);
-worker.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(FILES).then((cache) => cache.addAll(to_cache)).then(() => {
-    worker.skipWaiting();
+], n = "1657986509258", e = self, g = `cache${n}`, i = r.concat(c.filter((o) => !o.endsWith(".nojekyll"))), d = new Set(i);
+e.addEventListener("install", (o) => {
+  o.waitUntil(caches.open(g).then((s) => s.addAll(i)).then(() => {
+    e.skipWaiting();
   }));
 });
-worker.addEventListener("activate", (event) => {
-  event.waitUntil(caches.keys().then(async (keys) => {
-    for (const key of keys) {
-      if (key !== FILES)
-        await caches.delete(key);
-    }
-    worker.clients.claim();
+e.addEventListener("activate", (o) => {
+  o.waitUntil(caches.keys().then(async (s) => {
+    for (const a of s)
+      a !== g && await caches.delete(a);
+    e.clients.claim();
   }));
 });
-async function fetchAndCache(request) {
-  const cache = await caches.open(`offline${version}`);
+async function u(o) {
+  const s = await caches.open(`offline${n}`);
   try {
-    const response = await fetch(request);
-    cache.put(request, response.clone());
-    return response;
-  } catch (err) {
-    const response = await cache.match(request);
-    if (response)
-      return response;
-    throw err;
+    const a = await fetch(o);
+    return s.put(o, a.clone()), a;
+  } catch (a) {
+    const l = await s.match(o);
+    if (l)
+      return l;
+    throw a;
   }
 }
-worker.addEventListener("fetch", (event) => {
-  if (event.request.method !== "GET" || event.request.headers.has("range"))
+e.addEventListener("fetch", (o) => {
+  if (o.request.method !== "GET" || o.request.headers.has("range"))
     return;
-  const url = new URL(event.request.url);
-  const isHttp = url.protocol.startsWith("http");
-  const isDevServerRequest = url.hostname === self.location.hostname && url.port !== self.location.port;
-  const isStaticAsset = url.host === self.location.host && staticAssets.has(url.pathname);
-  const skipBecauseUncached = event.request.cache === "only-if-cached" && !isStaticAsset;
-  if (isHttp && !isDevServerRequest && !skipBecauseUncached) {
-    event.respondWith((async () => {
-      const cachedAsset = (isStaticAsset || url.pathname.startsWith("/PokeAPI/sprites/")) && await caches.match(event.request);
-      return cachedAsset || fetchAndCache(event.request);
-    })());
-  }
+  const s = new URL(o.request.url), a = s.protocol.startsWith("http"), l = s.hostname === self.location.hostname && s.port !== self.location.port, t = s.host === self.location.host && d.has(s.pathname), p = o.request.cache === "only-if-cached" && !t;
+  a && !l && !p && o.respondWith((async () => (t || s.pathname.startsWith("/PokeAPI/sprites/")) && await caches.match(o.request) || u(o.request))());
 });
