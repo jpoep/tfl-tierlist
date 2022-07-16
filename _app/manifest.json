@@ -24,7 +24,7 @@
     "src": "../node_modules/@fontsource/titillium-web/files/titillium-web-all-700-normal.woff"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-a5368d86.js",
+    "file": "immutable/start-fd2f875e.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [

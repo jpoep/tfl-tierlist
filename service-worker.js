@@ -5,7 +5,7 @@ const r = [
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
-  "/_app/immutable/start-a5368d86.js",
+  "/_app/immutable/start-fd2f875e.js",
   "/_app/immutable/pages/__layout.svelte-b5be459d.js",
   "/_app/immutable/assets/__layout-1e33ba6f.css",
   "/_app/immutable/error.svelte-30c3d862.js",
@@ -102,7 +102,8 @@ const r = [
   "/logos/tuspo-salamence.avif",
   "/logos/tuspo-salamence.png",
   "/logos/tuspo-salamence.webp",
-  "/logos/zygarde-green.avif",
+  "/logos/z69.avif",
+  "/logos/z69.webp",
   "/logos/zygarde-green.png",
   "/manifest.json",
   "/pokeball-logo.svg",
@@ -114,7 +115,7 @@ const r = [
   "/sounds/sword-thud.mp3",
   "/sounds/till.mp3",
   "/till.png"
-], n = "1657986920970", e = self, g = `cache${n}`, i = r.concat(c.filter((o) => !o.endsWith(".nojekyll"))), d = new Set(i);
+], n = "1657987463195", e = self, g = `cache${n}`, i = r.concat(c.filter((o) => !o.endsWith(".nojekyll"))), d = new Set(i);
 e.addEventListener("install", (o) => {
   o.waitUntil(caches.open(g).then((s) => s.addAll(i)).then(() => {
     e.skipWaiting();
