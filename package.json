@@ -13,7 +13,8 @@
     "lint": "yarn workspace pokemon-tierlist lint",
     "check": "yarn workspace pokemon-tierlist check",
     "format": "yarn workspace pokemon-tierlist format",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "start": "yarn workspace draft-websocket-server start"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.27.1",
