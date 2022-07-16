@@ -4,7 +4,12 @@ import devTierlist from '$lib/data/tierlist-dev.json';
 import teamsData from '$lib/data/teams.json';
 import pkg, { type PokemonForm, type PokemonSpecies } from 'pokenode-ts';
 import type { Ability, PokemonType, Stats, Team, Typing } from '$lib/types/pokemon';
-import type { JsonPokemon, JsonPokemonObject, JsonTier } from '$lib/types/json';
+import {
+	transformTeam,
+	type JsonPokemon,
+	type JsonPokemonObject,
+	type JsonTier
+} from '$lib/types/json';
 const { PokemonClient } = pkg;
 
 const api = new PokemonClient();
@@ -21,17 +26,6 @@ function isJsonPokemonObject(jsonPokemon: unknown): jsonPokemon is JsonPokemonOb
 		return typeof jsonPokemon === 'object' && 'internalName' in jsonPokemon;
 	}
 	return false;
-}
-
-function transformTeam(team: Omit<Team, 'logo'> & { logo: string }): Team {
-	return {
-		...team,
-		logo: {
-			avif: team.logo + '.avif',
-			webp: team.logo + '.webp',
-			png: team.logo + '.png'
-		}
-	};
 }
 
 const transformedTeamsData: Team[] = teamsData.teams.map(transformTeam);

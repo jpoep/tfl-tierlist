@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 	import ScrollTopButton from '$lib/components/buttons/scroll-top-button.svelte';
 	import type { PokemonType, Team, Tier } from '$lib/types/pokemon';
+	import { liveTeams } from '$lib/stores/teams';
 
 	export let tierlist: Tier[];
 	export let teams: Team[];
@@ -14,8 +15,8 @@
 	let currentTeam: Team | undefined;
 
 	$filter = initialFilter || '';
-	$: currentTeam = teams?.map((team) => team.name).includes($filter)
-		? teams.find((it) => it.name === $filter)
+	$: currentTeam = mergedTeams?.map((team) => team.name).includes($filter)
+		? mergedTeams.find((it) => it.name === $filter)
 		: undefined;
 
 	onMount(() => {
@@ -23,6 +24,9 @@
 			$filter = initialFilter || '';
 		});
 	});
+
+	// TODO: the passed static teams is completely ignored. Find a way to combine them.
+	$: mergedTeams = $liveTeams.length > 0 ? $liveTeams : teams;
 
 	const contains = (pokemon: PokemonType, term: string) =>
 		[
@@ -38,7 +42,16 @@
 			pokemon.team?.player
 		].some((it: string | undefined) => it?.toLowerCase().includes(term.toLowerCase()));
 
-	$: sortedList = tierlist?.map((it) => ({
+	// It's just a quick hack to get it ready for the draft in time. Refactoring needed.
+	$: updatedTeamsList = tierlist?.map((it) => ({
+		...it,
+		pokemon: it.pokemon.map((pokemon) => ({
+			...pokemon,
+			team: mergedTeams.find((team) => team.pokemon.includes(pokemon.id))
+		}))
+	}));
+
+	$: sortedList = updatedTeamsList?.map((it) => ({
 		...it,
 		pokemon: it.pokemon.sort((a, b) =>
 			(a.name[$language] as string).localeCompare(b.name[$language])
@@ -49,6 +62,7 @@
 		...it,
 		pokemon: it.pokemon.filter((pokemon) => contains(pokemon, $filter))
 	}));
+
 </script>
 
 <h1>Tierlist für Season 4 der TFL</h1>
@@ -59,7 +73,7 @@
 			emptyText: '',
 			rank: 1,
 			subtitles: [currentTeam.player],
-			pokemon: tierlist
+			pokemon: updatedTeamsList
 				.flatMap((it) => it.pokemon)
 				.filter((pokemon) => currentTeam?.pokemon.includes(pokemon.id))
 		}}

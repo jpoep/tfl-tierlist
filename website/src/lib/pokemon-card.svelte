@@ -6,11 +6,16 @@
 	import PokemonStats from './pokemon-stats.svelte';
 	import { tooltip } from '$lib/actions/tooltip';
 	import type { PokemonType } from './types/pokemon';
+	import { changedPokemon } from './stores/teams.js';
+	import { tick } from 'svelte';
 
 	export let pokemon: PokemonType;
 	let _pokemon: Pokemon;
 
 	let detailsActive = false;
+
+	let self: HTMLElement;
+	let animateTeam = false;
 
 	$: detailsActive = $allStatsToggled;
 	$: imageSource = detailsActive
@@ -31,9 +36,41 @@
 	const getImageUrl = (path: string) => {
 		return base + '/logos/' + path;
 	};
+
+	changedPokemon.subscribe(async (pokemon) => {
+		if (pokemon && pokemon === _pokemon?.id) {
+			$filter = '';
+			await tick();
+			animateTeam = true;
+			scrollIntoView(self);
+			const specialSounds: { [key: string]: string } = {
+				Alex: 'pokescout',
+				Nils: 'ppv',
+				Danny: 'dannex',
+				Oli: 'oli',
+				Till: 'till'
+			};
+			const player = _pokemon.team?.player;
+			if (player) {
+				const specialSound = specialSounds[player];
+				if (specialSound) {
+					new Audio(`/sounds/${specialSound}.mp3`).play();
+				}
+			}
+			new Audio('/sounds/sword-thud.mp3').play();
+		}
+	});
+
+	function scrollIntoView(el: HTMLElement | undefined) {
+		el?.scrollIntoView({
+			behavior: 'smooth',
+			block: 'center',
+			inline: 'center'
+		});
+	}
 </script>
 
-<div class="pokemon" on:click={toggleDetails}>
+<div class="pokemon" on:click={toggleDetails} bind:this={self}>
 	{#if !detailsActive}
 		{#if pokemon.team}
 			<div class="team-wrapper">
@@ -42,7 +79,7 @@
 					use:tooltip={{ title: pokemon.team.name, subTitle: pokemon.team.player }}
 					on:click|stopPropagation={setFilterToTeam}
 				>
-					<picture>
+					<picture class:animateTeam>
 						<source srcSet={getImageUrl(pokemon.team.logo.avif)} type="image/avif" />
 						<source srcSet={getImageUrl(pokemon.team.logo.webp)} type="image/webp" />
 						<img src={getImageUrl(pokemon.team.logo.png)} alt={'Logo von ' + pokemon.team.player} />
@@ -109,6 +146,25 @@
 		flex-direction: column;
 		justify-content: center;
 
+		@keyframes new-pick {
+			0% {
+				filter: opacity(0);
+			}
+
+			25% {
+				filter: opacity(1) grayscale(0) brightness(10) saturate(0);
+			}
+
+			100% {
+				filter: opacity(0.5) grayscale(0.7);
+			}
+		}
+
+		.animateTeam {
+			animation-name: new-pick;
+			animation-duration: 5s;
+		}
+
 		.team-wrapper {
 			position: absolute;
 			top: 0;
@@ -128,12 +184,12 @@
 				align-items: center;
 				justify-content: center;
 				picture {
-					filter: opacity(0.5) grayscale(0.7);
-					max-height: 12rem;
-					max-width: 12rem;
 					border-radius: 50%;
+					filter: opacity(0.5) grayscale(0.7);
 					background: var(--bg-color-highlighted);
 					padding: 0.1rem;
+					max-width: 12rem;
+					max-height: 12rem;
 				}
 				img {
 					max-width: 100%;
