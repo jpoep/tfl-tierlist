@@ -1,5 +1,5 @@
 const build = [
-  "/_app/immutable/start-f1fabb21.js",
+  "/_app/immutable/start-acafe1c3.js",
   "/_app/immutable/pages/__layout.svelte-4064d19a.js",
   "/_app/immutable/assets/pages/__layout.svelte-c77a3056.css",
   "/_app/immutable/assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
@@ -116,7 +116,7 @@ const files = [
   "/sounds/till.mp3",
   "/till.png"
 ];
-const version = "1657981609550";
+const version = "1657981765236";
 const worker = self;
 const FILES = `cache${version}`;
 const to_cache = build.concat(files.filter((it) => !it.endsWith(".nojekyll")));
