@@ -1,1 +1,1 @@
-draft-server: yarn workspace draft-websocket-server start
+web: yarn workspace draft-websocket-server start
