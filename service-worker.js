@@ -5,11 +5,11 @@ const r = [
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
-  "/_app/immutable/start-fd2f875e.js",
+  "/_app/immutable/start-b3226611.js",
   "/_app/immutable/pages/__layout.svelte-b5be459d.js",
   "/_app/immutable/assets/__layout-1e33ba6f.css",
   "/_app/immutable/error.svelte-30c3d862.js",
-  "/_app/immutable/pages/index.svelte-f870ed12.js",
+  "/_app/immutable/pages/index.svelte-54a95d2a.js",
   "/_app/immutable/assets/index-a6c351a7.css",
   "/_app/immutable/chunks/index-3e568538.js",
   "/_app/immutable/chunks/index-66fd6d2b.js",
@@ -103,8 +103,8 @@ const r = [
   "/logos/tuspo-salamence.png",
   "/logos/tuspo-salamence.webp",
   "/logos/z69.avif",
+  "/logos/z69.png",
   "/logos/z69.webp",
-  "/logos/zygarde-green.png",
   "/manifest.json",
   "/pokeball-logo.svg",
   "/sounds/dannex.mp3",
@@ -115,7 +115,7 @@ const r = [
   "/sounds/sword-thud.mp3",
   "/sounds/till.mp3",
   "/till.png"
-], n = "1657987463195", e = self, g = `cache${n}`, i = r.concat(c.filter((o) => !o.endsWith(".nojekyll"))), d = new Set(i);
+], n = "1657990984041", e = self, g = `cache${n}`, i = r.concat(c.filter((o) => !o.endsWith(".nojekyll"))), u = new Set(i);
 e.addEventListener("install", (o) => {
   o.waitUntil(caches.open(g).then((s) => s.addAll(i)).then(() => {
     e.skipWaiting();
@@ -128,7 +128,7 @@ e.addEventListener("activate", (o) => {
     e.clients.claim();
   }));
 });
-async function u(o) {
+async function d(o) {
   const s = await caches.open(`offline${n}`);
   try {
     const a = await fetch(o);
@@ -143,6 +143,6 @@ async function u(o) {
 e.addEventListener("fetch", (o) => {
   if (o.request.method !== "GET" || o.request.headers.has("range"))
     return;
-  const s = new URL(o.request.url), a = s.protocol.startsWith("http"), l = s.hostname === self.location.hostname && s.port !== self.location.port, t = s.host === self.location.host && d.has(s.pathname), p = o.request.cache === "only-if-cached" && !t;
-  a && !l && !p && o.respondWith((async () => (t || s.pathname.startsWith("/PokeAPI/sprites/")) && await caches.match(o.request) || u(o.request))());
+  const s = new URL(o.request.url), a = s.protocol.startsWith("http"), l = s.hostname === self.location.hostname && s.port !== self.location.port, t = s.host === self.location.host && u.has(s.pathname), p = o.request.cache === "only-if-cached" && !t;
+  a && !l && !p && o.respondWith((async () => (t || s.pathname.startsWith("/PokeAPI/sprites/")) && await caches.match(o.request) || d(o.request))());
 });
