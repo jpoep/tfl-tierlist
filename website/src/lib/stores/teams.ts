@@ -5,7 +5,7 @@ import { writable } from 'svelte/store';
 import type { Response } from '../../../../draft-websocket-server/src/server.js';
 
 const SERVER_ADDRESS =
-	import.meta.env.VITE_DRAFT_SERVER_URL || 'ws://tfl-draft-server.herokuapp.com';
+	import.meta.env.VITE_DRAFT_SERVER_URL || 'wss://tfl-draft-server.herokuapp.com';
 
 export const liveTeams = writable<Team[]>([]);
 
