@@ -15,13 +15,6 @@ const config = {
 		},
 		prerender: {
 			default: true
-		},
-		vite: {
-			server: {
-				fs: {
-					allow: ['..']
-				}
-			}
 		}
 	}
 };

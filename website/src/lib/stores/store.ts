@@ -13,7 +13,11 @@ export enum Language {
 
 let storedLanguage = Language.EN;
 if (browser) {
-	storedLanguage = <Language>localStorage.getItem('language');
+	storedLanguage = <Language>localStorage.getItem('language') || Language.EN;
+	// fix for a nasty bug that caused 'null' to be stored in the language
+	if ((storedLanguage as string) !== 'de' || (storedLanguage as string) !== 'en') {
+		storedLanguage = Language.EN;
+	}
 }
 export const language: Writable<Language> = writable(storedLanguage);
 

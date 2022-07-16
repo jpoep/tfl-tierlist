@@ -30,7 +30,7 @@ function isJsonPokemonObject(jsonPokemon: unknown): jsonPokemon is JsonPokemonOb
 
 const transformedTeamsData: Team[] = teamsData.teams.map(transformTeam);
 
-export const get: RequestHandler = async ({ url }) => {
+export const GET: RequestHandler = async ({ url }) => {
 	const getName: {
 		(species: PokemonSpecies): { en: string; de: string };
 	} = (species) => {

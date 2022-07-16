@@ -27,7 +27,7 @@
 
 	// TODO: the passed static teams is completely ignored. Find a way to combine them.
 	$: mergedTeams = $liveTeams.length > 0 ? $liveTeams : teams;
-
+	
 	const contains = (pokemon: PokemonType, term: string) =>
 		[
 			pokemon.form?.de,
