@@ -1,5 +1,5 @@
 const build = [
-  "/_app/immutable/start-df9718ed.js",
+  "/_app/immutable/start-b96090cd.js",
   "/_app/immutable/pages/__layout.svelte-4064d19a.js",
   "/_app/immutable/assets/pages/__layout.svelte-c77a3056.css",
   "/_app/immutable/assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
@@ -9,7 +9,7 @@ const build = [
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/error.svelte-cd1ca991.js",
-  "/_app/immutable/pages/index.svelte-5e8f5c5f.js",
+  "/_app/immutable/pages/index.svelte-ace33381.js",
   "/_app/immutable/assets/pages/index.svelte-794694ae.css",
   "/_app/immutable/chunks/index-8c7a71bd.js",
   "/_app/immutable/chunks/index-0665da37.js",
@@ -116,7 +116,7 @@ const files = [
   "/sounds/till.mp3",
   "/till.png"
 ];
-const version = "1657982417813";
+const version = "1657983819218";
 const worker = self;
 const FILES = `cache${version}`;
 const to_cache = build.concat(files.filter((it) => !it.endsWith(".nojekyll")));
