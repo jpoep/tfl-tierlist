@@ -24,7 +24,7 @@
     "src": "../node_modules/@fontsource/titillium-web/files/titillium-web-all-700-normal.woff"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-c1b9c782.js",
+    "file": "immutable/start-a5368d86.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -70,7 +70,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "immutable/pages/index.svelte-33a15aaa.js",
+    "file": "immutable/pages/index.svelte-f870ed12.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
