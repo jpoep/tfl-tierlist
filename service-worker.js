@@ -1,6 +1,6 @@
 const build = [
-  "/_app/immutable/start-a738b43a.js",
-  "/_app/immutable/pages/__layout.svelte-187888c2.js",
+  "/_app/immutable/start-cb47f2d5.js",
+  "/_app/immutable/pages/__layout.svelte-4064d19a.js",
   "/_app/immutable/assets/pages/__layout.svelte-c77a3056.css",
   "/_app/immutable/assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
@@ -8,13 +8,13 @@ const build = [
   "/_app/immutable/assets/titillium-web-latin-ext-700-normal-8f8ebc7e.woff2",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
-  "/_app/immutable/error.svelte-b933263e.js",
-  "/_app/immutable/pages/index.svelte-6235efb0.js",
+  "/_app/immutable/error.svelte-cd1ca991.js",
+  "/_app/immutable/pages/index.svelte-5e8f5c5f.js",
   "/_app/immutable/assets/pages/index.svelte-794694ae.css",
-  "/_app/immutable/chunks/index-3df6a2d7.js",
-  "/_app/immutable/chunks/index-6c4eee75.js",
+  "/_app/immutable/chunks/index-8c7a71bd.js",
+  "/_app/immutable/chunks/index-0665da37.js",
   "/_app/immutable/chunks/paths-396f020f.js",
-  "/_app/immutable/chunks/index-c944c310.js"
+  "/_app/immutable/chunks/index-e1c47fd3.js"
 ];
 const files = [
   "/.nojekyll",
@@ -116,7 +116,7 @@ const files = [
   "/sounds/till.mp3",
   "/till.png"
 ];
-const version = "1657981168100";
+const version = "1657981456162";
 const worker = self;
 const FILES = `cache${version}`;
 const to_cache = build.concat(files.filter((it) => !it.endsWith(".nojekyll")));
