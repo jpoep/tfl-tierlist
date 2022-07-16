@@ -9,36 +9,54 @@ const SERVER_ADDRESS =
 
 export const liveTeams = writable<Team[]>([]);
 
-if (browser) {
-	console.log('Initializing WebSocket connection');
-	const ws = new WebSocket(SERVER_ADDRESS);
-	ws.onmessage = (message) => {
-		console.log('new message yay');
-		const data: Response = JSON.parse(message.data);
-		switch (data.messageType) {
-			case 'teamsUpdate': {
-				console.log(data.data);
-				liveTeams.update(() => data.data.map((team) => transformTeam(team)));
-				break;
-			}
-			case 'singlePokemon': {
-				liveTeams.update((teams) => {
-					const team = teams.find(
-						(it) =>
-							it.name.toLowerCase() === data.data.name?.toLowerCase() ||
-							it.player.toLowerCase() === data.data.player?.toLowerCase()
-					);
-					if (!team) {
-						return teams;
-					}
-					team?.pokemon.push(data.data.pokemon);
-					return [...teams.filter((it) => it.name !== team?.name), team];
-				});
-				changedPokemon.update(() => data.data.pokemon);
-				break;
-			}
+const wsHandler = (message: MessageEvent) => {
+	const data: Response = JSON.parse(message.data);
+	switch (data.messageType) {
+		case 'teamsUpdate': {
+			console.log('Whole teams update received');
+			liveTeams.update(() => data.data.map((team) => transformTeam(team)));
+			changedPokemon.update(() => null);
+			break;
 		}
-	};
+		case 'singlePokemon': {
+			console.log('Single pokemon Update received: ', data.data.pokemon);
+			liveTeams.update((teams) => {
+				const team = teams.find(
+					(it) =>
+						it.name.toLowerCase() === data.data.name?.toLowerCase() ||
+						it.player.toLowerCase() === data.data.player?.toLowerCase()
+				);
+				if (!team) {
+					return teams;
+				}
+				team?.pokemon.push(data.data.pokemon);
+				return [...teams.filter((it) => it.name !== team?.name), team];
+			});
+			changedPokemon.update(() => data.data.pokemon);
+			break;
+		}
+	}
+};
+
+let ws: WebSocket;
+
+const initWebSocket = () => {
+	if (!ws || ws.readyState === ws.CLOSED) {
+		console.log('(Re-)initializing WebSocket connection');
+		ws = new WebSocket(SERVER_ADDRESS);
+		ws.onmessage = wsHandler;
+		ws.onclose = () => {
+			console.log('Socket closed; re-opening');
+			initWebSocket();
+		};
+	}
+};
+
+if (browser) {
+	initWebSocket();
+	const listener = () => initWebSocket;
+	document.removeEventListener('focus', listener);
+	document.addEventListener('focus', listener);
 }
 
-export const changedPokemon = writable<string>();
+export const changedPokemon = writable<string | null>();

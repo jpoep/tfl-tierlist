@@ -54,10 +54,10 @@
 			if (player) {
 				const specialSound = specialSounds[player];
 				if (specialSound) {
-					new Audio(`/sounds/${specialSound}.mp3`).play();
+					new Audio(`/sounds/${specialSound}.mp3`).play().catch(console.log);
 				}
 			}
-			new Audio('/sounds/sword-thud.mp3').play();
+			await new Audio('/sounds/sword-thud.mp3').play().catch(console.log);
 		}
 	});
 
