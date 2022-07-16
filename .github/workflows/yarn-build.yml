@@ -23,6 +23,8 @@ jobs:
         with:
           cmd: install # will run `yarn install` command
       - uses: borales/actions-yarn@v3.0.0
+        env: 
+          VITE_DRAFT_SERVER_URL: ${{secrets.VITE_DRAFT_SERVER_URL}}
         with:
           cmd: build:website # will run `yarn build` command
       - name: Deploy
