@@ -7,6 +7,8 @@ import type { Response } from '../../../../draft-websocket-server/src/server.js'
 const SERVER_ADDRESS =
 	import.meta.env.VITE_DRAFT_SERVER_URL || 'wss://tfl-draft-server.herokuapp.com';
 
+const isActive = import.meta.env.VITE_IS_DRAFT_SERVER_ACTIVE || false;
+
 export const liveTeams = writable<Team[]>([]);
 
 const wsHandler = (message: MessageEvent) => {
@@ -52,7 +54,7 @@ const initWebSocket = () => {
 	}
 };
 
-if (browser) {
+if (browser && isActive) {
 	initWebSocket();
 	const listener = () => initWebSocket;
 	document.removeEventListener('focus', listener);
