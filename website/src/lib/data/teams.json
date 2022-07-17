@@ -4,85 +4,253 @@
 			"name": "TUSPO Salamence",
 			"player": "Moritz",
 			"logo": "tuspo-salamence",
-			"pokemon": [""]
+			"pokemon": [
+				"hydreigon",
+				"cinderace",
+				"slowking-galar",
+				"scizor",
+				"nidoqueen",
+				"rotom-mow",
+				"guardevoir",
+				"lickilicky",
+				"golisopod",
+				"rhydon",
+				"sableye"
+			]
 		},
 		{
-			"name": "Freddyursa",
+			"name": "Freddyursa Münster",
 			"player": "Rick",
 			"logo": "freddyursa",
-			"pokemon": [""]
+			"pokemon": [
+				"corviknight",
+				"dragonite",
+				"nidoking",
+				"rotom-wash",
+				"mienshao",
+				"entei",
+				"hatterene",
+				"accelgor",
+				"palossand",
+				"maractus",
+				"kingler"
+			]
 		},
 		{
 			"name": "Große Demeteros Apokalypse",
 			"player": "Niklas",
 			"logo": "gda-2",
-			"pokemon": [""]
+			"pokemon": [
+				"landorus-therian",
+				"latios",
+				"milotic",
+				"raikou",
+				"incineroar",
+				"klefki",
+				"metagross",
+				"miltank",
+				"ditto",
+				"kadabra",
+				"leafeon"
+			]
 		},
 		{
 			"name": "Stomping Dannex",
 			"player": "Danny",
 			"logo": "stomping-dannex",
-			"pokemon": [""]
+			"pokemon": [
+				"tapu-koko",
+				"necrozma",
+				"arcanine",
+				"tornadus-incarnate",
+				"zarude",
+				"type-null",
+				"jellicent",
+				"hitmonlee",
+				"drapion",
+				"stunfisk-galar",
+				"frosmoth"
+			]
 		},
 		{
 			"name": "PSV Nilsoking",
 			"player": "Nils",
 			"logo": "psv-nilsoking",
-			"pokemon": [""]
+			"pokemon": [
+				"kyurem",
+				"jirachi",
+				"landorus-incarnate",
+				"porygon2",
+				"crobat",
+				"blaziken",
+				"vaporeon",
+				"delmise",
+				"lanturn",
+				"pantimos",
+				"coalossal"
+			]
 		},
 		{
 			"name": "Surging Strikes",
 			"player": "Alex",
 			"logo": "surging-strikes",
-			"pokemon": [""]
+			"pokemon": [
+				"excadrill",
+				"weavile",
+				"slowbro",
+				"hippowdown",
+				"lavados",
+				"vikavolt",
+				"dragalge",
+				"passimian",
+				"diancie",
+				"exeggutor-alola",
+				"audino"
+			]
 		},
 		{
 			"name": "Dragapult Disco",
 			"player": "Oli",
 			"logo": "dragapult-disco",
-			"pokemon": [""]
+			"pokemon": [
+				"dragapult",
+				"zapdos-galar",
+				"sylveon",
+				"swampert",
+				"bronzong",
+				"darmanitan",
+				"silvally-normal",
+				"whimsicott",
+				"raichu",
+				"garbodor",
+				"sandslash"
+			]
 		},
 		{
-			"name": "Machakey Balboa",
+			"name": "Machoke(y) Balboa",
 			"player": "Felix",
 			"logo": "machakey",
-			"pokemon": [""]
+			"pokemon": [
+				"zeraora",
+				"latias",
+				"tapu-fini",
+				"cobalion",
+				"krookodile",
+				"scolipede",
+				"ninetales",
+				"charizard",
+				"tangela",
+				"glaceon",
+				"machoke"
+			]
 		},
 		{
 			"name": "Pixelspark",
 			"player": "Till",
 			"logo": "pixelspark",
-			"pokemon": [""]
+			"pokemon": [
+				"zygarde-50",
+				"clefable",
+				"skarmory",
+				"blissey",
+				"gyarados",
+				"chandelure",
+				"slowbro-galar",
+				"jolteon",
+				"virizion",
+				"guzzlord",
+				"shuckle"
+			]
 		},
 		{
 			"name": "Zygarde-69%",
 			"player": "Jonas",
 			"logo": "z69",
-			"pokemon": [""]
+			"pokemon": [
+				"ferrothorn",
+				"zapdos-galar",
+				"pelipper",
+				"barraskewda",
+				"bisharp",
+				"seismitoad",
+				"weezing-galar",
+				"corsola-galar",
+				"exploud",
+				"beartic",
+				"lurantis"
+			]
 		},
 		{
 			"name": "Galar Rapidashs",
 			"player": "Philipp",
 			"logo": "galar-rapidashs",
-			"pokemon": [""]
+			"pokemon": [
+				"garchomp",
+				"thundurus-incarnate",
+				"primarina",
+				"blacephalon",
+				"durant",
+				"celebi",
+				"gastrodon",
+				"articuno",
+				"persian-alola",
+				"rapidash-galar",
+				"ninjask"
+			]
 		},
 		{
 			"name": "Atalanta Fletiamo",
 			"player": "Nico",
 			"logo": "atlanta-fletiamo",
-			"pokemon": [""]
+			"pokemon": [
+				"kartana",
+				"urshifu-rapid-strike",
+				"slowking-galar",
+				"volcanion",
+				"mandibuzz",
+				"noivern",
+				"grimmsnarl",
+				"heliolisk",
+				"mudsdale",
+				"cryogonal",
+				"swoobat"
+			]
 		},
 		{
 			"name": "Bellektro Ghetto",
 			"player": "Max",
 			"logo": "bellektro-ghetto-2",
-			"pokemon": [""]
+			"pokemon": [
+				"tornadus-therian",
+				"rillaboom",
+				"toxapex",
+				"lycanroc-dusk",
+				"magnezone",
+				"silvally-fairy",
+				"lucario",
+				"uxie",
+				"slurpuff",
+				"carkol",
+				"malamar"
+			]
 		},
 		{
 			"name": "Triple D Trauma",
 			"player": "Bobex",
 			"logo": "tripled",
-			"pokemon": [""]
+			"pokemon": [
+				"celesteela",
+				"azumarill",
+				"tyranitar",
+				"dracozolt",
+				"tentacruel",
+				"flygon",
+				"tsareena",
+				"escavalier",
+				"aerodactyl",
+				"lycanroc-midday",
+				"dugtrio"
+			]
 		}
 	]
 }
