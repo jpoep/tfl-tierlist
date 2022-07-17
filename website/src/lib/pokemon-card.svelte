@@ -37,29 +37,31 @@
 		return base + '/logos/' + path;
 	};
 
-	changedPokemon.subscribe(async (pokemon) => {
+	$: {
+		const pokemon = $changedPokemon;
 		if (pokemon && pokemon === _pokemon?.id) {
 			$filter = '';
-			await tick();
-			animateTeam = true;
-			scrollIntoView(self);
-			const specialSounds: { [key: string]: string } = {
-				Alex: 'pokescout',
-				Nils: 'ppv',
-				Danny: 'dannex',
-				Oli: 'oli',
-				Till: 'till'
-			};
-			const player = _pokemon.team?.player;
-			if (player) {
-				const specialSound = specialSounds[player];
-				if (specialSound) {
-					new Audio(`/sounds/${specialSound}.mp3`).play().catch(console.log);
+			tick().then(() => {
+				animateTeam = true;
+				scrollIntoView(self);
+				const specialSounds: { [key: string]: string } = {
+					Alex: 'pokescout',
+					Nils: 'ppv',
+					Danny: 'dannex',
+					Oli: 'oli',
+					Till: 'till'
+				};
+				const player = _pokemon.team?.player;
+				if (player) {
+					const specialSound = specialSounds[player];
+					if (specialSound) {
+						new Audio(`/sounds/${specialSound}.mp3`).play().catch(console.log);
+					}
 				}
-			}
-			await new Audio('/sounds/sword-thud.mp3').play().catch(console.log);
+				new Audio('/sounds/sword-thud.mp3').play().catch(console.log);
+			});
 		}
-	});
+	}
 
 	function scrollIntoView(el: HTMLElement | undefined) {
 		el?.scrollIntoView({
