@@ -5,11 +5,11 @@ const r = [
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
-  "/_app/immutable/start-b3226611.js",
+  "/_app/immutable/start-cc82655d.js",
   "/_app/immutable/pages/__layout.svelte-b5be459d.js",
   "/_app/immutable/assets/__layout-1e33ba6f.css",
   "/_app/immutable/error.svelte-30c3d862.js",
-  "/_app/immutable/pages/index.svelte-54a95d2a.js",
+  "/_app/immutable/pages/index.svelte-d5e69968.js",
   "/_app/immutable/assets/index-a6c351a7.css",
   "/_app/immutable/chunks/index-3e568538.js",
   "/_app/immutable/chunks/index-66fd6d2b.js",
@@ -33,31 +33,24 @@ const r = [
   "/logos/atlanta-fletiamo.png",
   "/logos/atlanta-fletiamo.webp",
   "/logos/bellektro-ghetto-2.avif",
-  "/logos/bellektro-ghetto-2.avif~",
   "/logos/bellektro-ghetto-2.jpg",
   "/logos/bellektro-ghetto-2.webp",
-  "/logos/bellektro-ghetto-2.webp~",
   "/logos/bellektro-ghetto.avif",
   "/logos/bellektro-ghetto.png",
   "/logos/bellektro-ghetto.webp",
   "/logos/dragapult-disco.avif",
   "/logos/dragapult-disco.jpg",
   "/logos/dragapult-disco.webp",
-  "/logos/dragapult-disco.webp~",
   "/logos/freddyursa.avif",
   "/logos/freddyursa.jpg",
   "/logos/freddyursa.png",
   "/logos/freddyursa.webp",
   "/logos/galar-rapidashs.avif",
-  "/logos/galar-rapidashs.avif~",
   "/logos/galar-rapidashs.jpg",
   "/logos/galar-rapidashs.webp",
-  "/logos/galar-rapidashs.webp~",
   "/logos/gda-2.avif",
-  "/logos/gda-2.avif~",
   "/logos/gda-2.jpg",
   "/logos/gda-2.webp",
-  "/logos/gda-2.webp~",
   "/logos/gda.avif",
   "/logos/gda.jpg",
   "/logos/gda.png",
@@ -68,7 +61,6 @@ const r = [
   "/logos/machakey.avif",
   "/logos/machakey.jpeg",
   "/logos/machakey.webp",
-  "/logos/machakey.webp~",
   "/logos/miami-heatran.avif",
   "/logos/miami-heatran.png",
   "/logos/miami-heatran.webp",
@@ -96,7 +88,6 @@ const r = [
   "/logos/surging-strikes.png",
   "/logos/surging-strikes.webp",
   "/logos/tripled.avif",
-  "/logos/tripled.avif~",
   "/logos/tripled.jpg",
   "/logos/tripled.webp",
   "/logos/tuspo-salamence.avif",
@@ -115,16 +106,16 @@ const r = [
   "/sounds/sword-thud.mp3",
   "/sounds/till.mp3",
   "/till.png"
-], n = "1657990984041", e = self, g = `cache${n}`, i = r.concat(c.filter((o) => !o.endsWith(".nojekyll"))), u = new Set(i);
+], n = "1658091418272", e = self, i = `cache${n}`, p = r.concat(c.filter((o) => !o.endsWith(".nojekyll"))), u = new Set(p);
 e.addEventListener("install", (o) => {
-  o.waitUntil(caches.open(g).then((s) => s.addAll(i)).then(() => {
+  o.waitUntil(caches.open(i).then((s) => s.addAll(p)).then(() => {
     e.skipWaiting();
   }));
 });
 e.addEventListener("activate", (o) => {
   o.waitUntil(caches.keys().then(async (s) => {
     for (const a of s)
-      a !== g && await caches.delete(a);
+      a !== i && await caches.delete(a);
     e.clients.claim();
   }));
 });
@@ -143,6 +134,6 @@ async function d(o) {
 e.addEventListener("fetch", (o) => {
   if (o.request.method !== "GET" || o.request.headers.has("range"))
     return;
-  const s = new URL(o.request.url), a = s.protocol.startsWith("http"), l = s.hostname === self.location.hostname && s.port !== self.location.port, t = s.host === self.location.host && u.has(s.pathname), p = o.request.cache === "only-if-cached" && !t;
-  a && !l && !p && o.respondWith((async () => (t || s.pathname.startsWith("/PokeAPI/sprites/")) && await caches.match(o.request) || d(o.request))());
+  const s = new URL(o.request.url), a = s.protocol.startsWith("http"), l = s.hostname === self.location.hostname && s.port !== self.location.port, t = s.host === self.location.host && u.has(s.pathname), g = o.request.cache === "only-if-cached" && !t;
+  a && !l && !g && o.respondWith((async () => (t || s.pathname.startsWith("/PokeAPI/sprites/")) && await caches.match(o.request) || d(o.request))());
 });
