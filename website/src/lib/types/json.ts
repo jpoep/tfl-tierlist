@@ -26,8 +26,7 @@ export function transformTeam(team: Omit<Team, 'logo'> & { logo: string }): Team
 		...team,
 		logo: {
 			avif: team.logo + '.avif',
-			webp: team.logo + '.webp',
-			png: team.logo + '.png'
+			webp: team.logo + '.webp'
 		}
 	};
 }

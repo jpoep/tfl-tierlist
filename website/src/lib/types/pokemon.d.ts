@@ -4,7 +4,6 @@ export type Team = {
 	logo: {
 		avif: string;
 		webp: string;
-		png: string;
 	};
 	pokemon: string[];
 };

@@ -84,7 +84,7 @@
 					<picture class:animateTeam>
 						<source srcSet={getImageUrl(pokemon.team.logo.avif)} type="image/avif" />
 						<source srcSet={getImageUrl(pokemon.team.logo.webp)} type="image/webp" />
-						<img src={getImageUrl(pokemon.team.logo.png)} alt={'Logo von ' + pokemon.team.player} />
+						<img src={getImageUrl(pokemon.team.logo.webp)} alt={'Logo von ' + pokemon.team.player} />
 					</picture>
 				</div>
 			</div>
