@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { language } from './stores/store';
+	import { language } from './stores/language';
 	import { tooltip } from '$lib/actions/tooltip';
 	import type { Ability, StatKeys, Stats } from './types/pokemon';
 

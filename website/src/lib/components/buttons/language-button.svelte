@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { language, toggleLanguage } from '$lib/stores/store';
+	import { language, toggleLanguage } from '$lib/stores/language';
 	import { fly } from 'svelte/transition';
 	import { expoOut } from 'svelte/easing';
 

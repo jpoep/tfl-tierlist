@@ -85,7 +85,7 @@
 </script>
 
 <script lang="ts">
-	import { language } from '$lib/stores/store';
+	import { language } from '$lib/stores/language';
 	import type { Type } from './types/pokemon';
 
 	export let type1: Type;

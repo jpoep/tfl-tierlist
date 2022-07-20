@@ -2,7 +2,7 @@
 	import Icon from '@iconify/svelte';
 	import baselineDarkMode from '@iconify-icons/ic/baseline-dark-mode.js';
 	import baselineLightMode from '@iconify-icons/ic/baseline-light-mode.js';
-	import { darkMode } from '$lib/stores/store';
+	import { darkMode } from '$lib/stores/theme';
 </script>
 
 <button on:click={() => ($darkMode = !$darkMode)}>

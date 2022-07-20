@@ -1,4 +1,4 @@
-import { language } from '$lib/stores/store';
+import { language } from '$lib/stores/language';
 import { get } from 'svelte/store';
 import type { Ability, PokemonType, Stats, Team, Typing } from '$lib/types/pokemon';
 

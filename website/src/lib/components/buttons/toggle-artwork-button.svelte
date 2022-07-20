@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ToggleButton from '../toggle-button.svelte';
-	import { officialArtworkEnabled } from '$lib/stores/store';
+	import { officialArtworkEnabled } from '$lib/stores/sprites';
 	import imageIcon from '@iconify-icons/akar-icons/image.js';
 </script>
 

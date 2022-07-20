@@ -5,7 +5,7 @@
 	import ToggleStatsButton from '$lib/components/buttons/toggle-stats-button.svelte';
 	import DarkModeButton from '$lib/components/buttons/dark-mode-button.svelte';
 	import LanguageButton from '$lib/components/buttons/language-button.svelte';
-	import { filter } from '$lib/stores/store';
+	import { filter } from '$lib/stores/filter';
 	import cancelIcon from '@iconify-icons/iconoir/cancel.js';
 	import Icon from '@iconify/svelte';
 	import ToggleArtworkButton from '$lib/components/buttons/toggle-artwork-button.svelte';

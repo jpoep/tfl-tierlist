@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { Pokemon } from './classes/Pokemon';
 	import PokemonTypeComponent from '$lib/pokemon-type.svelte';
-	import { allStatsToggled, filter, officialArtworkEnabled } from '$lib/stores/store';
+	import { allStatsToggled } from '$lib/stores/statToggle';
+	import { filter } from '$lib/stores/filter';
+	import { officialArtworkEnabled } from '$lib/stores/sprites';
 	import { base } from '$app/paths';
 	import PokemonStats from './pokemon-stats.svelte';
 	import { tooltip } from '$lib/actions/tooltip';
@@ -84,7 +86,10 @@
 					<picture class:animateTeam>
 						<source srcSet={getImageUrl(pokemon.team.logo.avif)} type="image/avif" />
 						<source srcSet={getImageUrl(pokemon.team.logo.webp)} type="image/webp" />
-						<img src={getImageUrl(pokemon.team.logo.webp)} alt={'Logo von ' + pokemon.team.player} />
+						<img
+							src={getImageUrl(pokemon.team.logo.webp)}
+							alt={'Logo von ' + pokemon.team.player}
+						/>
 					</picture>
 				</div>
 			</div>
