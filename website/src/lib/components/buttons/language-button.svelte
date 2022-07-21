@@ -11,8 +11,8 @@
 <div class="language-button-wrapper">
 	{#key $language}
 		<div
-			in:fly={{ duration: animationDuration, y: animationDistance, easing: easing }}
-			out:fly={{ duration: animationDuration, y: -animationDistance, easing: easing }}
+			in:fly|local={{ duration: animationDuration, y: animationDistance, easing: easing }}
+			out:fly|local={{ duration: animationDuration, y: -animationDistance, easing: easing }}
 		>
 			<button on:click={toggleLanguage}>{$language.toUpperCase()}</button>
 		</div>
@@ -22,7 +22,7 @@
 <style lang="scss">
 	button {
 		text-align: center;
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 	.language-button-wrapper {
 		display: grid;

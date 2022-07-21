@@ -1,8 +1,8 @@
 {
 	"compilerOptions": {
 		"moduleResolution": "node",
-		"module": "es2020",
-		"lib": ["es2020", "DOM", "WebWorker"],
+		"module": "ESNext",
+		"lib": ["ESNext", "DOM", "WebWorker"],
 		"target": "es2020",
 		"strict": true,
 		/**
@@ -35,6 +35,10 @@
 			"$data/*": ["src/data/*"]
 		}
 	},
+	"ts-node": {
+		"esm": true
+	},
+	"lib": "ESNext",
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"],
 	"extends": "./.svelte-kit/tsconfig.json"
 }

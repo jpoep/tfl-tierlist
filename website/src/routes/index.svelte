@@ -1,7 +1,7 @@
 <script lang="ts">
-	import TierComponent from '$lib/tier.svelte';
+	import TierComponent from '$lib/components/tier.svelte';
 	import { language } from '$lib/stores/language';
-	import { types } from '$lib/pokemon-type.svelte';
+	import { types } from '$lib/components/pokemon-type.svelte';
 	import { filter } from '$lib/stores/filter';
 	import { onMount } from 'svelte';
 	import ScrollTopButton from '$lib/components/buttons/scroll-top-button.svelte';

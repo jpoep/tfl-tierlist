@@ -23,6 +23,7 @@
 		box-shadow: rgba(99, 99, 99, 0.3) 0px 2px 8px 0px;
 	}
 }
+
 :root {
 	--dark-bg: var(--nord0);
 	--dark-bg-raised: var(--nord1);
@@ -192,4 +193,14 @@ button {
 
 .salt {
 	background-color: var(--salt);
+}
+
+main {
+	margin: 0 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+a {
+	text-decoration: none;
+	color: var(--font-color);
 }

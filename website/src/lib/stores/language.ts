@@ -1,5 +1,5 @@
-import { browser } from "$app/env";
-import { type Writable, writable } from "svelte/store";
+import { browser } from '$app/env';
+import { type Writable, writable } from 'svelte/store';
 
 export enum Language {
 	DE = 'de',

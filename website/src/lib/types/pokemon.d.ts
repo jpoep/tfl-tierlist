@@ -8,6 +8,13 @@ export type Team = {
 	pokemon: string[];
 };
 
+export type InflatedTeam = Omit<Team, 'pokemon'> & {
+	// pokemon: Record<string, PokemonTypeWithoutTeam[]>;
+	pokemon: {
+		[key: string]: PokemonTypeWithoutTeam[];
+	};
+};
+
 export type Tier = {
 	name: string;
 	rank: number;
@@ -56,6 +63,8 @@ export type PokemonType = {
 	miniSpriteUrl?: string;
 	pokemonDbUrl?: string;
 };
+
+export type PokemonTypeWithoutTeam = Omit<PokemonType, 'team'>;
 
 export type OptionalPokemonType = {
 	[Property in keyof PokemonType]?: PokemonType[Property];

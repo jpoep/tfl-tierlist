@@ -1,0 +1,114 @@
+{
+	"tiers": [
+		{
+			"name": "S",
+			"subtitles": [
+				"Die dicken Bimmser",
+				"Geile Pokemon und Necrozma",
+				"nice.",
+				"Hier ist es kernig",
+				"👌👀👌👀✔ some good👌👌shit right mMMMMᎷМ 💯 there💦💦"
+			],
+			"rank": 1,
+			"emptyText": "wie schade, dass es hier nichts mehr gibt",
+			"pokemon": [
+				{
+					"internalName": "silvally-fairy",
+					"pokemon": "silvally",
+					"overrides": {
+						"form": {
+							"en": "Fairy",
+							"de": "Fee"
+						},
+						"typing": ["fairy"],
+						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/773-fairy.png"
+					}
+				},
+				{
+					"internalName": "zygarde-10",
+					"pokemon": "zygarde-10",
+					"overrides": {
+						"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10118.png"
+					}
+				},
+				{
+					"internalName": "rick",
+					"pokemon": "primeape",
+					"overrides": {
+						"name": {
+							"en": "Rick",
+							"de": "Rick"
+						},
+						"typing": ["poison", "salt"],
+						"form": {
+							"en": "Dota Forme",
+							"de": "Dota-Form"
+						}
+					}
+				},
+				"azumarill",
+				"tornadus-therian",
+				"salamence",
+				"landorus-therian",
+				"dragonite",
+				"aegislash-shield",
+				"zapdos-galar",
+				"rillaboom",
+				"heatran",
+				"jirachi",
+				"celesteela",
+				"tapu-koko",
+				"kartana",
+				"dragapult",
+				"garchomp",
+				"corviknight",
+				"latias",
+				"latios",
+				"cinderace",
+				"mamoswine",
+				"necrozma",
+				"clefable",
+				"volcarona",
+				"weavile",
+				"excadrill",
+				"ferrothorn",
+				"terrakion",
+				"hydreigon",
+				"victini",
+				"thundurus-incarnate",
+				"thundurus-therian",
+				{
+					"internalName": "shuckle",
+					"pokemon": "shuckle",
+					"overrides": {
+						"pokemonDbUrl": "/till.png"
+					}
+				}
+			],
+			"notes": {
+				"cinderace": {
+					"de": "Ohne Libero",
+					"en": "Libero is banned"
+				},
+				"corviknight": {
+					"de": "yo",
+					"en": "yasdf"
+				}
+			}
+		},
+		{
+			"name": "A",
+			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"],
+			"emptyText": "wie alles rausgefiltert",
+			"rank": 2,
+			"pokemon": ["arcanine", "tornadus-incarnate", "slowking-galar"]
+		},
+		{
+			"name": "B",
+			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"],
+			"emptyText": "wie besonders leer gesucht",
+			"rank": 3,
+			"pokemon": ["tentacruel"]
+		}
+	]
+}
