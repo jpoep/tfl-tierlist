@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	import settings from '@iconify-icons/mdi/cog';
+	import settings from '@iconify-icons/mdi/cog.js';
 	import LanguageButton from '../buttons/language-button.svelte';
 	import DarkModeButton from '../buttons/dark-mode-button.svelte';
 	import ToggleArtworkButton from '../buttons/toggle-artwork-button.svelte';
@@ -16,7 +16,7 @@
 <div
 	class="wrapper"
 	on:click={toggle}
-	on:focusout={toggleOff}
+	on:blur={toggleOff}
 >
 	<button>
 		<Icon icon={settings} />
