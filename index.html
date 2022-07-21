@@ -8,15 +8,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>TFL Tierlist</title>
 		<meta http-equiv="content-security-policy" content="">
-	<link rel="stylesheet" href="/_app/immutable/assets/__layout-1e33ba6f.css">
-	<link rel="stylesheet" href="/_app/immutable/assets/index-a6c351a7.css">
-	<link rel="modulepreload" href="/_app/immutable/start-202c3ecf.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-3e568538.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-66fd6d2b.js">
+	<link rel="stylesheet" href="/_app/immutable/assets/__layout-8495a177.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/navbar-025804c3.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/tooltip-1298881e.css">
+	<link rel="stylesheet" href="/_app/immutable/assets/index-a9104c0d.css">
+	<link rel="modulepreload" href="/_app/immutable/start-83f69449.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-7ce7c74a.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/index-4916a16a.js">
 	<link rel="modulepreload" href="/_app/immutable/chunks/paths-1c47712a.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-b5be459d.js">
-	<link rel="modulepreload" href="/_app/immutable/chunks/index-8456a1b9.js">
-	<link rel="modulepreload" href="/_app/immutable/pages/index.svelte-ed5f5b68.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/__layout.svelte-0e78a8d3.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/navbar-8e02b7db.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/tooltip-8e32afb5.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/sprites-e8bb8e9f.js">
+	<link rel="modulepreload" href="/_app/immutable/chunks/filter-be20cfaa.js">
+	<link rel="modulepreload" href="/_app/immutable/pages/index.svelte-633d67b1.js">
 			<script>
 		if ('serviceWorker' in navigator) {
 			addEventListener('load', function () {
@@ -31,18 +36,16 @@
 
 
 
-<nav class="top-bar svelte-1twi58g"><div class="input-wrapper svelte-1twi58g"><input type="search" placeholder="Nach Pokémon, Typen oder Teams filtern" class="svelte-1twi58g">
-		</div>
-	<div class="spacer svelte-1twi58g"></div>
-	<button class="svelte-64g9kk invert" style="font-size: 2rem;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><!-- HTML_TAG_START --><path fill="currentColor" d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 16H5V5h14v14zM9 17H7v-5h2v5zm4 0h-2V7h2v10zm4 0h-2v-7h2v7z"/><!-- HTML_TAG_END --></svg>
-</button>
-	<button class="svelte-64g9kk invert" style="font-size: 1.7rem;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><!-- HTML_TAG_START --><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M2 6a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v12a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V6Z"/><circle cx="8.5" cy="8.5" r="2.5"/><path d="M14.526 12.621L6 22h12.133A3.867 3.867 0 0 0 22 18.133V18c0-.466-.175-.645-.49-.99l-4.03-4.395a2 2 0 0 0-2.954.006Z"/></g><!-- HTML_TAG_END --></svg>
-</button>
-	<button class="svelte-1cwi06j"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5s5-2.24 5-5s-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0a.996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36a.996.996 0 0 0 0-1.41a.996.996 0 0 0-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/><!-- HTML_TAG_END --></svg>
-</button>
-	<div class="language-button-wrapper svelte-wvk003"><div class="svelte-wvk003"><button class="svelte-wvk003">EN</button></div>
-</div></nav>
-<main class="svelte-1twi58g"><h1 class="svelte-1rptoyp">Tierlist für Season 4 der TFL</h1>
+<nav class="top-bar svelte-19pxswk"><div class="input-wrapper svelte-1t5an7k"><input type="search" placeholder="Nach Pokémon, Typen oder Teams filtern" class="svelte-1t5an7k">
+	
+</div>
+	<span class="svelte-19pxswk"><a href="/teams" sveltekit:prefetch class="svelte-124nba1">Teams</a></span>
+	<div class="wrapper"><button class="svelte-1tu07qy"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden role="img" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><!-- HTML_TAG_START --><path fill="currentColor" d="M12 15.5A3.5 3.5 0 0 1 8.5 12A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5a3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97c0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1c0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/><!-- HTML_TAG_END --></svg></button>
+	
+</div>
+</nav>
+
+<main><h1 class="svelte-1rptoyp">Tierlist für Season 4 der TFL</h1>
 <div class="tier svelte-1ojnhyq"><h2 id="S" class="svelte-1ojnhyq">S <span class="emptyText svelte-1ojnhyq"></span></h2>
 	
 		<p class="tier-subtitle secondary svelte-1ojnhyq">👌👀👌👀✔ some good👌👌shit right mMMMMᎷМ 💯 there💦💦</p>
@@ -538,7 +541,7 @@
 				</div>
 </div><div class="tier svelte-1ojnhyq"><h2 id="A" class="svelte-1ojnhyq">A <span class="emptyText svelte-1ojnhyq"></span></h2>
 	
-		<p class="tier-subtitle secondary svelte-1ojnhyq">Ganz schön Wetter heute</p>
+		<p class="tier-subtitle secondary svelte-1ojnhyq">Auch noch ganz okay I guess</p>
 		<div class="svelte-1ojnhyq">
 			
 			
@@ -3181,7 +3184,7 @@
 				</div>
 </div><div class="tier svelte-1ojnhyq"><h2 id="D" class="svelte-1ojnhyq">D <span class="emptyText svelte-1ojnhyq"></span></h2>
 	
-		<p class="tier-subtitle secondary svelte-1ojnhyq">Immer noch besser als Warsteiner</p>
+		<p class="tier-subtitle secondary svelte-1ojnhyq">Ja! Pizza Salami 3x350g</p>
 		<div class="svelte-1ojnhyq">
 			
 			
@@ -4920,14 +4923,13 @@
 
 
 
-
 </main>
 
 
-		<script type="module" data-sveltekit-hydrate="z1d315">
-		import { start } from "/_app/immutable/start-202c3ecf.js";
+		<script type="module" data-sveltekit-hydrate="pr21c1">
+		import { start } from "/_app/immutable/start-83f69449.js";
 		start({
-			target: document.querySelector('[data-sveltekit-hydrate="z1d315"]').parentNode,
+			target: document.querySelector('[data-sveltekit-hydrate="pr21c1"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -4936,7 +4938,7 @@
 			hydrate: {
 				status: 200,
 				error: null,
-				nodes: [0, 2],
+				nodes: [0, 5],
 				params: {},
 				routeId: ""
 			}
