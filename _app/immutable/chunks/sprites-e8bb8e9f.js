@@ -1,1 +1,0 @@
-import{w as t}from"./index-4916a16a.js";const r=t(localStorage.getItem("officialArtworkEnabled")==="true"||!1);r.subscribe(o=>localStorage.setItem("officialArtworkEnabled",o.toString()));export{r as o};

@@ -1,1 +1,0 @@
-import{w as a}from"./index-4916a16a.js";const o=a();o.subscribe(e=>{const s=new URL(window.location.href);(e==null?void 0:e.length)>0?s.searchParams.set("q",e):s.searchParams.delete("q"),window.history.replaceState(null,"",s.toString())});export{o as f};
