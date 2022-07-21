@@ -9,7 +9,6 @@ export const GET: RequestHandler = async ({ url }) => {
 		body: {
 			tierlist,
 			teams: teams.teams.map(transformTeam),
-			initialFilter: url.searchParams.get('q')
 		},
 		status: 200,
 		headers: { 'Content-Type': 'application/json', 'cache-control': 'public, max-age=3600' }

@@ -1,11 +1,14 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import filterIcon from '@iconify-icons/mdi/filter.js';
+	import Icon from '@iconify/svelte';
 	import { officialArtworkEnabled } from '../stores/sprites.js';
 
 	import type { InflatedTeam, PokemonType } from '../types/pokemon.js';
 
 	export let team: InflatedTeam;
 	export let reverseLogoPosition = false;
+	export let filterButtonEnabled = false;
 
 	const getImageUrl = (path: string) => {
 		return base + '/logos/' + path;
@@ -15,7 +18,12 @@
 		$officialArtworkEnabled ? pokemon.officialArtworkUrl : pokemon.imageUrl;
 </script>
 
-<h2><a href={'/teams/' + team?.player.toLocaleLowerCase()} sveltekit:prefetch>{team?.name}</a></h2>
+<h2>
+	<a href={'/teams/' + team?.player.toLocaleLowerCase()} sveltekit:prefetch>{team?.name}</a>
+	{#if filterButtonEnabled}
+		<a href={`/?q=${encodeURIComponent(team.name)}`}><Icon inline icon={filterIcon} /></a>
+	{/if}
+</h2>
 <h3><a href={'/teams/' + team?.player.toLocaleLowerCase()}>{team?.player}</a></h3>
 <div class="container" class:reversed={reverseLogoPosition}>
 	<div class="mons">

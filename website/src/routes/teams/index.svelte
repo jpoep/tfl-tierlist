@@ -11,7 +11,7 @@
 <div class="container">
 	{#each teams as team, index}
 		<div class="team">
-			<TeamComponent {team} reverseLogoPosition={index % 2 === 1} />
+			<TeamComponent {team} reverseLogoPosition={index % 2 === 1} filterButtonEnabled/>
 		</div>
 	{/each}
 </div>

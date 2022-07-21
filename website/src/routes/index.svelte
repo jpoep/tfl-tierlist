@@ -7,19 +7,21 @@
 	import ScrollTopButton from '$lib/components/buttons/scroll-top-button.svelte';
 	import type { PokemonType, Team, Tier } from '$lib/types/pokemon';
 	import { liveTeams } from '$lib/stores/teams';
+	import { page } from '$app/stores';
 
 	export let tierlist: Tier[];
 	export let teams: Team[];
-	export let initialFilter: string | undefined;
 
 	let currentTeam: Team | undefined;
 
-	$filter = initialFilter || '';
+	$filter = '';
 	$: currentTeam = mergedTeams?.map((team) => team.name).includes($filter)
 		? mergedTeams.find((it) => it.name === $filter)
 		: undefined;
 
 	onMount(() => {
+		const initialFilter = $page.url.searchParams.get('q');
+		$filter = initialFilter || '';
 		window.addEventListener('popstate', () => {
 			$filter = initialFilter || '';
 		});
@@ -27,7 +29,7 @@
 
 	// TODO: the passed static teams is completely ignored. Find a way to combine them.
 	$: mergedTeams = $liveTeams.length > 0 ? $liveTeams : teams;
-	
+
 	const contains = (pokemon: PokemonType, term: string) =>
 		[
 			pokemon.form?.de,
@@ -62,7 +64,6 @@
 		...it,
 		pokemon: it.pokemon.filter((pokemon) => contains(pokemon, $filter))
 	}));
-
 </script>
 
 <h1>Tierlist für Season 4 der TFL</h1>
