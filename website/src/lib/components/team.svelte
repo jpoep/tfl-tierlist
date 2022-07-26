@@ -34,6 +34,7 @@
 						<img
 							src={imageSrc(mon)}
 							alt={mon.name?.en}
+							crossorigin="anonymous"
 							class:pixelated={!$officialArtworkEnabled}
 						/>
 					</div>
