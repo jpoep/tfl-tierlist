@@ -5,18 +5,18 @@ const c = [
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
-  "/_app/immutable/start-02ec581f.js",
+  "/_app/immutable/start-908227ae.js",
   "/_app/immutable/pages/__layout.svelte-7b95c91c.js",
   "/_app/immutable/assets/__layout-8495a177.css",
   "/_app/immutable/error.svelte-a508989b.js",
   "/_app/immutable/pages/__layout-root.svelte-183579a5.js",
   "/_app/immutable/pages/teams/__layout@root.svelte-e55f7fc1.js",
   "/_app/immutable/pages/teams/__layout-single-team@root.svelte-c5d74de2.js",
-  "/_app/immutable/pages/index.svelte-689fafb6.js",
+  "/_app/immutable/pages/index.svelte-0f83cd5c.js",
   "/_app/immutable/assets/index-a9104c0d.css",
-  "/_app/immutable/pages/teams/_team_@single-team.svelte-399a692c.js",
+  "/_app/immutable/pages/teams/_team_@single-team.svelte-90bd2b3d.js",
   "/_app/immutable/assets/[team]@single-team-df96a616.css",
-  "/_app/immutable/pages/teams/index.svelte-3e6fcbb5.js",
+  "/_app/immutable/pages/teams/index.svelte-c42f8d85.js",
   "/_app/immutable/assets/index-fd3525e6.css",
   "/_app/immutable/pages/teams/link.svelte-51e15104.js",
   "/_app/immutable/chunks/index-cd411dc4.js",
@@ -29,7 +29,7 @@ const c = [
   "/_app/immutable/chunks/tooltip-0e141dfe.js",
   "/_app/immutable/assets/tooltip-1298881e.css",
   "/_app/immutable/chunks/baseline-arrow-back-51f093c8.js",
-  "/_app/immutable/chunks/team-6718bacd.js",
+  "/_app/immutable/chunks/team-1953c536.js",
   "/_app/immutable/assets/team-00ff67f5.css"
 ], m = [
   "/.nojekyll",
@@ -122,7 +122,7 @@ const c = [
   "/sounds/sword-thud.mp3",
   "/sounds/till.mp3",
   "/till.png"
-], p = "1658436858880", e = self, n = `cache${p}`, i = c.concat(m.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
+], p = "1658834629509", e = self, n = `cache${p}`, i = c.concat(m.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
 e.addEventListener("install", (s) => {
   s.waitUntil(caches.open(n).then((a) => a.addAll(i)).then(() => {
     e.skipWaiting();
