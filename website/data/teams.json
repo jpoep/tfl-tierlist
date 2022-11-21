@@ -6,18 +6,18 @@
 			"logo": "tuspo-salamence",
 			"pokemon": [
 				"hydreigon",
-				"cinderace",
+				"aegislash-shield",
 				"slowking",
-				"scizor",
+				"buzzwole",
 				"nidoqueen",
 				"rotom-mow",
-				"gardevoir",
+				"silvally-fairy",
 				"lickilicky",
 				"golisopod",
 				"rhydon",
-				"sableye"
+				"swoobat"
 			]
-		},
+			},
 		{
 			"name": "Freddyursa Münster",
 			"player": "Rick",
@@ -30,10 +30,10 @@
 				"mienshao",
 				"entei",
 				"hatterene",
-				"accelgor",
+				"archeops",
 				"palossand",
-				"maractus",
-				"kingler"
+				"trevenant",
+				"barbaracle"
 			]
 		},
 		{
@@ -46,12 +46,12 @@
 				"milotic",
 				"raikou",
 				"incineroar",
-				"klefki",
+				"kingdra",
 				"metagross",
 				"miltank",
 				"ditto",
 				"kadabra",
-				"leafeon"
+				"sawk"
 			]
 		},
 		{
@@ -95,15 +95,15 @@
 			"player": "Alex",
 			"logo": "surging-strikes",
 			"pokemon": [
-				"excadrill",
+				"thundurus-therian",
 				"weavile",
 				"slowbro",
-				"hippowdon",
+				"cobalion",
 				"moltres",
-				"vikavolt",
+				"zygarde-10",
 				"dragalge",
 				"passimian",
-				"diancie",
+				"decidueye",
 				"exeggutor-alola",
 				"audino"
 			]
@@ -134,12 +134,12 @@
 				"zeraora",
 				"latias",
 				"tapu-fini",
-				"cobalion",
+				"tapu-fini",
 				"krookodile",
-				"scolipede",
+				"lucario",
 				"ninetales",
 				"charizard",
-				"tangela",
+				"runerigus",
 				"glaceon",
 				"machoke"
 			]
@@ -171,13 +171,13 @@
 				"zapdos",
 				"pelipper",
 				"barraskewda",
-				"bisharp",
+				"moltres-galar",
 				"seismitoad",
-				"weezing-galar",
-				"corsola-galar",
+				"indeedee-male",
+				"registeel",
 				"exploud",
 				"beartic",
-				"lurantis"
+				"turtonator"
 			]
 		},
 		{
@@ -213,7 +213,7 @@
 				"heliolisk",
 				"mudsdale",
 				"cryogonal",
-				"swoobat"
+				"dusknoir"
 			]
 		},
 		{
@@ -223,11 +223,11 @@
 			"pokemon": [
 				"tornadus-therian",
 				"rillaboom",
-				"toxapex",
+				"diggersby",
 				"lycanroc-dusk",
-				"magnezone",
-				"silvally-fairy",
-				"lucario",
+				"klefki",
+				"vikavolt",
+				"goodra",
 				"uxie",
 				"slurpuff",
 				"carkol",
