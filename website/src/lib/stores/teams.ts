@@ -7,7 +7,7 @@ import type { Response } from '../../../../draft-websocket-server/src/server.js'
 const SERVER_ADDRESS =
 	import.meta.env.VITE_DRAFT_SERVER_URL || 'wss://tfl-draft-server.herokuapp.com';
 
-const isActive = import.meta.env.VITE_IS_DRAFT_SERVER_ACTIVE || false;
+const isActive = import.meta.env.VITE_IS_DRAFT_SERVER_ACTIVE || true;
 
 export const liveTeams = writable<Team[]>([]);
 
