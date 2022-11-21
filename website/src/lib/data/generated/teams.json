@@ -28,36 +28,27 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/hydreigon"
 				},
 				{
-					"typing": ["fire"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/815.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/815.png",
-					"name": { "en": "Cinderace", "de": "Liberlo" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/815.png",
-					"id": "cinderace",
-					"baseStats": { "hp": 80, "atk": 116, "def": 75, "spatk": 65, "spdef": 75, "spd": 119 },
+					"typing": ["steel", "ghost"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/681.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/681.png",
+					"name": { "en": "Aegislash", "de": "Durengard" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/681.png",
+					"form": { "en": "Shield Forme", "de": "Schildform" },
+					"id": "aegislash-shield",
+					"baseStats": { "hp": 60, "atk": 50, "def": 140, "spatk": 50, "spdef": 140, "spd": 60 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Großbrand",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit nur noch 1/3 seiner maximalen hp oder weniger hat, werden all seine fire Attacken verstärkt, so dass sie 1,5× so viel regular damage anrichten wie sonst."
+								"name": "Taktikwechsel",
+								"description": "Lässt aegislash zur Klingenform wechseln, wenn es einen Attacke einsetzt die Schaden verursacht, oder zur Schildform, wenn kings shield eingesetzt wird.\n\nDie Fähigkeit löst auch aus, wenn die Ausführung der Attacke verhindert wird, z.B. durch sleep oder confusion. Die Fähigkeit löst nicht aus bei Attacken die andere Attacken aufrufen, so wie sleep talk, selbst wenn dabei kings shield oder eine Attacke die Schaden verursacht aufgerufen wird.\n\nDie Fähigkeit hat keinen Effekt für Pokémon außer aegislash."
 							},
 							"en": {
-								"name": "Blaze",
-								"description": "When this Pokémon has 1/3 or less of its HP remaining, its fire-type moves inflict 1.5× as much regular damage."
-							}
-						},
-						{
-							"de": {
-								"name": "Libero",
-								"description": "Das Pokémon nimmt bei Einsatz einer Attacke deren\nTyp an."
-							},
-							"en": {
-								"name": "Libero",
-								"description": "Changes the Pokémon’s type to the type of the\nmove it’s about to use."
+								"name": "Stance Change",
+								"description": "Changes aegislash to Blade Forme before using a damaging move, or Shield Forme before using kings shield."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/cinderace"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/aegislash"
 				}
 			],
 			"A": [
@@ -104,46 +95,26 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/slowking"
 				},
 				{
-					"typing": ["bug", "steel"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/212.png",
-					"name": { "en": "Scizor", "de": "Scherox" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/212.png",
-					"id": "scizor",
-					"baseStats": { "hp": 70, "atk": 130, "def": 100, "spatk": 55, "spdef": 80, "spd": 65 },
+					"typing": ["bug", "fighting"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/794.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/794.png",
+					"name": { "en": "Buzzwole", "de": "Masskito" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/794.png",
+					"id": "buzzwole",
+					"baseStats": { "hp": 107, "atk": 139, "def": 139, "spatk": 53, "spdef": 53, "spd": 79 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Hexaplaga",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit nur noch 1/3 seiner maximalen hp oder weniger hat, werden all seine bug Attacken verstärkt, so dass sie 1,5× so viel regular damage anrichten wie sonst.\n\nAußerhalb vom Kampf: Wenn ein Pokémon mit dieser Fähigkeit an erster Stelle im Team steht, ist die Wahrscheinlichkeit einem wilden Pokémon zu begegnen doppelt so hoch wie normal."
+								"name": "Bestien-Boost",
+								"description": "Erhöht in jeder Runde, in der es ein anderes Pokémon\nbesiegt, seinen höchsten Statuswert."
 							},
 							"en": {
-								"name": "Swarm",
-								"description": "When this Pokémon has 1/3 or less of its HP remaining, its bug-type moves inflict 1.5× as much regular damage.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is increased."
-							}
-						},
-						{
-							"de": {
-								"name": "Techniker",
-								"description": "Attacken von Pokémon mit dieser Fähigkeit die eine Stärke von 60 oder weniger haben werden um 50% verstärkt.\n\nDas schließt Attacken mit variabler Stärke, wie hidden power oder magnitude, mit ein, wenn ihre Stärke 60 oder weniger ist. Der Stärke Bonus von helping hand wird miteinberechnet, genauso wie der von defense curl für rollout."
-							},
-							"en": {
-								"name": "Technician",
-								"description": "This Pokémon's moves have 1.5× their power if their base power is 60 or less.\n\nThis includes moves of variable power, such as hidden power and magnitude, when their power is 60 or less.  helping hand's power boost is taken into account for any move, as is defense curl's power boost for rollout."
-							}
-						},
-						{
-							"de": {
-								"name": "Leichtmetall",
-								"description": "Pokémon mit dieser Fähigkeit haben ein halb so hohes Gewicht, wie andere von der selben Spezies."
-							},
-							"en": {
-								"name": "Light Metal",
-								"description": "This Pokémon has half the usual weight for its species."
+								"name": "Beast Boost",
+								"description": "Raises this Pokémon's highest stat by one stage when it faints another Pokémon."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/scizor"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/buzzwole"
 				}
 			],
 			"B": [
@@ -213,46 +184,27 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/rotom"
 				},
 				{
-					"typing": ["psychic", "fairy"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/282.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/282.png",
-					"name": { "en": "Gardevoir", "de": "Guardevoir" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/282.png",
-					"id": "gardevoir",
-					"baseStats": { "hp": 68, "atk": 65, "def": 65, "spatk": 125, "spdef": 115, "spd": 80 },
+					"typing": ["fairy"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/773.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/773.png",
+					"name": { "en": "Silvally", "de": "Amigento" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/773.png",
+					"form": { "en": "Fairy Memory", "de": "Feen-Disc" },
+					"id": "silvally-fairy",
+					"baseStats": { "hp": 95, "atk": 95, "def": 95, "spatk": 95, "spdef": 95, "spd": 95 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Synchro",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit verbrannt, paralysiert oder vergiftet wird, erhält das verantwortliche Pokémon die gleiche status ailment.\n\nDiese Fähigkeit gibt schwere poison als schwere poison zurück. Die Fähigkeit funktioniert nicht bei Statusänderungen die nicht direkt von einem anderen Pokémon erhalten wurden, so wie poison von toxic spikes oder die burn durch flame orb.\n\nAußerhalb vom Kampf: Wenn ein Pokémon mit dieser Fähigkeit an erster Stelle im Team steht, haben wilde Pokémon eine Chance von 50% dasselbe Wesen wie das des Pokémons zu haben. Das gilt nicht für Pokémon die außerhalb von Kämpfen erhalten werden oder sich bewegende Legendäre Pokémon."
+								"name": "Alpha-System",
+								"description": "Das Pokémon passt seinen Typ der getragenen Disc an."
 							},
 							"en": {
-								"name": "Synchronize",
-								"description": "Whenever this Pokémon is burned, paralyzed, or poisoned, the Pokémon who gave this Pokémon that ailment is also given the ailment.\n\nThis ability passes back bad poison when this Pokémon is badly poisoned.  This ability cannot pass on a status ailment that the Pokémon did not directly receive from another Pokémon, such as the poison from toxic spikes or the burn from a flame orb.\n\nOverworld: If the lead Pokémon has this ability, wild Pokémon have a 50% chance of having the lead Pokémon's nature, and a 50% chance of being given a random nature as usual, including the lead Pokémon's nature.  This does not work on Pokémon received outside of battle or roaming legendaries."
-							}
-						},
-						{
-							"de": {
-								"name": "Erfassen",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, kopiert es die Fähigkeit eines zufällig ausgewählten Gegners.\n\nflower gift, forecast, illusion, imposter, multitype, trace, wonder guard und zen mode können nicht kopiert werden."
-							},
-							"en": {
-								"name": "Trace",
-								"description": "When this Pokémon enters battle, it copies a random opponent's ability.\n\nThis ability cannot copy flower gift, forecast, illusion, imposter, multitype, trace, wonder guard, or zen mode."
-							}
-						},
-						{
-							"de": {
-								"name": "Telepathie",
-								"description": "Pokémon mit dieser Fähigkeit erleiden keinen Schaden von Attacken von Teampartnern, inklusive solchen Attacken die nur ein Ziel treffen und direkt auf das Pokémon gerichtet sind."
-							},
-							"en": {
-								"name": "Telepathy",
-								"description": "This Pokémon does not take damage from friendly Pokémon's moves, including single-target moves aimed at it."
+								"name": "RKS System",
+								"description": "Changes this Pokémon's type to match its held Memory.\n\nThis ability cannot be copied, replaced, or nullified.  This ability only takes effect for Silvally."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/gardevoir"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/silvally"
 				}
 			],
 			"C": [
@@ -365,46 +317,46 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/rhydon"
 				},
 				{
-					"typing": ["dark", "ghost"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/302.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/302.png",
-					"name": { "en": "Sableye", "de": "Zobiris" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/302.png",
-					"id": "sableye",
-					"baseStats": { "hp": 50, "atk": 75, "def": 75, "spatk": 65, "spdef": 65, "spd": 50 },
+					"typing": ["psychic", "flying"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/528.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/528.png",
+					"name": { "en": "Swoobat", "de": "Fletiamo" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/528.png",
+					"id": "swoobat",
+					"baseStats": { "hp": 67, "atk": 57, "def": 55, "spatk": 77, "spdef": 55, "spd": 114 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Adlerauge",
-								"description": "Pokémon mit dieser Fähigkeit kann die accuracy nicht gesenkt werden.\n\nDie Fähigkeit verhindert nur direkte Statuswertveränderungen, der Genauigkeitsverlust durch fog wird nicht verhindert, auch nicht das Erhöhen des Fluchtwerts des Gegners. Pokémon mit dieser Fähigkeit kann trotzdem negative accuracy durch heart swap übertragen werden.\n\nAußerhalb vom Kampf: Wenn das erste Pokémon im Team diese Fähigkeit hat, dann hat jede Begegnung mit einem Pokémon das 5 oder mehr Level niedriger ist, eine Chance von 50% übersprungen zu werden."
+								"name": "Unkenntnis",
+								"description": "Pokémon mit dieser Fähigkeit ignorieren die stat modifier der Gegner bei der Berechnung des Schadens und der accuracy.\n\nDies beeinflusst effektiv alle Änderungen der Statuswerte außer speed.\n\nDie Stärke von punishment und stored power wird normal berechnet. Wenn sich das Pokémon wegen confusion selbst verletzt, beeinflussen die stat modifier den Schaden wie sonst auch."
 							},
 							"en": {
-								"name": "Keen Eye",
-								"description": "This Pokémon cannot have its accuracy lowered.\n\nThis ability does not prevent any accuracy losses other than stat modifiers, such as the accuracy cut from fog; nor does it prevent other Pokémon's evasion from making this Pokémon's moves less accurate.  This Pokémon can still be passed negative accuracy modifiers through heart swap.\n\nOverworld: If the first Pokémon in the party has this ability, any random encounter with a Pokémon five or more levels lower than it has a 50% chance of being skipped."
+								"name": "Unaware",
+								"description": "This Pokémon ignores other Pokémon's stat modifiers for the purposes of damage and accuracy calculation.\n\nEffectively, this affects modifiers of every stat except Speed.\n\nThe power of punishment and stored power is calculated as usual.  When this Pokémon hurts itself in confusion, its stat modifiers affect damage as usual."
 							}
 						},
 						{
 							"de": {
-								"name": "Zeitspiel",
-								"description": "Attacken dieses Pokémon kommen zu letzt ohne dabei die Prioritäten der Attacken zu umgehen.\n\nMehrere Pokémon mit dieser Fähigkeit greifen in Reihenfolge ihrer speed an.\n\nfull incense und lagging tail erhalten den Vortritt zur Fähigkeit, was bedeutet, dass Pokémon mit diesen Items nach Pokémon mit dieser Fähigkeit agieren. Pokémon mit dieser Fähigkeit und eines der Items werden nur so viel verzögert, als hätten sie nur das Item.\n\nDiese Fähigkeit funktioniert normal während trick room, Pokémon mit dieser Fähigkeit greifen in umgekehrter Reihenfolge der speed nach den Pokémon ohne die Fähigkeit an."
+								"name": "Tollpatsch",
+								"description": "Pokémon mit dieser Fähigkeit können im Kampf keine getragenen Items benutzen und diese haben auch keine passiven Effekte im Kampf, egal ob positiv oder negativ. Das Pokémon kann fling nicht einsetzen.\n\nDer speed Malus einer iron ball und die EV Items (macho brace, power weight, power bracer, power belt, power lens, power band und power anklet) sind nicht betroffen. Items die den Kampf nicht direkt beeinflussen, wie der exp share, das amulet coin oder die soothe bell, funktionieren normal. Alle getragenen Items funktionieren normal außerhalb von Kämpfen.\n\nAndere Attacken die getragene Items verwenden, wie z.B. natural gift und switcheroo, funktionieren ebenfalls normal."
 							},
 							"en": {
-								"name": "Stall",
-								"description": "This Pokémon moves last within its priority bracket.\n\nMultiple Pokémon with this ability move in order of Speed amongst themselves.\n\nThe full incense and lagging tail take precedence over this ability; that is, Pokémon with these items move after Pokémon with this ability.  Pokémon with both this ability and one of these items are delayed as much as if they had only the item.\n\nThis ability works as usual during trick room: Pokémon with this ability will move in reverse order of Speed after Pokémon without it."
+								"name": "Klutz",
+								"description": "In battle, this Pokémon cannot use its held item, nor will the item have any passive effect on the battle, positive or negative.  This Pokémon also cannot use fling.\n\nThe Speed cut from the iron ball and the effort items (the macho brace, power weight, power bracer, power belt, power lens, power band, and power anklet) is unaffected.  Items that do not directly affect the battle, such as the exp share, the amulet coin, or the soothe bell, work as usual.  All held items work as usual out of battle.\n\nOther moves that use the held item, such as natural gift and switcheroo, work as usual."
 							}
 						},
 						{
 							"de": {
-								"name": "Strolch",
-								"description": "Wenn ein Pokémon diese Fähigkeit hat, erhöht sich die priority seiner Attacken die keinen Schaden anrichten um 1 Stufe."
+								"name": "Wankelmut",
+								"description": "Jede Stufe einer Statuswerte-Änderung agiert als 2 Stufen. Diese Doppelstufen sind trotzdem limitiert auf ein Minimum von -6 und ein Maximum von 6.\n\nPokémon mit dieser Fähigkeit können trotzdem weniger als -3 oder mehr als 3 Stufen erhalten, aber die zusätzlichen Stufen haben nach der Verdoppelung keinen Effekt."
 							},
 							"en": {
-								"name": "Prankster",
-								"description": "This Pokémon's non-damaging moves have their priority increased by one stage."
+								"name": "Simple",
+								"description": "Each stage of this Pokémon's stat modifiers acts as two stages.  These doubled stages are still limited to a minimum of -6 and a maximum of 6.\n\nThis Pokémon can still accumulate less than -3 or more than 3 stages of stat modifiers, even though the extra ones have no effect after doubling."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/sableye"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/swoobat"
 				}
 			]
 		}
@@ -668,46 +620,27 @@
 			],
 			"C": [
 				{
-					"typing": ["bug"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/617.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/617.png",
-					"name": { "en": "Accelgor", "de": "Hydragil" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/617.png",
-					"id": "accelgor",
-					"baseStats": { "hp": 80, "atk": 70, "def": 40, "spatk": 100, "spdef": 60, "spd": 145 },
+					"typing": ["rock", "flying"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/567.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/567.png",
+					"name": { "en": "Archeops", "de": "Aeropteryx" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/567.png",
+					"id": "archeops",
+					"baseStats": { "hp": 75, "atk": 140, "def": 65, "spatk": 112, "spdef": 65, "spd": 110 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Hydration",
-								"description": "Pokémon mit dieser Fähigkeit werden am Ende jeder Runde von major status ailment geheilt wenn es regnet."
+								"name": "Schwächling",
+								"description": "Der attack und die special attack eines Pokémon mit dieser Fähigkeit werden halbiert, wenn es nur noch 50% oder weniger seiner maximalen hp hat."
 							},
 							"en": {
-								"name": "Hydration",
-								"description": "This Pokémon is cured of any major status ailment after each turn during rain."
-							}
-						},
-						{
-							"de": {
-								"name": "Klebekörper",
-								"description": "Einem Pokémon mit dieser Fähigkeit kann ein getragenes Item nicht gestohlen werden.\n\nAttacken die Schaden verursachen und Items entfernen verursachen immer noch Schaden, z.B. knock off oder pluck. Das Pokémon kann trotzdem Attacken einsetzen die eigene Items entfernen, wie z.B. fling oder trick.\n\nAußerhalb vom Kampf: Wenn ein Pokémon mit dieser Fähigkeit an erster Stelle im Team steht, erhöht sich die Erfolgsrate beim Angeln."
-							},
-							"en": {
-								"name": "Sticky Hold",
-								"description": "This Pokémon's hold item cannot be removed by other Pokémon.\n\nDamaging moves that would remove this Pokémon's item can still inflict damage against this Pokémon, e.g. knock off or pluck.  This Pokémon can still use moves that involve the loss of its own item, e.g. fling or trick.\n\nOverworld: If the lead Pokémon has this ability, the encounter rate while fishing is increased."
-							}
-						},
-						{
-							"de": {
-								"name": "Entlastung",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit ein getragenes Item benutzt oder verliert, wird seine speed verdoppelt. Wenn es ein neues Item erhält oder den Kampf verlässt, erlischt der Bonus.\n\nDas passiert auch, wenn das Item durch knock off fallengelassen wird. Der Bonus zählt nicht als Statuswert-Änderung. Es gibt keine Benachrichtigung wenn der Effekt eintritt."
-							},
-							"en": {
-								"name": "Unburden",
-								"description": "When this Pokémon uses or loses its held item, its Speed is doubled.  If it gains another item or leaves battle, this bonus is lost.\n\nThis includes when the Pokémon drops its item because of knock off.  This bonus does not count as a stat modifier.  There is no notification when this ability takes effect."
+								"name": "Defeatist",
+								"description": "This Pokémon's Attack and Special Attack are halved when it has half its HP or less."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/accelgor"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/archeops",
+					"notes": { "de": "Von D nach C gewandert", "en": "Von D nach C gewandert" }
 				},
 				{
 					"typing": ["ghost", "ground"],
@@ -744,88 +677,88 @@
 			],
 			"D": [
 				{
-					"typing": ["grass"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/556.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/556.png",
-					"name": { "en": "Maractus", "de": "Maracamba" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/556.png",
-					"id": "maractus",
-					"baseStats": { "hp": 75, "atk": 86, "def": 67, "spatk": 106, "spdef": 67, "spd": 60 },
+					"typing": ["ghost", "grass"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/709.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/709.png",
+					"name": { "en": "Trevenant", "de": "Trombork" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/709.png",
+					"id": "trevenant",
+					"baseStats": { "hp": 85, "atk": 110, "def": 76, "spatk": 65, "spdef": 82, "spd": 56 },
 					"abilities": [
 						{
 							"de": {
-								"name": "H2O-Absorber",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer water Attacke getroffen wird, wird es um 1/4 seiner maximalen hp geheilt. Jeder andere Effekt der Attacke wird ignoriert.\n\nwater Attacken ignorieren den substitute dieses Pokémons."
+								"name": "Innere Kraft",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit ausgewechselt wird, wird es von einer etwaigen major status ailment geheilt.\n\nWenn diese Fähigkeit während des Kampfes erlangt wird, wird das Pokémon beim Auswechseln geheilt, bevor es die Fähigkeit wieder verliert."
 							},
 							"en": {
-								"name": "Water Absorb",
-								"description": "Whenever a water-type move hits this Pokémon, it heals for 1/4 of its maximum HP, negating any other effect on it.\n\nWater moves will ignore this Pokémon's substitute."
+								"name": "Natural Cure",
+								"description": "This Pokémon is cured of any major status ailment when it is switched out for another Pokémon.\n\nIf this ability is acquired during battle, the Pokémon is cured upon leaving battle before losing the temporary ability."
 							}
 						},
 						{
 							"de": {
-								"name": "Chlorophyll",
-								"description": "Während strong sunlight ist die speed eines Pokémon mit dieser Fähigkeit doppelt so hoch wie normal.\n\nDieser Bonus zählt nicht als stat modifier."
+								"name": "Schnüffler",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, wird allen Trainern mitgeteilt, welches Item der Gegner hält.\n\nWenn bei Mehrfachkämpfen ein Gegner ein Item hält, wird dieses angezeigt, wenn mehr ein Item halten wird ein zufälliges angekündigt."
 							},
 							"en": {
-								"name": "Chlorophyll",
-								"description": "This Pokémon's Speed is doubled during strong sunlight.\n\nThis bonus does not count as a stat modifier."
+								"name": "Frisk",
+								"description": "When this Pokémon enters battle, it reveals an opposing Pokémon's held item to all participating trainers.\n\nIn a double battle, if one opponent has an item, this Pokémon will Frisk that Pokémon; if both have an item, it will Frisk one at random."
 							}
 						},
 						{
 							"de": {
-								"name": "Sturmsog",
-								"description": "Alle water Attacken von anderen Pokémon mit nur einem Ziel werden auf das Pokémon mit dieser Fähigkeit umgeleitet, wenn es ein mögliches Ziel ist. water die dieses Pokémon treffen erhöhen seinen special attack um eine Stufe, wobei jeder andere Effekt entfernt wird. Die Attacke kann außerdem nicht daneben gehen.\n\nWenn das eigentliche Ziel der Attacke die Fähigkeit ebenfalls hat, wird die Attacke nicht umgeleitet. Wenn mehrere Pokémon mit dieser Fähigkeit mögliche Ziele sind, wird die Attacke zu dem mit der höchsten speed, oder, bei Gleichstand, zu einem zufälligen Pokémon umgeleitet. follow me erhält vor dieser Fähigkeit den Vorzug."
+								"name": "Reiche Ernte",
+								"description": "Pokémon mit dieser Fähigkeit haben nach jeder Runde eine Chance von 50% eine verbrauchte Beere wiederherzustellen, wenn das letzte verbrauchte Item eine Beere war und es gerade kein Item trägt. Bei starkem Sonnenlicht ist die Chance 100%."
 							},
 							"en": {
-								"name": "Storm Drain",
-								"description": "All other Pokémon's single-target water-type moves are redirected to this Pokémon, if it is an eligible target.  Other Pokémon's Water moves raise this Pokémon's Special Attack one stage, negating any other effect on it, and cannot miss it.\n\nIf the move's intended target also has this ability, the move is not redirected.  When multiple Pokémon with this ability are possible targets for redirection, the move is redirected to the one with the highest Speed stat, or, in the case of a tie, to a random tied Pokémon.  follow me takes precedence over this ability."
+								"name": "Harvest",
+								"description": "After each turn, if the last item this Pokémon consumed was a Berry and it is not currently holding an item, it has a 50% chance of regaining that Berry, or a 100% chance during strong sunlight."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/maractus"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/trevenant"
 				},
 				{
-					"typing": ["water"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/99.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/99.png",
-					"name": { "en": "Kingler", "de": "Kingler" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/99.png",
-					"id": "kingler",
-					"baseStats": { "hp": 55, "atk": 130, "def": 115, "spatk": 50, "spdef": 50, "spd": 75 },
+					"typing": ["rock", "water"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/689.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/689.png",
+					"name": { "en": "Barbaracle", "de": "Thanathora" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/689.png",
+					"id": "barbaracle",
+					"baseStats": { "hp": 72, "atk": 105, "def": 115, "spatk": 54, "spdef": 86, "spd": 68 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Scherenmacht",
-								"description": "Pokémon mit dieser Fähigkeit kann der attack nicht gesenkt werden.\n\nDie Fähigkeit verhindert nur Statuswertveränderungen, der verminderte attack durch burn wird nicht verhindert. Pokémon mit dieser Fähigkeit können trotzdem negative accuracy durch heart swap oder power swap übertragen werden."
+								"name": "Krallenwucht",
+								"description": "Die Attacken von Pokémon mit dieser Fähigkeit, die Konakt herstellen, haben eine 1,33× Basisstärke wie sonst."
 							},
 							"en": {
-								"name": "Hyper Cutter",
-								"description": "This Pokémon's Attack cannot be lowered by other Pokémon.\n\nThis ability does not prevent any Attack losses other than stat modifiers, such as the Attack cut from a burn.  This Pokémon can still be passed negative Attack modifiers through heart swap or power swap."
+								"name": "Tough Claws",
+								"description": "Strengthens moves that make contact to 1.33× their power."
 							}
 						},
 						{
 							"de": {
-								"name": "Panzerhaut",
-								"description": "Attacken können keinen kritischen Treffer landen.\n\nDiese Fähigkeit ist identisch mit battle armor."
+								"name": "Superschütze",
+								"description": "Pokémon mit dieser Fähigkeit verursachen bei kritischen Treffern 3× so viel Schaden anstatt 2× wie sonst."
 							},
 							"en": {
-								"name": "Shell Armor",
-								"description": "Moves cannot score critical hits against this Pokémon.\n\nThis ability functions identically to battle armor."
+								"name": "Sniper",
+								"description": "This Pokémon inflicts triple damage with critical hits, rather than the usual double damage."
 							}
 						},
 						{
 							"de": {
-								"name": "Rohe Gewalt",
-								"description": "Attacken von Pokémon mit dieser Fähigkeit die Zusatzeffekte haben, haben 1,3× so viel Basisstärke wie normal, dafür aber keinen Zusatzeffekt.\n\nEin Zusatzeffekt ist die Chance einer Attacke, als \"Effektchance\" bezeichnet, eine status ailment oder eine stat modifier hervorzurufen oder das Ziel zurückschrecken zu lassen, zusätzlich zum Haupteffekt einer Attacke. Zum Beispiel ist die paralysis die thunder shock verursachen kann ein Zusatzeffekt, im Gegensatz zu thunder wave, genauso wie das Entfernen des Items durch knock off und die erhöhte kritische Trefferchance durch air cutter.\n\nAttacken die einen Statuswert des Anwenders senken sind nicht betroffen."
+								"name": "Langfinger",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer Attacke getroffen wird die Kontakt herstellt, wird das vom Angreifer getragene Item auf das getroffene Pokémon übertragen, wenn dieses noch keins hält.\n\nDas Pokémon stiehlt nicht, wenn es besiegt wird. Es kann auch stehlen, wenn der Angreifer einen substitute hat, aber nicht wenn der eigene getroffen wird. Wenn eine Attacke mehrmals trifft, löst nur der letzte Treffer die Fähigkeit aus. Wenn das Pokémon ein wildes ist, kann es kein Item stehlen."
 							},
 							"en": {
-								"name": "Sheer Force",
-								"description": "This Pokémon's moves with extra effects have 1.3× their power, but lose their extra effects.\n\nAn effect chance is a move's chance to inflict a status ailment, cause a stat change, or make the target flinch in addition to the move's main effect. For example, thunder shock's paralysis is an extra effect, but thunder wave's is not, nor are knock off's item removal and air cutter's increased critical hit rate.\n\nMoves that lower the user's stats are unaffected."
+								"name": "Pickpocket",
+								"description": "Whenever a move makes contact with this Pokémon, if it does not have a held item, it steals the attacker's held item.\n\nThis Pokémon cannot steal upon being knocked out.  It can steal if the attacker has a substitute, but cannot steal when its own Substitute is hit.  If a move hits multiple times, only the last hit triggers this ability.  If this Pokémon is wild, it cannot steal from a trained Pokémon."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/kingler"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/barbaracle"
 				}
 			]
 		}
@@ -990,36 +923,46 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/incineroar"
 				},
 				{
-					"typing": ["steel", "fairy"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/707.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/707.png",
-					"name": { "en": "Klefki", "de": "Clavion" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/707.png",
-					"id": "klefki",
-					"baseStats": { "hp": 57, "atk": 80, "def": 91, "spatk": 80, "spdef": 87, "spd": 75 },
+					"typing": ["water", "dragon"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/230.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/230.png",
+					"name": { "en": "Kingdra", "de": "Seedraking" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/230.png",
+					"id": "kingdra",
+					"baseStats": { "hp": 75, "atk": 95, "def": 95, "spatk": 95, "spdef": 95, "spd": 85 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Strolch",
-								"description": "Wenn ein Pokémon diese Fähigkeit hat, erhöht sich die priority seiner Attacken die keinen Schaden anrichten um 1 Stufe."
+								"name": "Wassertempo",
+								"description": "Die speed eines Pokémon mit dieser Fähigkeit ist doppelt so hoch wie normal, solange es regnet.\n\nDieser Bonus zählt nicht als stat modifier."
 							},
 							"en": {
-								"name": "Prankster",
-								"description": "This Pokémon's non-damaging moves have their priority increased by one stage."
+								"name": "Swift Swim",
+								"description": "This Pokémon's Speed is doubled during rain.\n\nThis bonus does not count as a stat modifier."
 							}
 						},
 						{
 							"de": {
-								"name": "Zauberer",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer Attacke getroffen wird die Schaden verursacht, wird das vom Angreifer getragene Item auf das getroffene Pokémon übertragen, wenn dieses noch keins hält.\n\nDas Pokémon stiehlt nicht, wenn es besiegt wird. Es kann auch stehlen, wenn der Angreifer einen substitute hat, aber nicht wenn der eigene getroffen wird. Wenn eine Attacke mehrmals trifft, löst nur der letzte Treffer die Fähigkeit aus. Wenn das Pokémon ein wildes ist, kann es kein Item stehlen."
+								"name": "Superschütze",
+								"description": "Pokémon mit dieser Fähigkeit verursachen bei kritischen Treffern 3× so viel Schaden anstatt 2× wie sonst."
 							},
 							"en": {
-								"name": "Magician",
-								"description": "Steals the target's held item when the bearer uses a damaging move."
+								"name": "Sniper",
+								"description": "This Pokémon inflicts triple damage with critical hits, rather than the usual double damage."
+							}
+						},
+						{
+							"de": {
+								"name": "Feuchtigkeit",
+								"description": "Wenn sich ein Pokémon mit dieser Fähigkeit im Kampf befindet, schlagen die Attacken self destruct und explosion fehl und aftermath hat keinen Effekt."
+							},
+							"en": {
+								"name": "Damp",
+								"description": "While this Pokémon is in battle, self destruct and explosion will fail and aftermath will not take effect."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/klefki"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/kingdra"
 				},
 				{
 					"typing": ["steel", "psychic"],
@@ -1171,36 +1114,43 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/kadabra"
 				},
 				{
-					"typing": ["grass"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/470.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/470.png",
-					"name": { "en": "Leafeon", "de": "Folipurba" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/470.png",
-					"id": "leafeon",
-					"baseStats": { "hp": 65, "atk": 110, "def": 130, "spatk": 60, "spdef": 65, "spd": 95 },
+					"typing": ["fighting"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/539.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/539.png",
+					"name": { "en": "Sawk", "de": "Karadonis" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/539.png",
+					"id": "sawk",
+					"baseStats": { "hp": 75, "atk": 125, "def": 75, "spatk": 30, "spdef": 75, "spd": 85 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Floraschild",
-								"description": "Pokémon mit dieser Fähigkeit können während starkem Sonnenlicht keine major status ailments erleiden.\n\nDie Fähigkeit heilt keine major status ailments. rest schlägt fehl während die Fähigkeit aktiv ist. yawn schlägt sofort fehl wenn es während starkem Sonnenlicht gegen ein Pokémon mit dieser Fähigkeit benutzt wird und ein bereits eingesetzter yawn schlägt fehl, wenn sich das weather zu starkem Sonnenlicht ändert."
+								"name": "Robustheit",
+								"description": "Wenn das Pokémon volle hp hat, lässt jeder Treffer der das Pokémon besiegt hätte ein hp übrig. Das Pokémon ist immun gegen die K.O.-Attacken fissure, guillotine, horn drill und sheer cold.\n\nHält das Pokémon ein focus sash, hat die Fähigkeit Vorrang und das Item wird nicht verbraucht."
 							},
 							"en": {
-								"name": "Leaf Guard",
-								"description": "This Pokémon cannot be given a major status ailment during strong sunlight.\n\nThis ability does not heal prior status ailments.  rest will fail altogether with this ability in effect.  yawn will immediately fail if used on this Pokémon during strong sunlight, and an already-used Yawn will fail if the weather turns to strong sunlight in the meantime."
+								"name": "Sturdy",
+								"description": "When this Pokémon is at full HP, any hit that would knock it out will instead leave it with 1 HP.  Regardless of its current HP, it is also immune to the one-hit KO moves: fissure, guillotine, horn drill, and sheer cold.\n\nIf this Pokémon is holding a focus sash, this ability takes precedence and the item will not be consumed."
 							}
 						},
 						{
 							"de": {
-								"name": "Chlorophyll",
-								"description": "Während strong sunlight ist die speed eines Pokémon mit dieser Fähigkeit doppelt so hoch wie normal.\n\nDieser Bonus zählt nicht als stat modifier."
+								"name": "Konzentrator",
+								"description": "Ein Pokémon mit dieser Fähigkeit kann nicht zurückschrecken."
+							},
+							"en": { "name": "Inner Focus", "description": "This Pokémon cannot flinch." }
+						},
+						{
+							"de": {
+								"name": "Überbrückung",
+								"description": "Die Attacken von Pokémon mit dieser Fähigkeit ignorieren Fähigkeiten, die die Attacke am Funktionieren hindern oder ihre Effekte beeinflussen.\n\nBeispiel: Die Attacken ignorieren Fähigkeiten die sie komplett verhindern würden, wie water absorb, Fähigkeiten die einen der Effekte verhindern würden, wie z.B. clear body, shell armor oder sticky hold und Fähigkeiten die einen generellen schützenden Vorteil brächten, wie simple, snow cloak oder thick fat. Wenn eine Fähigkeit die Attacke behindern oder ihr helfen würde, wie dry skin oder unaware, wird sie ebenfalls ignoriert.\n\nFähigkeiten die dieser Beschreibung nicht entsprechen, selbst wenn sie eine Attacke behindern könnten, werden nicht verhindert. Zum Beispiel beeinflusst cursed body nur mögliche zukünftige Anwendungen der Attacke, während liquid ooze und shadow tag nur den Effekt der Attacke auf den Anwender verhindern. Die Attacke kann keine Typ- oder Form-Änderungen verhindern die durch Fähigkeiten ausgelöst werden, zum Beispiel color change oder forecast, genauso wie Effekte die von Fähigkeiten verursacht wurden aber nicht mehr an die Fähigkeit gebunden sind, so wie der rain von drizzle. Die Fähigkeit kann multitype nicht verhindern.\n\nEine Fähigkeit die von dieser Fähigkeit ignoriert wird, wird nur überbrückt, während die Attacke eingesetzt wird. Beispiel: Die Attacken von Pokémon mit dieser Fähigkeit können ein Pokémon mit limber paralysieren aber limber wird sich aktivieren und die Paralyse direkt danach heilen. Außerdem werden die Stacheln dieses Pokémons nicht von dieser Fähigkeit beeinflusst, nachdem sie platziert wurden.\n\nWenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, werden alle Trainer über diese Fähigkeit benachrichtigt.\n\nDie Fähigkeit ist identisch mit teravolt und turboblaze."
 							},
 							"en": {
-								"name": "Chlorophyll",
-								"description": "This Pokémon's Speed is doubled during strong sunlight.\n\nThis bonus does not count as a stat modifier."
+								"name": "Mold Breaker",
+								"description": "This Pokémon's moves completely ignore abilities that could hinder or prevent their effect on the target.\n\nFor example, this Pokémon's moves ignore abilities that would fully negate them, such as water absorb; abilities that would prevent any of their effects, such as clear body, shell armor, or sticky hold; and abilities that grant any general protective benefit, such as simple, snow cloak, or thick fat.  If an ability could either hinder or help this Pokémon's moves, e.g. dry skin or unaware, the ability is ignored either way.\n\nAbilities that do not fit this description, even if they could hinder moves in some other way, are not affected.  For example, cursed body only affects potential future uses of the move, while liquid ooze and shadow tag can only hinder a move's effect on the user.  This ablity cannot ignore type or form changes granted by abilities, for example color change or forecast; nor effects that were caused by abilities but are no longer tied to an ability, such as the rain from drizzle.  This ability cannot ignore multitype at all.\n\nAn ability ignored by this ability is only nullified while the move is being used.  For example, this Pokémon's moves can paralyze a Pokémon with limber, but Limber will activate and heal the paralysis immediately thereafter, and this Pokémon's spikes are not affected by this ability after they have been placed.\n\nWhen this Pokémon enters battle, all participating trainers are notified that it has this ability.\n\nThis ability functions identically to teravolt and turboblaze."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/leafeon"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/sawk"
 				}
 			]
 		}
@@ -1972,46 +1922,27 @@
 		"pokemon": {
 			"S": [
 				{
-					"typing": ["ground", "steel"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/530.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/530.png",
-					"name": { "en": "Excadrill", "de": "Stalobor" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/530.png",
-					"id": "excadrill",
-					"baseStats": { "hp": 110, "atk": 135, "def": 60, "spatk": 50, "spdef": 65, "spd": 88 },
+					"typing": ["electric", "flying"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10020.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10020.png",
+					"name": { "en": "Thundurus", "de": "Voltolos" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/642-therian.png",
+					"form": { "en": "Therian Forme", "de": "Tiergeistform" },
+					"id": "thundurus-therian",
+					"baseStats": { "hp": 79, "atk": 105, "def": 70, "spatk": 145, "spdef": 80, "spd": 101 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Sandscharrer",
-								"description": "Pokémon mit dieser Fähigkeit erleiden im sandstorm unabhängig von ihrem Typ keinen Schaden und ihre speed wird verdoppelt, solange der sandstorm anhält."
+								"name": "Voltabsorber",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer electric Attacke getroffen wird, wird es um 1/4 seiner maximalen hp geheilt. Jeder andere Effekt der Attacke wird ignoriert.\n\nDie Fähigkeit wirkt nicht, wenn das Pokémon vom Typ ground ist. electric Attacken ignorieren den substitute dieses Pokémons.\n\nDer Effekt gilt auch für Attacken die keinen Schaden verursachen, wie z.B. thunder wave."
 							},
 							"en": {
-								"name": "Sand Rush",
-								"description": "This Pokémon's Speed is doubled during a sandstorm, and it does not take sandstorm damage, regardless of type."
-							}
-						},
-						{
-							"de": {
-								"name": "Sandgewalt",
-								"description": "Die rock, ground und steel Attacken von Pokémon mit dieser Fähigkeit haben während eines Sandsturms 1,3× so viel Basisstärke wie sonst. Das Pokémon erleidet keinen Schaden durch Sandstürme, unabhängig von seinem Typ."
-							},
-							"en": {
-								"name": "Sand Force",
-								"description": "During a sandstorm, this Pokémon's rock-, ground-, and steel-type moves have 1.3× their base power.  This Pokémon does not take sandstorm damage, regardless of type."
-							}
-						},
-						{
-							"de": {
-								"name": "Überbrückung",
-								"description": "Die Attacken von Pokémon mit dieser Fähigkeit ignorieren Fähigkeiten, die die Attacke am Funktionieren hindern oder ihre Effekte beeinflussen.\n\nBeispiel: Die Attacken ignorieren Fähigkeiten die sie komplett verhindern würden, wie water absorb, Fähigkeiten die einen der Effekte verhindern würden, wie z.B. clear body, shell armor oder sticky hold und Fähigkeiten die einen generellen schützenden Vorteil brächten, wie simple, snow cloak oder thick fat. Wenn eine Fähigkeit die Attacke behindern oder ihr helfen würde, wie dry skin oder unaware, wird sie ebenfalls ignoriert.\n\nFähigkeiten die dieser Beschreibung nicht entsprechen, selbst wenn sie eine Attacke behindern könnten, werden nicht verhindert. Zum Beispiel beeinflusst cursed body nur mögliche zukünftige Anwendungen der Attacke, während liquid ooze und shadow tag nur den Effekt der Attacke auf den Anwender verhindern. Die Attacke kann keine Typ- oder Form-Änderungen verhindern die durch Fähigkeiten ausgelöst werden, zum Beispiel color change oder forecast, genauso wie Effekte die von Fähigkeiten verursacht wurden aber nicht mehr an die Fähigkeit gebunden sind, so wie der rain von drizzle. Die Fähigkeit kann multitype nicht verhindern.\n\nEine Fähigkeit die von dieser Fähigkeit ignoriert wird, wird nur überbrückt, während die Attacke eingesetzt wird. Beispiel: Die Attacken von Pokémon mit dieser Fähigkeit können ein Pokémon mit limber paralysieren aber limber wird sich aktivieren und die Paralyse direkt danach heilen. Außerdem werden die Stacheln dieses Pokémons nicht von dieser Fähigkeit beeinflusst, nachdem sie platziert wurden.\n\nWenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, werden alle Trainer über diese Fähigkeit benachrichtigt.\n\nDie Fähigkeit ist identisch mit teravolt und turboblaze."
-							},
-							"en": {
-								"name": "Mold Breaker",
-								"description": "This Pokémon's moves completely ignore abilities that could hinder or prevent their effect on the target.\n\nFor example, this Pokémon's moves ignore abilities that would fully negate them, such as water absorb; abilities that would prevent any of their effects, such as clear body, shell armor, or sticky hold; and abilities that grant any general protective benefit, such as simple, snow cloak, or thick fat.  If an ability could either hinder or help this Pokémon's moves, e.g. dry skin or unaware, the ability is ignored either way.\n\nAbilities that do not fit this description, even if they could hinder moves in some other way, are not affected.  For example, cursed body only affects potential future uses of the move, while liquid ooze and shadow tag can only hinder a move's effect on the user.  This ablity cannot ignore type or form changes granted by abilities, for example color change or forecast; nor effects that were caused by abilities but are no longer tied to an ability, such as the rain from drizzle.  This ability cannot ignore multitype at all.\n\nAn ability ignored by this ability is only nullified while the move is being used.  For example, this Pokémon's moves can paralyze a Pokémon with limber, but Limber will activate and heal the paralysis immediately thereafter, and this Pokémon's spikes are not affected by this ability after they have been placed.\n\nWhen this Pokémon enters battle, all participating trainers are notified that it has this ability.\n\nThis ability functions identically to teravolt and turboblaze."
+								"name": "Volt Absorb",
+								"description": "Whenever an electric-type move hits this Pokémon, it heals for 1/4 of its maximum HP, negating any other effect on it.\n\nThis ability will not take effect if this Pokémon is ground-type and thus immune to Electric moves.  Electric moves will ignore this Pokémon's substitute.\n\nThis effect includes non-damaging moves, i.e. thunder wave."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/excadrill"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/thundurus"
 				},
 				{
 					"typing": ["dark", "ice"],
@@ -2090,36 +2021,26 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/slowbro"
 				},
 				{
-					"typing": ["ground"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/450.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/450.png",
-					"name": { "en": "Hippowdon", "de": "Hippoterus" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/450.png",
-					"id": "hippowdon",
-					"baseStats": { "hp": 108, "atk": 112, "def": 118, "spatk": 68, "spdef": 72, "spd": 47 },
+					"typing": ["steel", "fighting"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/638.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/638.png",
+					"name": { "en": "Cobalion", "de": "Kobalium" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/638.png",
+					"id": "cobalion",
+					"baseStats": { "hp": 91, "atk": 90, "def": 129, "spatk": 90, "spdef": 72, "spd": 108 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Sandsturm",
-								"description": "Das weather ändert sich zu sandstorm wenn ein Pokémon mit dieser Fähigkeit den Kampf betritt und hört erst auf, wenn es von einem anderen weather abgelöst wird.\n\nWenn mehrere Pokémon mit dieser Fähigkeit, drizzle, drought oder snow warning zur selben Zeit den Kampf betreten, werden die Fähigkeiten nach Reihenfolge der speed der Pokémon ausgelöst, unter Berücksichtigung von trick room.\n\nAußerhalb vom Kampf: Wenn ein Pokémon mit dieser Fähigkeit an erster Stelle im Team steht, tauchen im Sandsturm nur halb so viele Pokémon auf."
+								"name": "Redlichkeit",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer dark Attacke getroffen wird, wird sein attack um 1 Stufe erhöht.\n\nDie Attacke wird nicht beeinflusst."
 							},
 							"en": {
-								"name": "Sand Stream",
-								"description": "The weather changes to a sandstorm when this Pokémon enters battle and does not end unless cancelled by another weather condition.\n\nIf multiple Pokémon with this ability, drizzle, drought, or snow warning are sent out at the same time, the abilities will activate in order of Speed, respecting trick room.  Each ability's weather will cancel the previous weather, and only the weather summoned by the slowest of the Pokémon will stay.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is halved in a sandstorm."
-							}
-						},
-						{
-							"de": {
-								"name": "Sandgewalt",
-								"description": "Die rock, ground und steel Attacken von Pokémon mit dieser Fähigkeit haben während eines Sandsturms 1,3× so viel Basisstärke wie sonst. Das Pokémon erleidet keinen Schaden durch Sandstürme, unabhängig von seinem Typ."
-							},
-							"en": {
-								"name": "Sand Force",
-								"description": "During a sandstorm, this Pokémon's rock-, ground-, and steel-type moves have 1.3× their base power.  This Pokémon does not take sandstorm damage, regardless of type."
+								"name": "Justified",
+								"description": "Whenever a dark-type move hits this Pokémon, its Attack rises one stage.\n\nThe move is not negated in any way."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/hippowdon"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/cobalion"
 				}
 			],
 			"B": [
@@ -2156,26 +2077,28 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/moltres"
 				},
 				{
-					"typing": ["bug", "electric"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/738.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/738.png",
-					"name": { "en": "Vikavolt", "de": "Donarion" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/738.png",
-					"id": "vikavolt",
-					"baseStats": { "hp": 77, "atk": 70, "def": 90, "spatk": 145, "spdef": 75, "spd": 43 },
+					"typing": ["dragon", "ground"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10118.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10118.png",
+					"name": { "en": "Zygarde", "de": "Zygarde" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/718-10.png",
+					"form": { "en": "10% Forme", "de": "10%-Form" },
+					"id": "zygarde-10",
+					"baseStats": { "hp": 54, "atk": 100, "def": 71, "spatk": 61, "spdef": 85, "spd": 115 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Schwebe",
-								"description": "Ein Pokémon mit dieser Fähigkeit ist immun gegen ground Attacken, spikes, toxic spikes und arena trap.\n\nDiese Fähigkeit wird mit gravity oder ingrain deaktiviert oder während eine iron ball getragen wird. roost deaktiviert diese Fähigkeit nicht."
+								"name": "Aura-Umkehr",
+								"description": "Wenn sich ein Pokémon mit dieser Fähigkeit im Kampf befindet, werden die Attacken die normalerweise durch dark aura und fairy aura verstärkt werden, stattdessen um 2/3 Basisstärke gesenkt."
 							},
 							"en": {
-								"name": "Levitate",
-								"description": "This Pokémon is immune to ground-type moves, spikes, toxic spikes, and arena trap.\n\nThis ability is disabled during gravity or ingrain, or while holding an iron ball.  This ability is not disabled during roost."
+								"name": "Aura Break",
+								"description": "While this Pokémon is on the field, dark aura and fairy aura weaken moves of their respective types to 2/3 their power, rather than strengthening them."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/vikavolt"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/zygarde",
+					"notes": { "de": "Ohne Scharwandel", "en": "Ohne Power Construct" }
 				},
 				{
 					"typing": ["poison", "dragon"],
@@ -2254,26 +2177,36 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/passimian"
 				},
 				{
-					"typing": ["rock", "fairy"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/719.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/719.png",
-					"name": { "en": "Diancie", "de": "Diancie" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/719.png",
-					"id": "diancie",
-					"baseStats": { "hp": 50, "atk": 100, "def": 150, "spatk": 100, "spdef": 150, "spd": 50 },
+					"typing": ["grass", "ghost"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/724.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/724.png",
+					"name": { "en": "Decidueye", "de": "Silvarro" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/724.png",
+					"id": "decidueye",
+					"baseStats": { "hp": 78, "atk": 107, "def": 75, "spatk": 100, "spdef": 100, "spd": 70 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Neutraltorso",
-								"description": "Pokémon mit dieser Fähigkeit können keine negativen Statuswerte Änderungen von anderen Pokémon zugefügt werden.\n\nDiese Fähigkeit verhindert keine stat modifier die nicht direkt verursacht wurden, wie die verminderte speed durch paralysis oder selbstverursachte negative Statuswerteänderungen wie durch overheat. Dem Pokémon können trotzdem negative Statuswerte mit guard swap, heart swap oder power swap übertragen werden.\n\nDiese Fähigkeit ist identisch mit white smoke im Kampf."
+								"name": "Notdünger",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit nur noch 1/3 seiner maximalen hp oder weniger hat, werden all seine grass Attacken verstärkt, so dass sie 1,5× so viel regular damage anrichten wie sonst."
 							},
 							"en": {
-								"name": "Clear Body",
-								"description": "This Pokémon cannot have its stats lowered by other Pokémon.\n\nThis ability does not prevent any stat losses other than stat modifiers, such as the Speed cut from paralysis.  This Pokémon can still be passed negative stat modifiers through guard swap, heart swap, or power swap.\n\nThis ability functions identically to white smoke in battle."
+								"name": "Overgrow",
+								"description": "When this Pokémon has 1/3 or less of its HP remaining, its grass-type moves inflict 1.5× as much regular damage."
+							}
+						},
+						{
+							"de": {
+								"name": "Langstrecke",
+								"description": "Ermöglicht dem Pokémon den Einsatz aller seiner\nAttacken, ohne das Ziel dabei direkt zu berühren."
+							},
+							"en": {
+								"name": "Long Reach",
+								"description": "A move used by this Pokémon will not make contact."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/diancie"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/decidueye"
 				}
 			],
 			"D": [
@@ -2832,26 +2765,36 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/tapu-fini"
 				},
 				{
-					"typing": ["steel", "fighting"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/638.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/638.png",
-					"name": { "en": "Cobalion", "de": "Kobalium" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/638.png",
-					"id": "cobalion",
-					"baseStats": { "hp": 91, "atk": 90, "def": 129, "spatk": 90, "spdef": 72, "spd": 108 },
+					"typing": ["water", "fairy"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/788.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/788.png",
+					"name": { "en": "Tapu Fini", "de": "Kapu-Kime" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/788.png",
+					"id": "tapu-fini",
+					"baseStats": { "hp": 70, "atk": 75, "def": 115, "spatk": 95, "spdef": 130, "spd": 85 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Redlichkeit",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer dark Attacke getroffen wird, wird sein attack um 1 Stufe erhöht.\n\nDie Attacke wird nicht beeinflusst."
+								"name": "Nebel-Erzeuger",
+								"description": "Erzeugt bei Kampfantritt ein Nebelfeld."
 							},
 							"en": {
-								"name": "Justified",
-								"description": "Whenever a dark-type move hits this Pokémon, its Attack rises one stage.\n\nThe move is not negated in any way."
+								"name": "Misty Surge",
+								"description": "When this Pokémon enters battle, it changes the terrain to misty terrain."
+							}
+						},
+						{
+							"de": {
+								"name": "Telepathie",
+								"description": "Pokémon mit dieser Fähigkeit erleiden keinen Schaden von Attacken von Teampartnern, inklusive solchen Attacken die nur ein Ziel treffen und direkt auf das Pokémon gerichtet sind."
+							},
+							"en": {
+								"name": "Telepathy",
+								"description": "This Pokémon does not take damage from friendly Pokémon's moves, including single-target moves aimed at it."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/cobalion"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/tapu-fini"
 				}
 			],
 			"B": [
@@ -2898,47 +2841,43 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/krookodile"
 				},
 				{
-					"typing": ["bug", "poison"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/545.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/545.png",
-					"name": { "en": "Scolipede", "de": "Cerapendra" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/545.png",
-					"id": "scolipede",
-					"baseStats": { "hp": 60, "atk": 100, "def": 89, "spatk": 55, "spdef": 69, "spd": 112 },
+					"typing": ["fighting", "steel"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png",
+					"name": { "en": "Lucario", "de": "Lucario" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/448.png",
+					"id": "lucario",
+					"baseStats": { "hp": 70, "atk": 110, "def": 70, "spatk": 115, "spdef": 70, "spd": 90 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Giftdorn",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer Attacke mit Kontakt getroffen wird, besteht eine 30% Chance den Angreifer zu vergiften."
+								"name": "Felsenfest",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit zurückschreckt, wird seine speed um 1 Stufe erhöht."
 							},
 							"en": {
-								"name": "Poison Point",
-								"description": "Whenever a move makes contact with this Pokémon, the move's user has a 30% chance of being poisoned."
+								"name": "Steadfast",
+								"description": "Whenever this Pokémon flinches, its Speed rises one stage."
 							}
 						},
 						{
 							"de": {
-								"name": "Hexaplaga",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit nur noch 1/3 seiner maximalen hp oder weniger hat, werden all seine bug Attacken verstärkt, so dass sie 1,5× so viel regular damage anrichten wie sonst.\n\nAußerhalb vom Kampf: Wenn ein Pokémon mit dieser Fähigkeit an erster Stelle im Team steht, ist die Wahrscheinlichkeit einem wilden Pokémon zu begegnen doppelt so hoch wie normal."
+								"name": "Konzentrator",
+								"description": "Ein Pokémon mit dieser Fähigkeit kann nicht zurückschrecken."
 							},
-							"en": {
-								"name": "Swarm",
-								"description": "When this Pokémon has 1/3 or less of its HP remaining, its bug-type moves inflict 1.5× as much regular damage.\n\nOverworld: If the lead Pokémon has this ability, the wild encounter rate is increased."
-							}
+							"en": { "name": "Inner Focus", "description": "This Pokémon cannot flinch." }
 						},
 						{
 							"de": {
-								"name": "Temposchub",
-								"description": "Die speed des Pokémon erhöht sich jede Runde um 1 Stufe."
+								"name": "Redlichkeit",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer dark Attacke getroffen wird, wird sein attack um 1 Stufe erhöht.\n\nDie Attacke wird nicht beeinflusst."
 							},
 							"en": {
-								"name": "Speed Boost",
-								"description": "This Pokémon's Speed rises one stage after each turn."
+								"name": "Justified",
+								"description": "Whenever a dark-type move hits this Pokémon, its Attack rises one stage.\n\nThe move is not negated in any way."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/scolipede",
-					"notes": { "de": "Von A nach B gewandert", "en": "Von A nach B gewandert" }
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/lucario"
 				},
 				{
 					"typing": ["fire"],
@@ -3007,46 +2946,26 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/charizard"
 				},
 				{
-					"typing": ["grass"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/114.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/114.png",
-					"name": { "en": "Tangela", "de": "Tangela" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/114.png",
-					"id": "tangela",
-					"baseStats": { "hp": 65, "atk": 55, "def": 115, "spatk": 100, "spdef": 40, "spd": 60 },
+					"typing": ["ground", "ghost"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/867.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/867.png",
+					"name": { "en": "Runerigus", "de": "Oghnatoll" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/867.png",
+					"id": "runerigus",
+					"baseStats": { "hp": 58, "atk": 95, "def": 145, "spatk": 50, "spdef": 105, "spd": 30 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Chlorophyll",
-								"description": "Während strong sunlight ist die speed eines Pokémon mit dieser Fähigkeit doppelt so hoch wie normal.\n\nDieser Bonus zählt nicht als stat modifier."
+								"name": "Rastlose Seele",
+								"description": "Wird das Pokémon von einer direkten Attacke\ngetroffen, tauscht es seine Fähigkeit mit der des\nAngreifers."
 							},
 							"en": {
-								"name": "Chlorophyll",
-								"description": "This Pokémon's Speed is doubled during strong sunlight.\n\nThis bonus does not count as a stat modifier."
-							}
-						},
-						{
-							"de": {
-								"name": "Floraschild",
-								"description": "Pokémon mit dieser Fähigkeit können während starkem Sonnenlicht keine major status ailments erleiden.\n\nDie Fähigkeit heilt keine major status ailments. rest schlägt fehl während die Fähigkeit aktiv ist. yawn schlägt sofort fehl wenn es während starkem Sonnenlicht gegen ein Pokémon mit dieser Fähigkeit benutzt wird und ein bereits eingesetzter yawn schlägt fehl, wenn sich das weather zu starkem Sonnenlicht ändert."
-							},
-							"en": {
-								"name": "Leaf Guard",
-								"description": "This Pokémon cannot be given a major status ailment during strong sunlight.\n\nThis ability does not heal prior status ailments.  rest will fail altogether with this ability in effect.  yawn will immediately fail if used on this Pokémon during strong sunlight, and an already-used Yawn will fail if the weather turns to strong sunlight in the meantime."
-							}
-						},
-						{
-							"de": {
-								"name": "Belebekraft",
-								"description": "Pokémon mit dieser Fähigkit heilen 1/3 ihrer maximalen hp, wenn sie aus irgend einem anderen Grund als besiegt zu werden ausgewechselt werden.\n\nDie Fähigkeit löst nicht aus, wenn der Kampf endet."
-							},
-							"en": {
-								"name": "Regenerator",
-								"description": "This Pokémon regains 1/3 of its maximum HP when it is switched out for another Pokémon under any circumstances other than having fainted.\n\nThis ability does not take effect when a battle ends."
+								"name": "Wandering Spirit",
+								"description": "The Pokémon exchanges Abilities with a Pokémon\nthat hits it with a move that makes direct contact."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/tangela"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/runerigus"
 				}
 			],
 			"D": [
@@ -3679,43 +3598,27 @@
 			],
 			"B": [
 				{
-					"typing": ["dark", "steel"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/625.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/625.png",
-					"name": { "en": "Bisharp", "de": "Caesurio" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/625.png",
-					"id": "bisharp",
-					"baseStats": { "hp": 65, "atk": 125, "def": 100, "spatk": 60, "spdef": 70, "spd": 70 },
+					"typing": ["dark", "flying"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10171.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10171.png",
+					"name": { "en": "Moltres", "de": "Lavados" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/146-galar.png",
+					"form": { "en": "Galarian Form", "de": "Galar-Form" },
+					"id": "moltres-galar",
+					"baseStats": { "hp": 90, "atk": 85, "def": 90, "spatk": 100, "spdef": 125, "spd": 90 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Siegeswille",
-								"description": "Wenn ein Statuswert eines Pokémon mit dieser Fähigkeit gesenkt wird, wird sein attack um 2 Stufen erhöht.\n\nWenn mehrere Statuswerte gesenkt löst die Fähigkeit für jeden Statuswert aus."
+								"name": "Wutausbruch",
+								"description": "Fallen seine KP nach einem Angriff auf die Hälfte des\nMaximalwerts oder weniger, steigt sein Spezial-Angriff."
 							},
 							"en": {
-								"name": "Defiant",
-								"description": "When any of this Pokémon's stats are lowered, its Attack rises by two stages.\n\nIf multiple stats are lowered at once, this ability takes effect with each stat lowered."
-							}
-						},
-						{
-							"de": {
-								"name": "Konzentrator",
-								"description": "Ein Pokémon mit dieser Fähigkeit kann nicht zurückschrecken."
-							},
-							"en": { "name": "Inner Focus", "description": "This Pokémon cannot flinch." }
-						},
-						{
-							"de": {
-								"name": "Erzwinger",
-								"description": "Attacken die ein Pokémon mit dieser Fähigkeit zum Ziel haben, kosten 1 pp mehr als sonst.\n\nDie Fähigkeit löst für jeden Treffer von Attacken die öfters treffen aus. Die Fähigkeit löst auch bei Attacken aus die fehlschlagen oder daneben gehen. Der Effekt zählt nicht für Attacken desselben Teams die das Ganze Feld oder nur die eigene Seite treffen, sowie die eigenen Attacken die sich selbst treffen. Der Effekt löst dafür bei Attacken von Teammitgliedern aus die nur das Pokémon mit dieser Fähigkeit zum Ziel haben, die alle anderen zum Ziel haben und Attacken von Gegnern die das ganze Feld treffen. Wenn diese Fähigkeit die Kosten auf einen Wert erhöht, der die verbleibenden pp übersteigt, wird es alle verbrauchen.\n\nWenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, werden alle Trainer über diese Fähigkeit benachrichtigt.\n\nAußerhalb vom Kampf: Wenn ein Pokémon mit dieser Fähigkeit an erster Stelle im Team steht, tauchen Pokémon mit einem höheren Level häufiger auf."
-							},
-							"en": {
-								"name": "Pressure",
-								"description": "Moves targetting this Pokémon use one extra PP.\n\nThis ability stacks if multiple targets have it.  This ability still affects moves that fail or miss.  This ability does not affect ally moves that target either the entire field or just its side, nor this Pokémon's self-targetted moves; it does, however, affect single-targetted ally moves aimed at this Pokémon, ally moves that target all other Pokémon, and opponents' moves that target the entire field.  If this ability raises a move's PP cost above its remaining PP, it will use all remaining PP.\n\nWhen this Pokémon enters battle, all participating trainers are notified that it has this ability.\n\nOverworld: If the lead Pokémon has this ability, higher-levelled Pokémon have their encounter rate increased."
+								"name": "Berserk",
+								"description": "Whenever this Pokémon takes damage from a move that causes its HP to drop below 50%, its Special Attack rises by one stage."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/bisharp"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/moltres"
 				},
 				{
 					"typing": ["water", "ground"],
@@ -3760,82 +3663,78 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/seismitoad"
 				},
 				{
-					"typing": ["poison", "fairy"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10167.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10167.png",
-					"name": { "en": "Weezing", "de": "Smogmog" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/110-galar.png",
-					"form": { "en": "Galarian Form", "de": "Galar-Form" },
-					"id": "weezing-galar",
-					"baseStats": { "hp": 65, "atk": 90, "def": 120, "spatk": 85, "spdef": 70, "spd": 60 },
+					"typing": ["psychic", "normal"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/876.png",
+					"name": { "en": "Indeedee", "de": "Servol" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/876.png",
+					"form": { "en": "Male", "de": "Männlich" },
+					"id": "indeedee-male",
+					"baseStats": { "hp": 60, "atk": 65, "def": 55, "spatk": 105, "spdef": 95, "spd": 95 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Schwebe",
-								"description": "Ein Pokémon mit dieser Fähigkeit ist immun gegen ground Attacken, spikes, toxic spikes und arena trap.\n\nDiese Fähigkeit wird mit gravity oder ingrain deaktiviert oder während eine iron ball getragen wird. roost deaktiviert diese Fähigkeit nicht."
+								"name": "Konzentrator",
+								"description": "Ein Pokémon mit dieser Fähigkeit kann nicht zurückschrecken."
+							},
+							"en": { "name": "Inner Focus", "description": "This Pokémon cannot flinch." }
+						},
+						{
+							"de": {
+								"name": "Synchro",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit verbrannt, paralysiert oder vergiftet wird, erhält das verantwortliche Pokémon die gleiche status ailment.\n\nDiese Fähigkeit gibt schwere poison als schwere poison zurück. Die Fähigkeit funktioniert nicht bei Statusänderungen die nicht direkt von einem anderen Pokémon erhalten wurden, so wie poison von toxic spikes oder die burn durch flame orb.\n\nAußerhalb vom Kampf: Wenn ein Pokémon mit dieser Fähigkeit an erster Stelle im Team steht, haben wilde Pokémon eine Chance von 50% dasselbe Wesen wie das des Pokémons zu haben. Das gilt nicht für Pokémon die außerhalb von Kämpfen erhalten werden oder sich bewegende Legendäre Pokémon."
 							},
 							"en": {
-								"name": "Levitate",
-								"description": "This Pokémon is immune to ground-type moves, spikes, toxic spikes, and arena trap.\n\nThis ability is disabled during gravity or ingrain, or while holding an iron ball.  This ability is not disabled during roost."
+								"name": "Synchronize",
+								"description": "Whenever this Pokémon is burned, paralyzed, or poisoned, the Pokémon who gave this Pokémon that ailment is also given the ailment.\n\nThis ability passes back bad poison when this Pokémon is badly poisoned.  This ability cannot pass on a status ailment that the Pokémon did not directly receive from another Pokémon, such as the poison from toxic spikes or the burn from a flame orb.\n\nOverworld: If the lead Pokémon has this ability, wild Pokémon have a 50% chance of having the lead Pokémon's nature, and a 50% chance of being given a random nature as usual, including the lead Pokémon's nature.  This does not work on Pokémon received outside of battle or roaming legendaries."
 							}
 						},
 						{
 							"de": {
-								"name": "Reaktionsgas",
-								"description": "Solange ein Pokémon mit der Fähigkeit Reaktionsgas\nam Kampf beteiligt ist, werden die Fähigkeiten aller\nanderen Pokémon unterdrückt oder aufgehoben."
+								"name": "Psycho-Erzeuger",
+								"description": "Erzeugt bei Kampfantritt ein Psychofeld."
 							},
 							"en": {
-								"name": "Neutralizing Gas",
-								"description": "If the Pokémon with Neutralizing Gas is in the battle,\nthe effects of all Pokémon’s Abilities will be nullified\nor will not be triggered."
-							}
-						},
-						{
-							"de": {
-								"name": "Nebel-Erzeuger",
-								"description": "Erzeugt bei Kampfantritt ein Nebelfeld."
-							},
-							"en": {
-								"name": "Misty Surge",
-								"description": "When this Pokémon enters battle, it changes the terrain to misty terrain."
+								"name": "Psychic Surge",
+								"description": "When this Pokémon enters battle, it changes the terrain to psychic terrain."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/weezing"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/indeedee"
 				}
 			],
 			"C": [
 				{
-					"typing": ["ghost"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10173.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10173.png",
-					"name": { "en": "Corsola", "de": "Corasonn" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-viii/icons/222-galar.png",
-					"form": { "en": "Galarian Form", "de": "Galar-Form" },
-					"id": "corsola-galar",
-					"baseStats": { "hp": 60, "atk": 55, "def": 100, "spatk": 65, "spdef": 100, "spd": 30 },
+					"typing": ["steel"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/379.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/379.png",
+					"name": { "en": "Registeel", "de": "Registeel" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/379.png",
+					"id": "registeel",
+					"baseStats": { "hp": 80, "atk": 75, "def": 150, "spatk": 75, "spdef": 150, "spd": 50 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Bruchrüstung",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer physischen Attacke getroffen wird, wird seine speed um eine Stufe erhöht und seine defense um 1 Stufe gesenkt.\n\nAttacken die mehrmals treffen lösen bei jedem Treffer diese Fähigkeit aus."
+								"name": "Neutraltorso",
+								"description": "Pokémon mit dieser Fähigkeit können keine negativen Statuswerte Änderungen von anderen Pokémon zugefügt werden.\n\nDiese Fähigkeit verhindert keine stat modifier die nicht direkt verursacht wurden, wie die verminderte speed durch paralysis oder selbstverursachte negative Statuswerteänderungen wie durch overheat. Dem Pokémon können trotzdem negative Statuswerte mit guard swap, heart swap oder power swap übertragen werden.\n\nDiese Fähigkeit ist identisch mit white smoke im Kampf."
 							},
 							"en": {
-								"name": "Weak Armor",
-								"description": "Whenever a physical move hits this Pokémon, its Speed rises one stage and its Defense falls one stage.\n\nThis ability triggers on every hit of a multiple-hit move."
+								"name": "Clear Body",
+								"description": "This Pokémon cannot have its stats lowered by other Pokémon.\n\nThis ability does not prevent any stat losses other than stat modifiers, such as the Speed cut from paralysis.  This Pokémon can still be passed negative stat modifiers through guard swap, heart swap, or power swap.\n\nThis ability functions identically to white smoke in battle."
 							}
 						},
 						{
 							"de": {
-								"name": "Tastfluch",
-								"description": "Attacken die ein Pokémon mit dieser Fähigkeit treffen, haben eine 30% Chance blockiert zu werden."
+								"name": "Leichtmetall",
+								"description": "Pokémon mit dieser Fähigkeit haben ein halb so hohes Gewicht, wie andere von der selben Spezies."
 							},
 							"en": {
-								"name": "Cursed Body",
-								"description": "Moves that hit this Pokémon have a 30% chance of being Disabled afterward."
+								"name": "Light Metal",
+								"description": "This Pokémon has half the usual weight for its species."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/corsola"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/registeel"
 				},
 				{
 					"typing": ["normal"],
@@ -3911,36 +3810,26 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/beartic"
 				},
 				{
-					"typing": ["grass"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/754.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/754.png",
-					"name": { "en": "Lurantis", "de": "Mantidea" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/754.png",
-					"id": "lurantis",
-					"baseStats": { "hp": 70, "atk": 105, "def": 90, "spatk": 80, "spdef": 90, "spd": 45 },
+					"typing": ["fire", "dragon"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/776.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/776.png",
+					"name": { "en": "Turtonator", "de": "Tortunator" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/776.png",
+					"id": "turtonator",
+					"baseStats": { "hp": 60, "atk": 78, "def": 135, "spatk": 91, "spdef": 85, "spd": 36 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Floraschild",
-								"description": "Pokémon mit dieser Fähigkeit können während starkem Sonnenlicht keine major status ailments erleiden.\n\nDie Fähigkeit heilt keine major status ailments. rest schlägt fehl während die Fähigkeit aktiv ist. yawn schlägt sofort fehl wenn es während starkem Sonnenlicht gegen ein Pokémon mit dieser Fähigkeit benutzt wird und ein bereits eingesetzter yawn schlägt fehl, wenn sich das weather zu starkem Sonnenlicht ändert."
+								"name": "Panzerhaut",
+								"description": "Attacken können keinen kritischen Treffer landen.\n\nDiese Fähigkeit ist identisch mit battle armor."
 							},
 							"en": {
-								"name": "Leaf Guard",
-								"description": "This Pokémon cannot be given a major status ailment during strong sunlight.\n\nThis ability does not heal prior status ailments.  rest will fail altogether with this ability in effect.  yawn will immediately fail if used on this Pokémon during strong sunlight, and an already-used Yawn will fail if the weather turns to strong sunlight in the meantime."
-							}
-						},
-						{
-							"de": {
-								"name": "Umkehrung",
-								"description": "Wenn ein Statuswert eines Pokémons mit dieser Fähigkeit erhöht werden würde, wird er stattdessen um die selbe Anzahl Stufen gesenkt"
-							},
-							"en": {
-								"name": "Contrary",
-								"description": "Whenever this Pokémon's stats would be raised, they are instead lowered by the same amount, and vice versa."
+								"name": "Shell Armor",
+								"description": "Moves cannot score critical hits against this Pokémon.\n\nThis ability functions identically to battle armor."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/lurantis"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/turtonator"
 				}
 			]
 		}
@@ -4697,46 +4586,36 @@
 					"pokemonDbUrl": "https://pokemondb.net/pokedex/cryogonal"
 				},
 				{
-					"typing": ["psychic", "flying"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/528.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/528.png",
-					"name": { "en": "Swoobat", "de": "Fletiamo" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/528.png",
-					"id": "swoobat",
-					"baseStats": { "hp": 67, "atk": 57, "def": 55, "spatk": 77, "spdef": 55, "spd": 114 },
+					"typing": ["ghost"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/477.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/477.png",
+					"name": { "en": "Dusknoir", "de": "Zwirrfinst" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/477.png",
+					"id": "dusknoir",
+					"baseStats": { "hp": 45, "atk": 100, "def": 135, "spatk": 65, "spdef": 135, "spd": 45 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Unkenntnis",
-								"description": "Pokémon mit dieser Fähigkeit ignorieren die stat modifier der Gegner bei der Berechnung des Schadens und der accuracy.\n\nDies beeinflusst effektiv alle Änderungen der Statuswerte außer speed.\n\nDie Stärke von punishment und stored power wird normal berechnet. Wenn sich das Pokémon wegen confusion selbst verletzt, beeinflussen die stat modifier den Schaden wie sonst auch."
+								"name": "Erzwinger",
+								"description": "Attacken die ein Pokémon mit dieser Fähigkeit zum Ziel haben, kosten 1 pp mehr als sonst.\n\nDie Fähigkeit löst für jeden Treffer von Attacken die öfters treffen aus. Die Fähigkeit löst auch bei Attacken aus die fehlschlagen oder daneben gehen. Der Effekt zählt nicht für Attacken desselben Teams die das Ganze Feld oder nur die eigene Seite treffen, sowie die eigenen Attacken die sich selbst treffen. Der Effekt löst dafür bei Attacken von Teammitgliedern aus die nur das Pokémon mit dieser Fähigkeit zum Ziel haben, die alle anderen zum Ziel haben und Attacken von Gegnern die das ganze Feld treffen. Wenn diese Fähigkeit die Kosten auf einen Wert erhöht, der die verbleibenden pp übersteigt, wird es alle verbrauchen.\n\nWenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, werden alle Trainer über diese Fähigkeit benachrichtigt.\n\nAußerhalb vom Kampf: Wenn ein Pokémon mit dieser Fähigkeit an erster Stelle im Team steht, tauchen Pokémon mit einem höheren Level häufiger auf."
 							},
 							"en": {
-								"name": "Unaware",
-								"description": "This Pokémon ignores other Pokémon's stat modifiers for the purposes of damage and accuracy calculation.\n\nEffectively, this affects modifiers of every stat except Speed.\n\nThe power of punishment and stored power is calculated as usual.  When this Pokémon hurts itself in confusion, its stat modifiers affect damage as usual."
+								"name": "Pressure",
+								"description": "Moves targetting this Pokémon use one extra PP.\n\nThis ability stacks if multiple targets have it.  This ability still affects moves that fail or miss.  This ability does not affect ally moves that target either the entire field or just its side, nor this Pokémon's self-targetted moves; it does, however, affect single-targetted ally moves aimed at this Pokémon, ally moves that target all other Pokémon, and opponents' moves that target the entire field.  If this ability raises a move's PP cost above its remaining PP, it will use all remaining PP.\n\nWhen this Pokémon enters battle, all participating trainers are notified that it has this ability.\n\nOverworld: If the lead Pokémon has this ability, higher-levelled Pokémon have their encounter rate increased."
 							}
 						},
 						{
 							"de": {
-								"name": "Tollpatsch",
-								"description": "Pokémon mit dieser Fähigkeit können im Kampf keine getragenen Items benutzen und diese haben auch keine passiven Effekte im Kampf, egal ob positiv oder negativ. Das Pokémon kann fling nicht einsetzen.\n\nDer speed Malus einer iron ball und die EV Items (macho brace, power weight, power bracer, power belt, power lens, power band und power anklet) sind nicht betroffen. Items die den Kampf nicht direkt beeinflussen, wie der exp share, das amulet coin oder die soothe bell, funktionieren normal. Alle getragenen Items funktionieren normal außerhalb von Kämpfen.\n\nAndere Attacken die getragene Items verwenden, wie z.B. natural gift und switcheroo, funktionieren ebenfalls normal."
+								"name": "Schnüffler",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit den Kampf betritt, wird allen Trainern mitgeteilt, welches Item der Gegner hält.\n\nWenn bei Mehrfachkämpfen ein Gegner ein Item hält, wird dieses angezeigt, wenn mehr ein Item halten wird ein zufälliges angekündigt."
 							},
 							"en": {
-								"name": "Klutz",
-								"description": "In battle, this Pokémon cannot use its held item, nor will the item have any passive effect on the battle, positive or negative.  This Pokémon also cannot use fling.\n\nThe Speed cut from the iron ball and the effort items (the macho brace, power weight, power bracer, power belt, power lens, power band, and power anklet) is unaffected.  Items that do not directly affect the battle, such as the exp share, the amulet coin, or the soothe bell, work as usual.  All held items work as usual out of battle.\n\nOther moves that use the held item, such as natural gift and switcheroo, work as usual."
-							}
-						},
-						{
-							"de": {
-								"name": "Wankelmut",
-								"description": "Jede Stufe einer Statuswerte-Änderung agiert als 2 Stufen. Diese Doppelstufen sind trotzdem limitiert auf ein Minimum von -6 und ein Maximum von 6.\n\nPokémon mit dieser Fähigkeit können trotzdem weniger als -3 oder mehr als 3 Stufen erhalten, aber die zusätzlichen Stufen haben nach der Verdoppelung keinen Effekt."
-							},
-							"en": {
-								"name": "Simple",
-								"description": "Each stage of this Pokémon's stat modifiers acts as two stages.  These doubled stages are still limited to a minimum of -6 and a maximum of 6.\n\nThis Pokémon can still accumulate less than -3 or more than 3 stages of stat modifiers, even though the extra ones have no effect after doubling."
+								"name": "Frisk",
+								"description": "When this Pokémon enters battle, it reveals an opposing Pokémon's held item to all participating trainers.\n\nIn a double battle, if one opponent has an item, this Pokémon will Frisk that Pokémon; if both have an item, it will Frisk one at random."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/swoobat"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/dusknoir"
 				}
 			]
 		}
@@ -4805,46 +4684,46 @@
 			],
 			"A": [
 				{
-					"typing": ["poison", "water"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/748.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/748.png",
-					"name": { "en": "Toxapex", "de": "Aggrostella" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/748.png",
-					"id": "toxapex",
-					"baseStats": { "hp": 50, "atk": 63, "def": 152, "spatk": 53, "spdef": 142, "spd": 35 },
+					"typing": ["normal", "ground"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/660.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/660.png",
+					"name": { "en": "Diggersby", "de": "Grebbit" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/660.png",
+					"id": "diggersby",
+					"baseStats": { "hp": 85, "atk": 56, "def": 77, "spatk": 50, "spdef": 77, "spd": 78 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Quälerei",
-								"description": "Sorgt bei Angriffen auf vergiftete Ziele für\nVolltreffergarantie."
+								"name": "Mitnahme",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit nicht bereits ein Item hält und ein anderes Pokémon ein getragenes Item verbraucht oder wegschleudert, hebt es das Item am Ende der Runde auf. Nach jedem Kampf besteht eine 10% Chance, dass das Pokémon ein Item aufhebt wenn es nicht bereits eines trägt.\n\nair balloon und eject button können nicht aufgehoben werden.\n\nDie gefundenen Items variieren je nach Spiel und, seit Smaragd, dem Level des Pokémons mit dieser Fähigkeit. Die Fähigkeit wird überprüft wenn der Kampf endet und temporär erlangte Fähigkeiten wieder weg sind."
 							},
 							"en": {
-								"name": "Merciless",
-								"description": "This Pokémon's moves critical hit against poisoned targets."
+								"name": "Pickup",
+								"description": "At the end of each turn, if another Pokémon consumed or Flung a held item that turn, this Pokémon picks up the item if it is not already holding one.  After each battle, this Pokémon has a 10% chance of picking up an item if it is not already holding one.\n\nThe air balloon and eject button cannot be picked up.\n\nThe items that may be found vary by game, and, since Pokémon Emerald, by the Pokémon's level.  This ability is checked after the battle ends, at which point any temporary ability changes have worn off."
 							}
 						},
 						{
 							"de": {
-								"name": "Flexibilität",
-								"description": "Ein Pokémon mit dieser Fähigkeit kann nicht paralysiert werden.\n\nWenn ein paralysiertes Pokémon diese Fähigkeit erhält, wird es von der paralysis geheilt. Das bezieht das Wiedererlangen dieser Fähigkeit nach dem Kampf mit ein."
+								"name": "Backentaschen",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit eine Beere isst, stellt es 1/3 seiner maximalen hp wieder her, zusätzlich zum eigentlichen Effekt der Beere.\n\nDie Fähigkeit wirkt auch, wenn das Pokémon die Beere durch fling, bug bite oder pluck erhalten hat, solange es von der Beere profitiert.\n\nDie Fähigkeit wirkt nicht, wenn die Beere mit natural gift verbraucht wird."
 							},
 							"en": {
-								"name": "Limber",
-								"description": "This Pokémon cannot be paralyzed.\n\nIf a Pokémon is paralyzed and acquires this ability, its paralysis is healed; this includes when regaining a lost ability upon leaving battle."
+								"name": "Cheek Pouch",
+								"description": "Restores HP upon eating a Berry, in addition to the Berry's effect."
 							}
 						},
 						{
 							"de": {
-								"name": "Belebekraft",
-								"description": "Pokémon mit dieser Fähigkit heilen 1/3 ihrer maximalen hp, wenn sie aus irgend einem anderen Grund als besiegt zu werden ausgewechselt werden.\n\nDie Fähigkeit löst nicht aus, wenn der Kampf endet."
+								"name": "Kraftkoloss",
+								"description": "Solange sich ein Pokémon mit dieser Fähigkeit im Kampf befindet ist sein attack doppelt so hoch wie sonst.\n\nDieser Bonus zählt nicht als stat modifier.\n\nDiese Fähigkeit ist identisch mit pure power."
 							},
 							"en": {
-								"name": "Regenerator",
-								"description": "This Pokémon regains 1/3 of its maximum HP when it is switched out for another Pokémon under any circumstances other than having fainted.\n\nThis ability does not take effect when a battle ends."
+								"name": "Huge Power",
+								"description": "This Pokémon's Attack is doubled while in battle.\n\nThis bonus does not count as a stat modifier.\n\nThis ability functions identically to pure power."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/toxapex"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/diggersby"
 				},
 				{
 					"typing": ["rock"],
@@ -4872,108 +4751,100 @@
 			],
 			"B": [
 				{
-					"typing": ["electric", "steel"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/462.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/462.png",
-					"name": { "en": "Magnezone", "de": "Magnezone" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/462.png",
-					"id": "magnezone",
-					"baseStats": { "hp": 70, "atk": 70, "def": 115, "spatk": 130, "spdef": 90, "spd": 60 },
+					"typing": ["steel", "fairy"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/707.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/707.png",
+					"name": { "en": "Klefki", "de": "Clavion" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/707.png",
+					"id": "klefki",
+					"baseStats": { "hp": 57, "atk": 80, "def": 91, "spatk": 80, "spdef": 87, "spd": 75 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Magnetfalle",
-								"description": "Solange sich ein Pokémon mit dieser Fähigkeit im Kampf befindet, werden steel Pokémon daran gehindert zu fliehen oder ausgetauscht zu werden.\n\nPokémon mit der Fähigkeit run away können trotzdem fliehen. Pokémon können trotzdem mit Hilfe von bestimmten Items oder Attacken ausgetauscht werden.\n\nAußerhalb vom Kampf: Wenn ein Pokémon mit dieser Fähigkeit an erster Stelle im Team steht, erhöht sich die Chance wilden steel Pokémon zu begegnen."
+								"name": "Strolch",
+								"description": "Wenn ein Pokémon diese Fähigkeit hat, erhöht sich die priority seiner Attacken die keinen Schaden anrichten um 1 Stufe."
 							},
 							"en": {
-								"name": "Magnet Pull",
-								"description": "While this Pokémon is in battle, opposing steel-type Pokémon cannot flee or switch out.\n\nPokémon with run away can still flee.  Pokémon can still switch out with the use of a move or item.\n\nOverworld: If the lead Pokémon has this ability, Steel-type Pokémon have a higher encounter rate."
+								"name": "Prankster",
+								"description": "This Pokémon's non-damaging moves have their priority increased by one stage."
 							}
 						},
 						{
 							"de": {
-								"name": "Robustheit",
-								"description": "Wenn das Pokémon volle hp hat, lässt jeder Treffer der das Pokémon besiegt hätte ein hp übrig. Das Pokémon ist immun gegen die K.O.-Attacken fissure, guillotine, horn drill und sheer cold.\n\nHält das Pokémon ein focus sash, hat die Fähigkeit Vorrang und das Item wird nicht verbraucht."
+								"name": "Zauberer",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer Attacke getroffen wird die Schaden verursacht, wird das vom Angreifer getragene Item auf das getroffene Pokémon übertragen, wenn dieses noch keins hält.\n\nDas Pokémon stiehlt nicht, wenn es besiegt wird. Es kann auch stehlen, wenn der Angreifer einen substitute hat, aber nicht wenn der eigene getroffen wird. Wenn eine Attacke mehrmals trifft, löst nur der letzte Treffer die Fähigkeit aus. Wenn das Pokémon ein wildes ist, kann es kein Item stehlen."
 							},
 							"en": {
-								"name": "Sturdy",
-								"description": "When this Pokémon is at full HP, any hit that would knock it out will instead leave it with 1 HP.  Regardless of its current HP, it is also immune to the one-hit KO moves: fissure, guillotine, horn drill, and sheer cold.\n\nIf this Pokémon is holding a focus sash, this ability takes precedence and the item will not be consumed."
-							}
-						},
-						{
-							"de": {
-								"name": "Analyse",
-								"description": "Attacken von Pokémon mit dieser Fähigkeit, haben 1,3× so viel Stärke, wenn das Pokémon als Letztes angreift.\n\nfuture sight und doom desire sind nicht betroffen."
-							},
-							"en": {
-								"name": "Analytic",
-								"description": "This Pokémon's moves have 1.3× their power when it moves last in a turn.\n\nfuture sight and doom desire are unaffected."
+								"name": "Magician",
+								"description": "Steals the target's held item when the bearer uses a damaging move."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/magnezone"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/klefki"
 				},
 				{
-					"typing": ["fairy"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/773.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/773.png",
-					"name": { "en": "Silvally", "de": "Amigento" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/773.png",
-					"form": { "en": "Fairy Memory", "de": "Feen-Disc" },
-					"id": "silvally-fairy",
-					"baseStats": { "hp": 95, "atk": 95, "def": 95, "spatk": 95, "spdef": 95, "spd": 95 },
+					"typing": ["bug", "electric"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/738.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/738.png",
+					"name": { "en": "Vikavolt", "de": "Donarion" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/738.png",
+					"id": "vikavolt",
+					"baseStats": { "hp": 77, "atk": 70, "def": 90, "spatk": 145, "spdef": 75, "spd": 43 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Alpha-System",
-								"description": "Das Pokémon passt seinen Typ der getragenen Disc an."
+								"name": "Schwebe",
+								"description": "Ein Pokémon mit dieser Fähigkeit ist immun gegen ground Attacken, spikes, toxic spikes und arena trap.\n\nDiese Fähigkeit wird mit gravity oder ingrain deaktiviert oder während eine iron ball getragen wird. roost deaktiviert diese Fähigkeit nicht."
 							},
 							"en": {
-								"name": "RKS System",
-								"description": "Changes this Pokémon's type to match its held Memory.\n\nThis ability cannot be copied, replaced, or nullified.  This ability only takes effect for Silvally."
+								"name": "Levitate",
+								"description": "This Pokémon is immune to ground-type moves, spikes, toxic spikes, and arena trap.\n\nThis ability is disabled during gravity or ingrain, or while holding an iron ball.  This ability is not disabled during roost."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/silvally"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/vikavolt"
 				},
 				{
-					"typing": ["fighting", "steel"],
-					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/448.png",
-					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/448.png",
-					"name": { "en": "Lucario", "de": "Lucario" },
-					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/448.png",
-					"id": "lucario",
-					"baseStats": { "hp": 70, "atk": 110, "def": 70, "spatk": 115, "spdef": 70, "spd": 90 },
+					"typing": ["dragon"],
+					"imageUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/706.png",
+					"officialArtworkUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/706.png",
+					"name": { "en": "Goodra", "de": "Viscogon" },
+					"miniSpriteUrl": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-vii/icons/706.png",
+					"id": "goodra",
+					"baseStats": { "hp": 90, "atk": 100, "def": 70, "spatk": 110, "spdef": 150, "spd": 80 },
 					"abilities": [
 						{
 							"de": {
-								"name": "Felsenfest",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit zurückschreckt, wird seine speed um 1 Stufe erhöht."
+								"name": "Vegetarier",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer grass Attacke getroffen wird, steigt sein attack um 1 Stufe, wobei jeder andere Effekt entfernt wird."
 							},
 							"en": {
-								"name": "Steadfast",
-								"description": "Whenever this Pokémon flinches, its Speed rises one stage."
+								"name": "Sap Sipper",
+								"description": "Whenever a grass-type move hits this Pokémon, its Attack rises one stage, negating any other effect on it."
 							}
 						},
 						{
 							"de": {
-								"name": "Konzentrator",
-								"description": "Ein Pokémon mit dieser Fähigkeit kann nicht zurückschrecken."
+								"name": "Hydration",
+								"description": "Pokémon mit dieser Fähigkeit werden am Ende jeder Runde von major status ailment geheilt wenn es regnet."
 							},
-							"en": { "name": "Inner Focus", "description": "This Pokémon cannot flinch." }
+							"en": {
+								"name": "Hydration",
+								"description": "This Pokémon is cured of any major status ailment after each turn during rain."
+							}
 						},
 						{
 							"de": {
-								"name": "Redlichkeit",
-								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer dark Attacke getroffen wird, wird sein attack um 1 Stufe erhöht.\n\nDie Attacke wird nicht beeinflusst."
+								"name": "Viskosität",
+								"description": "Wenn ein Pokémon mit dieser Fähigkeit von einer Attacke die Kontakt herstellt getroffen wird, wird die speed des Angreifers um 1 Stufe gesenkt."
 							},
 							"en": {
-								"name": "Justified",
-								"description": "Whenever a dark-type move hits this Pokémon, its Attack rises one stage.\n\nThe move is not negated in any way."
+								"name": "Gooey",
+								"description": "Lowers attacking Pokémon's Speed by one stage on contact."
 							}
 						}
 					],
-					"pokemonDbUrl": "https://pokemondb.net/pokedex/lucario"
+					"pokemonDbUrl": "https://pokemondb.net/pokedex/goodra"
 				}
 			],
 			"C": [

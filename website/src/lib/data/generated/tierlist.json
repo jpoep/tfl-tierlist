@@ -251,11 +251,11 @@
 					"pokemon": [
 						"tornadus-therian",
 						"rillaboom",
-						"toxapex",
+						"diggersby",
 						"lycanroc-dusk",
-						"magnezone",
-						"silvally-fairy",
-						"lucario",
+						"klefki",
+						"vikavolt",
+						"goodra",
 						"uxie",
 						"slurpuff",
 						"carkol",
@@ -327,12 +327,12 @@
 						"milotic",
 						"raikou",
 						"incineroar",
-						"klefki",
+						"kingdra",
 						"metagross",
 						"miltank",
 						"ditto",
 						"kadabra",
-						"leafeon"
+						"sawk"
 					]
 				}
 			},
@@ -376,10 +376,10 @@
 						"mienshao",
 						"entei",
 						"hatterene",
-						"accelgor",
+						"archeops",
 						"palossand",
-						"maractus",
-						"kingler"
+						"trevenant",
+						"barbaracle"
 					]
 				}
 			},
@@ -404,7 +404,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/aegislash"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/aegislash",
+				"team": {
+					"name": "TUSPO Salamence",
+					"player": "Moritz",
+					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
+					"pokemon": [
+						"hydreigon",
+						"aegislash-shield",
+						"slowking",
+						"buzzwole",
+						"nidoqueen",
+						"rotom-mow",
+						"silvally-fairy",
+						"lickilicky",
+						"golisopod",
+						"rhydon",
+						"swoobat"
+					]
+				}
 			},
 			{
 				"typing": ["fighting", "flying"],
@@ -485,11 +503,11 @@
 					"pokemon": [
 						"tornadus-therian",
 						"rillaboom",
-						"toxapex",
+						"diggersby",
 						"lycanroc-dusk",
-						"magnezone",
-						"silvally-fairy",
-						"lucario",
+						"klefki",
+						"vikavolt",
+						"goodra",
 						"uxie",
 						"slurpuff",
 						"carkol",
@@ -695,7 +713,7 @@
 						"heliolisk",
 						"mudsdale",
 						"cryogonal",
-						"swoobat"
+						"dusknoir"
 					]
 				}
 			},
@@ -862,10 +880,10 @@
 						"mienshao",
 						"entei",
 						"hatterene",
-						"accelgor",
+						"archeops",
 						"palossand",
-						"maractus",
-						"kingler"
+						"trevenant",
+						"barbaracle"
 					]
 				}
 			},
@@ -898,12 +916,12 @@
 						"zeraora",
 						"latias",
 						"tapu-fini",
-						"cobalion",
+						"tapu-fini",
 						"krookodile",
-						"scolipede",
+						"lucario",
 						"ninetales",
 						"charizard",
-						"tangela",
+						"runerigus",
 						"glaceon",
 						"machoke"
 					]
@@ -940,12 +958,12 @@
 						"milotic",
 						"raikou",
 						"incineroar",
-						"klefki",
+						"kingdra",
 						"metagross",
 						"miltank",
 						"ditto",
 						"kadabra",
-						"leafeon"
+						"sawk"
 					]
 				}
 			},
@@ -979,25 +997,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/cinderace",
-				"team": {
-					"name": "TUSPO Salamence",
-					"player": "Moritz",
-					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
-					"pokemon": [
-						"hydreigon",
-						"cinderace",
-						"slowking",
-						"scizor",
-						"nidoqueen",
-						"rotom-mow",
-						"gardevoir",
-						"lickilicky",
-						"golisopod",
-						"rhydon",
-						"sableye"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/cinderace"
 			},
 			{
 				"typing": ["ice", "ground"],
@@ -1209,15 +1209,15 @@
 					"player": "Alex",
 					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
 					"pokemon": [
-						"excadrill",
+						"thundurus-therian",
 						"weavile",
 						"slowbro",
-						"hippowdon",
+						"cobalion",
 						"moltres",
-						"vikavolt",
+						"zygarde-10",
 						"dragalge",
 						"passimian",
-						"diancie",
+						"decidueye",
 						"exeggutor-alola",
 						"audino"
 					]
@@ -1263,25 +1263,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/excadrill",
-				"team": {
-					"name": "Surging Strikes",
-					"player": "Alex",
-					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
-					"pokemon": [
-						"excadrill",
-						"weavile",
-						"slowbro",
-						"hippowdon",
-						"moltres",
-						"vikavolt",
-						"dragalge",
-						"passimian",
-						"diancie",
-						"exeggutor-alola",
-						"audino"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/excadrill"
 			},
 			{
 				"typing": ["grass", "steel"],
@@ -1323,13 +1305,13 @@
 						"zapdos",
 						"pelipper",
 						"barraskewda",
-						"bisharp",
+						"moltres-galar",
 						"seismitoad",
-						"weezing-galar",
-						"corsola-galar",
+						"indeedee-male",
+						"registeel",
 						"exploud",
 						"beartic",
-						"lurantis"
+						"turtonator"
 					]
 				}
 			},
@@ -1382,16 +1364,16 @@
 					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
 					"pokemon": [
 						"hydreigon",
-						"cinderace",
+						"aegislash-shield",
 						"slowking",
-						"scizor",
+						"buzzwole",
 						"nidoqueen",
 						"rotom-mow",
-						"gardevoir",
+						"silvally-fairy",
 						"lickilicky",
 						"golisopod",
 						"rhydon",
-						"sableye"
+						"swoobat"
 					]
 				}
 			},
@@ -1489,7 +1471,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/thundurus"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/thundurus",
+				"team": {
+					"name": "Surging Strikes",
+					"player": "Alex",
+					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
+					"pokemon": [
+						"thundurus-therian",
+						"weavile",
+						"slowbro",
+						"cobalion",
+						"moltres",
+						"zygarde-10",
+						"dragalge",
+						"passimian",
+						"decidueye",
+						"exeggutor-alola",
+						"audino"
+					]
+				}
 			},
 			{
 				"typing": ["fighting", "water"],
@@ -1527,7 +1527,7 @@
 						"heliolisk",
 						"mudsdale",
 						"cryogonal",
-						"swoobat"
+						"dusknoir"
 					]
 				}
 			},
@@ -1571,13 +1571,13 @@
 						"zapdos",
 						"pelipper",
 						"barraskewda",
-						"bisharp",
+						"moltres-galar",
 						"seismitoad",
-						"weezing-galar",
-						"corsola-galar",
+						"indeedee-male",
+						"registeel",
 						"exploud",
 						"beartic",
-						"lurantis"
+						"turtonator"
 					]
 				}
 			},
@@ -1610,12 +1610,12 @@
 						"zeraora",
 						"latias",
 						"tapu-fini",
-						"cobalion",
+						"tapu-fini",
 						"krookodile",
-						"scolipede",
+						"lucario",
 						"ninetales",
 						"charizard",
-						"tangela",
+						"runerigus",
 						"glaceon",
 						"machoke"
 					]
@@ -1775,25 +1775,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/toxapex",
-				"team": {
-					"name": "Bellektro Ghetto",
-					"player": "Max",
-					"logo": { "avif": "bellektro-ghetto-2.avif", "webp": "bellektro-ghetto-2.webp" },
-					"pokemon": [
-						"tornadus-therian",
-						"rillaboom",
-						"toxapex",
-						"lycanroc-dusk",
-						"magnezone",
-						"silvally-fairy",
-						"lucario",
-						"uxie",
-						"slurpuff",
-						"carkol",
-						"malamar"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/toxapex"
 			},
 			{
 				"typing": ["rock", "poison"],
@@ -1857,13 +1839,13 @@
 						"zapdos",
 						"pelipper",
 						"barraskewda",
-						"bisharp",
+						"moltres-galar",
 						"seismitoad",
-						"weezing-galar",
-						"corsola-galar",
+						"indeedee-male",
+						"registeel",
 						"exploud",
 						"beartic",
-						"lurantis"
+						"turtonator"
 					]
 				}
 			},
@@ -2201,7 +2183,7 @@
 						"heliolisk",
 						"mudsdale",
 						"cryogonal",
-						"swoobat"
+						"dusknoir"
 					]
 				}
 			},
@@ -2309,7 +2291,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/diggersby"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/diggersby",
+				"team": {
+					"name": "Bellektro Ghetto",
+					"player": "Max",
+					"logo": { "avif": "bellektro-ghetto-2.avif", "webp": "bellektro-ghetto-2.webp" },
+					"pokemon": [
+						"tornadus-therian",
+						"rillaboom",
+						"diggersby",
+						"lycanroc-dusk",
+						"klefki",
+						"vikavolt",
+						"goodra",
+						"uxie",
+						"slurpuff",
+						"carkol",
+						"malamar"
+					]
+				}
 			},
 			{
 				"typing": ["ground"],
@@ -2341,25 +2341,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/hippowdon",
-				"team": {
-					"name": "Surging Strikes",
-					"player": "Alex",
-					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
-					"pokemon": [
-						"excadrill",
-						"weavile",
-						"slowbro",
-						"hippowdon",
-						"moltres",
-						"vikavolt",
-						"dragalge",
-						"passimian",
-						"diancie",
-						"exeggutor-alola",
-						"audino"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/hippowdon"
 			},
 			{
 				"typing": ["grass", "poison"],
@@ -2432,12 +2414,12 @@
 						"zeraora",
 						"latias",
 						"tapu-fini",
-						"cobalion",
+						"tapu-fini",
 						"krookodile",
-						"scolipede",
+						"lucario",
 						"ninetales",
 						"charizard",
-						"tangela",
+						"runerigus",
 						"glaceon",
 						"machoke"
 					]
@@ -2488,21 +2470,21 @@
 				],
 				"pokemonDbUrl": "https://pokemondb.net/pokedex/cobalion",
 				"team": {
-					"name": "Machoke(y) Balboa",
-					"player": "Felix",
-					"logo": { "avif": "machakey.avif", "webp": "machakey.webp" },
+					"name": "Surging Strikes",
+					"player": "Alex",
+					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
 					"pokemon": [
-						"zeraora",
-						"latias",
-						"tapu-fini",
+						"thundurus-therian",
+						"weavile",
+						"slowbro",
 						"cobalion",
-						"krookodile",
-						"scolipede",
-						"ninetales",
-						"charizard",
-						"tangela",
-						"glaceon",
-						"machoke"
+						"moltres",
+						"zygarde-10",
+						"dragalge",
+						"passimian",
+						"decidueye",
+						"exeggutor-alola",
+						"audino"
 					]
 				}
 			},
@@ -2592,15 +2574,15 @@
 					"player": "Alex",
 					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
 					"pokemon": [
-						"excadrill",
+						"thundurus-therian",
 						"weavile",
 						"slowbro",
-						"hippowdon",
+						"cobalion",
 						"moltres",
-						"vikavolt",
+						"zygarde-10",
 						"dragalge",
 						"passimian",
-						"diancie",
+						"decidueye",
 						"exeggutor-alola",
 						"audino"
 					]
@@ -2653,16 +2635,16 @@
 					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
 					"pokemon": [
 						"hydreigon",
-						"cinderace",
+						"aegislash-shield",
 						"slowking",
-						"scizor",
+						"buzzwole",
 						"nidoqueen",
 						"rotom-mow",
-						"gardevoir",
+						"silvally-fairy",
 						"lickilicky",
 						"golisopod",
 						"rhydon",
-						"sableye"
+						"swoobat"
 					]
 				}
 			},
@@ -2746,7 +2728,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/buzzwole"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/buzzwole",
+				"team": {
+					"name": "TUSPO Salamence",
+					"player": "Moritz",
+					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
+					"pokemon": [
+						"hydreigon",
+						"aegislash-shield",
+						"slowking",
+						"buzzwole",
+						"nidoqueen",
+						"rotom-mow",
+						"silvally-fairy",
+						"lickilicky",
+						"golisopod",
+						"rhydon",
+						"swoobat"
+					]
+				}
 			},
 			{
 				"typing": ["dragon"],
@@ -2885,10 +2885,10 @@
 						"mienshao",
 						"entei",
 						"hatterene",
-						"accelgor",
+						"archeops",
 						"palossand",
-						"maractus",
-						"kingler"
+						"trevenant",
+						"barbaracle"
 					]
 				}
 			},
@@ -3002,13 +3002,13 @@
 						"zapdos",
 						"pelipper",
 						"barraskewda",
-						"bisharp",
+						"moltres-galar",
 						"seismitoad",
-						"weezing-galar",
-						"corsola-galar",
+						"indeedee-male",
+						"registeel",
 						"exploud",
 						"beartic",
-						"lurantis"
+						"turtonator"
 					]
 				}
 			},
@@ -3182,12 +3182,12 @@
 						"milotic",
 						"raikou",
 						"incineroar",
-						"klefki",
+						"kingdra",
 						"metagross",
 						"miltank",
 						"ditto",
 						"kadabra",
-						"leafeon"
+						"sawk"
 					]
 				}
 			},
@@ -3290,10 +3290,10 @@
 						"mienshao",
 						"entei",
 						"hatterene",
-						"accelgor",
+						"archeops",
 						"palossand",
-						"maractus",
-						"kingler"
+						"trevenant",
+						"barbaracle"
 					]
 				}
 			},
@@ -3337,25 +3337,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/scizor",
-				"team": {
-					"name": "TUSPO Salamence",
-					"player": "Moritz",
-					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
-					"pokemon": [
-						"hydreigon",
-						"cinderace",
-						"slowking",
-						"scizor",
-						"nidoqueen",
-						"rotom-mow",
-						"gardevoir",
-						"lickilicky",
-						"golisopod",
-						"rhydon",
-						"sableye"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/scizor"
 			},
 			{
 				"typing": ["psychic"],
@@ -3659,7 +3641,7 @@
 						"heliolisk",
 						"mudsdale",
 						"cryogonal",
-						"swoobat"
+						"dusknoir"
 					]
 				}
 			},
@@ -3692,11 +3674,11 @@
 					"pokemon": [
 						"tornadus-therian",
 						"rillaboom",
-						"toxapex",
+						"diggersby",
 						"lycanroc-dusk",
-						"magnezone",
-						"silvally-fairy",
-						"lucario",
+						"klefki",
+						"vikavolt",
+						"goodra",
 						"uxie",
 						"slurpuff",
 						"carkol",
@@ -3997,12 +3979,12 @@
 						"milotic",
 						"raikou",
 						"incineroar",
-						"klefki",
+						"kingdra",
 						"metagross",
 						"miltank",
 						"ditto",
 						"kadabra",
-						"leafeon"
+						"sawk"
 					]
 				}
 			}
@@ -4095,7 +4077,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/moltres"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/moltres",
+				"team": {
+					"name": "Zygarde-69%",
+					"player": "Jonas",
+					"logo": { "avif": "z69.avif", "webp": "z69.webp" },
+					"pokemon": [
+						"ferrothorn",
+						"zapdos",
+						"pelipper",
+						"barraskewda",
+						"moltres-galar",
+						"seismitoad",
+						"indeedee-male",
+						"registeel",
+						"exploud",
+						"beartic",
+						"turtonator"
+					]
+				}
 			},
 			{
 				"typing": ["fire", "ghost"],
@@ -4236,21 +4236,21 @@
 				],
 				"pokemonDbUrl": "https://pokemondb.net/pokedex/silvally",
 				"team": {
-					"name": "Bellektro Ghetto",
-					"player": "Max",
-					"logo": { "avif": "bellektro-ghetto-2.avif", "webp": "bellektro-ghetto-2.webp" },
+					"name": "TUSPO Salamence",
+					"player": "Moritz",
+					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
 					"pokemon": [
-						"tornadus-therian",
-						"rillaboom",
-						"toxapex",
-						"lycanroc-dusk",
-						"magnezone",
+						"hydreigon",
+						"aegislash-shield",
+						"slowking",
+						"buzzwole",
+						"nidoqueen",
+						"rotom-mow",
 						"silvally-fairy",
-						"lucario",
-						"uxie",
-						"slurpuff",
-						"carkol",
-						"malamar"
+						"lickilicky",
+						"golisopod",
+						"rhydon",
+						"swoobat"
 					]
 				}
 			},
@@ -4498,13 +4498,13 @@
 						"zapdos",
 						"pelipper",
 						"barraskewda",
-						"bisharp",
+						"moltres-galar",
 						"seismitoad",
-						"weezing-galar",
-						"corsola-galar",
+						"indeedee-male",
+						"registeel",
 						"exploud",
 						"beartic",
-						"lurantis"
+						"turtonator"
 					]
 				}
 			},
@@ -4647,25 +4647,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/bisharp",
-				"team": {
-					"name": "Zygarde-69%",
-					"player": "Jonas",
-					"logo": { "avif": "z69.avif", "webp": "z69.webp" },
-					"pokemon": [
-						"ferrothorn",
-						"zapdos",
-						"pelipper",
-						"barraskewda",
-						"bisharp",
-						"seismitoad",
-						"weezing-galar",
-						"corsola-galar",
-						"exploud",
-						"beartic",
-						"lurantis"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/bisharp"
 			},
 			{
 				"typing": ["psychic", "grass"],
@@ -4739,21 +4721,21 @@
 				],
 				"pokemonDbUrl": "https://pokemondb.net/pokedex/klefki",
 				"team": {
-					"name": "Große Demeteros Apokalypse",
-					"player": "Niklas",
-					"logo": { "avif": "gda-2.avif", "webp": "gda-2.webp" },
+					"name": "Bellektro Ghetto",
+					"player": "Max",
+					"logo": { "avif": "bellektro-ghetto-2.avif", "webp": "bellektro-ghetto-2.webp" },
 					"pokemon": [
-						"landorus-therian",
-						"latios",
-						"milotic",
-						"raikou",
-						"incineroar",
+						"tornadus-therian",
+						"rillaboom",
+						"diggersby",
+						"lycanroc-dusk",
 						"klefki",
-						"metagross",
-						"miltank",
-						"ditto",
-						"kadabra",
-						"leafeon"
+						"vikavolt",
+						"goodra",
+						"uxie",
+						"slurpuff",
+						"carkol",
+						"malamar"
 					]
 				}
 			},
@@ -4801,21 +4783,21 @@
 				],
 				"pokemonDbUrl": "https://pokemondb.net/pokedex/vikavolt",
 				"team": {
-					"name": "Surging Strikes",
-					"player": "Alex",
-					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
+					"name": "Bellektro Ghetto",
+					"player": "Max",
+					"logo": { "avif": "bellektro-ghetto-2.avif", "webp": "bellektro-ghetto-2.webp" },
 					"pokemon": [
-						"excadrill",
-						"weavile",
-						"slowbro",
-						"hippowdon",
-						"moltres",
+						"tornadus-therian",
+						"rillaboom",
+						"diggersby",
+						"lycanroc-dusk",
+						"klefki",
 						"vikavolt",
-						"dragalge",
-						"passimian",
-						"diancie",
-						"exeggutor-alola",
-						"audino"
+						"goodra",
+						"uxie",
+						"slurpuff",
+						"carkol",
+						"malamar"
 					]
 				}
 			},
@@ -4888,16 +4870,16 @@
 					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
 					"pokemon": [
 						"hydreigon",
-						"cinderace",
+						"aegislash-shield",
 						"slowking",
-						"scizor",
+						"buzzwole",
 						"nidoqueen",
 						"rotom-mow",
-						"gardevoir",
+						"silvally-fairy",
 						"lickilicky",
 						"golisopod",
 						"rhydon",
-						"sableye"
+						"swoobat"
 					]
 				}
 			},
@@ -4941,10 +4923,10 @@
 						"mienshao",
 						"entei",
 						"hatterene",
-						"accelgor",
+						"archeops",
 						"palossand",
-						"maractus",
-						"kingler"
+						"trevenant",
+						"barbaracle"
 					]
 				}
 			},
@@ -5160,12 +5142,12 @@
 						"milotic",
 						"raikou",
 						"incineroar",
-						"klefki",
+						"kingdra",
 						"metagross",
 						"miltank",
 						"ditto",
 						"kadabra",
-						"leafeon"
+						"sawk"
 					]
 				}
 			},
@@ -5271,25 +5253,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/weezing",
-				"team": {
-					"name": "Zygarde-69%",
-					"player": "Jonas",
-					"logo": { "avif": "z69.avif", "webp": "z69.webp" },
-					"pokemon": [
-						"ferrothorn",
-						"zapdos",
-						"pelipper",
-						"barraskewda",
-						"bisharp",
-						"seismitoad",
-						"weezing-galar",
-						"corsola-galar",
-						"exploud",
-						"beartic",
-						"lurantis"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/weezing"
 			},
 			{
 				"typing": ["water", "flying"],
@@ -5442,25 +5406,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/gardevoir",
-				"team": {
-					"name": "TUSPO Salamence",
-					"player": "Moritz",
-					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
-					"pokemon": [
-						"hydreigon",
-						"cinderace",
-						"slowking",
-						"scizor",
-						"nidoqueen",
-						"rotom-mow",
-						"gardevoir",
-						"lickilicky",
-						"golisopod",
-						"rhydon",
-						"sableye"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/gardevoir"
 			},
 			{
 				"typing": ["poison", "flying"],
@@ -5693,15 +5639,15 @@
 					"player": "Alex",
 					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
 					"pokemon": [
-						"excadrill",
+						"thundurus-therian",
 						"weavile",
 						"slowbro",
-						"hippowdon",
+						"cobalion",
 						"moltres",
-						"vikavolt",
+						"zygarde-10",
 						"dragalge",
 						"passimian",
-						"diancie",
+						"decidueye",
 						"exeggutor-alola",
 						"audino"
 					]
@@ -5837,21 +5783,21 @@
 				],
 				"pokemonDbUrl": "https://pokemondb.net/pokedex/lucario",
 				"team": {
-					"name": "Bellektro Ghetto",
-					"player": "Max",
-					"logo": { "avif": "bellektro-ghetto-2.avif", "webp": "bellektro-ghetto-2.webp" },
+					"name": "Machoke(y) Balboa",
+					"player": "Felix",
+					"logo": { "avif": "machakey.avif", "webp": "machakey.webp" },
 					"pokemon": [
-						"tornadus-therian",
-						"rillaboom",
-						"toxapex",
-						"lycanroc-dusk",
-						"magnezone",
-						"silvally-fairy",
+						"zeraora",
+						"latias",
+						"tapu-fini",
+						"tapu-fini",
+						"krookodile",
 						"lucario",
-						"uxie",
-						"slurpuff",
-						"carkol",
-						"malamar"
+						"ninetales",
+						"charizard",
+						"runerigus",
+						"glaceon",
+						"machoke"
 					]
 				}
 			},
@@ -5895,25 +5841,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/magnezone",
-				"team": {
-					"name": "Bellektro Ghetto",
-					"player": "Max",
-					"logo": { "avif": "bellektro-ghetto-2.avif", "webp": "bellektro-ghetto-2.webp" },
-					"pokemon": [
-						"tornadus-therian",
-						"rillaboom",
-						"toxapex",
-						"lycanroc-dusk",
-						"magnezone",
-						"silvally-fairy",
-						"lucario",
-						"uxie",
-						"slurpuff",
-						"carkol",
-						"malamar"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/magnezone"
 			},
 			{
 				"typing": ["water", "flying"],
@@ -5998,12 +5926,12 @@
 						"milotic",
 						"raikou",
 						"incineroar",
-						"klefki",
+						"kingdra",
 						"metagross",
 						"miltank",
 						"ditto",
 						"kadabra",
-						"leafeon"
+						"sawk"
 					]
 				}
 			},
@@ -6201,7 +6129,7 @@
 						"heliolisk",
 						"mudsdale",
 						"cryogonal",
-						"swoobat"
+						"dusknoir"
 					]
 				}
 			},
@@ -6338,12 +6266,12 @@
 						"zeraora",
 						"latias",
 						"tapu-fini",
-						"cobalion",
+						"tapu-fini",
 						"krookodile",
-						"scolipede",
+						"lucario",
 						"ninetales",
 						"charizard",
-						"tangela",
+						"runerigus",
 						"glaceon",
 						"machoke"
 					]
@@ -6480,16 +6408,16 @@
 					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
 					"pokemon": [
 						"hydreigon",
-						"cinderace",
+						"aegislash-shield",
 						"slowking",
-						"scizor",
+						"buzzwole",
 						"nidoqueen",
 						"rotom-mow",
-						"gardevoir",
+						"silvally-fairy",
 						"lickilicky",
 						"golisopod",
 						"rhydon",
-						"sableye"
+						"swoobat"
 					]
 				}
 			},
@@ -6533,7 +6461,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/kingdra"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/kingdra",
+				"team": {
+					"name": "Große Demeteros Apokalypse",
+					"player": "Niklas",
+					"logo": { "avif": "gda-2.avif", "webp": "gda-2.webp" },
+					"pokemon": [
+						"landorus-therian",
+						"latios",
+						"milotic",
+						"raikou",
+						"incineroar",
+						"kingdra",
+						"metagross",
+						"miltank",
+						"ditto",
+						"kadabra",
+						"sawk"
+					]
+				}
 			},
 			{
 				"typing": ["psychic", "normal"],
@@ -6573,7 +6519,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/indeedee"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/indeedee",
+				"team": {
+					"name": "Zygarde-69%",
+					"player": "Jonas",
+					"logo": { "avif": "z69.avif", "webp": "z69.webp" },
+					"pokemon": [
+						"ferrothorn",
+						"zapdos",
+						"pelipper",
+						"barraskewda",
+						"moltres-galar",
+						"seismitoad",
+						"indeedee-male",
+						"registeel",
+						"exploud",
+						"beartic",
+						"turtonator"
+					]
+				}
 			},
 			{
 				"typing": ["psychic", "normal"],
@@ -6670,10 +6634,10 @@
 						"mienshao",
 						"entei",
 						"hatterene",
-						"accelgor",
+						"archeops",
 						"palossand",
-						"maractus",
-						"kingler"
+						"trevenant",
+						"barbaracle"
 					]
 				}
 			},
@@ -6825,15 +6789,15 @@
 					"player": "Alex",
 					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
 					"pokemon": [
-						"excadrill",
+						"thundurus-therian",
 						"weavile",
 						"slowbro",
-						"hippowdon",
+						"cobalion",
 						"moltres",
-						"vikavolt",
+						"zygarde-10",
 						"dragalge",
 						"passimian",
-						"diancie",
+						"decidueye",
 						"exeggutor-alola",
 						"audino"
 					]
@@ -6959,7 +6923,7 @@
 						"heliolisk",
 						"mudsdale",
 						"cryogonal",
-						"swoobat"
+						"dusknoir"
 					]
 				}
 			},
@@ -7003,7 +6967,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/goodra"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/goodra",
+				"team": {
+					"name": "Bellektro Ghetto",
+					"player": "Max",
+					"logo": { "avif": "bellektro-ghetto-2.avif", "webp": "bellektro-ghetto-2.webp" },
+					"pokemon": [
+						"tornadus-therian",
+						"rillaboom",
+						"diggersby",
+						"lycanroc-dusk",
+						"klefki",
+						"vikavolt",
+						"goodra",
+						"uxie",
+						"slurpuff",
+						"carkol",
+						"malamar"
+					]
+				}
 			},
 			{
 				"typing": ["electric"],
@@ -7108,12 +7090,12 @@
 						"zeraora",
 						"latias",
 						"tapu-fini",
-						"cobalion",
+						"tapu-fini",
 						"krookodile",
-						"scolipede",
+						"lucario",
 						"ninetales",
 						"charizard",
-						"tangela",
+						"runerigus",
 						"glaceon",
 						"machoke"
 					]
@@ -7211,10 +7193,10 @@
 						"mienshao",
 						"entei",
 						"hatterene",
-						"accelgor",
+						"archeops",
 						"palossand",
-						"maractus",
-						"kingler"
+						"trevenant",
+						"barbaracle"
 					]
 				}
 			},
@@ -7259,25 +7241,7 @@
 					}
 				],
 				"pokemonDbUrl": "https://pokemondb.net/pokedex/scolipede",
-				"notes": { "de": "Von A nach B gewandert", "en": "Von A nach B gewandert" },
-				"team": {
-					"name": "Machoke(y) Balboa",
-					"player": "Felix",
-					"logo": { "avif": "machakey.avif", "webp": "machakey.webp" },
-					"pokemon": [
-						"zeraora",
-						"latias",
-						"tapu-fini",
-						"cobalion",
-						"krookodile",
-						"scolipede",
-						"ninetales",
-						"charizard",
-						"tangela",
-						"glaceon",
-						"machoke"
-					]
-				}
+				"notes": { "de": "Von A nach B gewandert", "en": "Von A nach B gewandert" }
 			},
 			{
 				"typing": ["dark", "grass"],
@@ -7421,7 +7385,7 @@
 						"heliolisk",
 						"mudsdale",
 						"cryogonal",
-						"swoobat"
+						"dusknoir"
 					]
 				}
 			},
@@ -7550,7 +7514,25 @@
 					}
 				],
 				"pokemonDbUrl": "https://pokemondb.net/pokedex/zygarde",
-				"notes": { "de": "Ohne Scharwandel", "en": "Ohne Power Construct" }
+				"notes": { "de": "Ohne Scharwandel", "en": "Ohne Power Construct" },
+				"team": {
+					"name": "Surging Strikes",
+					"player": "Alex",
+					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
+					"pokemon": [
+						"thundurus-therian",
+						"weavile",
+						"slowbro",
+						"cobalion",
+						"moltres",
+						"zygarde-10",
+						"dragalge",
+						"passimian",
+						"decidueye",
+						"exeggutor-alola",
+						"audino"
+					]
+				}
 			}
 		]
 	},
@@ -8086,10 +8068,10 @@
 						"mienshao",
 						"entei",
 						"hatterene",
-						"accelgor",
+						"archeops",
 						"palossand",
-						"maractus",
-						"kingler"
+						"trevenant",
+						"barbaracle"
 					]
 				}
 			},
@@ -8155,25 +8137,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/diancie",
-				"team": {
-					"name": "Surging Strikes",
-					"player": "Alex",
-					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
-					"pokemon": [
-						"excadrill",
-						"weavile",
-						"slowbro",
-						"hippowdon",
-						"moltres",
-						"vikavolt",
-						"dragalge",
-						"passimian",
-						"diancie",
-						"exeggutor-alola",
-						"audino"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/diancie"
 			},
 			{
 				"typing": ["normal"],
@@ -8216,12 +8180,12 @@
 						"milotic",
 						"raikou",
 						"incineroar",
-						"klefki",
+						"kingdra",
 						"metagross",
 						"miltank",
 						"ditto",
 						"kadabra",
-						"leafeon"
+						"sawk"
 					]
 				}
 			},
@@ -8416,7 +8380,7 @@
 						"heliolisk",
 						"mudsdale",
 						"cryogonal",
-						"swoobat"
+						"dusknoir"
 					]
 				}
 			},
@@ -8630,25 +8594,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/corsola",
-				"team": {
-					"name": "Zygarde-69%",
-					"player": "Jonas",
-					"logo": { "avif": "z69.avif", "webp": "z69.webp" },
-					"pokemon": [
-						"ferrothorn",
-						"zapdos",
-						"pelipper",
-						"barraskewda",
-						"bisharp",
-						"seismitoad",
-						"weezing-galar",
-						"corsola-galar",
-						"exploud",
-						"beartic",
-						"lurantis"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/corsola"
 			},
 			{
 				"typing": ["ice"],
@@ -8805,12 +8751,12 @@
 						"zeraora",
 						"latias",
 						"tapu-fini",
-						"cobalion",
+						"tapu-fini",
 						"krookodile",
-						"scolipede",
+						"lucario",
 						"ninetales",
 						"charizard",
-						"tangela",
+						"runerigus",
 						"glaceon",
 						"machoke"
 					]
@@ -8930,25 +8876,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/accelgor",
-				"team": {
-					"name": "Freddyursa Münster",
-					"player": "Rick",
-					"logo": { "avif": "freddyursa.avif", "webp": "freddyursa.webp" },
-					"pokemon": [
-						"corviknight",
-						"dragonite",
-						"nidoking",
-						"rotom-wash",
-						"mienshao",
-						"entei",
-						"hatterene",
-						"accelgor",
-						"palossand",
-						"maractus",
-						"kingler"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/accelgor"
 			},
 			{
 				"typing": ["fire", "bug"],
@@ -9299,13 +9227,13 @@
 						"zapdos",
 						"pelipper",
 						"barraskewda",
-						"bisharp",
+						"moltres-galar",
 						"seismitoad",
-						"weezing-galar",
-						"corsola-galar",
+						"indeedee-male",
+						"registeel",
 						"exploud",
 						"beartic",
-						"lurantis"
+						"turtonator"
 					]
 				}
 			},
@@ -9610,12 +9538,12 @@
 						"milotic",
 						"raikou",
 						"incineroar",
-						"klefki",
+						"kingdra",
 						"metagross",
 						"miltank",
 						"ditto",
 						"kadabra",
-						"leafeon"
+						"sawk"
 					]
 				}
 			},
@@ -9718,7 +9646,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/runerigus"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/runerigus",
+				"team": {
+					"name": "Machoke(y) Balboa",
+					"player": "Felix",
+					"logo": { "avif": "machakey.avif", "webp": "machakey.webp" },
+					"pokemon": [
+						"zeraora",
+						"latias",
+						"tapu-fini",
+						"tapu-fini",
+						"krookodile",
+						"lucario",
+						"ninetales",
+						"charizard",
+						"runerigus",
+						"glaceon",
+						"machoke"
+					]
+				}
 			},
 			{
 				"typing": ["ground"],
@@ -9773,7 +9719,7 @@
 						"heliolisk",
 						"mudsdale",
 						"cryogonal",
-						"swoobat"
+						"dusknoir"
 					]
 				}
 			},
@@ -10087,15 +10033,15 @@
 					"player": "Alex",
 					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
 					"pokemon": [
-						"excadrill",
+						"thundurus-therian",
 						"weavile",
 						"slowbro",
-						"hippowdon",
+						"cobalion",
 						"moltres",
-						"vikavolt",
+						"zygarde-10",
 						"dragalge",
 						"passimian",
-						"diancie",
+						"decidueye",
 						"exeggutor-alola",
 						"audino"
 					]
@@ -10213,7 +10159,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/registeel"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/registeel",
+				"team": {
+					"name": "Zygarde-69%",
+					"player": "Jonas",
+					"logo": { "avif": "z69.avif", "webp": "z69.webp" },
+					"pokemon": [
+						"ferrothorn",
+						"zapdos",
+						"pelipper",
+						"barraskewda",
+						"moltres-galar",
+						"seismitoad",
+						"indeedee-male",
+						"registeel",
+						"exploud",
+						"beartic",
+						"turtonator"
+					]
+				}
 			},
 			{
 				"typing": ["electric", "ghost"],
@@ -10276,11 +10240,11 @@
 					"pokemon": [
 						"tornadus-therian",
 						"rillaboom",
-						"toxapex",
+						"diggersby",
 						"lycanroc-dusk",
-						"magnezone",
-						"silvally-fairy",
-						"lucario",
+						"klefki",
+						"vikavolt",
+						"goodra",
 						"uxie",
 						"slurpuff",
 						"carkol",
@@ -10374,16 +10338,16 @@
 					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
 					"pokemon": [
 						"hydreigon",
-						"cinderace",
+						"aegislash-shield",
 						"slowking",
-						"scizor",
+						"buzzwole",
 						"nidoqueen",
 						"rotom-mow",
-						"gardevoir",
+						"silvally-fairy",
 						"lickilicky",
 						"golisopod",
 						"rhydon",
-						"sableye"
+						"swoobat"
 					]
 				}
 			},
@@ -10415,11 +10379,11 @@
 					"pokemon": [
 						"tornadus-therian",
 						"rillaboom",
-						"toxapex",
+						"diggersby",
 						"lycanroc-dusk",
-						"magnezone",
-						"silvally-fairy",
-						"lucario",
+						"klefki",
+						"vikavolt",
+						"goodra",
 						"uxie",
 						"slurpuff",
 						"carkol",
@@ -10583,7 +10547,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/decidueye"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/decidueye",
+				"team": {
+					"name": "Surging Strikes",
+					"player": "Alex",
+					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
+					"pokemon": [
+						"thundurus-therian",
+						"weavile",
+						"slowbro",
+						"cobalion",
+						"moltres",
+						"zygarde-10",
+						"dragalge",
+						"passimian",
+						"decidueye",
+						"exeggutor-alola",
+						"audino"
+					]
+				}
 			},
 			{
 				"typing": ["poison", "dark"],
@@ -10874,25 +10856,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/tangela",
-				"team": {
-					"name": "Machoke(y) Balboa",
-					"player": "Felix",
-					"logo": { "avif": "machakey.avif", "webp": "machakey.webp" },
-					"pokemon": [
-						"zeraora",
-						"latias",
-						"tapu-fini",
-						"cobalion",
-						"krookodile",
-						"scolipede",
-						"ninetales",
-						"charizard",
-						"tangela",
-						"glaceon",
-						"machoke"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/tangela"
 			},
 			{
 				"typing": ["normal"],
@@ -10963,16 +10927,16 @@
 					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
 					"pokemon": [
 						"hydreigon",
-						"cinderace",
+						"aegislash-shield",
 						"slowking",
-						"scizor",
+						"buzzwole",
 						"nidoqueen",
 						"rotom-mow",
-						"gardevoir",
+						"silvally-fairy",
 						"lickilicky",
 						"golisopod",
 						"rhydon",
-						"sableye"
+						"swoobat"
 					]
 				}
 			},
@@ -11165,7 +11129,25 @@
 					}
 				],
 				"pokemonDbUrl": "https://pokemondb.net/pokedex/archeops",
-				"notes": { "de": "Von D nach C gewandert", "en": "Von D nach C gewandert" }
+				"notes": { "de": "Von D nach C gewandert", "en": "Von D nach C gewandert" },
+				"team": {
+					"name": "Freddyursa Münster",
+					"player": "Rick",
+					"logo": { "avif": "freddyursa.avif", "webp": "freddyursa.webp" },
+					"pokemon": [
+						"corviknight",
+						"dragonite",
+						"nidoking",
+						"rotom-wash",
+						"mienshao",
+						"entei",
+						"hatterene",
+						"archeops",
+						"palossand",
+						"trevenant",
+						"barbaracle"
+					]
+				}
 			},
 			{
 				"typing": ["ice", "flying"],
@@ -11306,15 +11288,15 @@
 					"player": "Alex",
 					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
 					"pokemon": [
-						"excadrill",
+						"thundurus-therian",
 						"weavile",
 						"slowbro",
-						"hippowdon",
+						"cobalion",
 						"moltres",
-						"vikavolt",
+						"zygarde-10",
 						"dragalge",
 						"passimian",
-						"diancie",
+						"decidueye",
 						"exeggutor-alola",
 						"audino"
 					]
@@ -11749,11 +11731,11 @@
 					"pokemon": [
 						"tornadus-therian",
 						"rillaboom",
-						"toxapex",
+						"diggersby",
 						"lycanroc-dusk",
-						"magnezone",
-						"silvally-fairy",
-						"lucario",
+						"klefki",
+						"vikavolt",
+						"goodra",
 						"uxie",
 						"slurpuff",
 						"carkol",
@@ -12461,20 +12443,20 @@
 				],
 				"pokemonDbUrl": "https://pokemondb.net/pokedex/swoobat",
 				"team": {
-					"name": "Atalanta Fletiamo",
-					"player": "Nico",
-					"logo": { "avif": "atlanta-fletiamo.avif", "webp": "atlanta-fletiamo.webp" },
+					"name": "TUSPO Salamence",
+					"player": "Moritz",
+					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
 					"pokemon": [
-						"kartana",
-						"urshifu-rapid-strike",
-						"slowking-galar",
-						"volcanion",
-						"mandibuzz",
-						"noivern",
-						"grimmsnarl",
-						"heliolisk",
-						"mudsdale",
-						"cryogonal",
+						"hydreigon",
+						"aegislash-shield",
+						"slowking",
+						"buzzwole",
+						"nidoqueen",
+						"rotom-mow",
+						"silvally-fairy",
+						"lickilicky",
+						"golisopod",
+						"rhydon",
 						"swoobat"
 					]
 				}
@@ -12593,25 +12575,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/leafeon",
-				"team": {
-					"name": "Große Demeteros Apokalypse",
-					"player": "Niklas",
-					"logo": { "avif": "gda-2.avif", "webp": "gda-2.webp" },
-					"pokemon": [
-						"landorus-therian",
-						"latios",
-						"milotic",
-						"raikou",
-						"incineroar",
-						"klefki",
-						"metagross",
-						"miltank",
-						"ditto",
-						"kadabra",
-						"leafeon"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/leafeon"
 			},
 			{
 				"typing": ["ice"],
@@ -12649,7 +12613,7 @@
 						"heliolisk",
 						"mudsdale",
 						"cryogonal",
-						"swoobat"
+						"dusknoir"
 					]
 				}
 			},
@@ -13036,12 +13000,12 @@
 						"zeraora",
 						"latias",
 						"tapu-fini",
-						"cobalion",
+						"tapu-fini",
 						"krookodile",
-						"scolipede",
+						"lucario",
 						"ninetales",
 						"charizard",
-						"tangela",
+						"runerigus",
 						"glaceon",
 						"machoke"
 					]
@@ -13365,12 +13329,12 @@
 						"milotic",
 						"raikou",
 						"incineroar",
-						"klefki",
+						"kingdra",
 						"metagross",
 						"miltank",
 						"ditto",
 						"kadabra",
-						"leafeon"
+						"sawk"
 					]
 				}
 			},
@@ -13485,7 +13449,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/sawk"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/sawk",
+				"team": {
+					"name": "Große Demeteros Apokalypse",
+					"player": "Niklas",
+					"logo": { "avif": "gda-2.avif", "webp": "gda-2.webp" },
+					"pokemon": [
+						"landorus-therian",
+						"latios",
+						"milotic",
+						"raikou",
+						"incineroar",
+						"kingdra",
+						"metagross",
+						"miltank",
+						"ditto",
+						"kadabra",
+						"sawk"
+					]
+				}
 			},
 			{
 				"typing": ["water", "rock"],
@@ -13633,25 +13615,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/kingler",
-				"team": {
-					"name": "Freddyursa Münster",
-					"player": "Rick",
-					"logo": { "avif": "freddyursa.avif", "webp": "freddyursa.webp" },
-					"pokemon": [
-						"corviknight",
-						"dragonite",
-						"nidoking",
-						"rotom-wash",
-						"mienshao",
-						"entei",
-						"hatterene",
-						"accelgor",
-						"palossand",
-						"maractus",
-						"kingler"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/kingler"
 			},
 			{
 				"typing": ["dark"],
@@ -14244,25 +14208,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/lurantis",
-				"team": {
-					"name": "Zygarde-69%",
-					"player": "Jonas",
-					"logo": { "avif": "z69.avif", "webp": "z69.webp" },
-					"pokemon": [
-						"ferrothorn",
-						"zapdos",
-						"pelipper",
-						"barraskewda",
-						"bisharp",
-						"seismitoad",
-						"weezing-galar",
-						"corsola-galar",
-						"exploud",
-						"beartic",
-						"lurantis"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/lurantis"
 			},
 			{
 				"typing": ["grass"],
@@ -14304,25 +14250,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/maractus",
-				"team": {
-					"name": "Freddyursa Münster",
-					"player": "Rick",
-					"logo": { "avif": "freddyursa.avif", "webp": "freddyursa.webp" },
-					"pokemon": [
-						"corviknight",
-						"dragonite",
-						"nidoking",
-						"rotom-wash",
-						"mienshao",
-						"entei",
-						"hatterene",
-						"accelgor",
-						"palossand",
-						"maractus",
-						"kingler"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/maractus"
 			},
 			{
 				"typing": ["fighting"],
@@ -14373,12 +14301,12 @@
 						"zeraora",
 						"latias",
 						"tapu-fini",
-						"cobalion",
+						"tapu-fini",
 						"krookodile",
-						"scolipede",
+						"lucario",
 						"ninetales",
 						"charizard",
-						"tangela",
+						"runerigus",
 						"glaceon",
 						"machoke"
 					]
@@ -14930,15 +14858,15 @@
 					"player": "Alex",
 					"logo": { "avif": "surging-strikes.avif", "webp": "surging-strikes.webp" },
 					"pokemon": [
-						"excadrill",
+						"thundurus-therian",
 						"weavile",
 						"slowbro",
-						"hippowdon",
+						"cobalion",
 						"moltres",
-						"vikavolt",
+						"zygarde-10",
 						"dragalge",
 						"passimian",
-						"diancie",
+						"decidueye",
 						"exeggutor-alola",
 						"audino"
 					]
@@ -15588,16 +15516,16 @@
 					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
 					"pokemon": [
 						"hydreigon",
-						"cinderace",
+						"aegislash-shield",
 						"slowking",
-						"scizor",
+						"buzzwole",
 						"nidoqueen",
 						"rotom-mow",
-						"gardevoir",
+						"silvally-fairy",
 						"lickilicky",
 						"golisopod",
 						"rhydon",
-						"sableye"
+						"swoobat"
 					]
 				}
 			},
@@ -16132,13 +16060,13 @@
 						"zapdos",
 						"pelipper",
 						"barraskewda",
-						"bisharp",
+						"moltres-galar",
 						"seismitoad",
-						"weezing-galar",
-						"corsola-galar",
+						"indeedee-male",
+						"registeel",
 						"exploud",
 						"beartic",
-						"lurantis"
+						"turtonator"
 					]
 				}
 			},
@@ -16488,7 +16416,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/barbaracle"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/barbaracle",
+				"team": {
+					"name": "Freddyursa Münster",
+					"player": "Rick",
+					"logo": { "avif": "freddyursa.avif", "webp": "freddyursa.webp" },
+					"pokemon": [
+						"corviknight",
+						"dragonite",
+						"nidoking",
+						"rotom-wash",
+						"mienshao",
+						"entei",
+						"hatterene",
+						"archeops",
+						"palossand",
+						"trevenant",
+						"barbaracle"
+					]
+				}
 			},
 			{
 				"typing": ["electric", "steel"],
@@ -16594,7 +16540,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/turtonator"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/turtonator",
+				"team": {
+					"name": "Zygarde-69%",
+					"player": "Jonas",
+					"logo": { "avif": "z69.avif", "webp": "z69.webp" },
+					"pokemon": [
+						"ferrothorn",
+						"zapdos",
+						"pelipper",
+						"barraskewda",
+						"moltres-galar",
+						"seismitoad",
+						"indeedee-male",
+						"registeel",
+						"exploud",
+						"beartic",
+						"turtonator"
+					]
+				}
 			},
 			{
 				"typing": ["ghost", "grass"],
@@ -16636,7 +16600,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/trevenant"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/trevenant",
+				"team": {
+					"name": "Freddyursa Münster",
+					"player": "Rick",
+					"logo": { "avif": "freddyursa.avif", "webp": "freddyursa.webp" },
+					"pokemon": [
+						"corviknight",
+						"dragonite",
+						"nidoking",
+						"rotom-wash",
+						"mienshao",
+						"entei",
+						"hatterene",
+						"archeops",
+						"palossand",
+						"trevenant",
+						"barbaracle"
+					]
+				}
 			},
 			{
 				"typing": ["flying", "water"],
@@ -16750,11 +16732,11 @@
 					"pokemon": [
 						"tornadus-therian",
 						"rillaboom",
-						"toxapex",
+						"diggersby",
 						"lycanroc-dusk",
-						"magnezone",
-						"silvally-fairy",
-						"lucario",
+						"klefki",
+						"vikavolt",
+						"goodra",
 						"uxie",
 						"slurpuff",
 						"carkol",
@@ -17054,25 +17036,7 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/sableye",
-				"team": {
-					"name": "TUSPO Salamence",
-					"player": "Moritz",
-					"logo": { "avif": "tuspo-salamence.avif", "webp": "tuspo-salamence.webp" },
-					"pokemon": [
-						"hydreigon",
-						"cinderace",
-						"slowking",
-						"scizor",
-						"nidoqueen",
-						"rotom-mow",
-						"gardevoir",
-						"lickilicky",
-						"golisopod",
-						"rhydon",
-						"sableye"
-					]
-				}
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/sableye"
 			},
 			{
 				"typing": ["ghost"],
@@ -17104,7 +17068,25 @@
 						}
 					}
 				],
-				"pokemonDbUrl": "https://pokemondb.net/pokedex/dusknoir"
+				"pokemonDbUrl": "https://pokemondb.net/pokedex/dusknoir",
+				"team": {
+					"name": "Atalanta Fletiamo",
+					"player": "Nico",
+					"logo": { "avif": "atlanta-fletiamo.avif", "webp": "atlanta-fletiamo.webp" },
+					"pokemon": [
+						"kartana",
+						"urshifu-rapid-strike",
+						"slowking-galar",
+						"volcanion",
+						"mandibuzz",
+						"noivern",
+						"grimmsnarl",
+						"heliolisk",
+						"mudsdale",
+						"cryogonal",
+						"dusknoir"
+					]
+				}
 			},
 			{
 				"typing": ["ghost"],
