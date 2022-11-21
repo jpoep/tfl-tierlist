@@ -5,14 +5,14 @@ const c = [
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
-  "/_app/immutable/start-d92f8e9c.js",
+  "/_app/immutable/start-f4ebe0e2.js",
   "/_app/immutable/pages/__layout.svelte-7b95c91c.js",
   "/_app/immutable/assets/__layout-8495a177.css",
   "/_app/immutable/error.svelte-a508989b.js",
   "/_app/immutable/pages/__layout-root.svelte-183579a5.js",
   "/_app/immutable/pages/teams/__layout@root.svelte-e55f7fc1.js",
   "/_app/immutable/pages/teams/__layout-single-team@root.svelte-c5d74de2.js",
-  "/_app/immutable/pages/index.svelte-b0c61824.js",
+  "/_app/immutable/pages/index.svelte-e486adb7.js",
   "/_app/immutable/assets/index-a9104c0d.css",
   "/_app/immutable/pages/teams/_team_@single-team.svelte-90bd2b3d.js",
   "/_app/immutable/assets/[team]@single-team-df96a616.css",
@@ -122,34 +122,34 @@ const c = [
   "/sounds/sword-thud.mp3",
   "/sounds/till.mp3",
   "/till.png"
-], p = "1669067214290", e = self, n = `cache${p}`, i = c.concat(m.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
+], p = "1669068637224", e = self, n = `cache${p}`, i = c.concat(m.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
 e.addEventListener("install", (s) => {
-  s.waitUntil(caches.open(n).then((o) => o.addAll(i)).then(() => {
+  s.waitUntil(caches.open(n).then((a) => a.addAll(i)).then(() => {
     e.skipWaiting();
   }));
 });
 e.addEventListener("activate", (s) => {
-  s.waitUntil(caches.keys().then(async (o) => {
-    for (const a of o)
-      a !== n && await caches.delete(a);
+  s.waitUntil(caches.keys().then(async (a) => {
+    for (const o of a)
+      o !== n && await caches.delete(o);
     e.clients.claim();
   }));
 });
 async function u(s) {
-  const o = await caches.open(`offline${p}`);
+  const a = await caches.open(`offline${p}`);
   try {
-    const a = await fetch(s);
-    return o.put(s, a.clone()), a;
-  } catch (a) {
-    const t = await o.match(s);
+    const o = await fetch(s);
+    return a.put(s, o.clone()), o;
+  } catch (o) {
+    const t = await a.match(s);
     if (t)
       return t;
-    throw a;
+    throw o;
   }
 }
 e.addEventListener("fetch", (s) => {
   if (s.request.method !== "GET" || s.request.headers.has("range"))
     return;
-  const o = new URL(s.request.url), a = o.protocol.startsWith("http"), t = o.hostname === self.location.hostname && o.port !== self.location.port, l = o.host === self.location.host && r.has(o.pathname), g = s.request.cache === "only-if-cached" && !l;
-  a && !t && !g && s.respondWith((async () => (l || o.pathname.startsWith("/PokeAPI/sprites/")) && await caches.match(s.request) || u(s.request))());
+  const a = new URL(s.request.url), o = a.protocol.startsWith("http"), t = a.hostname === self.location.hostname && a.port !== self.location.port, l = a.host === self.location.host && r.has(a.pathname), g = s.request.cache === "only-if-cached" && !l;
+  o && !t && !g && s.respondWith((async () => (l || a.pathname.startsWith("/PokeAPI/sprites/")) && await caches.match(s.request) || u(s.request))());
 });
