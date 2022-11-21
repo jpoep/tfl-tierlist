@@ -1,6 +1,13 @@
 import prodTierlist from '../data/tierlist.json' assert { type: 'json' };
 import teamsData from '../data/teams.json' assert { type: 'json' };
-import pkg, { type PokemonForm, type PokemonSpecies } from 'pokenode-ts';
+import {
+	type PokemonForm,
+	type PokemonSpecies,
+	PokemonClient,
+	type Pokemon,
+	type VerboseEffect,
+	type Name
+} from 'pokenode-ts';
 import type {
 	Ability,
 	InflatedTeam,
@@ -17,7 +24,6 @@ import {
 	type JsonPokemonObject,
 	type JsonTier
 } from '../src/lib/types/json.js';
-const { PokemonClient } = pkg;
 
 const api = new PokemonClient({
 	cacheOptions: {
@@ -64,7 +70,7 @@ const getForm: {
 };
 
 const getStats: {
-	(pokemon: pkg.Pokemon): Stats;
+	(pokemon: Pokemon): Stats;
 } = (pokemon) => {
 	const stats = pokemon.stats.map((stat) => stat.base_stat);
 	return {
@@ -87,7 +93,7 @@ async function getAbility(abilityName: string): Promise<Ability> {
 	}
 	const ability = await api.getAbilityByName(abilityName);
 	const error = () => throwExpression(`Ability "${abilityName}" not found.`);
-	const byLanguage = (language: string) => (verboseEffect: pkg.Name | pkg.VerboseEffect) =>
+	const byLanguage = (language: string) => (verboseEffect: Name | VerboseEffect) =>
 		verboseEffect.language.name === language;
 
 	const returnAbility: Ability = {
@@ -132,6 +138,7 @@ const fetchPokemon: { (pokemon: JsonPokemon): Promise<PokemonType> } = async (
 
 	const pokemon = await api
 		.getPokemonByName(pokemonName)
+		.catch(() => api.getPokemonByName(pokemonName))
 		.catch((it) => logError(it, pokemonName, 'main'));
 
 	if (!pokemon) {
@@ -190,6 +197,7 @@ const fetchPokemon: { (pokemon: JsonPokemon): Promise<PokemonType> } = async (
 				console.info('\tSpecies data for ' + pokemonName + ' fetched');
 				return it;
 			})
+			.catch(() => api.getPokemonSpeciesByName(pokemon.species.name))
 			.catch((it) => logError(it, pokemonName, 'species')),
 		api
 			.getPokemonFormByName(pokemon.forms[0].name)
@@ -197,6 +205,7 @@ const fetchPokemon: { (pokemon: JsonPokemon): Promise<PokemonType> } = async (
 				console.info('\tForm data for ' + pokemonName + ' fetched');
 				return it;
 			})
+			.catch(() => api.getPokemonFormByName(pokemon.forms[0].name))
 			.catch((it) => logError(it, pokemonName, 'form')),
 		...pokemon.abilities.map((it) =>
 			getAbility(it.ability.name)
@@ -204,6 +213,7 @@ const fetchPokemon: { (pokemon: JsonPokemon): Promise<PokemonType> } = async (
 					console.info('\tAbility data for ' + pokemonName + ' fetched');
 					return it;
 				})
+				.catch(() => getAbility(it.ability.name))
 				.catch((it) => logError(it, pokemonName, 'abilities'))
 		)
 	]);
