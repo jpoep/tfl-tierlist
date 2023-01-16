@@ -87,33 +87,44 @@ function throwExpression(errorMessage: string): never {
 	throw new Error(errorMessage);
 }
 
+const FALLBACK_ABILITY_TEXT = 'Konnte Ability nicht laden';
+const fallbackAbility: Ability = {
+	de: {
+		description: FALLBACK_ABILITY_TEXT,
+		name: FALLBACK_ABILITY_TEXT
+	},
+	en: {
+		description: FALLBACK_ABILITY_TEXT,
+		name: FALLBACK_ABILITY_TEXT
+	}
+};
+
 async function getAbility(abilityName: string): Promise<Ability> {
 	if (abilityName in abilityCache) {
 		return abilityCache[abilityName];
 	}
 	const ability = await api.getAbilityByName(abilityName);
-	const error = () => throwExpression(`Ability "${abilityName}" not found.`);
 	const byLanguage = (language: string) => (verboseEffect: Name | VerboseEffect) =>
 		verboseEffect.language.name === language;
 
 	const returnAbility: Ability = {
 		de: {
-			name: ability.names.find(byLanguage('de'))?.name ?? error(),
+			name: ability.names.find(byLanguage('de'))?.name ?? abilityName,
 			description:
 				(ability.effect_entries.find(byLanguage('de'))?.effect ||
 					ability.flavor_text_entries
 						.filter((it) => it.language.name === 'de')
 						?.find((it) => it.version_group.name === 'sword-shield')?.flavor_text) ??
-				error()
+				FALLBACK_ABILITY_TEXT
 		},
 		en: {
-			name: ability.names.find(byLanguage('en'))?.name ?? error(),
+			name: ability.names.find(byLanguage('en'))?.name ?? abilityName,
 			description:
 				(ability.effect_entries.find(byLanguage('en'))?.effect ||
 					ability.flavor_text_entries
 						.filter((it) => it.language.name === 'en')
 						?.find((it) => it.version_group.name === 'sword-shield')?.flavor_text) ??
-				error()
+				FALLBACK_ABILITY_TEXT
 		}
 	};
 	abilityCache[abilityName] = returnAbility;
@@ -217,18 +228,6 @@ const fetchPokemon: { (pokemon: JsonPokemon): Promise<PokemonType> } = async (
 				.catch(console.error)
 		)
 	]);
-
-	const FALLBACK_ABILITY_TEXT = 'Konnte Ability nicht laden';
-	const fallbackAbility: Ability = {
-		de: {
-			description: FALLBACK_ABILITY_TEXT,
-			name: FALLBACK_ABILITY_TEXT
-		},
-		en: {
-			description: FALLBACK_ABILITY_TEXT,
-			name: FALLBACK_ABILITY_TEXT
-		}
-	};
 
 	const returnValue: PokemonType = {
 		typing: pokemon.types.map((it) => it.type.name) as Typing,
