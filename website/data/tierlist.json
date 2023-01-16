@@ -34,8 +34,6 @@
 				"torkoal",
 				"cyclizar",
 				"iron-treads",
-				"hydreigon",
-				"skeledirge",
 				"garganacl",
 				"cinderace"
 			],
@@ -54,8 +52,10 @@
 			"rank": 2,
 			"pokemon": [
 				"gengar",
+				"hydreigon",
 				"azumarill",
 				"slowking",
+				"skeledirge",
 				"tyranitar",
 				"breloom",
 				"floatzel",
@@ -81,7 +81,6 @@
 				"pelipper",
 				"slowbro",
 				"scizor",
-				"toxtricity",
 				"sandy-shocks",
 				"toxapex"
 			],
@@ -97,6 +96,7 @@
 			"pokemon": [
 				"lowkix",
 				"arcanine",
+				"toxtricity-amped",
 				"cloyster",
 				"cetitan",
 				"tauros-paldea-aqua-breed",
