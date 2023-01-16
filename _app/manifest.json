@@ -24,7 +24,7 @@
     "src": "../node_modules/@fontsource/titillium-web/files/titillium-web-all-700-normal.woff"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-ef8b6a10.js",
+    "file": "immutable/start-dbd78a47.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -108,7 +108,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "immutable/pages/index.svelte-7be88b1b.js",
+    "file": "immutable/pages/index.svelte-73890f5f.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -238,10 +238,6 @@
     "file": "immutable/assets/__layout-8495a177.css",
     "src": "src/routes/__layout.css"
   },
-  "src/routes/index.css": {
-    "file": "immutable/assets/index-a9104c0d.css",
-    "src": "src/routes/index.css"
-  },
   "navbar.css": {
     "file": "immutable/assets/navbar-025804c3.css",
     "src": "navbar.css"
@@ -254,12 +250,16 @@
     "file": "immutable/assets/[team]@single-team-df96a616.css",
     "src": "src/routes/teams/[team]@single-team.css"
   },
+  "src/routes/teams/index.css": {
+    "file": "immutable/assets/index-fd3525e6.css",
+    "src": "src/routes/teams/index.css"
+  },
   "team.css": {
     "file": "immutable/assets/team-00ff67f5.css",
     "src": "team.css"
   },
-  "src/routes/teams/index.css": {
-    "file": "immutable/assets/index-fd3525e6.css",
-    "src": "src/routes/teams/index.css"
+  "src/routes/index.css": {
+    "file": "immutable/assets/index-a9104c0d.css",
+    "src": "src/routes/index.css"
   }
 }
