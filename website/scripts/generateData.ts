@@ -214,7 +214,7 @@ const fetchPokemon: { (pokemon: JsonPokemon): Promise<PokemonType> } = async (
 					return it;
 				})
 				.catch(() => getAbility(it.ability.name))
-				.catch((it) => logError(it, pokemonName, 'abilities'))
+				.catch(console.error)
 		)
 	]);
 
