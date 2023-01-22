@@ -5,6 +5,17 @@
 			"player": "Moritz",
 			"logo": "tuspo-salamence",
 			"pokemon": [
+				"great-tusk",
+				"greninja",
+				"azumarill",
+				"skeledirge",
+				"noivern",
+				"forretress",
+				"wo-chien",
+				"jolteon",
+				"grafaiai",
+				"carbink",
+				"vivillon"
 			]
 			},
 		{
@@ -12,41 +23,107 @@
 			"player": "Rick",
 			"logo": "freddyursa",
 			"pokemon": [
+				"cyclizar",
+				"kingambit",
+				"espathra",
+				"ceruledge",
+				"grimmsnarl",
+				"cloyster",
+				"gyarados",
+				"hariyama",
+				"rotom-mow",
+				"frosmoth",
+				"squawkabilly"
 			]
 		},
 		{
-			"name": "Große Demeteros Apokalypse",
+			"name": "Große Schlurm Apokalypse",
 			"player": "Niklas",
 			"logo": "gda-2",
 			"pokemon": [
+				"roaring-moon",
+				"iron-treads",
+				"sylveon",
+				"slither-wing",
+				"rotom-heat",
+				"hippowdon",
+				"orthworm",
+				"lycanroc-midday",
+				"vaporeon",
+				"drifblim",
+				"abomasnow"
 			]
 		},
 		{
-			"name": "Stomping Dannex",
+			"name": "All Hail The King",
 			"player": "Danny",
 			"logo": "stomping-dannex",
 			"pokemon": [
+				"baxcalibur",
+				"cinderace",
+				"slowking",
+				"lycanroc-dusk",
+				"cetitan",
+				"revavroom",
+				"lokix",
+				"mudsdale",
+				"dachsbuns",
+				"dunsparce",
+				"gogoat"
 			]
 		},
 		{
-			"name": "PSV Nilsoking",
-			"player": "Nils",
+			"name": "Frigometris Eisdusche",
+			"player": "David",
 			"logo": "psv-nilsoking",
 			"pokemon": [
+				"corviknight",
+				"garchomp",
+				"gengar",
+				"slowbro",
+				"armarouge",
+				"brute-bonnet",
+				"tauros-aqua-breed",
+				"klefki",
+				"muk",
+				"cryogonal",
+				"coalossal"
 			]
 		},
 		{
-			"name": "Surging Strikes",
+			"name": "All Whale The King",
 			"player": "Alex",
 			"logo": "surging-strikes",
 			"pokemon": [
+				"meowscarada",
+				"annihilape",
+				"dondozo",
+				"clodsire",
+				"kilowattrel",
+				"tinkaton",
+				"chansey",
+				"tatsugiri",
+				"venomoth",
+				"sableye",
+				"persian"
 			]
 		},
 		{
-			"name": "Dragapults Disco",
+			"name": "Allmighty Altaria",
 			"player": "Oli",
 			"logo": "dragapult-disco",
 			"pokemon": [
+				"quaquaval",
+				"volcarona",
+				"hydreigon",
+				"amoonguss",
+				"florges",
+				"salazzle",
+				"krookodile",
+				"eelektross",
+				"copperajah",
+				"kricketune",
+				"altaria"
 			]
 		},
 		{
@@ -54,41 +131,71 @@
 			"player": "Felix",
 			"logo": "machakey",
 			"pokemon": [
+				"iron-valiant",
+				"dragapult",
+				"scizor",
+				"rotom-wash",
+				"pinchurchin",
+				"gastrodon",
+				"mabosstiff",
+				"tsareena",
+				"raichu-alola",
+				"flareon",
+				"eiscue"
 			]
 		},
 		{
-			"name": "Pixelspark",
-			"player": "Till",
+			"name": "Ghood As Ghold",
+			"player": "Turti",
 			"logo": "pixelspark",
 			"pokemon": [
+				"gholdengo",
+				"dragonite",
+				"breloom",
+				"tyranitar",
+				"quagsire",
+				"ditto",
+				"maushold",
+				"charizard",
+				"bronzong",
+				"dedenne",
+				"glimmet"
 			]
 		},
 		{
-			"name": "Zygarde-69%",
+			"name": "Dyken Domage",
 			"player": "Jonas",
 			"logo": "z69",
 			"pokemon": [
+				"chi-yu",
+				"garganacl",
+				"iron-hands",
+				"hawlucha",
+				"toxtricity",
+				"indeedee-f",
+				"donphan",
+				"arboliva",
+				"masquerain",
+				"perrserker",
+				"greedent"
 			]
 		},
 		{
-			"name": "Galar Rapidashs",
-			"player": "Philipp",
+			"name": "HESESCHMESE",
+			"player": "Hese",
 			"logo": "galar-rapidashs",
 			"pokemon": [
-			]
-		},
-		{
-			"name": "Atalanta Fletiamo",
-			"player": "Nico",
-			"logo": "atlanta-fletiamo",
-			"pokemon": [
-			]
-		},
-		{
-			"name": "Bellektro Ghetto",
-			"player": "Max",
-			"logo": "bellektro-ghetto-2",
-			"pokemon": [
+				"pawmot",
+				"ting-lu",
+				"glimmora",
+				"iron-jugulis",
+				"lucario",
+				"veluza",
+				"hatterene",
+				"froslass",
+				"brambleghast",
+				"talonflame",
+				"komala"
 			]
 		},
 		{
@@ -96,6 +203,17 @@
 			"player": "Bobex",
 			"logo": "tripled",
 			"pokemon": [
+				"chien-pao",
+				"iron-moth",
+				"scream-tail",
+				"toxapex",
+				"goodra",
+				"braviary",
+				"magnezone",
+				"scyther",
+				"toedscruel",
+				"avalugg",
+				"rotom"
 			]
 		}
 	]
