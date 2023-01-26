@@ -20,11 +20,12 @@
 	let animateTeam = false;
 
 	$: detailsActive = $allStatsToggled;
-	$: imageSource = detailsActive
-		? pokemon.miniSpriteUrl
-		: $officialArtworkEnabled
-		? pokemon.officialArtworkUrl
-		: pokemon.imageUrl;
+	$: imageSource =
+		(detailsActive
+			? pokemon.miniSpriteUrl
+			: $officialArtworkEnabled
+			? pokemon.officialArtworkUrl
+			: pokemon.imageUrl) ?? pokemon.officialArtworkUrl;
 	$: _pokemon = new Pokemon(pokemon);
 
 	const toggleDetails = () => (detailsActive = !detailsActive);
