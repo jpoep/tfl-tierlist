@@ -5,14 +5,14 @@ const c = [
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
-  "/_app/immutable/start-575d609a.js",
-  "/_app/immutable/pages/__layout.svelte-7b95c91c.js",
+  "/_app/immutable/start-a86c9bd6.js",
+  "/_app/immutable/pages/__layout.svelte-cd482d7c.js",
   "/_app/immutable/assets/__layout-8495a177.css",
   "/_app/immutable/error.svelte-a508989b.js",
   "/_app/immutable/pages/__layout-root.svelte-183579a5.js",
-  "/_app/immutable/pages/teams/__layout@root.svelte-e55f7fc1.js",
-  "/_app/immutable/pages/teams/__layout-single-team@root.svelte-c5d74de2.js",
-  "/_app/immutable/pages/index.svelte-4f2a5e4b.js",
+  "/_app/immutable/pages/teams/__layout@root.svelte-029e7675.js",
+  "/_app/immutable/pages/teams/__layout-single-team@root.svelte-e15ccbdc.js",
+  "/_app/immutable/pages/index.svelte-03efa498.js",
   "/_app/immutable/assets/index-a9104c0d.css",
   "/_app/immutable/pages/teams/_team_@single-team.svelte-90bd2b3d.js",
   "/_app/immutable/assets/[team]@single-team-df96a616.css",
@@ -22,11 +22,11 @@ const c = [
   "/_app/immutable/chunks/index-cd411dc4.js",
   "/_app/immutable/chunks/index-7be4c444.js",
   "/_app/immutable/chunks/paths-1c47712a.js",
-  "/_app/immutable/chunks/navbar-cbcaf8e7.js",
+  "/_app/immutable/chunks/navbar-ff4a559e.js",
   "/_app/immutable/assets/navbar-025804c3.css",
   "/_app/immutable/chunks/filter-6bb947a8.js",
   "/_app/immutable/chunks/sprites-f9e5c6f3.js",
-  "/_app/immutable/chunks/tooltip-0e141dfe.js",
+  "/_app/immutable/chunks/tooltip-0150ad3b.js",
   "/_app/immutable/assets/tooltip-1298881e.css",
   "/_app/immutable/chunks/baseline-arrow-back-51f093c8.js",
   "/_app/immutable/chunks/team-1953c536.js",
@@ -122,7 +122,7 @@ const c = [
   "/sounds/sword-thud.mp3",
   "/sounds/till.mp3",
   "/till.png"
-], p = "1674163775076", e = self, n = `cache${p}`, i = c.concat(m.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
+], p = "1674753080019", e = self, n = `cache${p}`, i = c.concat(m.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
 e.addEventListener("install", (s) => {
   s.waitUntil(caches.open(n).then((a) => a.addAll(i)).then(() => {
     e.skipWaiting();
