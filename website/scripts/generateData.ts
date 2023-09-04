@@ -242,7 +242,7 @@ const fetchPokemon: { (pokemon: JsonPokemon): Promise<PokemonType> } = async (
 		id: jsonPokemonObject?.internalName || pokemonName,
 		baseStats: getStats(pokemon),
 		abilities: abilities.map((it) => it || fallbackAbility),
-		pokemonDbUrl: species?.name && `https://pokemondb.net/pokedex/${species.name}`,
+		pokemonDbUrl: species && species.name && `https://pokemondb.net/pokedex/${species.name}`,
 		...jsonPokemonObject?.overrides
 	};
 
