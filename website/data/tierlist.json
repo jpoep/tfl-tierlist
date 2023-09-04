@@ -13,7 +13,7 @@
 			"pokemon": [
 				"chien-pao",
 				"tornadus-therian",
-				"enamorous-incarnate",
+				"enamorus-incarnate",
 				"ting-lu",
 				"landorus-therian",
 				"roaring-moon",
@@ -47,16 +47,13 @@
 			"notes": {
 				"sneasler": {
 					"de": "Ohne Unheilsklauen",
-					"en": "without Dire Claw"
+					"en": "Ohne Dire Claw"
 				}
 			}
 		},
 		{
 			"name": "A",
-			"subtitles": [
-				"Auch noch ganz okay I guess",
-				"Erschwingliches Pex gefällig?"
-			],
+			"subtitles": ["Auch noch ganz okay I guess", "Erschwingliches Pex gefällig?"],
 			"emptyText": "wie alles rausgefiltert",
 			"rank": 2,
 			"pokemon": [
@@ -67,15 +64,15 @@
 				"barraskewda",
 				"scream-tail",
 				"salamence",
-				"enamorous-therian",
+				"enamorus-therian",
 				"landorus-incarnate",
 				"tyranitar",
 				"dragonite",
 				"iron-leaves",
-				"iron-thorns,
+				"iron-thorns",
 				"iron-jugulis",
 				"sylveon",
-				"galade",
+				"gallade",
 				"gengar",
 				"rillaboom",
 				"dondozo",
@@ -87,7 +84,7 @@
 				"amoonguss",
 				"slither-wing",
 				"slowking",
-				"glimmora,
+				"glimmora",
 				"haxorus",
 				"pelipper",
 				"espathra",
@@ -109,7 +106,7 @@
 				"iron-hands",
 				"slowking-galar",
 				"lilligant-hisui",
-				"thundurs-therian",
+				"thundurus-therian",
 				"floatzel",
 				"sandy-shocks",
 				"breloom",
@@ -119,7 +116,7 @@
 			"notes": {
 				"landorus-incarnate": {
 					"de": "Ohne Rohe Gewalt",
-					"en": "without Sheer Force"
+					"en": "Ohne Sheer Force"
 				}
 			}
 		},
@@ -150,7 +147,7 @@
 				"moltres-galar",
 				"gastrodon",
 				"tinkaton",
-				"guardevoir";
+				"gardevoir",
 				"hariyama",
 				"blissey",
 				"decidueye-hisui",
@@ -164,8 +161,8 @@
 				"lucario",
 				"alomomola",
 				"medicham",
-				"meloetta",
-				"mimikyu",
+				"meloetta-aria",
+				"mimikyu-disguised",
 				"quagsire",
 				"polteageist",
 				"umbreon",
@@ -176,7 +173,7 @@
 				"glastrier",
 				"krookodile",
 				"regidrago",
-				"toxtricity",
+				"toxtricity-amped",
 				"rotom-mow",
 				"basculegion-male",
 				"basculegion-female",
@@ -205,16 +202,16 @@
 			],
 			"notes": {
 				"basculin-white-striped": {
-					"de": "Info: Kann im Gegensatz zur blauen oder roten Variante Evolit tragen",
-					"en": "Info: May carry eviolite, in contrast to blue and red variants"
+					"de": "Kann im Gegensatz zur blauen oder roten Variante Evolit tragen",
+					"en": "Kann im Gegensatz zur blauen oder roten Variante Eviolite tragen"
 				},
 				"basculegion-male": {
 					"de": "Ohne Letzte Ehre",
-					"en": "Without Last Respects"
+					"en": "Ohne Last Respects"
 				},
 				"basculegion-female": {
 					"de": "Ohne Letzte Ehre",
-					"en": "Without Last Respects"
+					"en": "Ohne Last Respects"
 				}
 			}
 		},
@@ -249,7 +246,7 @@
 				"articuno-galar",
 				"glaceon",
 				"charizard",
-				"scolvillain",
+				"scovillain",
 				"qwilfish-hisui",
 				"electrode-hisui",
 				"sneasel-hisui",
@@ -258,7 +255,7 @@
 				"houndoom",
 				"klawf",
 				"revavroom",
-				"eiscue",
+				"eiscue-ice",
 				"falinks",
 				"slaking",
 				"luxray",
@@ -271,7 +268,7 @@
 				"passimian",
 				"primeape",
 				"rotom",
-				"sandaconda,
+				"sandaconda",
 				"appletun",
 				"naclstack",
 				"beartic",
@@ -287,7 +284,7 @@
 				"ursaring",
 				"mesprit",
 				"bellibolt",
-				"lycanroc-day",
+				"lycanroc-midday",
 				"eelektross",
 				"magneton",
 				"mudsdale",
@@ -298,15 +295,15 @@
 			"notes": {
 				"houndstone": {
 					"de": "Ohne Letzte Ehre",
-					"en": "without Last Respects"
+					"en": "Ohne Last Respects"
 				},
 				"scovillain": {
 					"de": "Ohne Gefühlswippe",
-					"en": "without Moody"
+					"en": "Ohne Moody"
 				},
 				"basculin-red-striped": {
-					"de": "Info: Kann kein Evolit tragen. Inkludiert blaue Variation",
-					"en": "Info: May not carry eviolite. Includes blue variant"
+					"de": "Kann keinen Evoliten tragen. Schließt die blaue Variation mit ein",
+					"en": "Kann keinen Eviolite tragen. Schließt die blaue Variation mit ein"
 				},
 				"rabsca": {
 					"de": "Ohne Vitalsegen",
@@ -317,17 +314,9 @@
 		{
 			"name": "D",
 			"rank": 5,
-			"subtitles": ["Immer noch besser als Warsteiner", "Ja! Pizza Salami 3x350g"],
-			"emptyText": "wie doof, dass nichts mehr übrig ist",
-			"pokemon": [
-				"arceus"
-			],
-			"notes": {
-				"arceus": {
-					"de": "D Tier wird noch bearbeitet",
-					"en": "D Tier work in progress"
-				}
-			}
+			"subtitles": ["Alex und Rick ehren das D-Tier nicht"],
+			"emptyText": "wie Digga gar keinen Bock, mich ums D-Tier zu kümmern",
+			"pokemon": []
 		}
 	]
 }
