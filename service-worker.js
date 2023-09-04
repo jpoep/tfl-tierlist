@@ -5,14 +5,14 @@ const m = [
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
-  "/_app/immutable/start-5fb6718e.js",
+  "/_app/immutable/start-759c5d25.js",
   "/_app/immutable/pages/__layout.svelte-b25c8639.js",
   "/_app/immutable/assets/__layout-8495a177.css",
   "/_app/immutable/error.svelte-a508989b.js",
   "/_app/immutable/pages/__layout-root.svelte-183579a5.js",
   "/_app/immutable/pages/teams/__layout@root.svelte-f68c18ea.js",
   "/_app/immutable/pages/teams/__layout-single-team@root.svelte-7a282221.js",
-  "/_app/immutable/pages/index.svelte-07dbbbed.js",
+  "/_app/immutable/pages/index.svelte-4a9fb786.js",
   "/_app/immutable/assets/index-a9104c0d.css",
   "/_app/immutable/pages/teams/_team_@single-team.svelte-5d996c3b.js",
   "/_app/immutable/assets/[team]@single-team-df96a616.css",
@@ -122,7 +122,7 @@ const m = [
   "/sounds/sword-thud.mp3",
   "/sounds/till.mp3",
   "/till.png"
-], p = "1674753437520", e = self, n = `cache${p}`, i = m.concat(c.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
+], p = "1693828130323", e = self, n = `cache${p}`, i = m.concat(c.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
 e.addEventListener("install", (s) => {
   s.waitUntil(caches.open(n).then((a) => a.addAll(i)).then(() => {
     e.skipWaiting();
