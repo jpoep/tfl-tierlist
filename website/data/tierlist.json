@@ -3,12 +3,11 @@
 		{
 			"name": "S",
 			"subtitles": [
-				"Die dicken Bimmser",
-				"Geile Pokemon und Necrozma",
-				"nice.",
-				"👌👀👌👀✔ some good👌👌shit right mMMMMᎷМ 💯 there💦💦"
+				"Nach Gutdünken bestückt mit krassen Bois und Boietten",
+				"Lando und seine Homies",
+				"rip clef"
 			],
-			"emptyText": "wie schade, dass es hier nichts mehr gibt",
+			"emptyText": "wie so ein Schmutz; hier nicht",
 			"rank": 1,
 			"pokemon": [
 				"chien-pao",
@@ -89,8 +88,8 @@
 		},
 		{
 			"name": "A",
-			"subtitles": ["Auch noch ganz okay I guess", "Erschwingliches Pex gefällig?"],
-			"emptyText": "wie alles rausgefiltert",
+			"subtitles": ["Auch noch ganz okay I guess", "Auch ohne Tera brauchbar", "2 Kings und 2 Dons"],
+			"emptyText": "wie anders nicht vorhanden",
 			"rank": 2,
 			"pokemon": [
 				"toxapex",
@@ -283,8 +282,8 @@
 		},
 		{
 			"name": "B",
-			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“"],
-			"emptyText": "wie besonders leer gesucht",
+			"subtitles": ["„Wer das B-Tier nicht ehrt, ist des S-Tiers nicht wert.“", "2 Dons und 2 Bros"],
+			"emptyText": "wie besonders heftig gefiltert",
 			"rank": 3,
 			"pokemon": [
 				"muk-alola",
@@ -369,7 +368,8 @@
 				"vikavolt",
 				"ribombee",
 				"ninetales",
-				"torterra"
+				"torterra",
+				"weezing-galar"
 			],
 			"notes": {
 				"basculin-white-striped": {
@@ -388,8 +388,8 @@
 		},
 		{
 			"name": "C",
-			"subtitles": ["Nimmste günstig mit"],
-			"emptyText": "wie complett ergebnislos",
+			"subtitles": ["Nimmste günstig mit", "Core-Resterampe", "Kommt doch eh nie mit"],
+			"emptyText": "wie clownig gesucht",
 			"rank": 4,
 			"pokemon": [
 				"bombirdier",
@@ -535,8 +535,8 @@
 		{
 			"name": "D",
 			"rank": 5,
-			"subtitles": ["Immer noch besser als Warsteiner", "Heimat der Motte"],
-			"emptyText": "wie Digger alles leer",
+			"subtitles": ["Immer noch besser als Warsteiner", "Heimat der Motte", "Denken alle, es heißt „der Play“"],
+			"emptyText": "wie Digger zu krasser Filter",
 			"pokemon": [
 				"sprigatito",
 				"floragato",
