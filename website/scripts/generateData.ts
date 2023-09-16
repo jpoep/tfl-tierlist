@@ -25,11 +25,8 @@ import {
 	type JsonTier
 } from '../src/lib/types/json.js';
 
-const api = new PokemonClient({
-	cacheOptions: {
-		maxAge: 60 * 1000
-	}
-});
+const api = new PokemonClient();
+
 
 const dev = process.env.NODE_ENV === 'development';
 
@@ -232,7 +229,7 @@ const fetchPokemon: { (pokemon: JsonPokemon): Promise<PokemonType> } = async (
 	const returnValue: PokemonType = {
 		typing: pokemon.types.map((it) => it.type.name) as Typing,
 		imageUrl: pokemon.sprites.front_default || undefined,
-		officialArtworkUrl: pokemon.sprites.other['official-artwork'].front_default || undefined,
+		officialArtworkUrl: pokemon.sprites.other?.['official-artwork'].front_default || undefined,
 		name: (species && getName(species)) || { de: pokemonName, en: pokemonName },
 		miniSpriteUrl:
 			pokemon.sprites.versions['generation-vii'].icons.front_default ??
