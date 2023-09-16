@@ -1,4 +1,5 @@
 import prodTierlist from '../data/tierlist.json' assert { type: 'json' };
+import { firstValueFrom, from, mergeMap, toArray } from 'rxjs';
 import teamsData from '../data/teams.json' assert { type: 'json' };
 import {
 	type PokemonForm,
@@ -26,7 +27,6 @@ import {
 } from '../src/lib/types/json.js';
 
 const api = new PokemonClient();
-
 
 const dev = process.env.NODE_ENV === 'development';
 
@@ -252,16 +252,18 @@ const tierlistJson: JsonTier[] = prodTierlist.tiers as JsonTier[];
 Promise.all(
 	tierlistJson.map(async (element: JsonTier) => {
 		console.info(`Fetching Pokemon for ${element.name} tier`);
+		const source = from(element.pokemon)
+			.pipe(
+				mergeMap((pokemon) => fetchPokemon(pokemon), 10),
+				toArray()
+			)
+		const mons = await firstValueFrom(source);
 		return {
 			name: element.name,
 			rank: element.rank as number,
 			subtitles: element.subtitles,
 			emptyText: element.emptyText,
-			pokemon: (
-				await Promise.all(
-					element.pokemon.map(async (pokemon: JsonPokemon) => fetchPokemon(pokemon))
-				)
-			).map((it) => ({
+			pokemon: mons.map((it) => ({
 				...it,
 				notes: element.notes?.[it.id],
 				team: transformedTeamsData.find((team) => team.pokemon.includes(it.id))
