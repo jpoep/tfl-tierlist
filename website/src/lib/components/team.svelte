@@ -19,7 +19,7 @@
 </script>
 
 <h2>
-	<a href={'/teams/' + team?.player.toLocaleLowerCase()} sveltekit:prefetch>{team?.name}</a>
+	<a href={'/teams/' + team?.player.toLocaleLowerCase()} data-sveltekit:prefetch="hover">{team?.name}</a>
 	{#if filterButtonEnabled}
 		<a href={`/?q=${encodeURIComponent(team.name)}`}><Icon inline icon={filterIcon} /></a>
 	{/if}

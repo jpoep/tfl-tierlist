@@ -42,12 +42,48 @@
 				"urshifu-rapid-strike",
 				"ursaluna",
 				"hoopa-unbound",
-				"samurott-hisui"
+				"samurott-hisui",
+				"mamoswine",
+				"manaphy",
+				{
+          				"internalName": "ursalunaBM",
+          				"pokemon": "ditto",
+          				"overrides": {
+						"name": {
+              						"en": "Ursaluna",
+              						"de": "Ursaluna"
+            					},
+            					"form": {
+							"de": "Bloodmoon-Form",
+              						"en": "Bloodmoon Form"
+            					},
+						"typing": ["ground", "normal"],
+						"baseStats": { 
+							"hp":  113,
+							"atk": 70,
+							"def": 120,
+							"spatk": 135,
+							"spdef": 65,
+							"spd": 52
+						},
+						"abilities": [
+							{
+								"de": {"name": "Geistiges Auge", "description": "Kampf- und Normal-Attacken treffen Geist-Pokemon. Genauigkeit kann nicht gesenkt werden und Attacken ignorieren den Fluchtwert" }, 
+								"en": {"name": "Mind's Eye", "description": "Fighting and Normal moves hit Ghost types. Accuracy can't be lowered and attacks ignore evasiveness" }
+							}
+						],
+						"officialArtworkUrl": "https://archives.bulbagarden.net/media/upload/8/82/HOME0901B.png"
+          				}
+        			}
 			],
 			"notes": {
 				"sneasler": {
 					"de": "Ohne Unheilsklauen",
 					"en": "Ohne Dire Claw"
+				},
+				"manaphy": {
+					"de": "Ohne Mutschub",
+					"en": "Ohne Take Heart"
 				}
 			}
 		},
@@ -111,7 +147,132 @@
 				"sandy-shocks",
 				"breloom",
 				"regieleki",
-				"gyarados"
+				"gyarados",
+				"shaymin-land",
+				"ninetales-alola",
+				"gliscor",
+				"conkeldurr",
+				"kommo-o",
+				"clefable",
+				"crawdaunt",
+				"empoleon",
+				"infernape",
+				{
+          				"internalName": "ogerpon",
+          				"pokemon": "ditto",
+          				"overrides": {
+						"name": {
+              						"en": "Ogerpon",
+              						"de": "Ogerpon"
+            					},
+						"typing": ["grass"],
+						"baseStats": { 
+							"hp":  80,
+							"atk": 120,
+							"def": 84,
+							"spatk": 60,
+							"spdef": 96,
+							"spd": 110
+						},
+						"abilities": [
+							{
+								"de": {"name": "Siegeswille", "description": "Wenn die Statuswerte dieses Pokemons gesenket werden, steigt sein Angriff um zwei Stufen. Wenn mehrere Statuswerte gleichzeitig gesenkt werden, löst dieser Effekt für jeden gesenkten Statuswert einzeln aus." }, 
+								"en": {"name": "Defiant", "description": "When any of this Pokémon's stats are lowered, it's attack rises by two stages. If multiple stats are lowered at once, this ability takes effect with each stat lowered." }
+							}
+						],
+						"officialArtworkUrl": "https://archives.bulbagarden.net/media/upload/a/a5/1017Ogerpon.png"
+          				}
+        			},
+				{
+          				"internalName": "okidogi",
+          				"pokemon": "ditto",
+          				"overrides": {
+						"name": {
+              						"en": "Okidogi",
+              						"de": "Boninu"
+            					},
+						"typing": ["poison", "fighting"],
+						"baseStats": { 
+							"hp":  88,
+							"atk": 128,
+							"def": 115,
+							"spatk": 58,
+							"spdef": 86,
+							"spd": 80
+						},
+						"abilities": [
+							{
+								"de": {"name": "Giftkette", "description": "Wenn ein Pokemon mit dieser Fähigkeit eine Attacke benutzt, besteht eine 30% Chance, dass das Ziel schwer vergiftet wird." }, 
+								"en": {"name": "Toxic Chain", "description": "If a Pokémon with this Ability uses a move, there is a 30% chance the target will become badly poisoned." }
+							},
+							{
+								"de": {"name": "Wachhund", "description": "Wird das Pokémon bedroht, steigt sein Angriff. Attacken und Items, durch die Pokémon ausgetauscht werden, haben keine Wirkung auf es." }, 
+								"en": {"name": "Guard Dog", "description": "Boosts the Pokémon’s Attack stat if intimidated. Moves and items that would force the Pokémon to switch out also fail to work." }
+							}
+						],
+						"officialArtworkUrl": "https://archives.bulbagarden.net/media/upload/7/73/1014Okidogi.png"
+          				}
+        			},
+				{
+          				"internalName": "munkidori",
+          				"pokemon": "ditto",
+          				"overrides": {
+						"name": {
+              						"en": "Munkidori",
+              						"de": "Benesaru"
+            					},
+						"typing": ["poison", "psychic"],
+						"baseStats": { 
+							"hp":  88,
+							"atk": 75,
+							"def": 66,
+							"spatk": 130,
+							"spdef": 90,
+							"spd": 106
+						},
+						"abilities": [
+							{
+								"de": {"name": "Giftkette", "description": "Wenn ein Pokemon mit dieser Fähigkeit eine Attacke benutzt, besteht eine 30% Chance, dass das Ziel schwer vergiftet wird." }, 
+								"en": {"name": "Toxic Chain", "description": "If a Pokémon with this Ability uses a move, there is a 30% chance the target will become badly poisoned." }
+							},
+							{
+								"de": {"name": "Schnüffler", "description": "Kann bei Kampfantritt Auskunft über das vom Gegner getragene Item geben." }, 
+								"en": {"name": "Frisk", "description": "When it enters a battle, the Pokémon can check an opposing Pokémon's held item." }
+							}
+						],
+						"officialArtworkUrl": "https://archives.bulbagarden.net/media/upload/e/e1/1015Munkidori.png"
+          				}
+        			},
+				{
+          				"internalName": "fezandipiti",
+          				"pokemon": "ditto",
+          				"overrides": {
+						"name": {
+              						"en": "Fezandipiti",
+              						"de": "Beatori"
+            					},
+						"typing": ["poison", "fairy"],
+						"baseStats": { 
+							"hp":  88,
+							"atk": 91,
+							"def": 82,
+							"spatk": 70,
+							"spdef": 125,
+							"spd": 99
+						},
+						"abilities": [
+							{
+								"de": {"name": "Giftkette", "description": "Wenn ein Pokemon mit dieser Fähigkeit eine Attacke benutzt, besteht eine 30% Chance, dass das Ziel schwer vergiftet wird." }, 
+								"en": {"name": "Toxic Chain", "description": "If a Pokémon with this Ability uses a move, there is a 30% chance the target will become badly poisoned." }
+							},
+							{
+								"de": {"name": "Techniker", "description": "Die Stärke von schwächeren Attacken des Pokémon steigt." }, 
+								"en": {"name": "Technician", "description": "Powers up weak moves so the Pokémon can deal more damage with them." }
+							}
+						],
+						"officialArtworkUrl": "https://archives.bulbagarden.net/media/upload/c/cb/1016Fezandipiti.png"
+          				}
+        			}
 			],
 			"notes": {
 				"landorus-incarnate": {
@@ -198,7 +359,17 @@
 				"klefki",
 				"forretress",
 				"hoopa",
-				"overqwil"
+				"overqwil",
+				"snorlax",
+				"politoed",
+				"milotic",
+				"chandelure",
+				"mienshao",
+				"mandibuzz",
+				"vikavolt",
+				"ribombee",
+				"ninetales",
+				"torterra"
 			],
 			"notes": {
 				"basculin-white-striped": {
@@ -249,7 +420,6 @@
 				"scovillain",
 				"qwilfish-hisui",
 				"electrode-hisui",
-				"sneasel-hisui",
 				"sliggoo-hisui",
 				"brambleghast",
 				"houndoom",
@@ -271,11 +441,9 @@
 				"sandaconda",
 				"appletun",
 				"naclstack",
-				"beartic",
 				"scyther",
 				"decidueye",
 				"rabsca",
-				"sneasel",
 				"tauros",
 				"tauros-paldea-combat-breed",
 				"toedscruel",
@@ -285,12 +453,57 @@
 				"mesprit",
 				"bellibolt",
 				"lycanroc-midday",
+				"lycanroc-midnight",
 				"eelektross",
 				"magneton",
 				"mudsdale",
 				"abomasnow",
 				"crocalor",
-				"samurott"
+				"samurott",
+				"oinkologne",
+				"oinkologne-female",
+				"oricorio-baile",
+				"oricorio-pom-pom",
+				"oricorio-pau",
+				"oricorio-sensu",
+				"whiscash",
+				"frosmoth",
+				"phione",
+				"piloswine",
+				"weezing",
+				"morpeko-full-belly",
+				"ambipom",
+				"gothitelle",
+				{
+          				"internalName": "sinistcha",
+          				"pokemon": "ditto",
+          				"overrides": {
+						"name": {
+              						"en": "Sinistcha",
+              						"de": "Fatalitcha"
+            					},
+						"typing": ["grass", "ghost"],
+						"baseStats": { 
+							"hp":  71,
+							"atk": 60,
+							"def": 106,
+							"spatk": 121,
+							"spdef": 80,
+							"spd": 70
+						},
+						"abilities": [
+							{
+								"de": {"name": "Gastlichkeit", "description": "Bei Kampfantritt zeigt das Pokémon seine Gastlichkeit, indem es die KP seines Mitstreiters ein wenig auffüllt." }, 
+								"en": {"name": "Hospitality", "description": "When the Pokémon enters a battle, it showers its ally with hospitality, restoring a small amount of the ally's HP." }
+							},
+							{
+								"de": {"name": "Hitzeschutz", "description": "Der Hitze abweisende Körper des Pokémon halbiert den durch Feuer-Attacken erlittenen Schaden." }, 
+								"en": {"name": "Heatproof", "description": "The Pokémon's heatproof body halves the damage taken from Fire-type moves." }
+							}
+						],
+						"officialArtworkUrl": "https://archives.bulbagarden.net/media/upload/9/98/HOME1013.png"
+          				}
+        			}
 			],
 			"notes": {
 				"houndstone": {
@@ -307,16 +520,408 @@
 				},
 				"rabsca": {
 					"de": "Ohne Vitalsegen",
-					"en": "Without Revival Blessing"
+					"en": "Ohne Revival Blessing"
+				},
+				"phione": {
+					"de": "Ohne Mutschub",
+					"en": "Ohne Take Heart"
+				},
+				"gothitelle": {
+					"de": "Ohne Wegsperre",
+					"en": "Ohne Shadow Tag"
 				}
 			}
 		},
 		{
 			"name": "D",
 			"rank": 5,
-			"subtitles": ["Alex und Rick ehren das D-Tier nicht"],
-			"emptyText": "wie Digga gar keinen Bock, mich ums D-Tier zu kümmern",
-			"pokemon": []
+			"subtitles": ["Immer noch besser als Warsteiner", "Heimat der Motte"],
+			"emptyText": "wie Digger alles leer",
+			"pokemon": [
+				"sprigatito",
+				"floragato",
+				"fuecoco",
+				"quaxly",
+				"quaxwell",
+				"lechonk",
+				"tarountula",
+				"spidops",
+				"nymble",
+				"hoppip",
+				"skiploom",
+				"jumpluff",
+				"fletchling",
+				"fletchinder",
+				"pawmi",
+				"pawmo",
+				"houndour",
+				"yungoos",
+				"gumshoos",
+				"skwovet",
+				"greedent",
+				"sunkern",
+				"sunflora",
+				"kricketot",
+				"kricketune",
+				"scatterbug",
+				"spewpa",
+				"vivillon",
+				"combee",
+				"vespiquen",
+				"sneasel",
+				"rookidee",
+				"corvisquire",
+				"happiny",
+				"azurill",
+				"marill",
+				"surskit",
+				"masquerain",
+				"buizel",
+				"wooper-paldea",
+				"psyduck",
+				"golduck",
+				"chewtle",
+				"igglybuff",
+				"jigglypuff",
+				"wigglytuff",
+				"ralts",
+				"kirlia",
+				"drowzee",
+				"hypno",
+				"gastly",
+				"haunter",
+				"tandemaus",
+				"pichu",
+				"pikachu",
+				"fidough",
+				"slakoth",
+				"vigoroth",
+				"bounsweet",
+				"steenee",
+				"smoliv",
+				"dolliv",
+				"bonsly",
+				"sudowoodo",
+				"rockruff",
+				"rolycoly",
+				"carkol",
+				"shinx",
+				"luxio",
+				"starly",
+				"staravia",
+				"mareep",
+				"flaaffy",
+				"ampharos",
+				"petilil",
+				"lilligant",
+				"shroomish",
+				"applin",
+				"spoink",
+				"grumpig",
+				"squawkabilly",
+				"misdreavus",
+				"mismagius",
+				"makuhita",
+				"crabrawler",
+				"crabominable",
+				"salandit",
+				"phanpy",
+				"cufant",
+				"gible",
+				"gabite",
+				"nacli",
+				"wingull",
+				"magikarp",
+				"arrokuda",
+				"gulpin",
+				"swalot",
+				"meowth",
+				"persian",
+				"drifloon",
+				"drifblim",
+				"flabebe",
+				"floette",
+				"diglett",
+				"dugtrio",
+				"numel",
+				"camerupt",
+				"bronzor",
+				"axew",
+				"fraxure",
+				"mankey",
+				"meditite",
+				"riolu",
+				"charcadet",
+				"barboach",
+				"tadbulb",
+				"goomy",
+				"sliggoo",
+				"croagunk",
+				"wattrel",
+				"eevee",
+				"leafeon",
+				"glaceon",
+				"deerling",
+				"sawsbuck",
+				"girafarig",
+				"grimer",
+				"muk",
+				"maschiff",
+				"toxel",
+				"dedenne",
+				"pachirisu",
+				"shroodle",
+				"stantler",
+				"foongus",
+				"voltorb",
+				"electrode",
+				"magnemite",
+				"growlithe",
+				"teddiursa",
+				"zangoose",
+				"seviper",
+				"swablu",
+				"skiddo",
+				"gogoat",
+				"litleo",
+				"pyroar",
+				"stunky",
+				"skuntank",
+				"zorua",
+				"murkrow",
+				"gothita",
+				"gothorita",
+				"sinistea",
+				"bramblin",
+				"toedscool",
+				"tropius",
+				"fomantis",
+				"lurantis",
+				"capsakid",
+				"cacnea",
+				"cacturne",
+				"rellor",
+				"venonat",
+				"pineco",
+				"flittle",
+				"hippopotas",
+				"sandile",
+				"krokorok",
+				"silicobra",
+				"mudbray",
+				"larvesta",
+				"bagon",
+				"shelgon",
+				"tinkatink",
+				"tinkatuff",
+				"hatenna",
+				"hattrem",
+				"impidimp",
+				"morgrem",
+				"wiglett",
+				"wugtrio",
+				"finizen",
+				"varoom",
+				"sableye",
+				"shuppet",
+				"banette",
+				"spiritomb",
+				"noibat",
+				"dreepy",
+				"drakloak",
+				"glimmet",
+				"greavard",
+				"oranguru",
+				"komala",
+				"larvitar",
+				"pupitar",
+				"sandygast",
+				"slowpoke",
+				"shellos",
+				"shellder",
+				"qwilfish",
+				"luvdisc",
+				"finneon",
+				"lumineon",
+				"bruxish",
+				"skrelp",
+				"clauncher",
+				"clawitzer",
+				"tynamo",
+				"eelektrik",
+				"mareanie",
+				"dratini",
+				"dragonair",
+				"snom",
+				"snover",
+				"delibird",
+				"cubchoo",
+				"beartic",
+				"snorunt",
+				"glalie",
+				"cryogonal",
+				"cetoddle",
+				"bergmite",
+				"avalugg",
+				"rufflet",
+				"pawniard",
+				"deino",
+				"zweilous",
+				"frigibax",
+				"arctibax",
+				"gimmighoul",
+				"charmander",
+				"charmeleon",
+				"raichu",
+				"diglett-alola",
+				"dugtrio-alola",
+				"meowth-alola",
+				"meowth-galar",
+				"persian-alola",
+				"perrserker",
+				"growlithe-hisui",
+				"slowpoke-galar",
+				"grimer-alola",
+				"voltorb-hisui",
+				"articuno",
+				"cyndaquil",
+				"quilava",
+				"sneasel-hisui",
+				"oshawott",
+				"dewott",
+				"zorua-hisui",
+				"chespin",
+				"quilladin",
+				"fennekin",
+				"braixen",
+				"froakie",
+				"frogadier",
+				"avalugg-hisui",
+				"rowlet",
+				"dartrix",
+				"grookey",
+				"thwackey",
+				"scorbunny",
+				"raboot",
+				"sobble",
+				"drizzile",
+				"kubfu",
+				"calyrex",
+				"sandshrew-alola",
+				"vulpix-alola",
+				"geodude-alola",
+				"graveler-alola",
+				"golem-alola",
+				"turtwig",
+				"grotle",
+				"chimchar",
+				"monferno",
+				"piplup",
+				"prinplup",
+				"wooper",
+				"carbink",
+				"arbok",
+				"sandslash",
+				"clefairy",
+				"golem",
+				"gligar",
+				"poliwrath",
+				"mightyena",
+				"ludicolo",
+				"ariados",
+				"shiftry",
+				"dusclops",
+				"dusknoir",
+				"cramorant",
+				"victreebel",
+				{
+          				"internalName": "poltchageist",
+          				"pokemon": "ditto",
+          				"overrides": {
+						"name": {
+              						"en": "Poltchageist",
+              						"de": "Mortcha"
+            					},
+						"typing": ["grass", "ghost"],
+						"baseStats": { 
+							"hp":  40,
+							"atk": 45,
+							"def": 45,
+							"spatk": 74,
+							"spdef": 54,
+							"spd": 50
+						},
+						"abilities": [
+							{
+								"de": {"name": "Gastlichkeit", "description": "Bei Kampfantritt zeigt das Pokémon seine Gastlichkeit, indem es die KP seines Mitstreiters ein wenig auffüllt." }, 
+								"en": {"name": "Hospitality", "description": "When the Pokémon enters a battle, it showers its ally with hospitality, restoring a small amount of the ally's HP." }
+							},
+							{
+								"de": {"name": "Hitzeschutz", "description": "Der Hitze abweisende Körper des Pokémon halbiert den durch Feuer-Attacken erlittenen Schaden." }, 
+								"en": {"name": "Heatproof", "description": "The Pokémon's heatproof body halves the damage taken from Fire-type moves." }
+							}
+						],
+						"officialArtworkUrl": "https://archives.bulbagarden.net/media/upload/3/39/1012Poltchageist.png"
+          				}
+        			},
+				{
+          				"internalName": "dipplin",
+          				"pokemon": "ditto",
+          				"overrides": {
+						"name": {
+              						"en": "Dipplin",
+              						"de": "Sirapfel"
+            					},
+						"typing": ["grass", "dragon"],
+						"baseStats": { 
+							"hp":  80,
+							"atk": 80,
+							"def": 110,
+							"spatk": 95,
+							"spdef": 80,
+							"spd": 40
+						},
+						"abilities": [
+							{
+								"de": {"name": "Süßer Nektar", "description": "Beim ersten Kampfantritt verbreitet das Pokémon den Duft süßen Nektars und senkt so den Ausweichwert seiner Gegner." }, 
+								"en": {"name": "Supersweet Syrup", "description": "A sickly sweet scent spreads across the field the first time the Pokémon enters a battle, lowering the evasiveness of opposing Pokémon." }
+							},
+							{
+								"de": {"name": "Völlerei", "description": "Das Pokémon setzt bestimmte Beeren nicht erst in einer Notlage ein, sondern bereits dann, wenn seine KP auf die Hälfte des Maximalwerts oder weniger fallen." }, 
+								"en": {"name": "Gluttony", "description": "If the Pokémon is holding a Berry to be eaten when its HP is low, it will instead eat the Berry when its HP drops to half or less." }
+							},
+							{
+								"de": {"name": "Klebekörper", "description": "Trägt das Pokémon ein Item, bleibt dieses an seinem klebrigen Körper haften, wodurch Item-Diebstahl verhindert wird." }, 
+								"en": {"name": "Sticky Hold", "description": "The Pokémon's held items cling to its sticky body and cannot be removed by other Pokémon." }
+							}
+						],
+						"officialArtworkUrl": "https://archives.bulbagarden.net/media/upload/7/74/1011Dipplin.png"
+          				}
+        			}
+				
+			],
+			"notes": {
+				"squawkabilly": {
+					"de": "Nur eine Form",
+					"en": "Nur eine Form"
+				},
+				"diglett": {
+					"de": "Ohne Ausweglos",
+					"en": "Ohne Arena Trap"
+				},
+				"dugtrio": {
+					"de": "Ohne Ausweglos",
+					"en": "Ohne Arena Trap"
+				},
+				"gothita": {
+					"de": "Ohne Wegsperre",
+					"en": "Ohne Shadow Tag"
+				},
+				"gothorita": {
+					"de": "Ohne Wegsperre",
+					"en": "Ohne Shadow Tag"
+				}
+			}
 		}
 	]
 }
