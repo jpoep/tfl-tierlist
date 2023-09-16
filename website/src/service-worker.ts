@@ -70,7 +70,7 @@ worker.addEventListener('fetch', (event) => {
 				// if your application has other URLs with data that will never change,
 				// set this variable to true for them and they will only be fetched once.
 				const cachedAsset =
-					(isStaticAsset || url.pathname.startsWith('/PokeAPI/sprites/')) &&
+					(isStaticAsset || url.pathname.startsWith('/PokeAPI/sprites/') || url.pathname.includes('archives.bulbagarden.net')) &&
 					(await caches.match(event.request));
 
 				return cachedAsset || fetchAndCache(event.request);

@@ -112,7 +112,6 @@
 		<img
 			src={imageSource}
 			alt={_pokemon.localName}
-			crossorigin="anonymous"
 			loading="lazy"
 			class:details-layout={detailsActive}
 			class:pixelated={detailsActive || !$officialArtworkEnabled}
