@@ -5,14 +5,14 @@ const m = [
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
-  "/_app/immutable/start-68f63813.js",
+  "/_app/immutable/start-195a4a28.js",
   "/_app/immutable/pages/__layout.svelte-8024b32d.js",
   "/_app/immutable/assets/__layout-8495a177.css",
   "/_app/immutable/error.svelte-eb65eaf2.js",
   "/_app/immutable/pages/__layout-root.svelte-9bb6fd98.js",
   "/_app/immutable/pages/teams/__layout@root.svelte-fa18f02d.js",
   "/_app/immutable/pages/teams/__layout-single-team@root.svelte-9ebe50bc.js",
-  "/_app/immutable/pages/index.svelte-07e6a19a.js",
+  "/_app/immutable/pages/index.svelte-abc2e5b3.js",
   "/_app/immutable/assets/index-a9104c0d.css",
   "/_app/immutable/pages/teams/_team_@single-team.svelte-2ce17325.js",
   "/_app/immutable/assets/[team]@single-team-df96a616.css",
@@ -123,34 +123,34 @@ const m = [
   "/sounds/sword-thud.mp3",
   "/sounds/till.mp3",
   "/till.png"
-], p = "1694879823099", e = self, n = `cache${p}`, i = m.concat(c.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
-e.addEventListener("install", (s) => {
+], p = "1694883843535", o = self, n = `cache${p}`, i = m.concat(c.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
+o.addEventListener("install", (s) => {
   s.waitUntil(caches.open(n).then((a) => a.addAll(i)).then(() => {
-    e.skipWaiting();
+    o.skipWaiting();
   }));
 });
-e.addEventListener("activate", (s) => {
+o.addEventListener("activate", (s) => {
   s.waitUntil(caches.keys().then(async (a) => {
-    for (const o of a)
-      o !== n && await caches.delete(o);
-    e.clients.claim();
+    for (const e of a)
+      e !== n && await caches.delete(e);
+    o.clients.claim();
   }));
 });
 async function u(s) {
   const a = await caches.open(`offline${p}`);
   try {
-    const o = await fetch(s);
-    return a.put(s, o.clone()), o;
-  } catch (o) {
+    const e = await fetch(s);
+    return a.put(s, e.clone()), e;
+  } catch (e) {
     const t = await a.match(s);
     if (t)
       return t;
-    throw o;
+    throw e;
   }
 }
-e.addEventListener("fetch", (s) => {
+o.addEventListener("fetch", (s) => {
   if (s.request.method !== "GET" || s.request.headers.has("range"))
     return;
-  const a = new URL(s.request.url), o = a.protocol.startsWith("http"), t = a.hostname === self.location.hostname && a.port !== self.location.port, l = a.host === self.location.host && r.has(a.pathname), g = s.request.cache === "only-if-cached" && !l;
-  o && !t && !g && s.respondWith((async () => (l || a.pathname.startsWith("/PokeAPI/sprites/")) && await caches.match(s.request) || u(s.request))());
+  const a = new URL(s.request.url), e = a.protocol.startsWith("http"), t = a.hostname === self.location.hostname && a.port !== self.location.port, l = a.host === self.location.host && r.has(a.pathname), g = s.request.cache === "only-if-cached" && !l;
+  e && !t && !g && s.respondWith((async () => (l || a.pathname.startsWith("/PokeAPI/sprites/") || a.pathname.includes("archives.bulbagarden.net")) && await caches.match(s.request) || u(s.request))());
 });
