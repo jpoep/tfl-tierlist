@@ -48,8 +48,8 @@
 			],
 			"notes": {
 				"sneasler": {
-					"de": "Ohne Unheilsklauen",
-					"en": "Ohne Dire Claw"
+					"de": "Ohne Dire Claw",
+					"en": "Without Dire Claw"
 				},
 				"manaphy": {
 					"de": "Ohne Take Heart",
@@ -128,8 +128,8 @@
 			],
 			"notes": {
 				"landorus-incarnate": {
-					"de": "Ohne Rohe Gewalt",
-					"en": "Ohne Sheer Force"
+					"de": "Ohne Sheer Force",
+					"en": "Without Sheer Force"
 				}
 			}
 		},
@@ -228,12 +228,12 @@
 					"en": "Kann im Gegensatz zur blauen oder roten Variante Eviolite tragen"
 				},
 				"basculegion-male": {
-					"de": "Ohne Letzte Ehre",
-					"en": "Ohne Last Respects"
+					"de": "Ohne Last Respects",
+					"en": "Without Last Respects"
 				},
 				"basculegion-female": {
-					"de": "Ohne Letzte Ehre",
-					"en": "Ohne Last Respects"
+					"de": "Ohne Last Respects",
+					"en": "Without Last Respects"
 				}
 			}
 		},
