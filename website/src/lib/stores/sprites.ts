@@ -2,7 +2,7 @@ import { browser } from '$app/env';
 import { writable } from 'svelte/store';
 
 export const officialArtworkEnabled = writable<boolean>(
-	(browser && localStorage.getItem('officialArtworkEnabled') === 'true') || false
+	(browser && localStorage.getItem('officialArtworkEnabled') === 'true') || true
 );
 
 if (browser) {
