@@ -1,1 +1,0 @@
-import{w as r}from"./index-7be4c444.js";const t=r();t.subscribe(e=>{if(!e)return;const o=new URL(window.location.href);e.length>0?o.searchParams.set("q",e):(o.searchParams.delete("q"),console.log("yo delete")),window.history.replaceState(null,"",o.toString())});export{t as f};
