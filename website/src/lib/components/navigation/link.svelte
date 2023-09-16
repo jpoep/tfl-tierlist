@@ -2,7 +2,7 @@
 	export let href: string;
 </script>
 
-<a {href} sveltekit:prefetch><slot /></a>
+<a {href} data-sveltekit:prefetch="hover"><slot /></a>
 
 <style lang="scss">
     a {

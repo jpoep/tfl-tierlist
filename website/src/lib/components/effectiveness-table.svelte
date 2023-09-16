@@ -20,11 +20,7 @@
 		quadrupleDamage: PokemonType[];
 	}[];
 
-	const api = new PokemonClient({
-		cacheOptions: {
-			maxAge: 60 * 1000
-		}
-	});
+	const api = new PokemonClient();
 
 	let damageChart: DamageChart;
 	let relevantPokemon: PokemonType[];
