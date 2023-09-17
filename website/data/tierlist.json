@@ -439,6 +439,10 @@
 				"basculegion-female": {
 					"de": "Ohne Letzte Ehre",
 					"en": "Ohne Last Respects"
+				},
+				"pawmot": {
+					"de": "Ohne Vitalsegen",
+					"en": "Ohne Revival Blessing"
 				}
 			}
 		},
