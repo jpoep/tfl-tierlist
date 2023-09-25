@@ -7,6 +7,10 @@
     "file": "immutable/assets/titillium-web-latin-400-normal-557f6d08.woff2",
     "src": "../node_modules/@fontsource/titillium-web/files/titillium-web-latin-400-normal.woff2"
   },
+  "../node_modules/@fontsource/titillium-web/files/titillium-web-all-400-normal.woff": {
+    "file": "immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
+    "src": "../node_modules/@fontsource/titillium-web/files/titillium-web-all-400-normal.woff"
+  },
   "../node_modules/@fontsource/titillium-web/files/titillium-web-latin-ext-700-normal.woff2": {
     "file": "immutable/assets/titillium-web-latin-ext-700-normal-8f8ebc7e.woff2",
     "src": "../node_modules/@fontsource/titillium-web/files/titillium-web-latin-ext-700-normal.woff2"
@@ -15,16 +19,12 @@
     "file": "immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
     "src": "../node_modules/@fontsource/titillium-web/files/titillium-web-latin-700-normal.woff2"
   },
-  "../node_modules/@fontsource/titillium-web/files/titillium-web-all-400-normal.woff": {
-    "file": "immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
-    "src": "../node_modules/@fontsource/titillium-web/files/titillium-web-all-400-normal.woff"
-  },
   "../node_modules/@fontsource/titillium-web/files/titillium-web-all-700-normal.woff": {
     "file": "immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
     "src": "../node_modules/@fontsource/titillium-web/files/titillium-web-all-700-normal.woff"
   },
   ".svelte-kit/runtime/client/start.js": {
-    "file": "immutable/start-01facd48.js",
+    "file": "immutable/start-20631544.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -108,7 +108,7 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "immutable/pages/index.svelte-583b0454.js",
+    "file": "immutable/pages/index.svelte-02344ca3.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -248,28 +248,28 @@
     "file": "immutable/assets/__layout-8495a177.css",
     "src": "src/routes/__layout.css"
   },
-  "navbar.css": {
-    "file": "immutable/assets/navbar-025804c3.css",
-    "src": "navbar.css"
-  },
-  "src/routes/teams/index.css": {
-    "file": "immutable/assets/index-fd3525e6.css",
-    "src": "src/routes/teams/index.css"
-  },
   "tooltip.css": {
     "file": "immutable/assets/tooltip-1298881e.css",
     "src": "tooltip.css"
   },
-  "team.css": {
-    "file": "immutable/assets/team-00ff67f5.css",
-    "src": "team.css"
+  "navbar.css": {
+    "file": "immutable/assets/navbar-025804c3.css",
+    "src": "navbar.css"
+  },
+  "src/routes/index.css": {
+    "file": "immutable/assets/index-a9104c0d.css",
+    "src": "src/routes/index.css"
   },
   "src/routes/teams/[team]@single-team.css": {
     "file": "immutable/assets/[team]@single-team-df96a616.css",
     "src": "src/routes/teams/[team]@single-team.css"
   },
-  "src/routes/index.css": {
-    "file": "immutable/assets/index-a9104c0d.css",
-    "src": "src/routes/index.css"
+  "src/routes/teams/index.css": {
+    "file": "immutable/assets/index-fd3525e6.css",
+    "src": "src/routes/teams/index.css"
+  },
+  "team.css": {
+    "file": "immutable/assets/team-00ff67f5.css",
+    "src": "team.css"
   }
 }
