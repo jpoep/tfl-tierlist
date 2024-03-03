@@ -1,18 +1,18 @@
 const m = [
   "/_app/immutable/assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
   "/_app/immutable/assets/titillium-web-latin-400-normal-557f6d08.woff2",
-  "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-latin-ext-700-normal-8f8ebc7e.woff2",
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
+  "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
-  "/_app/immutable/start-20631544.js",
+  "/_app/immutable/start-6e495c2d.js",
   "/_app/immutable/pages/__layout.svelte-8024b32d.js",
   "/_app/immutable/assets/__layout-8495a177.css",
   "/_app/immutable/error.svelte-eb65eaf2.js",
   "/_app/immutable/pages/__layout-root.svelte-9bb6fd98.js",
   "/_app/immutable/pages/teams/__layout@root.svelte-fa18f02d.js",
   "/_app/immutable/pages/teams/__layout-single-team@root.svelte-9ebe50bc.js",
-  "/_app/immutable/pages/index.svelte-02344ca3.js",
+  "/_app/immutable/pages/index.svelte-6e59690c.js",
   "/_app/immutable/assets/index-a9104c0d.css",
   "/_app/immutable/pages/teams/_team_@single-team.svelte-2ce17325.js",
   "/_app/immutable/assets/[team]@single-team-df96a616.css",
@@ -123,7 +123,7 @@ const m = [
   "/sounds/sword-thud.mp3",
   "/sounds/till.mp3",
   "/till.png"
-], p = "1695669354690", o = self, n = `cache${p}`, i = m.concat(c.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
+], p = "1709499745328", o = self, n = `cache${p}`, i = m.concat(c.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
 o.addEventListener("install", (s) => {
   s.waitUntil(caches.open(n).then((a) => a.addAll(i)).then(() => {
     o.skipWaiting();
