@@ -71,9 +71,13 @@
 					"de": "Ohne Unheilsklauen",
 					"en": "Ohne Dire Claw"
 				},
-				"Zamazenta": {
+				"zamazenta": {
 					"de": "Ohne Rostiger Schild",
 					"en": "Ohne Rusty Shield"
+				},
+				"shaymin-sky":{
+					"de": "Ohne Schocksamen",
+					"en": "Ohne Seed Flare"
 				}
 			}
 		},
