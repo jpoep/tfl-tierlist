@@ -63,12 +63,17 @@
 				"urshifu-single-strike",
 				"terapagos",
 				"palafin",
+				"shaymin-sky",
 				"zamazenta"
 			],
 			"notes": {
 				"sneasler": {
 					"de": "Ohne Unheilsklauen",
 					"en": "Ohne Dire Claw"
+				},
+				"Zamazenta": {
+					"de": "Ohne Rostiger Schild",
+					"en": "Ohne Rusty Shield"
 				}
 			}
 		},
@@ -154,7 +159,8 @@
 				"thundurus-incarnate",
 				"barraskewda",
 				"floatzel",
-				"venusaur"
+				"venusaur",
+				"mamoswine"
 			]
 		},
 		{
@@ -268,7 +274,8 @@
 				"wo-chien",
 				"ditto",
 				"indeedee-female",
-				"basculin-white-striped"
+				"basculin-white-striped",
+				"pincurchin"
 			],
 			"notes": {
 				"basculin-white-striped": {
@@ -396,7 +403,11 @@
 				"basculin-red-striped": {
 					"de": "Kann keinen Evoliten tragen. Schließt die blaue Variation mit ein",
 					"en": "Kann keinen Eviolite tragen. Schließt die blaue Variation mit ein"
-				}
+				},
+				"smeargle": {
+					"de": "Ohne Gefühlswippe, Vitalsegen, Letzte Ehre und Unheilsklauen",
+					"en": "Ohne Moody, Revival Blessing, Last Respects und Dire Claw"
+				},
 			}
 		},
 		{
