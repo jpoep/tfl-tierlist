@@ -78,7 +78,7 @@
 					"de": "Ohne Rostiger Schild",
 					"en": "Ohne Rusty Shield"
 				},
-				"shaymin-sky":{
+				"shaymin-sky": {
 					"de": "Ohne Schocksamen",
 					"en": "Ohne Seed Flare"
 				}
@@ -417,7 +417,7 @@
 				"smeargle": {
 					"de": "Ohne Gefühlswippe, Vitalsegen, Letzte Ehre und Unheilsklauen",
 					"en": "Ohne Moody, Revival Blessing, Last Respects und Dire Claw"
-				},
+				}
 			}
 		},
 		{
