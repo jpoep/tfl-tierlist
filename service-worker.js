@@ -1,18 +1,18 @@
-const m = [
+const b = [
   "/_app/immutable/assets/titillium-web-latin-ext-400-normal-05e41516.woff2",
   "/_app/immutable/assets/titillium-web-latin-400-normal-557f6d08.woff2",
   "/_app/immutable/assets/titillium-web-latin-ext-700-normal-8f8ebc7e.woff2",
   "/_app/immutable/assets/titillium-web-latin-700-normal-d5c1172f.woff2",
   "/_app/immutable/assets/titillium-web-all-400-normal-36ceefe1.woff",
   "/_app/immutable/assets/titillium-web-all-700-normal-65d21c1b.woff",
-  "/_app/immutable/start-ca415bcd.js",
+  "/_app/immutable/start-ffa1d9e0.js",
   "/_app/immutable/pages/__layout.svelte-8024b32d.js",
   "/_app/immutable/assets/__layout-8495a177.css",
   "/_app/immutable/error.svelte-eb65eaf2.js",
   "/_app/immutable/pages/__layout-root.svelte-9bb6fd98.js",
   "/_app/immutable/pages/teams/__layout@root.svelte-fa18f02d.js",
   "/_app/immutable/pages/teams/__layout-single-team@root.svelte-9ebe50bc.js",
-  "/_app/immutable/pages/index.svelte-053406e6.js",
+  "/_app/immutable/pages/index.svelte-1ca5b350.js",
   "/_app/immutable/assets/index-a9104c0d.css",
   "/_app/immutable/pages/teams/_team_@single-team.svelte-2ce17325.js",
   "/_app/immutable/assets/[team]@single-team-df96a616.css",
@@ -36,17 +36,30 @@ const m = [
   "/.nojekyll",
   "/CNAME",
   "/favicon.png",
+  "/favicon.webp",
   "/logo-120x120.png",
+  "/logo-120x120.webp",
   "/logo-128x128.png",
+  "/logo-128x128.webp",
   "/logo-144x144.png",
+  "/logo-144x144.webp",
   "/logo-152x152.png",
+  "/logo-152x152.webp",
   "/logo-180x180.png",
+  "/logo-180x180.webp",
   "/logo-192x192.png",
+  "/logo-192x192.webp",
   "/logo-384x384.png",
+  "/logo-384x384.webp",
   "/logo-512x512.png",
+  "/logo-512x512.webp",
   "/logo-72x72.png",
+  "/logo-72x72.webp",
   "/logo-96x96.png",
-  "/logos/atlanta-fletiamo.avif",
+  "/logo-96x96.webp",
+  "/logos/alex.avif",
+  "/logos/alex.jpeg",
+  "/logos/alex.webp",
   "/logos/atlanta-fletiamo.png",
   "/logos/atlanta-fletiamo.webp",
   "/logos/bellektro-ghetto-2.avif",
@@ -55,9 +68,21 @@ const m = [
   "/logos/bellektro-ghetto.avif",
   "/logos/bellektro-ghetto.png",
   "/logos/bellektro-ghetto.webp",
+  "/logos/bobex.avif",
+  "/logos/bobex.jpeg",
+  "/logos/bobex.webp",
+  "/logos/danny.avif",
+  "/logos/danny.jpeg",
+  "/logos/danny.webp",
   "/logos/dragapult-disco.avif",
   "/logos/dragapult-disco.jpg",
   "/logos/dragapult-disco.webp",
+  "/logos/felix.avif",
+  "/logos/felix.jpeg",
+  "/logos/felix.webp",
+  "/logos/flo.avif",
+  "/logos/flo.jpeg",
+  "/logos/flo.webp",
   "/logos/freddyursa.avif",
   "/logos/freddyursa.jpg",
   "/logos/freddyursa.png",
@@ -72,22 +97,45 @@ const m = [
   "/logos/gda.jpg",
   "/logos/gda.png",
   "/logos/gda.webp",
+  "/logos/jonas.avif",
+  "/logos/jonas.jpeg",
+  "/logos/jonas.webp",
   "/logos/kopflos-dorsten.avif",
   "/logos/kopflos-dorsten.png",
   "/logos/kopflos-dorsten.webp",
+  "/logos/leo.avif",
+  "/logos/leo.jpeg",
+  "/logos/leo.webp",
   "/logos/machakey.avif",
   "/logos/machakey.jpeg",
   "/logos/machakey.webp",
+  "/logos/max.avif",
+  "/logos/max.jpeg",
+  "/logos/max.webp",
   "/logos/miami-heatran.avif",
   "/logos/miami-heatran.png",
   "/logos/miami-heatran.webp",
+  "/logos/nico.avif",
+  "/logos/nico.webp",
+  "/logos/niklas.avif",
+  "/logos/niklas.jpeg",
+  "/logos/niklas.webp",
+  "/logos/oli.avif",
+  "/logos/oli.jpeg",
+  "/logos/oli.webp",
   "/logos/oliberlo-chancentod.avif",
   "/logos/oliberlo-chancentod.png",
   "/logos/oliberlo-chancentod.webp",
+  "/logos/philipp.avif",
+  "/logos/philipp.jpeg",
+  "/logos/philipp.webp",
   "/logos/pixelspark.avif",
   "/logos/pixelspark.jpg",
   "/logos/pixelspark.png",
   "/logos/pixelspark.webp",
+  "/logos/ppv.avif",
+  "/logos/ppv.jpeg",
+  "/logos/ppv.webp",
   "/logos/psv-nilsoking.avif",
   "/logos/psv-nilsoking.png",
   "/logos/psv-nilsoking.webp",
@@ -98,15 +146,24 @@ const m = [
   "/logos/quellbrunn-quaxo.jpg",
   "/logos/quellbrunn-quaxo.png",
   "/logos/quellbrunn-quaxo.webp",
+  "/logos/rick.avif",
+  "/logos/rick.jpeg",
+  "/logos/rick.webp",
   "/logos/stomping-dannex.avif",
   "/logos/stomping-dannex.jpg",
   "/logos/stomping-dannex.webp",
   "/logos/surging-strikes.avif",
   "/logos/surging-strikes.png",
   "/logos/surging-strikes.webp",
+  "/logos/till.avif",
+  "/logos/till.jpeg",
+  "/logos/till.webp",
   "/logos/tripled.avif",
   "/logos/tripled.jpg",
   "/logos/tripled.webp",
+  "/logos/turti.avif",
+  "/logos/turti.jpeg",
+  "/logos/turti.webp",
   "/logos/tuspo-salamence.avif",
   "/logos/tuspo-salamence.png",
   "/logos/tuspo-salamence.webp",
@@ -115,6 +172,7 @@ const m = [
   "/logos/z69.webp",
   "/manifest.json",
   "/pokeball-logo.svg",
+  "/pokeball-logo.webp",
   "/sounds/dannex.mp3",
   "/sounds/impact.mp3",
   "/sounds/oli.mp3",
@@ -122,35 +180,36 @@ const m = [
   "/sounds/ppv.mp3",
   "/sounds/sword-thud.mp3",
   "/sounds/till.mp3",
-  "/till.png"
-], p = "1711447657840", o = self, n = `cache${p}`, i = m.concat(c.filter((s) => !s.endsWith(".nojekyll"))), r = new Set(i);
-o.addEventListener("install", (s) => {
-  s.waitUntil(caches.open(n).then((a) => a.addAll(i)).then(() => {
-    o.skipWaiting();
+  "/till.png",
+  "/till.webp"
+], p = "1711708661569", l = self, g = `cache${p}`, i = b.concat(c.filter((o) => !o.endsWith(".nojekyll"))), m = new Set(i);
+l.addEventListener("install", (o) => {
+  o.waitUntil(caches.open(g).then((s) => s.addAll(i)).then(() => {
+    l.skipWaiting();
   }));
 });
-o.addEventListener("activate", (s) => {
-  s.waitUntil(caches.keys().then(async (a) => {
-    for (const e of a)
-      e !== n && await caches.delete(e);
-    o.clients.claim();
+l.addEventListener("activate", (o) => {
+  o.waitUntil(caches.keys().then(async (s) => {
+    for (const e of s)
+      e !== g && await caches.delete(e);
+    l.clients.claim();
   }));
 });
-async function u(s) {
-  const a = await caches.open(`offline${p}`);
+async function r(o) {
+  const s = await caches.open(`offline${p}`);
   try {
-    const e = await fetch(s);
-    return a.put(s, e.clone()), e;
+    const e = await fetch(o);
+    return s.put(o, e.clone()), e;
   } catch (e) {
-    const t = await a.match(s);
-    if (t)
-      return t;
+    const a = await s.match(o);
+    if (a)
+      return a;
     throw e;
   }
 }
-o.addEventListener("fetch", (s) => {
-  if (s.request.method !== "GET" || s.request.headers.has("range"))
+l.addEventListener("fetch", (o) => {
+  if (o.request.method !== "GET" || o.request.headers.has("range"))
     return;
-  const a = new URL(s.request.url), e = a.protocol.startsWith("http"), t = a.hostname === self.location.hostname && a.port !== self.location.port, l = a.host === self.location.host && r.has(a.pathname), g = s.request.cache === "only-if-cached" && !l;
-  e && !t && !g && s.respondWith((async () => (l || a.pathname.startsWith("/PokeAPI/sprites/") || a.pathname.includes("archives.bulbagarden.net")) && await caches.match(s.request) || u(s.request))());
+  const s = new URL(o.request.url), e = s.protocol.startsWith("http"), a = s.hostname === self.location.hostname && s.port !== self.location.port, t = s.host === self.location.host && m.has(s.pathname), n = o.request.cache === "only-if-cached" && !t;
+  e && !a && !n && o.respondWith((async () => (t || s.pathname.startsWith("/PokeAPI/sprites/") || s.pathname.includes("archives.bulbagarden.net")) && await caches.match(o.request) || r(o.request))());
 });
