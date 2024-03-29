@@ -1,75 +1,99 @@
 {
 	"teams": [
 		{
-			"name": "TUSPO Salamence",
-			"player": "Moritz",
-			"logo": "tuspo-salamence",
-			"pokemon": []
-		},
-		{
-			"name": "Freddyursa Münster",
-			"player": "Rick",
-			"logo": "freddyursa",
-			"pokemon": []
-		},
-		{
-			"name": "Große Schlurm Apokalypse",
-			"player": "Niklas",
-			"logo": "gda-2",
-			"pokemon": []
-		},
-		{
-			"name": "All Hail The King",
-			"player": "Danny",
-			"logo": "stomping-dannex",
-			"pokemon": []
-		},
-		{
-			"name": "Frigometris Eisdusche",
-			"player": "David",
-			"logo": "psv-nilsoking",
-			"pokemon": []
-		},
-		{
-			"name": "All Whale The King",
-			"player": "Alex",
-			"logo": "surging-strikes",
-			"pokemon": []
-		},
-		{
-			"name": "Allmighty Altaria",
-			"player": "Oli",
-			"logo": "dragapult-disco",
-			"pokemon": []
-		},
-		{
-			"name": "Machoke(y) Balboa",
-			"player": "Felix",
-			"logo": "machakey",
-			"pokemon": []
-		},
-		{
-			"name": "Ghood As Ghold",
-			"player": "Turti",
-			"logo": "pixelspark",
+			"name": "Blizzard Brigade",
+			"player": "Bobex",
+			"logo": "bobex",
 			"pokemon": []
 		},
 		{
 			"name": "Dyken Domage",
 			"player": "Jonas",
-			"logo": "z69",
+			"logo": "jonas",
 			"pokemon": []
 		},
 		{
-			"name": "HESESCHMESE",
-			"player": "Hese",
-			"logo": "galar-rapidashs",
+			"name": "Gliscor Rangers",
+			"player": "Danny",
+			"logo": "danny",
 			"pokemon": []
 		},
 		{
-			"name": "Triple D Trauma",
-			"player": "Bobex",
-			"logo": "tripled",
+			"name": "ImpoLeos Imperium",
+			"player": "Leo",
+			"logo": "leo",
+			"pokemon": []
+		},
+		{
+			"name": "Münsteraner Wolwerocks",
+			"player": "Felix?",
+			"logo": "felix",
+			"pokemon": []
+		},
+		{
+			"name": "PSV Nilsoking",
+			"player": "PPV",
+			"logo": "ppv",
+			"pokemon": []
+		},
+		{
+			"name": "Twindrake City Thundurus",
+			"player": "Philipp",
+			"logo": "philipp",
+			"pokemon": []
+		},
+		{
+			"name": "Wake Me Up",
+			"player": "Alex",
+			"logo": "alex",
+			"pokemon": []
+		},
+		{
+			"name": "Atalanta Fletiamo",
+			"player": "Nico",
+			"logo": "nico",
+			"pokemon": []
+		},
+		{
+			"name": "Bellektro Ghetto",
+			"player": "Max",
+			"logo": "max",
+			"pokemon": []
+		},
+		{
+			"name": "G-Town Glowkings",
+			"player": "Till",
+			"logo": "till",
+			"pokemon": []
+		},
+		{
+			"name": "Große Demeteros Apokalypse",
+			"player": "Niklas",
+			"logo": "niklas",
+			"pokemon": []
+		},
+		{
+			"name": "Harte Schale Harter Kern",
+			"player": "Oli",
+			"logo": "oli",
+			"pokemon": []
+		},
+		{
+			"name": "Inter Flyland",
+			"player": "Flo",
+			"logo": "flo",
+			"pokemon": []
+		},
+		{
+			"name": "Laustos Münster",
+			"player": "Rick",
+			"logo": "rick",
+			"pokemon": []
+		},
+		{
+			"name": "Turtinators Titans",
+			"player": "Turti",
+			"logo": "turti",
 			"pokemon": []
 		}
 	]
